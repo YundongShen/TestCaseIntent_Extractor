@@ -1,0 +1,107 @@
+
+[Loading test data]
+✓ Loaded from: testcases/k6-api-load-test.js
+✓ Data loaded
+  User ID: test_user_bug
+  Test ID: tc_bug_ant_solid
+  Content: 699 chars
+
+
+================================================================================
+[Intent Extraction & Document Generation System]
+================================================================================
+Start time: 2026-04-06T14:53:50.186447
+
+================================================================================
+Layer 1: INPUT LAYER (Data Preprocessing)
+================================================================================
+[InputLayer] Initializing
+[PREPROCESSOR] Initializing preprocessor
+[InputLayer] Processing
+[PREPROCESSOR] Starting code preprocessing
+[PREPROCESSOR] Preprocessing completed: 29 -> 24 lines
+✓ Input layer done: 578 chars
+
+================================================================================
+Layer 2: EXTRACT LAYER (Objects/Goals/Activities)
+================================================================================
+[ExtractLayer] Initializing
+[ObjectExtractor] Initializing
+[ActivityExtractor] Initializing
+[GoalExtractor] Initializing
+[ExtractLayer] Extracting
+[InferenceService] Initialized in 'local' mode
+[InferenceService] Loading local DeepSeek model...
+🚀 [Device] Using NVIDIA CUDA (RTX 6000)
+[Loading] Using local model: /proj/test_extender/Intent_Implementation_0327/model/models/deepseek-llm-7b-chat
+[Loading] Loading to device: cuda...
+[Tokenizer] eos_token: '<｜end▁of▁sentence｜>' (ID: 100001)
+[Tokenizer] pad_token: '<｜end▁of▁sentence｜>' (ID: 100001)
+[Success] Model loaded successfully
+[InferenceService] Model loaded successfully
+
+[ObjectExtractor] LLM Response:
+{"objects":["http", "sleep", "check"]}
+
+
+[ActivityExtractor] LLM Response:
+{
+"activities": [
+"http.get('https://test-api.k6.io')",
+"check(response, {'statusis200': (r) => r.status === 200, 'responsetimeisacceptable': (r) => r.timings.duration < 500})",
+"sleep(1)"
+]
+}
+
+
+[GoalExtractor] LLM Response:
+{"goals":["verifythat10virtualusersareabletoconnecttothestest-api.k6.io"]}
+
+[ExtractLayer] Done | objects=3 activities=3 goals=1
+✓ Extraction done: objects=3 goals=1 activities=3
+
+[SAVE] EXTRACT: extract_result/extract_result_20260406_145411.json
+================================================================================
+Layer 3: INTENT LAYER (Validation & Adjustment)
+================================================================================
+[IntentLayer] Initializing
+[Validator] Initializing
+[Adjuster] Initializing
+[IntentLayer] Processing
+[IntentLayer] Validation passed
+[Adjuster] Using business_purpose: Document generation
+[IntentLayer] Processing done
+✓ Intent processing done
+
+[SAVE] VALIDATE: validate_result/validate_result_20260406_145413.json
+[SAVE] ADJUST: adjust_result/adjust_result_20260406_145413.json
+================================================================================
+Layer 4: BUSINESS LAYER (Prompt Template)
+================================================================================
+[BusinessLayer] Initializing
+[BusinessLayer] Prompt loaded (984 chars)
+[BusinessLayer] Processing
+✓ Prompt loaded: 984 chars
+
+================================================================================
+Layer 5: OUTPUT LAYER (Document Generation)
+================================================================================
+[OUTPUT LAYER] Initializing output layer
+[ONBOARDING GENERATOR] Initializing generator
+[DOCUMENT WRITER] Initializing document writer, output directory: onboarding_result
+[DOCUMENT WRITER] Checking output directory: onboarding_result
+[DOCUMENT WRITER] Output directory exists
+[OUTPUT LAYER] Starting Onboarding document generation
+[ONBOARDING GENERATOR] Calling LLM to generate
+[ONBOARDING GENERATOR] Generation completed
+[DOCUMENT WRITER] Saving document
+[DOCUMENT WRITER] Document saved: onboarding_result/onboarding_20260406_145424.md
+[OUTPUT LAYER] Document generation and persistence completed
+✓ Document saved: onboarding_result/onboarding_20260406_145424.md
+
+================================================================================
+[Pipeline completed successfully!]
+================================================================================
+
+[Final Result]
+✓ Document: onboarding_result/onboarding_20260406_145424.md

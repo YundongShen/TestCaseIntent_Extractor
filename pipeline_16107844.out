@@ -1,0 +1,111 @@
+
+[Loading test data]
+✓ Loaded from: testcases/contact-us-form.feature
+✓ Data loaded
+  User ID: test_user_bug
+  Test ID: tc_bug_ant_solid
+  Content: 563 chars
+
+
+================================================================================
+[Intent Extraction & Document Generation System]
+================================================================================
+Start time: 2026-04-06T15:04:46.174144
+
+================================================================================
+Layer 1: INPUT LAYER (Data Preprocessing)
+================================================================================
+[InputLayer] Initializing
+[PREPROCESSOR] Initializing preprocessor
+[InputLayer] Processing
+[PREPROCESSOR] Starting code preprocessing
+[PREPROCESSOR] Preprocessing completed: 15 -> 15 lines
+✓ Input layer done: 563 chars
+
+================================================================================
+Layer 2: EXTRACT LAYER (Objects/Goals/Activities)
+================================================================================
+[ExtractLayer] Initializing
+[ObjectExtractor] Initializing
+[ActivityExtractor] Initializing
+[GoalExtractor] Initializing
+[ExtractLayer] Extracting
+[InferenceService] Initialized in 'local' mode
+[InferenceService] Loading local DeepSeek model...
+🚀 [Device] Using NVIDIA CUDA (RTX 6000)
+[Loading] Using local model: /proj/test_extender/Intent_Implementation_0327/model/models/deepseek-llm-7b-chat
+[Loading] Loading to device: cuda...
+[Tokenizer] eos_token: '<｜end▁of▁sentence｜>' (ID: 100001)
+[Tokenizer] pad_token: '<｜end▁of▁sentence｜>' (ID: 100001)
+[Success] Model loaded successfully
+[InferenceService] Model loaded successfully
+
+[ObjectExtractor] LLM Response:
+```json
+{
+"objects": ["ContactUsForm", "GETINTOUCH", "name", "email", "subject", "message", "file", "Submit", "OK", "successMessage", "Home"]
+}
+```
+Explanation:
+
+* "ContactUsForm" is the primary target of the test activities as it is the form where the user inputs their details.
+* "GETINTOUCH" is the visible text after the user submits the form.
+* "name", "email", "subject", "message", "file", "Submit", "OK", "successMessage", and "Home" are attributes, behaviors, or states of the primary target entities that are directly observed during the test activities.
+* All other entities such as test frameworks, test information, auxiliary and temporary variables, test lifecycle management, infrastructure wrappers, and test utility calls are excluded as they are not the direct, primary targets of the test activities.
+
+
+[ActivityExtractor] LLM Response:
+{"activities":["verifyGETINTOUCHvisibility", "entername", "enteremail", "entersubject", "entermessage", "enterfile", "clickSubmit", "clickOK", "verifysuccessmessage", "verifyhomebutton"]}
+
+
+[GoalExtractor] LLM Response:
+{"goals":["verifythattheGETINTOUCHlinkisvisiblewhentheuserentersname,email,subjectandmessageandtheuseruploadsfileAndTheuserclicksSubmitbuttonAndTheuserclicksOKbutton"]}
+
+[ExtractLayer] Done | objects=11 activities=10 goals=1
+✓ Extraction done: objects=11 goals=1 activities=10
+
+[SAVE] EXTRACT: extract_result/extract_result_20260406_150511.json
+================================================================================
+Layer 3: INTENT LAYER (Validation & Adjustment)
+================================================================================
+[IntentLayer] Initializing
+[Validator] Initializing
+[Adjuster] Initializing
+[IntentLayer] Processing
+[IntentLayer] Validation passed
+[Adjuster] Using business_purpose: Document generation
+[IntentLayer] Processing done
+✓ Intent processing done
+
+[SAVE] VALIDATE: validate_result/validate_result_20260406_150513.json
+[SAVE] ADJUST: adjust_result/adjust_result_20260406_150513.json
+================================================================================
+Layer 4: BUSINESS LAYER (Prompt Template)
+================================================================================
+[BusinessLayer] Initializing
+[BusinessLayer] Prompt loaded (984 chars)
+[BusinessLayer] Processing
+✓ Prompt loaded: 984 chars
+
+================================================================================
+Layer 5: OUTPUT LAYER (Document Generation)
+================================================================================
+[OUTPUT LAYER] Initializing output layer
+[ONBOARDING GENERATOR] Initializing generator
+[DOCUMENT WRITER] Initializing document writer, output directory: onboarding_result
+[DOCUMENT WRITER] Checking output directory: onboarding_result
+[DOCUMENT WRITER] Output directory exists
+[OUTPUT LAYER] Starting Onboarding document generation
+[ONBOARDING GENERATOR] Calling LLM to generate
+[ONBOARDING GENERATOR] Generation completed
+[DOCUMENT WRITER] Saving document
+[DOCUMENT WRITER] Document saved: onboarding_result/onboarding_20260406_150533.md
+[OUTPUT LAYER] Document generation and persistence completed
+✓ Document saved: onboarding_result/onboarding_20260406_150533.md
+
+================================================================================
+[Pipeline completed successfully!]
+================================================================================
+
+[Final Result]
+✓ Document: onboarding_result/onboarding_20260406_150533.md
