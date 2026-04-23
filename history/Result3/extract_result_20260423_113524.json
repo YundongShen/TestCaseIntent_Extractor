@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-23T11:35:24.939773",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "/admin/index/details",
+    "Product",
+    "ProductVariant",
+    "LinkProductVariantPriceSet",
+    "Price",
+    "SalesChannel",
+    "LinkProductSalesChannel",
+    "PriceSet"
+  ],
+  "goals": [
+    "Verify that the GET /admin/index/details endpoint returns index information with metadata for expected entities, including their structure and status."
+  ],
+  "activities": [
+    "Set the ENABLE_INDEX_MODULE environment variable to true.",
+    "Set the Jest test timeout to 300000ms.",
+    "Get the test container instance.",
+    "Create an admin user.",
+    "Wait for 3 seconds.",
+    "Send a GET request to the Admin Index Details API endpoint.",
+    "Assert that the response status is 200.",
+    "Assert that the response data contains a 'metadata' property.",
+    "Assert that the 'metadata' array has 7 items.",
+    "For each predefined entity, find its metadata and assert its structure and properties (id, entity, status, fields, updated_at, last_synced_key).",
+    "Find metadata specifically for the 'Product' entity.",
+    "Delete the ENABLE_INDEX_MODULE environment variable."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

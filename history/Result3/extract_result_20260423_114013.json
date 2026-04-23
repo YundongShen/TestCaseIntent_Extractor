@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-04-23T11:40:13.037152",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "BugAntSolid",
+    "svgElement"
+  ],
+  "goals": [
+    "Verify that the BugAntSolid component renders successfully and is present in the document."
+  ],
+  "activities": [
+    "Render the BugAntSolid component.",
+    "Get the element by its test ID.",
+    "Assert that the element is present in the document.",
+    "Clean up the rendered DOM."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

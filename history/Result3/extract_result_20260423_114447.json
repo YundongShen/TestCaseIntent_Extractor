@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-23T11:44:47.377075",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "Home page",
+    "\"Contact us\" menu button",
+    "\"GET IN TOUCH\" text",
+    "Name input field",
+    "Email input field",
+    "Subject input field",
+    "Message input field",
+    "File upload field",
+    "Submit button",
+    "OK button",
+    "Success message"
+  ],
+  "goals": [
+    "Verify the successful submission of the Contact Us Form and the display of the success message."
+  ],
+  "activities": [
+    "Navigate to the home page",
+    "Click the \"Contact us\" menu button",
+    "Verify \"GET IN TOUCH\" text is visible",
+    "Enter name, email, subject, and message into the form",
+    "Upload a file",
+    "Click the \"Submit\" button",
+    "Click the \"OK\" button",
+    "Verify the success message \"Success! Your details have been submitted successfully.\" is visible",
+    "Click the \"Home\" button",
+    "Verify that the user has landed on the home page"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

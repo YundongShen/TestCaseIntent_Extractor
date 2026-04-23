@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-07T16:56:03.065857",
+  "extract_mode": "combined",
+  "objects": [
+    "GETINTOUCH"
+  ],
+  "goals": [
+    "verification_purpose"
+  ],
+  "activities": [
+    "enters_name_and_submits",
+    "uploads_file_and_submits",
+    "clicks_OK_button"
+  ],
+  "test_case_id": "tc_contact_us_form",
+  "user_id": "test_user"
+}

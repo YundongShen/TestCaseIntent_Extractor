@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-04-21T21:12:29.141033",
+  "extract_mode": "independent",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "home page",
+    "Contact us menu button",
+    "GET IN TOUCH",
+    "name",
+    "email",
+    "subject",
+    "message",
+    "file",
+    "Submit button",
+    "OK button",
+    "success message",
+    "Home button"
+  ],
+  "goals": [
+    "Verify the accessibility and navigation flow to the Contact Us section",
+    "Verify the successful submission of the Contact Us Form including file upload and success message validation"
+  ],
+  "activities": [
+    "Navigate to home page",
+    "Click 'Contact us' menu button",
+    "Verify 'GET IN TOUCH' is visible",
+    "Enter name, email, subject and message",
+    "Upload file",
+    "Click Submit button",
+    "Click OK button",
+    "Verify success message 'Success! Your details have been submitted successfully.' is visible",
+    "Click Home button",
+    "Verify landed to home page successfully"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

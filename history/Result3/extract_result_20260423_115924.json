@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-23T11:59:24.488303",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "bookmarks file",
+    "sidebar",
+    "bookmarks panel",
+    "toplevel \"Bookmarks\" menu",
+    "bookmark",
+    "Bookmarks/personal toolbar",
+    "\"Bookmarks\" on the Bookmarks/personal toolbar",
+    "\"Manage Bookmarks\" menu item",
+    "folder",
+    "Manage Bookmarks window"
+  ],
+  "goals": [
+    "Verify that a bookmarks file is detected and displayed at the appropriate places."
+  ],
+  "activities": [
+    "Select the toplevel \"Bookmarks\" menu.",
+    "Select any bookmark from the list.",
+    "Click \"Bookmarks\" on the Bookmarks/personal toolbar.",
+    "Open the sidebar and click on the \"Bookmarks\" panel.",
+    "Select \"Manage Bookmarks\" from the toplevel \"Bookmarks\" menu."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

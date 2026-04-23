@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-23T12:16:29.205664",
+  "extract_mode": "independent",
+  "model_type": "gemini-3-pro-preview",
+  "model_id": "gemini-3-pro-preview",
+  "quantization": "API",
+  "objects": [
+    "api"
+  ],
+  "goals": [
+    "Verify that the GET /admin/index/details endpoint returns index information with metadata for all expected entities"
+  ],
+  "activities": [
+    "Create an admin user",
+    "Wait for 3000 milliseconds",
+    "Send a GET request to '/admin/index/details' with admin headers",
+    "Verify the response status is 200",
+    "Verify the response data contains a 'metadata' property",
+    "Verify the metadata array length is exactly 7",
+    "Verify metadata exists for each expected entity (Product, ProductVariant, LinkProductVariantPriceSet, Price, SalesChannel, LinkProductSalesChannel, PriceSet)",
+    "Verify each entity's metadata matches the expected object structure including id, entity, status, fields, and updated_at",
+    "Verify each entity's metadata contains a 'last_synced_key' property",
+    "Retrieve the metadata specifically for the 'Product' entity"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

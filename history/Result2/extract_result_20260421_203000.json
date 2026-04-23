@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-21T20:30:00.612586",
+  "extract_mode": "independent",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "BugAntSolid"
+  ],
+  "goals": [
+    "Verify BugAntSolid component renders successfully and is present in the DOM"
+  ],
+  "activities": [
+    "Render the BugAntSolid component with data-testid icon",
+    "Query the screen for the element with testid icon",
+    "Assert the element is in the document",
+    "Cleanup the test environment"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

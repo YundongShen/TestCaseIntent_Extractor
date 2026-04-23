@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-07T15:19:05.319893",
+  "extract_mode": "independent",
+  "objects": [
+    "Product",
+    "ProductVariant",
+    "LinkProductVariantPriceSet",
+    "Price",
+    "SalesChannel",
+    "LinkProductSalesChannel",
+    "PriceSet"
+  ],
+  "goals": [
+    "Test whether the AdminIndexAPI returns index information with metadata for all configured entities, including expected metadata fields and statuses"
+  ],
+  "activities": [
+    "set timeout for 30 seconds",
+    "call createAdminUser function and store the container",
+    "call medusaIntegrationTestRunner function with testSuite as argument",
+    "call api.get on /admin/index/details endpoint with adminHeaders",
+    "assert that response status is 200",
+    "assert that response data has property metadata",
+    "assert that metadata length is 7",
+    "loop through entities and call response.data.metadata.find on each entity",
+    "assert that entity metadata is defined and has properties id, entity, status, fields, updated_at, and last_synced_key",
+    "loop through entities and call response.data.metadata.find on each entity",
+    "assert that productMetadata is defined and has properties id, entity, status, fields, updated_at, and last_synced_key"
+  ],
+  "test_case_id": "tc_admin_index_api.test",
+  "user_id": "test_user"
+}

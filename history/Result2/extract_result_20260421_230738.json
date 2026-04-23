@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-21T23:07:38.419469",
+  "extract_mode": "combined",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "https://test-api.k6.io"
+  ],
+  "goals": [
+    "verify API response status and performance under load"
+  ],
+  "activities": [
+    "send http get request to api endpoint",
+    "check response status is 200",
+    "check response time is acceptable",
+    "sleep for one second"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

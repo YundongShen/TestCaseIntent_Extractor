@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-04-07T16:05:16.515363",
+  "extract_mode": "independent",
+  "objects": [
+    "http",
+    "sleep",
+    "check"
+  ],
+  "goals": [
+    "verifythat10virtualusersareabletoconnecttothestest-api.k6.io"
+  ],
+  "activities": [
+    "constresponse=http.get('https://test-api.k6.io');",
+    "check(response,{'statusis200':(r)=>r.status===200,'responsetimeisacceptable':(r)=>r.timings.duration<500});",
+    "sleep(1);"
+  ],
+  "test_case_id": "tc_k6_api_load_test",
+  "user_id": "test_user"
+}

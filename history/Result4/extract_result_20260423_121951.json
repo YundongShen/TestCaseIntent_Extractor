@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-23T12:19:51.334467",
+  "extract_mode": "chain",
+  "model_type": "gemini-3-pro-preview",
+  "model_id": "gemini-3-pro-preview",
+  "quantization": "API",
+  "objects": [
+    "api"
+  ],
+  "goals": [
+    "Verify that the API returns index information with metadata for the /admin/index/details endpoint"
+  ],
+  "activities": [
+    "Send a GET request to the /admin/index/details endpoint",
+    "Verify the response status is 200",
+    "Verify the response contains a metadata property with exactly 7 items",
+    "Verify each expected entity in the metadata has the correct structure, status, and synchronization keys"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

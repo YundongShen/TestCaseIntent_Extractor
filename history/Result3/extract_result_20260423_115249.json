@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-23T11:52:49.902014",
+  "extract_mode": "chain",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "GET IN TOUCH text element",
+    "Contact Us Form input fields",
+    "File upload input",
+    "Submit button",
+    "Browser alert dialog",
+    "Success message text element",
+    "Home button",
+    "Browser frame 'aswift_2'",
+    "Browser frame 'ad_iframe'",
+    "Dismiss button",
+    "Browser current URL"
+  ],
+  "goals": [
+    "Verify the successful submission of the Contact Us form, including file upload, and the display of the success message.",
+    "Verify successful navigation to the home page after interacting with the contact form."
+  ],
+  "activities": [
+    "Verify the 'GET IN TOUCH' text element is visible.",
+    "Fill the Contact Us form with name, email, subject, and message.",
+    "Upload a file.",
+    "Click the Submit button.",
+    "Accept the browser alert dialog.",
+    "Verify the success message is displayed.",
+    "Click the Home button and dismiss any overlaying ads.",
+    "Verify the browser has navigated to the home page URL."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

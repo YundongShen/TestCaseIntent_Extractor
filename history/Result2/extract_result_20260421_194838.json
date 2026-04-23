@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-21T19:48:38.179390",
+  "extract_mode": "independent",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "response",
+    "entityMetadata"
+  ],
+  "goals": [
+    "Verify GET /admin/index/details endpoint returns successful response with index metadata",
+    "Validate metadata structure and entity status for specific configured entities"
+  ],
+  "activities": [
+    "Set environment variable ENABLE_INDEX_MODULE to true",
+    "Set Jest timeout to 300000 milliseconds",
+    "Initialize Medusa integration test runner",
+    "Retrieve container instance",
+    "Create admin user",
+    "Wait for 3000 milliseconds",
+    "Send GET request to /admin/index/details endpoint",
+    "Assert response status equals 200",
+    "Assert response data contains metadata property",
+    "Assert metadata array length equals 7",
+    "Define list of entity names",
+    "Iterate through each entity name",
+    "Find metadata object for entity",
+    "Assert metadata object is defined",
+    "Assert metadata object matches expected structure",
+    "Assert metadata object has last_synced_key property",
+    "Find metadata object for Product entity",
+    "Delete environment variable ENABLE_INDEX_MODULE"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-23T11:49:47.856499",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "ContactUsPage",
+    "contactUsPage.getInTouchText",
+    "contactUsPage.submitButton",
+    "browser alert",
+    "contactUsPage.successText",
+    "contactUsPage.homeButton",
+    "iframe \"aswift_2\"",
+    "iframe \"ad_iframe\"",
+    "contactUsPage.dismissButton",
+    "current URL"
+  ],
+  "goals": [
+    "Verify that the Contact Us form can be successfully submitted and a success message is displayed."
+  ],
+  "activities": [
+    "Verify 'GET IN TOUCH' text is visible.",
+    "Fill the contact us form with name, email, subject, and message.",
+    "Upload a file.",
+    "Click the Submit button.",
+    "Accept the alert (click OK).",
+    "Verify the success message 'Success! Your details have been submitted successfully.' is visible.",
+    "Click the Home button.",
+    "Switch to frame 'aswift_2'.",
+    "Switch to frame 'ad_iframe'.",
+    "Click the Dismiss button.",
+    "Verify the current URL is 'https://www.automationexercise.com/'."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

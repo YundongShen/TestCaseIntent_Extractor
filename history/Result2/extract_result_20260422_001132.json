@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-22T00:11:32.075564",
+  "extract_mode": "chain",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "Bookmarks file",
+    "Bookmarks menu",
+    "Bookmarks toolbar",
+    "Bookmarks panel",
+    "Manage Bookmarks window",
+    "Bookmarks",
+    "Folders"
+  ],
+  "goals": [
+    "Verify bookmarks file detection and display across Bookmarks menu, toolbar, panel, and Manage Bookmarks window"
+  ],
+  "activities": [
+    "Open the Bookmarks menu and select a bookmark",
+    "Click the Bookmarks button on the toolbar",
+    "Open the sidebar and click the Bookmarks panel",
+    "Select Manage Bookmarks from the Bookmarks menu"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

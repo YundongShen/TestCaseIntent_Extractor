@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-04-23T11:51:01.446861",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "ContactUsPage"
+  ],
+  "goals": [
+    "Verify Contact Us form submission and navigation"
+  ],
+  "activities": [
+    "Verify GET IN TOUCH text is displayed",
+    "Fill contact us form",
+    "Upload file",
+    "Click submit button",
+    "Switch to alert and accept it",
+    "Verify success message is displayed",
+    "Click home button",
+    "Switch to frame aswift_2",
+    "Switch to frame ad_iframe",
+    "Click dismiss button",
+    "Verify current URL matches expected home page URL"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-21T20:48:57.883237",
+  "extract_mode": "chain",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "BugAntSolid"
+  ],
+  "goals": [
+    "Verify BugAntSolid component renders correctly and is present in the DOM"
+  ],
+  "activities": [
+    "Render the BugAntSolid component with a test ID",
+    "Query the DOM for the element using the test ID",
+    "Assert the element is present in the document"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

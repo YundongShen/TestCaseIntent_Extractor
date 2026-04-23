@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-07T16:43:50.356626",
+  "extract_mode": "combined",
+  "objects": [
+    "ContactUsPage"
+  ],
+  "goals": [
+    "VerifyGETINTOUCHisvisible,Theuserentersname,email,subjectandmessage,Theuseruploadsfile,TheUserclicksSubmitbutton,verify_success_message_success_your_details_have_been_submitted_successfully_isvisible,Verifythatlandedtohomepagesuccessfully"
+  ],
+  "activities": [
+    "verify_get_in_touch_is_visible,the_user_enters_name_email_subject_and_message,the_user_uploads_file,the_user_clicks_submit_button,verify_success_message_success_your_details_have_been_submitted_successfully_is_visible,the_user_clicks_home_button,verify_that_landed_to_home_page_successfully"
+  ],
+  "test_case_id": "tc_ContactUs_StepDefs",
+  "user_id": "test_user"
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-23T11:47:53.231130",
+  "extract_mode": "chain",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "home page",
+    "Contact us menu button",
+    "GET IN TOUCH element",
+    "name input field",
+    "email input field",
+    "subject input field",
+    "message input field",
+    "file upload mechanism",
+    "Submit button",
+    "OK button",
+    "Success message",
+    "Home button"
+  ],
+  "goals": [
+    "Verify the successful submission of the Contact Us form, including text fields and file upload."
+  ],
+  "activities": [
+    "Access the Contact Us form page.",
+    "Fill in the form fields with text details and a file, then submit the form.",
+    "Acknowledge the submission confirmation and verify the success message."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

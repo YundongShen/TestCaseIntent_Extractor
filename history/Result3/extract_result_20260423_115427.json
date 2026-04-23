@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-23T11:54:27.512725",
+  "extract_mode": "independent",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "https://test-api.k6.io"
+  ],
+  "goals": [
+    "Verify the https://test-api.k6.io endpoint's availability and functional correctness (status 200) with a low error rate under load.",
+    "Verify the https://test-api.k6.io endpoint's response time performance meets specified thresholds (e.g., 95th percentile < 500ms) under load."
+  ],
+  "activities": [
+    "Make an HTTP GET request to 'https://test-api.k6.io'.",
+    "Verify the response: check if the status is 200 and if the response time is less than 500ms.",
+    "Pause execution for 1 second."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

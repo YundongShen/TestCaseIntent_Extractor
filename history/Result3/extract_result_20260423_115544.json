@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-23T11:55:44.866893",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "API endpoint"
+  ],
+  "goals": [
+    "Ensure API endpoint is available and performs within acceptable thresholds under load"
+  ],
+  "activities": [
+    "Make an HTTP GET request to the API endpoint",
+    "Check that the response status is 200",
+    "Check that the response time is less than 500ms",
+    "Pause for 1 second"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

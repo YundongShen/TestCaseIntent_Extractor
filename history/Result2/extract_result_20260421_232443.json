@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-21T23:24:43.774904",
+  "extract_mode": "chain",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [],
+  "goals": [
+    "Validate API response time performance under concurrent load conditions",
+    "Ensure API request success rate meets stability thresholds under load"
+  ],
+  "activities": [
+    "Configure concurrent load parameters and performance thresholds",
+    "Execute HTTP GET request to target API endpoint",
+    "Verify response status code meets success criteria",
+    "Verify response duration meets performance criteria",
+    "Apply sleep delay between iterations"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-21T22:03:38.599066",
+  "extract_mode": "independent",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [],
+  "goals": [
+    "Verify Contact Us form submission and success message visibility",
+    "Verify navigation to home page after submission"
+  ],
+  "activities": [
+    "Verify 'GET IN TOUCH' text is visible",
+    "Enter name, email, subject, and message",
+    "Upload file",
+    "Click Submit button",
+    "Click OK button on alert",
+    "Verify success message is visible",
+    "Click Home button",
+    "Switch to frame 'aswift_2'",
+    "Switch to frame 'ad_iframe'",
+    "Click dismiss button",
+    "Verify current URL matches expected home page URL"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

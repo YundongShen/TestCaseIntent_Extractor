@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-23T11:41:25.440098",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "BugAntSolid"
+  ],
+  "goals": [
+    "verify BugAntSolid renders without errors and is present in the document"
+  ],
+  "activities": [
+    "Render the BugAntSolid component",
+    "Get the icon element by test ID",
+    "Assert the icon element is in the document",
+    "Clean up the testing environment"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

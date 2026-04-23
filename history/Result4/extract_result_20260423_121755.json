@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-04-23T12:17:55.896511",
+  "extract_mode": "combined",
+  "model_type": "gemini-3-pro-preview",
+  "model_id": "gemini-3-pro-preview",
+  "quantization": "API",
+  "objects": [
+    "Admin Index API"
+  ],
+  "goals": [
+    "Verify that the admin index details endpoint returns the correct index information and metadata for all expected entities"
+  ],
+  "activities": [
+    "Wait for a specified timeout",
+    "Send a GET request to the admin index details endpoint with admin headers",
+    "Verify the response status is 200",
+    "Verify the response data contains a metadata property",
+    "Verify the metadata array contains exactly seven items",
+    "Iterate through the list of expected entities",
+    "Find the metadata for each expected entity in the response",
+    "Verify the entity metadata is defined",
+    "Verify the entity metadata matches the expected object structure",
+    "Verify the entity metadata contains a last synced key property",
+    "Find the metadata specifically for the Product entity"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

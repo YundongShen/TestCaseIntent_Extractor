@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-07T16:49:59.609070",
+  "extract_mode": "independent",
+  "objects": [
+    "ContactUsForm",
+    "homepage",
+    "Contactusmenubutton",
+    "GETINTOUCH",
+    "name",
+    "email",
+    "subject",
+    "message",
+    "file",
+    "Submitbutton",
+    "OKbutton",
+    "successmessage",
+    "Success!",
+    "Homebutton",
+    "homepage"
+  ],
+  "goals": [
+    "verifythattheGETINTOUCHlinkisvisiblewhentheuserentersname,email,subjectandmessageandtheuseruploadsfileAndTheuserclicksSubmitbuttonAndTheuserclicksOKbutton"
+  ],
+  "activities": [
+    "verifyGETINTOUCHvisibility",
+    "entername",
+    "enteremail",
+    "entersubject",
+    "entermessage",
+    "enterfile",
+    "clickSubmit",
+    "clickOK",
+    "verifysuccessmessage",
+    "verifyhomebutton"
+  ],
+  "test_case_id": "tc_contact_us_form",
+  "user_id": "test_user"
+}

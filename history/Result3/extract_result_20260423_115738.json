@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-23T11:57:38.715838",
+  "extract_mode": "chain",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "https://test-api.k6.io"
+  ],
+  "goals": [
+    "Verify the API endpoint https://test-api.k6.io returns a successful HTTP status code (200) when subjected to load.",
+    "Verify the API endpoint https://test-api.k6.io meets performance criteria (response time) and maintains a low error rate when subjected to load."
+  ],
+  "activities": [],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

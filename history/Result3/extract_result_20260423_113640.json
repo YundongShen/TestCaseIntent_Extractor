@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-23T11:36:40.406922",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "Admin Index API"
+  ],
+  "goals": [
+    "Verify the Admin Index API returns correct index information and metadata"
+  ],
+  "activities": [
+    "Create an admin user",
+    "Wait for 3 seconds",
+    "Make a GET request to the admin index details endpoint",
+    "Assert response status is 200",
+    "Assert response data has metadata property",
+    "Assert metadata length is 7",
+    "Iterate through expected entities",
+    "Find entity metadata in the response",
+    "Assert entity metadata is defined",
+    "Assert entity metadata matches expected object structure",
+    "Assert entity metadata has last synced key property",
+    "Find product metadata in the response"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

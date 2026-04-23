@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-04-21T19:56:03.378809",
+  "extract_mode": "combined",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "Admin Index API endpoint"
+  ],
+  "goals": [
+    "verify index information response contains correct metadata structure and entity statuses"
+  ],
+  "activities": [
+    "wait for 3 seconds",
+    "send GET request to admin index details endpoint",
+    "check response status equals 200",
+    "check response data has metadata property",
+    "check metadata length equals 7",
+    "iterate through expected entity list",
+    "find entity metadata in response",
+    "assert entity metadata is defined",
+    "assert entity metadata matches expected structure",
+    "assert entity metadata has last synced key property",
+    "find Product metadata in response"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

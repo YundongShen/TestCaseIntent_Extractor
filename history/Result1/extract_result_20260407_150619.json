@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-04-07T15:06:19.517179",
+  "objects": [
+    "BugAntSolid"
+  ],
+  "goals": [
+    "Test whether the BugAntSolid component renders the icon in the document"
+  ],
+  "activities": [
+    "renderBugAntSolidcomponent",
+    "getSVGelementbytestId",
+    "checkifSVGelementisInTheDocument"
+  ],
+  "test_case_id": "tc_bug_ant_solid.test",
+  "user_id": "test_user"
+}

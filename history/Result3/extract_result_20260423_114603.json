@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-23T11:46:03.445249",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "Contact Us Form"
+  ],
+  "goals": [
+    "Verify successful submission of the Contact Us Form"
+  ],
+  "activities": [
+    "Navigate to home page",
+    "Click contact us menu button",
+    "Verify get in touch is visible",
+    "Enter name, email, subject, and message",
+    "Upload file",
+    "Click submit button",
+    "Click OK button",
+    "Verify success message is visible",
+    "Click home button",
+    "Verify landing on home page"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

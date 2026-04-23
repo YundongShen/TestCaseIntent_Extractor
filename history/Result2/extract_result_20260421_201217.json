@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-21T20:12:17.361537",
+  "extract_mode": "chain",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [],
+  "goals": [
+    "Verify the GET /admin/index/details endpoint returns a successful HTTP 200 response",
+    "Verify the response metadata contains valid entries for all expected index entities with correct schema"
+  ],
+  "activities": [
+    "Enable index module environment variable",
+    "Initialize test container and create admin user",
+    "Wait for index processing stabilization",
+    "Execute GET request to /admin/index/details endpoint",
+    "Verify HTTP response status code is 200",
+    "Verify response metadata array exists and has length 7",
+    "Validate schema and properties for all expected index entities"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

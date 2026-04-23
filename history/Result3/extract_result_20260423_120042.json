@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-23T12:00:42.473779",
+  "extract_mode": "combined",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "bookmarks and folders"
+  ],
+  "goals": [
+    "Verify correct detection and display of bookmarks and folders across various UI elements"
+  ],
+  "activities": [
+    "Select the top-level Bookmarks menu",
+    "Select any bookmark on the list",
+    "Click Bookmarks on the Bookmarks/personal toolbar",
+    "Open the sidebar",
+    "Click on the Bookmarks panel",
+    "Select Manage Bookmarks from the top-level Bookmarks menu"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

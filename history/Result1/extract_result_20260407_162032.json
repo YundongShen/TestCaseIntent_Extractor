@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-07T16:20:32.862107",
+  "extract_mode": "independent",
+  "objects": [
+    "Bookmarks",
+    "Bookmarks panel",
+    "Personal Toolbar Folder"
+  ],
+  "goals": [
+    "verify that a bookmarks file is being detected and is being displayed at the appropriate places"
+  ],
+  "activities": [
+    "SelectBookmarksMenu",
+    "SelectBookmark",
+    "OpenSidebar",
+    "ClickBookmarksPanel",
+    "ManageBookmarks",
+    "VerifyBookmarksAndFoldersAppearance",
+    "VerifyFolderSubmenu",
+    "VerifyGreenRibbonIcon",
+    "VerifyFolderIcon",
+    "VerifyPersonalToolbarIcon",
+    "VerifyManageBookmarksWindowPopulation"
+  ],
+  "test_case_id": "tc_view_bookmarks.test",
+  "user_id": "test_user"
+}

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-07T15:56:52.941017",
+  "extract_mode": "combined",
+  "objects": [
+    "Product"
+  ],
+  "goals": [
+    "verifyindexinformationwithmetadata"
+  ],
+  "activities": [
+    "waitfor3seconds",
+    "getindexdetailsresponse",
+    "verifyresponsestatus",
+    "checkresponsedata",
+    "findentitymetadata",
+    "validateentitymetadata",
+    "checklastsyncedkey"
+  ],
+  "test_case_id": "tc_admin_index_api.test",
+  "user_id": "test_user"
+}

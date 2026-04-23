@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-21T23:54:36.749808",
+  "extract_mode": "combined",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "Bookmarks"
+  ],
+  "goals": [
+    "Verify bookmarks file detection and display across UI components"
+  ],
+  "activities": [
+    "Select the toplevel Bookmarks menu",
+    "Select any bookmark on the list",
+    "Click Bookmarks on the Bookmarks personal toolbar",
+    "Open the sidebar",
+    "Click on the Bookmarks panel",
+    "Select Manage Bookmarks from the toplevel Bookmarks menu"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

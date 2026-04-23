@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-07T16:27:32.055643",
+  "extract_mode": "combined",
+  "objects": [
+    "Selectanybookmarkonthelist"
+  ],
+  "goals": [
+    "Verifythatabookmarksfileisbeingdetectedandisbeingdisplayedattheappropriateplaces"
+  ],
+  "activities": [
+    "Selectanybookmarkonthelist",
+    "Click\"Bookmarks\"ontheBookmarks/personaltoolbar",
+    " Openthesidebar;clickonthe\"Bookmarks\"panel",
+    " Fromthetoplevel\"Bookmarks\"menuselect\"ManageBookmarks\""
+  ],
+  "test_case_id": "tc_view_bookmarks.test",
+  "user_id": "test_user"
+}

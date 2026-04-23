@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-21T22:10:45.240497",
+  "extract_mode": "combined",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [],
+  "goals": [],
+  "activities": [],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

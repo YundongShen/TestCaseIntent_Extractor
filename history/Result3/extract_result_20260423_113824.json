@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-04-23T11:38:24.719637",
+  "extract_mode": "chain",
+  "model_type": "gemini-2.5-flash",
+  "model_id": "gemini-2.5-flash",
+  "quantization": "API",
+  "objects": [
+    "/admin/index/details",
+    "Product",
+    "ProductVariant",
+    "LinkProductVariantPriceSet",
+    "Price",
+    "SalesChannel",
+    "LinkProductSalesChannel",
+    "PriceSet"
+  ],
+  "goals": [
+    "Verify that the /admin/index/details endpoint returns comprehensive and correctly structured metadata for the system's indexed entities."
+  ],
+  "activities": [
+    "Enable the index module for the test environment.",
+    "Create an administrator user for API authentication.",
+    "Wait for a short period to allow initial system indexing to complete.",
+    "Send an authenticated GET request to the /admin/index/details endpoint.",
+    "Verify that the API response status is 200 OK.",
+    "Assert that the response data contains a 'metadata' property.",
+    "Confirm that the 'metadata' array contains 7 entries.",
+    "For each expected entity (Product, ProductVariant, LinkProductVariantPriceSet, Price, SalesChannel, LinkProductSalesChannel, PriceSet), verify its presence in the metadata.",
+    "Validate that each entity's metadata conforms to the expected structure, including properties like id, entity, status, fields, updated_at, and last_synced_key."
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

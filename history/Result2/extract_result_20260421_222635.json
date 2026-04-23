@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-21T22:26:35.730197",
+  "extract_mode": "chain",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [],
+  "goals": [
+    "Verify Contact Us form submission and success message display",
+    "Verify navigation to home page after form submission"
+  ],
+  "activities": [
+    "Verify GET IN TOUCH text is visible",
+    "Fill contact form with name, email, subject, and message",
+    "Upload file to the form",
+    "Click Submit button and accept confirmation alert",
+    "Verify success message is displayed",
+    "Click Home button and handle frame navigation",
+    "Verify navigation to home page URL"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

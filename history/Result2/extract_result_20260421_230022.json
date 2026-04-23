@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-21T23:00:22.418849",
+  "extract_mode": "independent",
+  "model_type": "Qwen-3.5-27B",
+  "model_id": "Qwen/Qwen3.5-27B",
+  "quantization": "BF16",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify API endpoint stability and response status under concurrent load",
+    "Verify API response time meets performance thresholds under load"
+  ],
+  "activities": [
+    "Send HTTP GET request to https://test-api.k6.io",
+    "Verify response status is 200 and duration is under 500ms",
+    "Pause execution for 1 second"
+  ],
+  "test_case_id": "tc_admin_index_api",
+  "user_id": "test_user_admin"
+}

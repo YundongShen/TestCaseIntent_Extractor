@@ -49,7 +49,6 @@ model/models/*/
 
 # Runtime results - generated during execution
 Result/
-history/
 logs/
 
 # Virtual environments
