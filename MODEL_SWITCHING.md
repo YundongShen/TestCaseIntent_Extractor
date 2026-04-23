@@ -1,117 +1,114 @@
-# 模型切换说明 (Model Switching Guide)
+# Model Switching Guide
 
-## 快速开始 (Quick Start)
+## Quick Start
 
-### 使用 7B 模型 (Default)
+### Use 7B model (default)
 ```bash
 python main.py
-# 或显式指定
+# or explicitly
 export MODEL_TYPE=7b && python main.py
 ```
 
-### 使用 Qwen 3.5-27B 模型
+### Use Qwen 3.5-27B
 ```bash
 export MODEL_TYPE=qwen && python main.py
 ```
 
-### 使用 V3 模型 (多GPU)
+### Use V3 model (multi-GPU)
 ```bash
 export MODEL_TYPE=v3
-# For single GPU
+# Single GPU
 python main.py
 
-# For multi-GPU distributed
+# Multi-GPU distributed
 export WORLD_SIZE=4
 torchrun --nproc_per_node 4 main.py
 ```
 
-## 支持的模型
+## Supported Models
 
-| 模型 | MODEL_TYPE | 大小 | 类型 | 状态 |
-|------|-----------|------|------|------|
-| DeepSeek-7B-Chat | `7b` | 14GB | FP16 | ✅ 就绪 |
-| Qwen-3.5-27B | `qwen` | 52GB | BF16 | ✅ 就绪 (新增) |
-| DeepSeek-V3 (MoE) | `v3` | 1.3TB | FP8 | ⚠️ 需要多GPU |
+| Model | MODEL_TYPE | Size | Precision | Status |
+|-------|-----------|------|-----------|--------|
+| DeepSeek-7B-Chat | `7b` | 14GB | FP16 | Ready |
+| Qwen-3.5-27B | `qwen` | 52GB | BF16 | Ready |
+| DeepSeek-V3 (MoE) | `v3` | 1.3TB | FP8 | Requires multi-GPU |
 
-## 文件位置
+## File Layout
 
 ```
 model/
-├── model_config_7b.py           # 7B 配置
-├── model_config_qwen.py         # Qwen 配置 (新增)
-├── model_config_v3.py           # V3 配置代理
-├── model_config_v3_official.py  # V3 官方实现
-├── model_config_v3_mp.py        # V3 多GPU支持
-├── inference_service.py         # 推理服务 (已更新支持Qwen)
+├── model_config_7b.py           # 7B config
+├── model_config_qwen.py         # Qwen config
+├── model_config_v3.py           # V3 config proxy
+├── model_config_v3_official.py  # V3 official implementation
+├── model_config_v3_mp.py        # V3 multi-GPU support
+├── inference_service.py         # Inference service (supports all models)
 └── models/
-    ├── deepseek-llm-7b-chat/    # 7B 模型
-    └── models--Qwen--Qwen3.5-27B/ # Qwen 模型 (新增)
+    ├── deepseek-llm-7b-chat/
+    └── models--Qwen--Qwen3.5-27B/
 ```
 
-## 数据流
+## Data Flow
 
 ```
-main.py 
-  ↓ (读取 MODEL_TYPE 环境变量)
-  ├─→ model_config_7b.py (if MODEL_TYPE=7b)
-  ├─→ model_config_qwen.py (if MODEL_TYPE=qwen) 
-  └─→ model_config_v3.py (if MODEL_TYPE=v3)
-  ↓
+main.py
+  | (reads MODEL_TYPE env var)
+  |-> model_config_7b.py    (MODEL_TYPE=7b)
+  |-> model_config_qwen.py  (MODEL_TYPE=qwen)
+  |-> model_config_v3.py    (MODEL_TYPE=v3)
+  |
 inference_service.py
-  ↓ (路由到相应推理方法)
-  ├─→ _infer_7b()
-  ├─→ _infer_qwen() (新增)
-  └─→ _infer_v3()
-  ↓
-ObjectExtractor / ActivityExtractor / GoalExtractor (自动使用任意模型)
+  | (routes to the appropriate inference method)
+  |-> _infer_7b()
+  |-> _infer_qwen()
+  |-> _infer_v3()
+  |
+ObjectExtractor / ActivityExtractor / GoalExtractor
 ```
 
-## 测试不同模型
+## Testing Different Models
 
-### 快速测试 Qwen (推荐)
+### Quick Qwen test
 ```bash
-# 提交 SLURM 任务
 sbatch test_qwen_load.slurm
-
-# 查看输出
 cat test_qwen_load_*.out
 ```
 
-### 完整提取流程对比
+### Full extraction comparison
 ```bash
-# 用 7B 运行完整提取
+# Run with 7B
 python main.py
 
-# 用 Qwen 运行完整提取  
+# Run with Qwen
 export MODEL_TYPE=qwen && python main.py
 
-# 对比结果
+# Compare results
 diff Result/extract_result/*.json
 ```
 
-## 配置详情
+## Configuration Details
 
-### 7B 模型配置
-- **文件**: `model/model_config_7b.py`
-- **推理函数**: `load_deepseek_model()` → `_infer_7b()`
-- **特点**: 快速、低显存、FP16精度
-- **推荐**: 快速原型、单GPU推理
+### 7B model
+- **File**: `model/model_config_7b.py`
+- **Inference**: `load_deepseek_model()` → `_infer_7b()`
+- **Characteristics**: Fast, low VRAM, FP16
+- **Recommended for**: Rapid prototyping, single-GPU inference
 
-### Qwen 模型配置  
-- **文件**: `model/model_config_qwen.py`
-- **推理函数**: `load_qwen_model()` → `_infer_qwen()`
-- **特点**: 更好质量、27B参数、BF16精度、Flash Attention支持
-- **推荐**: 生产质量结果、需要更好的理解能力
+### Qwen model
+- **File**: `model/model_config_qwen.py`
+- **Inference**: `load_qwen_model()` → `_infer_qwen()`
+- **Characteristics**: Better quality, 27B parameters, BF16, Flash Attention
+- **Recommended for**: Production-quality results
 
-### V3 模型配置
-- **文件**: `model/model_config_v3.py` + `model_config_v3_official.py`
-- **推理函数**: `load_deepseek_model()` → `_infer_v3()`
-- **特点**: 最强能力、671B MoE、FP8量化
-- **推荐**: 最高质量、需要多GPU集群
+### V3 model
+- **File**: `model/model_config_v3.py` + `model_config_v3_official.py`
+- **Inference**: `load_deepseek_model()` → `_infer_v3()`
+- **Characteristics**: Strongest capability, 671B MoE, FP8 quantization
+- **Recommended for**: Highest quality, requires multi-GPU cluster
 
-## 如何添加新模型
+## Adding a New Model
 
-1. 创建配置文件 `model/model_config_<modelname>.py`:
+1. Create `model/model_config_<name>.py`:
    ```python
    MODEL_CONFIG = {
        "model_id": "huggingface_model_id",
@@ -121,95 +118,83 @@ diff Result/extract_result/*.json
        "parameters": "Size",
        "context_length": 2048,
    }
-   
-   def load_<modelname>_model(device=None):
-       # 返回 (model, tokenizer)
+
+   def load_<name>_model(device=None):
+       # return (model, tokenizer)
        pass
    ```
 
-2. 在 `main.py` 添加支持:
+2. Add a branch in `main.py`:
    ```python
-   elif MODEL_TYPE == "<modelname>":
-       from model.model_config_<modelname> import set_seed, MODEL_CONFIG
+   elif MODEL_TYPE == "<name>":
+       from model.model_config_<name> import set_seed, MODEL_CONFIG
    ```
 
-3. 在 `inference_service.py` 添加推理方法:
+3. Add inference method in `inference_service.py`:
    ```python
-   elif model_type == "<modelname>":
-       from model.model_config_<modelname> import load_<modelname>_model
-       response = self._infer_<modelname>(model, tokenizer, prompt, max_tokens, device)
-   
-   def _infer_<modelname>(self, model, tokenizer, prompt, max_tokens, device):
-       # 推理实现
+   elif model_type == "<name>":
+       response = self._infer_<name>(model, tokenizer, prompt, max_tokens, device)
+
+   def _infer_<name>(self, model, tokenizer, prompt, max_tokens, device):
        pass
    ```
 
-## 常见问题
+## FAQ
 
-**Q: 如何在7B和Qwen之间快速切换?**
-A: 只需设置环境变量:
+**Q: How do I switch between 7B and Qwen quickly?**
 ```bash
-export MODEL_TYPE=7b   # 使用7B
-export MODEL_TYPE=qwen # 使用Qwen
+export MODEL_TYPE=7b    # use 7B
+export MODEL_TYPE=qwen  # use Qwen
 ```
 
-**Q: Qwen是否支持多GPU推理?**
-A: 当前使用单GPU inference。如需多GPU并行推理，可以集成：
-- vLLM (带张量并行)
-- SGLang
-- TensorRT-LLM
+**Q: Does Qwen support multi-GPU inference?**
+A: Currently single-GPU only. For multi-GPU, consider integrating vLLM (tensor parallel), SGLang, or TensorRT-LLM.
 
-**Q: 如何衡量模型质量差异?**
-A: 运行完整提取并对比结果:
+**Q: How do I measure quality differences between models?**
 ```bash
-# 用不同模型生成结果
 MODEL_TYPE=7b python main.py
 MODEL_TYPE=qwen python main.py
-
-# 查看生成结果目录
 ls -la Result/extract_result/
 diff Result/extract_result/*.json
 ```
 
-**Q: 切换模型后需要重新训练吗?**
-A: 不需要。系统使用预训练模型进行零样本提取/生成。
+**Q: Do I need to retrain after switching models?**
+A: No. The system uses pretrained models for zero-shot extraction.
 
-## 环境变量
+## Environment Variables
 
-| 变量 | 值 | 说明 |
-|------|-----|------|
-| `MODEL_TYPE` | `7b`, `qwen`, `v3` | 选择模型 |
-| `WORLD_SIZE` | 整数 | V3多GPU数量 |
-| `CUDA_VISIBLE_DEVICES` | GPU索引 | 指定使用的GPU |
+| Variable | Values | Description |
+|----------|--------|-------------|
+| `MODEL_TYPE` | `7b`, `qwen`, `v3` | Select model |
+| `WORLD_SIZE` | integer | Number of GPUs for V3 |
+| `CUDA_VISIBLE_DEVICES` | GPU indices | Restrict visible GPUs |
 
-示例:
+Examples:
 ```bash
-# 使用GPU 0-3运行Qwen
+# Run Qwen on GPUs 0-3
 CUDA_VISIBLE_DEVICES=0,1,2,3 MODEL_TYPE=qwen python main.py
 
-# 使用8张GPU运行V3  
+# Run V3 on 8 GPUs
 export WORLD_SIZE=8
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --nproc_per_node 8 main.py
 ```
 
-## 工作流对比
+## Workflow Comparison
 
-### 7B (基准)
+### 7B (baseline)
 ```
-快速 ✓ | 低显存 ✓ | 低质量 ✗
-```
-
-### Qwen (推荐平衡)
-```
-较快 ✓ | 适中显存 ✓ | 高质量 ✓
+Fast | Low VRAM | Lower quality
 ```
 
-### V3 (最高质量)
+### Qwen (recommended balance)
 ```
-慢 ✗ | 高显存需求 ✗ | 最高质量 ✓
+Moderate speed | Moderate VRAM | High quality
+```
+
+### V3 (highest quality)
+```
+Slow | Very high VRAM | Best quality
 ```
 
 ---
-更新时间: 2026-04-20
-作者: AI Assistant
-
+Updated: 2026-04-20

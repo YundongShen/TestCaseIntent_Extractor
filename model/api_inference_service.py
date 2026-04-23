@@ -1,7 +1,7 @@
 """
 Google Gemini API Inference Service
-完全独立的 API 推理层，专用于 Gemini API
-与本地模型推理 (inference_service.py) 完全隔离
+Standalone API inference layer dedicated to Gemini API.
+Fully isolated from local model inference (inference_service.py).
 """
 
 import os
@@ -10,29 +10,29 @@ from typing import Optional
 
 
 class GeminiInferenceService:
-    """Gemini API 推理服务 - 完全独立实现"""
-    
+    """Gemini API inference service — standalone implementation."""
+
     def __init__(self, api_key: Optional[str] = None):
         """
-        初始化 Gemini 推理服务
-        
+        Initialize the Gemini inference service.
+
         Args:
-            api_key: Google API key (如果为 None，从环境变量读取)
+            api_key: Google API key. If None, read from GOOGLE_API_KEY env var.
         """
         self.api_key = api_key or os.getenv("GOOGLE_API_KEY")
-        
+
         if not self.api_key:
             raise ValueError(
                 "[GeminiInference] GOOGLE_API_KEY not provided and not in environment"
             )
-        
+
         self.model_name = "gemini-3-pro-preview"
         self.client = None
         self._initialize_client()
         print(f"[GeminiInference] Service initialized with Gemini API")
-    
+
     def _initialize_client(self):
-        """初始化 Gemini API 客户端"""
+        """Initialize the Gemini API client."""
         try:
             from google import genai
             self.client = genai.Client(api_key=self.api_key)
@@ -47,14 +47,14 @@ class GeminiInferenceService:
 
     def infer(self, prompt: str, max_tokens: int = 1000) -> str:
         """
-        使用 Gemini API 进行推理
+        Run inference using the Gemini API.
 
         Args:
-            prompt: 输入提示
-            max_tokens: 最大生成 token 数
+            prompt: Input prompt.
+            max_tokens: Maximum number of output tokens.
 
         Returns:
-            生成的文本
+            Generated text string.
         """
         if not self.client:
             raise RuntimeError("[GeminiInference] Client not initialized")
@@ -91,46 +91,45 @@ class GeminiInferenceService:
                 raise
         print(f"[GeminiInference] All retries exhausted: {last_exc}")
         raise last_exc
-    
+
     def infer_json(self, prompt: str, max_tokens: int = 1000) -> str:
         """
-        使用 Gemini API 进行 JSON 推理（带格式约束）
-        
+        Run JSON inference using the Gemini API.
+
         Args:
-            prompt: 输入提示
-            max_tokens: 最大生成 token 数
-            
+            prompt: Input prompt.
+            max_tokens: Maximum number of output tokens.
+
         Returns:
-            生成的 JSON 文本
+            Generated JSON text string.
         """
-        # Gemini API 会自动处理 JSON 格式请求
         return self.infer(prompt, max_tokens)
 
 
-# 全局单例实例
+# Global singleton instance
 _gemini_service: Optional[GeminiInferenceService] = None
 
 
 def get_gemini_service(api_key: Optional[str] = None) -> GeminiInferenceService:
     """
-    获取 Gemini 推理服务（单例模式）
-    
+    Get the Gemini inference service (singleton).
+
     Args:
-        api_key: 可选的 API key（用于初始化或重新配置）
-        
+        api_key: Optional API key for initialization or reconfiguration.
+
     Returns:
-        GeminiInferenceService 实例
+        GeminiInferenceService instance.
     """
     global _gemini_service
-    
+
     if _gemini_service is None:
         _gemini_service = GeminiInferenceService(api_key=api_key)
-    
+
     return _gemini_service
 
 
 def reset_gemini_service():
-    """重置 Gemini 服务（用于测试或切换 API key）"""
+    """Reset the Gemini service (useful for testing or switching API keys)."""
     global _gemini_service
     _gemini_service = None
 

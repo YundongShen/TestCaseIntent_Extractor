@@ -1,6 +1,6 @@
 #!/bin/bash
-# 使用 SLURM dependency chain 串行提交18个job
-# 每个job依赖上一个完成，断网后调度器自动处理，无需持续进程
+# Submit 18 jobs sequentially via SLURM dependency chain
+# Each job depends on the previous one; scheduler handles ordering after disconnect
 
 set -e
 cd /proj/test_extender/Intent_Implementation_0327
@@ -23,8 +23,8 @@ COUNT=0
 TOTAL=$((${#TEST_FILES[@]} * ${#MODES[@]}))
 
 echo "=================================================="
-echo "  串行提交 ${TOTAL} 个 job (Qwen 27B, 80GB GPU)"
-echo "  SLURM dependency chain — 断网后自动继续"
+echo "  Submitting ${TOTAL} jobs (Qwen 27B, 80GB GPU)"
+echo "  SLURM dependency chain — continues after disconnect"
 echo "=================================================="
 echo ""
 
@@ -69,9 +69,9 @@ EXIT_CODE=\$?
 echo ""
 echo "========================================"
 if [ \$EXIT_CODE -eq 0 ]; then
-  echo "✅ [${COUNT}/${TOTAL}] SUCCESS: ${filename} + ${mode}"
+  echo "SUCCESS [${COUNT}/${TOTAL}]: ${filename} + ${mode}"
 else
-  echo "❌ [${COUNT}/${TOTAL}] FAILED (exit \$EXIT_CODE): ${filename} + ${mode}"
+  echo "FAILED  [${COUNT}/${TOTAL}] (exit \$EXIT_CODE): ${filename} + ${mode}"
 fi
 echo "End: \$(date)"
 echo "========================================"
@@ -93,10 +93,10 @@ done
 
 echo ""
 echo "=================================================="
-echo "✅ 全部 ${TOTAL} 个 job 已提交完毕"
-echo "   最后一个 Job ID: ${PREV_JOB}"
+echo "  All ${TOTAL} jobs submitted"
+echo "  Last Job ID: ${PREV_JOB}"
 echo ""
-echo "监控命令:"
-echo "  squeue -u \$USER          # 查看队列状态"
-echo "  tail -f logs/job_1_*.out  # 跟踪第一个job日志"
+echo "Monitor commands:"
+echo "  squeue -u \$USER          # view queue"
+echo "  tail -f logs/job_1_*.out  # follow first job log"
 echo "=================================================="

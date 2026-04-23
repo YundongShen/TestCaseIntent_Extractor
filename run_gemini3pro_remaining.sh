@@ -1,17 +1,15 @@
 #!/bin/bash
-# Gemini 2.5 Flash API — run 18 combinations sequentially
-# 5s proactive delay per request; 30s delay between pipelines
-# Use nohup to keep running after disconnect
+# Gemini 3 Pro Preview — remaining 5 test cases x 3 modes = 15 combinations
+# admin-index-api already completed, skipped here
+# 60s delay between pipelines; 5s proactive delay built into each request
 
 cd /proj/test_extender/Intent_Implementation_0327
 source gpu_env/bin/activate
 
 export INFERENCE_BACKEND=api
-export MODEL_TYPE=qwen           # only affects local mode config; ignored in API mode
 # export GOOGLE_API_KEY="your_key_here"  # do not hardcode — export manually before running
 
 TEST_FILES=(
-  "testcases/admin-index-api.test.js"
   "testcases/bug-ant-solid.test.js"
   "testcases/contact-us-form.feature"
   "testcases/ContactUs_StepDefs.java"
@@ -27,8 +25,8 @@ SUCCESS=0
 FAIL=0
 
 echo "=================================================="
-echo "  Gemini 2.5 Flash API — 18 combinations"
-echo "  Request delay: 5s (built-in) + 30s between pipelines"
+echo "  Gemini 3 Pro Preview — 15 combinations"
+echo "  Delay between pipelines: 60s"
 echo "  Start time: $(date)"
 echo "=================================================="
 echo ""
@@ -55,17 +53,14 @@ for test_file in "${TEST_FILES[@]}"; do
     fi
 
     if [ $COUNT -lt $TOTAL ]; then
-      echo "Waiting 30s..."
-      sleep 30
+      echo "Waiting 60s..."
+      sleep 60
     fi
   done
 done
 
 echo ""
 echo "=================================================="
-echo "  All done: ${SUCCESS} succeeded / ${FAIL} failed (total ${TOTAL})"
+echo "  Done: ${SUCCESS} succeeded / ${FAIL} failed (total ${TOTAL})"
 echo "  End time: $(date)"
-echo "Results:"
-echo "  extract:    $(ls Result/extract_result/extract_result_*.json 2>/dev/null | wc -l) files"
-echo "  onboarding: $(ls Result/onboarding_result/onboarding_*.md 2>/dev/null | wc -l) files"
 echo "=================================================="
