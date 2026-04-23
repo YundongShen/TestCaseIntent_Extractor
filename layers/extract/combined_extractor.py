@@ -42,8 +42,6 @@ class CombinedExtractor:
             "goals": [...]
         }
         """
-        if len(code_text) > 2000:
-            code_text = code_text[:2000]
         return self._extract_with_model(code_text)
     
     def _extract_with_model(self, code_text):

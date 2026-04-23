@@ -37,8 +37,6 @@ class GoalExtractor:
     
     def extract(self, code_text):
         """Extract test goals from code. Returns: {"goals": [list]}"""
-        if len(code_text) > 2000:
-            code_text = code_text[:2000]
         
         prompt = f"""IMPORTANT: Return ONLY valid JSON in this exact format: {{"goals": ["goal1", "goal2", ...]}}
 Output ONLY JSON, no explanations or other text.

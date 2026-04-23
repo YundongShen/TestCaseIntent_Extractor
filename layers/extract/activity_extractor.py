@@ -37,8 +37,6 @@ class ActivityExtractor:
     
     def extract(self, code_text):
         """Extract test activities from code. Returns: {"activities": [list]}"""
-        if len(code_text) > 2000:
-            code_text = code_text[:2000]
         
         prompt = f"""IMPORTANT: Return ONLY valid JSON in this exact format: {{"activities": ["activity1", "activity2", ...]}}
 Output ONLY JSON, no explanations or other text.

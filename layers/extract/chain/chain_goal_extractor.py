@@ -43,8 +43,6 @@ class ChainGoalExtractor:
         
         Returns: {"goals": [list]}
         """
-        if len(code_text) > 2000:
-            code_text = code_text[:2000]
         return self._extract_with_model(code_text, objects=objects)
     
     def _extract_with_model(self, code_text, objects=None):

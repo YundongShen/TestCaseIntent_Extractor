@@ -36,8 +36,6 @@ class ChainObjectExtractor:
     def extract(self, code_text):
         """Extract test objects from code. Returns: {"objects": [list]}"""
         
-        if len(code_text) > 2000:
-            code_text = code_text[:2000]
         
         prompt = f"""IMPORTANT: Return ONLY valid JSON in this exact format: {{"objects": ["object1", "object2", ...]}}
 Output ONLY JSON, no explanations or other text.
