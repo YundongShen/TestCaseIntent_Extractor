@@ -29,12 +29,13 @@ class InferenceService:
            response = service.infer(prompt)   # Called by ObjectExtractor, etc.
     """
     
-    def __init__(self, mode: str = "local"):
+    def __init__(self, mode: str = "local", model_config: dict = None):
         """
         Initialize inference service.
         
         Args:
-            mode: "local" for local DeepSeek model, "api" for cloud API
+            mode: "local" for local model, "api" for cloud API
+            model_config: Model configuration dict from MODEL_CONFIG (should be set via set_model_config())
         
         IMPORTANT: To switch to API mode, change mode="local" -> mode="api" here
         """
@@ -42,8 +43,11 @@ class InferenceService:
         self.model = None
         self.tokenizer = None
         self.device = None
+        self.model_config = model_config or _model_config
         
         print(f"[InferenceService] Initialized in '{mode}' mode")
+        if self.model_config:
+            print(f"[InferenceService] Using model: {self.model_config.get('model_name', 'unknown')}")
     
     def infer(self, prompt: str, max_tokens: int = 200) -> str:
         """
@@ -66,34 +70,47 @@ class InferenceService:
     
     def _load_local_model(self) -> Tuple:
         """
-        EDIT THIS to change local model.
-        Currently loads: model/models/deepseek-v3.2-7b-base
-        
-        To use different model: Modify load_deepseek_model() call below
+        Load local model using the configured MODEL_CONFIG.
         
         Returns: (model, tokenizer, device)
         """
         if self.model is not None:
             return self.model, self.tokenizer, self.device
         
-        # Auto-check if model exists, if not download it
-        from pathlib import Path
-        from model.model_config import get_model_path, load_deepseek_model, get_device
+        if not self.model_config:
+            raise RuntimeError("[InferenceService] No model config set. Call set_model_config() first.")
         
-        model_path = get_model_path()
-        if not model_path.exists() or not any(model_path.iterdir()):
-            print(f"[InferenceService] Model not found at {model_path}")
+        # Use the configured model path and loader
+        model_name = self.model_config.get('model_name', 'unknown')
+        model_id = self.model_config.get('model_id', '')
+        local_path = self.model_config.get('local_path', None)
+        
+        print(f"[InferenceService] Loading model: {model_name}")
+        
+        # Auto-check if model exists
+        from pathlib import Path
+        if local_path and (not Path(local_path).exists() or not any(Path(local_path).iterdir())):
+            print(f"[InferenceService] Model not found at {local_path}")
             print("[InferenceService] Attempting auto-download...")
             self._auto_download_model()
         
-        print("[InferenceService] Loading local DeepSeek model...")
         try:
+            from model.model_config import get_device
+            
             self.device = get_device()
-            self.model, self.tokenizer = load_deepseek_model(
-                device=self.device, 
-                quantize_8bit=True
-            )
-            print("[InferenceService] Model loaded successfully")
+            
+            # Dynamically load the appropriate loader function based on model type
+            if 'Qwen' in model_id or 'qwen' in model_id.lower():
+                from model.model_config_qwen import load_qwen_model
+                self.model, self.tokenizer = load_qwen_model(device=self.device, quantize_8bit=True)
+                print("[InferenceService] Qwen model loaded successfully")
+            elif 'DeepSeek' in model_id or 'deepseek' in model_id.lower():
+                from model.model_config import load_deepseek_model
+                self.model, self.tokenizer = load_deepseek_model(device=self.device, quantize_8bit=True)
+                print("[InferenceService] DeepSeek model loaded successfully")
+            else:
+                raise ValueError(f"Unknown model type: {model_id}")
+            
             return self.model, self.tokenizer, self.device
         except Exception as e:
             print(f"[InferenceService] Failed to load local model: {e}")
@@ -103,10 +120,15 @@ class InferenceService:
         """Auto-download model if missing (using HuggingFace CLI or API)"""
         import subprocess
         from pathlib import Path
-        from model.model_config import get_model_path, MODEL_CONFIG
         
-        model_id = MODEL_CONFIG["model_id"]
-        local_dir = get_model_path()
+        if not self.model_config:
+            raise RuntimeError("[InferenceService] No model config set for download.")
+        
+        model_id = self.model_config.get("model_id", "")
+        local_dir = self.model_config.get("local_path")
+        
+        if not local_dir:
+            raise ValueError("[InferenceService] No local_path in model config")
         local_dir.parent.mkdir(parents=True, exist_ok=True)
         
         print(f"\n{'='*80}")
@@ -185,6 +207,7 @@ class InferenceService:
         
         try:
             # Use chat template for better instruction following
+            model_id = self.model_config.get('model_id', '')
             if hasattr(tokenizer, 'apply_chat_template'):
                 messages = [{"role": "user", "content": prompt}]
                 formatted_prompt = tokenizer.apply_chat_template(
@@ -193,6 +216,7 @@ class InferenceService:
                     add_generation_prompt=True
                 )
             else:
+                # For Qwen and others, use raw prompt directly
                 formatted_prompt = prompt
             
             # Tokenize input with attention mask
@@ -206,16 +230,31 @@ class InferenceService:
             input_length = inputs['input_ids'].shape[1]
             inputs = inputs.to(device)
             
-            # Generate with greedy decoding for stability
+            is_qwen = 'Qwen' in model_id or 'qwen' in model_id.lower()
+
+            # Generate response
             with torch.no_grad():
-                outputs = model.generate(
-                    input_ids=inputs['input_ids'],
-                    attention_mask=inputs.get('attention_mask', None),
-                    max_new_tokens=max_tokens,
-                    do_sample=False,  # Greedy decoding
-                    eos_token_id=tokenizer.eos_token_id,
-                    pad_token_id=tokenizer.pad_token_id
-                )
+                generate_kwargs = {
+                    'input_ids': inputs['input_ids'],
+                    'attention_mask': inputs.get('attention_mask', None),
+                    'max_new_tokens': max_tokens,
+                    'pad_token_id': tokenizer.pad_token_id
+                }
+
+                if is_qwen:
+                    # Qwen uses sampling mode to generate complete JSON with thinking process
+                    generate_kwargs['do_sample'] = True
+                    generate_kwargs['temperature'] = 0.5
+                    generate_kwargs['top_p'] = 0.95
+                    generate_kwargs['top_k'] = 50
+                else:
+                    generate_kwargs['do_sample'] = True
+                    generate_kwargs['temperature'] = 0.5
+                    generate_kwargs['top_p'] = 0.95
+                    generate_kwargs['top_k'] = 50
+                    generate_kwargs['eos_token_id'] = tokenizer.eos_token_id
+                
+                outputs = model.generate(**generate_kwargs)
             
             # Decode response - only the newly generated tokens
             generated_token_ids = outputs[0][input_length:]
@@ -290,14 +329,28 @@ class InferenceService:
         # return response.choices[0].message.content
 
 
-# Global singleton instance
+# Global singleton instance and model configuration
 _inference_service = None
+_model_config = None
+
+
+def set_model_config(model_config: dict):
+    """
+    Set the global MODEL_CONFIG before creating InferenceService.
+    Should be called from main.py after selecting the appropriate model config.
+    
+    Args:
+        model_config: Dictionary with keys: model_id, model_name, local_path, quantization, etc.
+    """
+    global _model_config
+    _model_config = model_config
+    print(f"[InferenceService] Model config set: {model_config.get('model_name', 'unknown')}")
 
 
 def get_inference_service(mode: str = "local") -> InferenceService:
     """
     Get global inference service (singleton pattern).
-    Used by all extractors: service = get_inference_service()
+    Uses the model config set via set_model_config().
     Model only loads once at first call.
     
     Args:
@@ -308,7 +361,7 @@ def get_inference_service(mode: str = "local") -> InferenceService:
     """
     global _inference_service
     if _inference_service is None:
-        _inference_service = InferenceService(mode=mode)
+        _inference_service = InferenceService(mode=mode, model_config=_model_config)
     return _inference_service
 
 
@@ -325,4 +378,4 @@ def set_inference_mode(mode: str):
     print(f"[InferenceService] Mode switched to '{mode}'")
 
 
-__all__ = ['InferenceService', 'get_inference_service', 'set_inference_mode']
+__all__ = ['InferenceService', 'get_inference_service', 'set_inference_mode', 'set_model_config']

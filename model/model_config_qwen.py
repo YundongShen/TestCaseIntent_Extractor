@@ -1,16 +1,16 @@
-"""DeepSeek Model Configuration
-Model: DeepSeek-LLM-7B-Chat, Size: 14 GB, Source: HuggingFace
+"""Qwen-3.5-27B Model Configuration
+Model: Qwen/Qwen3.5-27B, Size: 52 GB, Type: BF16, Source: HuggingFace
 """
 
 from pathlib import Path
 
 MODEL_CONFIG = {
-    "model_id": "deepseek-ai/deepseek-llm-7b-chat",
-    "local_path": Path(__file__).parent / "models" / "deepseek-llm-7b-chat",
-    "model_name": "DeepSeek-LLM-7B-Chat",
-    "quantization": "FP16",
-    "parameters": "7B",
-    "context_length": 2048,
+    "model_id": "Qwen/Qwen3.5-27B",
+    "local_path": Path(__file__).parent / "models" / "models--Qwen--Qwen3.5-27B" / "snapshots" / "b7ca741b86de18df552fd2cc952861e04621a4bd",
+    "model_name": "Qwen-3.5-27B",
+    "quantization": "BF16",
+    "parameters": "27B",
+    "context_length": 32768,
 }
 
 def get_model_path():
@@ -40,14 +40,14 @@ def get_device():
     import torch
     
     if torch.cuda.is_available():
-        print("🚀 [Device] Using NVIDIA CUDA (RTX 6000)")
+        print("🚀 [Device] Using NVIDIA CUDA (Qwen-27B Model)")
         return "cuda"
     else:
         print("⚙️  [Device] Using CPU")
         return "cpu"
 
-def load_deepseek_model(device=None, quantize_8bit=True):
-    """Load Llama model. Downloads from HF if needed. Returns: (model, tokenizer)"""
+def load_qwen_model(device=None, quantize_8bit=False):
+    """Load Qwen-3.5-27B model. Downloads from HF if needed. Returns: (model, tokenizer)"""
     from transformers import AutoModelForCausalLM, AutoTokenizer
     import torch
     from pathlib import Path
@@ -55,7 +55,7 @@ def load_deepseek_model(device=None, quantize_8bit=True):
     if device is None:
         device = get_device()
     
-    model_id = MODEL_CONFIG["model_id"]  # NousResearch/Llama-2-13b-hf
+    model_id = MODEL_CONFIG["model_id"]
     local_path = get_model_path()
     
     # Determine which path to load from
@@ -69,49 +69,33 @@ def load_deepseek_model(device=None, quantize_8bit=True):
     print(f"[Loading] Loading to device: {device}...")
     
     try:
-        # Load tokenizer with fallback for Llama models
-        # Llama models may have tokenizer.model issues, try with use_fast=False
+        # Load tokenizer - Qwen uses official tokenizer
         try:
             tokenizer = AutoTokenizer.from_pretrained(load_path, trust_remote_code=True)
         except (ValueError, ImportError) as e:
-            # Fallback for SentencePiece/tiktoken issues with Llama
             print(f"[Tokenizer] First attempt failed: {e}. Trying with use_fast=False...")
             tokenizer = AutoTokenizer.from_pretrained(load_path, trust_remote_code=True, use_fast=False)
         
-        # Set pad token for Llama
+        # Set pad token
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
         
         print(f"[Tokenizer] eos_token: '{tokenizer.eos_token}' (ID: {tokenizer.eos_token_id})")
         print(f"[Tokenizer] pad_token: '{tokenizer.pad_token}' (ID: {tokenizer.pad_token_id})")
         
-        # Load model - check if V3 for special handling
-        is_v3 = "v3" in model_id.lower()
+        # Load model - Qwen uses BF16 for better stability
+        model = AutoModelForCausalLM.from_pretrained(
+            load_path,
+            torch_dtype=torch.bfloat16,
+            device_map="cpu" if device == "cpu" else device,
+            trust_remote_code=True,
+            attn_implementation="sdpa"  # Use scaled_dot_product instead of flash_attention
+        )
         
-        if is_v3:
-            print("[Loading] Detected V3 model - using FP16 with device_map='auto'")
-            model = AutoModelForCausalLM.from_pretrained(
-                load_path,
-                torch_dtype=torch.float16,
-                device_map="auto",              # Automatically distribute across GPUs
-                trust_remote_code=True,
-                attn_implementation="eager"    # Use eager attention instead of flash-attn
-            )
-            print("[Success] V3 Model loaded successfully (FP16, device_map='auto', eager attention)")
-        else:
-            print("[Loading] Detected 7B model - using FP16")
-            model = AutoModelForCausalLM.from_pretrained(
-                load_path,
-                torch_dtype=torch.float16,
-                device_map="cpu" if device == "cpu" else device,
-                trust_remote_code=True
-            )
-            
-            if device == "cpu":
-                model = model.cpu()
-            
-            print("[Success] 7B Model loaded successfully (FP16)")
+        if device == "cpu":
+            model = model.cpu()
         
+        print("[Success] Qwen-3.5-27B Model loaded successfully (BF16)")
         return model, tokenizer
     
     except Exception as e:
@@ -119,5 +103,5 @@ def load_deepseek_model(device=None, quantize_8bit=True):
         raise
 
 if __name__ == "__main__":
-    print("DeepSeek Model Configuration")
+    print("Qwen-3.5-27B Model Configuration")
     print(f"Path: {get_model_path()}")

@@ -18,8 +18,8 @@ class Validator:
     
     def _validate_with_model(self, objects, goals, activities):
         """Validate using LLM inference service"""
-        from model.inference_service import get_inference_service
-        
+        from model.service_factory import get_inference_backend
+
         prompt = f"""You are a test intent analysis expert. Check if the following three extracted test intent elements are mutually related and matched.
 
 [Test Objects] (Main objects being tested)
@@ -46,7 +46,7 @@ Return JSON format result:
 Output ONLY JSON, no other text."""
         
         # Use inference service instead of direct model calls
-        service = get_inference_service()
+        service = get_inference_backend()
         response = service.infer(prompt, max_tokens=200)
         
         try:

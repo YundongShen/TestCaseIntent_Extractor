@@ -28,12 +28,50 @@ def save_intermediate_result(result_type, data):
     print(f"[SAVE] {result_type.upper()}: {filepath}")
     return filepath
 
+# ============================================================================
+# MODEL CONFIGURATION - Choose model via environment variable
+# ============================================================================
+INFERENCE_BACKEND = os.getenv("INFERENCE_BACKEND", "local")
+MODEL_TYPE = os.getenv("MODEL_TYPE", "qwen")
+os.environ["MODEL_TYPE"] = MODEL_TYPE
+
+if INFERENCE_BACKEND == "api":
+    from model.api_inference_service import get_gemini_service
+    _svc = get_gemini_service()
+    EFFECTIVE_MODEL = {
+        "model_name": _svc.model_name,
+        "model_id":   _svc.model_name,
+        "quantization": "API",
+    }
+    MODEL_CONFIG = EFFECTIVE_MODEL
+    print(f"✅ [Config] Using API backend: {_svc.model_name}")
+else:
+    if MODEL_TYPE == "qwen":
+        from model.model_config_qwen import set_seed, MODEL_CONFIG
+        print(f"✅ [Config] Using Qwen-3.5-27B model configuration (27B, BF16)")
+    elif MODEL_TYPE == "v3":
+        from model.model_config_v3 import set_seed, MODEL_CONFIG
+        print(f"✅ [Config] Using V3 model configuration (671B MoE, FP8)")
+    else:
+        from model.model_config_7b import set_seed, MODEL_CONFIG
+        print(f"✅ [Config] Using 7B model configuration (FP16)")
+
+    # Only configure local inference service when using local backend
+    from model.inference_service import set_model_config
+    set_model_config(MODEL_CONFIG)
+
+# ============================================================================
+
 
 def run_pipeline(raw_data):
     """Execute the complete processing pipeline. Returns: {"success": bool, ...}"""
+    # Get extraction mode from environment variable
+    extract_mode = os.getenv("EXTRACT_MODE", "independent")
+    
     print("\n" + "="*80)
     print("[Intent Extraction & Document Generation System]")
     print("="*80)
+    print(f"Extract Mode: {extract_mode}")
     print(f"Start time: {datetime.now().isoformat()}\n")
     
     try:
@@ -44,16 +82,29 @@ def run_pipeline(raw_data):
         data1 = InputLayer().process(raw_data)
         print(f"✓ Input layer done: {len(data1.get('content', ''))} chars\n")
         
+        # Save Preprocess result
+        save_intermediate_result('preprocess', {
+            "timestamp": datetime.now().isoformat(),
+            "original_length": len(raw_data.get('content', '')),
+            "processed_length": len(data1.get('content', '')),
+            "test_case_id": data1.get('test_case_id', 'unknown'),
+            "user_id": data1.get('user_id', 'unknown')
+        })
+        
         # Layer 2: Extract - Key information extraction
         print("="*80)
         print("Layer 2: EXTRACT LAYER (Objects/Goals/Activities)")
         print("="*80)
-        data2 = ExtractLayer().process(data1)
+        data2 = ExtractLayer(extract_mode=extract_mode).process(data1)
         print(f"✓ Extraction done: objects={len(data2.get('objects', []))} goals={len(data2.get('goals', []))} activities={len(data2.get('activities', []))}\n")
         
         # Save Extract result
         save_intermediate_result('extract', {
             "timestamp": datetime.now().isoformat(),
+            "extract_mode": extract_mode,
+            "model_type": MODEL_CONFIG.get('model_name', 'unknown'),
+            "model_id": MODEL_CONFIG.get('model_id', 'unknown'),
+            "quantization": MODEL_CONFIG.get('quantization', 'unknown'),
             "objects": data2.get('objects', []),
             "goals": data2.get('goals', []),
             "activities": data2.get('activities', []),
@@ -144,7 +195,8 @@ def run_pipeline(raw_data):
 
 def create_sample_data():
     """Load test data from file."""
-    test_file_path = "testcases/ContactUs_StepDefs.java"
+    # Try to get test file from environment variable, default to admin-index-api.test.js  
+    test_file_path = os.getenv("TEST_FILE", "testcases/admin-index-api.test.js")
     
     with open(test_file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -153,8 +205,8 @@ def create_sample_data():
     
     return {
         "content": content,
-        "user_id": "test_user_bug",
-        "test_case_id": "tc_bug_ant_solid"
+        "user_id": "test_user_admin",
+        "test_case_id": "tc_admin_index_api"
     }
 
 

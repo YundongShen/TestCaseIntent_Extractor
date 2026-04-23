@@ -36,10 +36,9 @@ class OnboardingGenerator:
     
     def _generate_with_model(self, prompt):
         """Generate document using LLM inference service"""
-        from model.inference_service import get_inference_service
-        
-        # Use inference service instead of direct model calls
-        service = get_inference_service()
+        from model.service_factory import get_inference_backend
+
+        service = get_inference_backend()
         document = service.infer(prompt, max_tokens=800)
         
         print("[ONBOARDING GENERATOR] Generation completed")

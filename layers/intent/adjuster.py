@@ -34,21 +34,21 @@ class Adjuster:
     def _adjust_with_model(self, objects, goals, activities, business_purpose):
         """Adjust elements based on LLM-determined specificity level.
         LLM only determines specificity (easy), Python does the adjustment (reliable)."""
-        from model.inference_service import get_inference_service
-        
+        from model.service_factory import get_inference_backend
+
         business_purpose = business_purpose[:500] if business_purpose else "Document generation"
-        
+
         # Step 1: Ask LLM ONLY to choose specificity level (single number)
         prompt = f"""Choose specificity level for: {business_purpose}
 
 Levels:
 0.3 = Technical details  (for developers)
-0.5 = Balanced           (for general documentation)  
+0.5 = Balanced           (for general documentation)
 0.8 = Onboarding simple  (for new team members)
 
 Return ONLY a number: 0.3 or 0.5 or 0.8"""
-        
-        service = get_inference_service()
+
+        service = get_inference_backend()
         response = service.infer(prompt, max_tokens=20)
         
         # Extract specificity number

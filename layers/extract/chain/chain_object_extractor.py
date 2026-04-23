@@ -1,15 +1,15 @@
 """
-Object Extractor - Extract test objects using DeepSeek LLM with COT reasoning.
+Chain Object Extractor - Extract test objects (first step in chain mode).
 """
 
 import re
 import json
 
-class ObjectExtractor:
+class ChainObjectExtractor:
     """Extract test objects from code using inference service."""
     
     def __init__(self):
-        print("[ObjectExtractor] Initializing (uses InferenceService)")
+        print("[ChainObjectExtractor] Initializing (uses InferenceService)")
     
     @staticmethod
     def _extract_json_object(text):
@@ -32,30 +32,6 @@ class ObjectExtractor:
                             except json.JSONDecodeError:
                                 pass
         return None
-
-    @staticmethod
-    def _extract_json_candidates(text):
-        """
-        Extract all possible JSON object candidates by balanced brace matching.
-        """
-        candidates = []
-        for i, char in enumerate(text):
-            if char != "{":
-                continue
-            brace_count = 0
-            for j in range(i, len(text)):
-                if text[j] == "{":
-                    brace_count += 1
-                elif text[j] == "}":
-                    brace_count -= 1
-                    if brace_count == 0:
-                        candidate = text[i:j+1]
-                        try:
-                            candidates.append(json.loads(candidate))
-                        except json.JSONDecodeError:
-                            pass
-                        break
-        return candidates
     
     def extract(self, code_text):
         """Extract test objects from code. Returns: {"objects": [list]}"""
@@ -99,24 +75,17 @@ Final answer (ONLY JSON):"""
         # Use inference service (consistent with GoalExtractor and ActivityExtractor)
         from model.service_factory import get_inference_backend
         service = get_inference_backend()
-        response = service.infer(prompt, max_tokens=9000)
+        response = service.infer(prompt, max_tokens=3000)
         
-        print("\n[ObjectExtractor] LLM Response:")
+        print("\n[ChainObjectExtractor] LLM Response:")
         print(response)
         print()
         
-        # Prefer the last valid JSON candidate containing the target key.
-        for data in reversed(self._extract_json_candidates(response)):
-            if isinstance(data, dict) and "objects" in data:
-                objects = data.get("objects", [])
-                if isinstance(objects, list):
-                    return {"objects": objects}
-
-        # Try Method 1 (legacy): first valid JSON candidate
+        # Try Method 1: Balanced bracket matching (handles nested structures)
         data = self._extract_json_object(response)
         if data and isinstance(data, dict):
             objects = data.get("objects", [])
-            if isinstance(objects, list):
+            if isinstance(objects, list) and len(objects) > 0:
                 return {"objects": objects}
         
         # Try Method 2: Original regex patterns (fallback for compatibility)
@@ -134,7 +103,7 @@ Final answer (ONLY JSON):"""
                     try:
                         data = json.loads(json_str)
                         objects = data.get("objects", [])
-                        if isinstance(objects, list):
+                        if isinstance(objects, list) and len(objects) > 0:
                             return {"objects": objects}
                     except json.JSONDecodeError:
                         pass
@@ -142,4 +111,3 @@ Final answer (ONLY JSON):"""
             pass
         
         return {"objects": []}
-

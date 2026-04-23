@@ -1,5 +1,5 @@
 """
-Activity Extractor - Extract test activities using LLM inference service.
+Activity Extractor - Extract test activities using DeepSeek LLM with COT reasoning.
 """
 
 import re
@@ -9,39 +9,36 @@ class ActivityExtractor:
     """Extract test activities from code using inference service."""
     
     def __init__(self):
-        print("[ActivityExtractor] Initializing")
-    
+        print("[ActivityExtractor] Initializing (uses InferenceService)")
+
     @staticmethod
-    def _extract_json_object(text):
+    def _extract_json_candidates(text):
         """
-        Extract a valid JSON object from text using bracket/brace matching.
-        Handles nested structures like: {"activities": ["item with {nested} object"]}
+        Extract all possible JSON object candidates by balanced brace matching.
         """
+        candidates = []
         for i, char in enumerate(text):
-            if char == '{':
-                brace_count = 0
-                for j in range(i, len(text)):
-                    if text[j] == '{':
-                        brace_count += 1
-                    elif text[j] == '}':
-                        brace_count -= 1
-                        if brace_count == 0:
-                            candidate = text[i:j+1]
-                            try:
-                                return json.loads(candidate)
-                            except json.JSONDecodeError:
-                                pass
-        return None
+            if char != "{":
+                continue
+            brace_count = 0
+            for j in range(i, len(text)):
+                if text[j] == "{":
+                    brace_count += 1
+                elif text[j] == "}":
+                    brace_count -= 1
+                    if brace_count == 0:
+                        candidate = text[i:j+1]
+                        try:
+                            candidates.append(json.loads(candidate))
+                        except json.JSONDecodeError:
+                            pass
+                        break
+        return candidates
     
     def extract(self, code_text):
-        """Extract test activities from code using LLM only. Returns: {"activities": [list]}"""
+        """Extract test activities from code. Returns: {"activities": [list]}"""
         if len(code_text) > 2000:
             code_text = code_text[:2000]
-        return self._extract_with_model(code_text)
-    
-    def _extract_with_model(self, code_text):
-        """Extract using LLM inference service"""
-        from model.inference_service import get_inference_service
         
         prompt = f"""IMPORTANT: Return ONLY valid JSON in this exact format: {{"activities": ["activity1", "activity2", ...]}}
 Output ONLY JSON, no explanations or other text.
@@ -67,51 +64,28 @@ clear, concise language for each activity step.
 
 Final answer (ONLY JSON):"""
         
-        # Use inference service
-        service = get_inference_service()
-        response = service.infer(prompt, max_tokens=2000)
-        
+        from model.service_factory import get_inference_backend
+        service = get_inference_backend()
+        response = service.infer(prompt, max_tokens=9000)
+
         print("\n[ActivityExtractor] LLM Response:")
         print(response)
         print()
-        
-        # Try Method 1: Balanced bracket matching (handles nested structures)
-        data = self._extract_json_object(response)
-        if data and isinstance(data, dict):
-            activities = data.get("activities", [])
-            if isinstance(activities, list) and len(activities) > 0:
-                return {"activities": activities}
-        
-        # Try Method 2: Original regex patterns (fallback for compatibility)
-        try:
-            patterns = [
-                r'\{[^}]*"activities"[^}]*\}',      # Simple non-nested
-                r'\{.*?"activities".*?\}',           # Non-greedy  
-                r'\{[\s\S]*?"activities"[\s\S]*?\}', # With special chars and newlines
-            ]
-            
-            for pattern in patterns:
-                match = re.search(pattern, response, re.DOTALL)
-                if match:
-                    json_str = match.group()
-                    try:
-                        data = json.loads(json_str)
-                        activities = data.get("activities", [])
-                        if isinstance(activities, list) and len(activities) > 0:
-                            return {"activities": activities}
-                    except json.JSONDecodeError:
-                        pass
-                        
-        except Exception:
-            pass
-        
-        # Try Method 3: Clean and retry
-        try:
-            cleaned = ''.join(c if ord(c) < 128 else ' ' for c in response)
-            data = self._extract_json_object(cleaned)
-            if data and isinstance(data, dict):
+
+        # Prefer the last valid JSON candidate containing the target key.
+        for data in reversed(self._extract_json_candidates(response)):
+            if isinstance(data, dict) and "activities" in data:
                 activities = data.get("activities", [])
-                if isinstance(activities, list) and len(activities) > 0:
+                if isinstance(activities, list):
+                    return {"activities": activities}
+
+        # Regex fallback for malformed wrappers.
+        try:
+            matches = re.findall(r"\{[\s\S]*?\"activities\"[\s\S]*?\}", response, re.DOTALL)
+            for match in reversed(matches):
+                data = json.loads(match)
+                activities = data.get("activities", [])
+                if isinstance(activities, list):
                     return {"activities": activities}
         except Exception:
             pass

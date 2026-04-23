@@ -48,7 +48,16 @@ Thumbs.db
 model/models/*/
 
 # Runtime results - generated during execution
-# (removed to allow viewing in VS Code)
+Result/
+history/
+logs/
+
+# Virtual environments
+gpu_env/
+
+# SLURM job outputs
+*.out
+*.err
 
 # Temporary files
 *.tmp
