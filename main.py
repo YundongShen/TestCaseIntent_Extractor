@@ -201,12 +201,15 @@ def create_sample_data():
     with open(test_file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
+    basename = os.path.splitext(os.path.basename(test_file_path))[0]
+    test_case_id = "tc_" + basename.replace("-", "_").replace(".", "_")
+
     print(f"✓ Loaded from: {test_file_path}")
-    
+
     return {
         "content": content,
         "user_id": "test_user_admin",
-        "test_case_id": "tc_admin_index_api"
+        "test_case_id": test_case_id
     }
 
 

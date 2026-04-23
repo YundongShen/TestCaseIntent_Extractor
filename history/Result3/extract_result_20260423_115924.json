@@ -26,6 +26,6 @@
     "Open the sidebar and click on the \"Bookmarks\" panel.",
     "Select \"Manage Bookmarks\" from the toplevel \"Bookmarks\" menu."
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_view_bookmarks_test",
   "user_id": "test_user_admin"
 }

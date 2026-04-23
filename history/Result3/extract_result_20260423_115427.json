@@ -16,6 +16,6 @@
     "Verify the response: check if the status is 200 and if the response time is less than 500ms.",
     "Pause execution for 1 second."
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_k6_api_load_test",
   "user_id": "test_user_admin"
 }

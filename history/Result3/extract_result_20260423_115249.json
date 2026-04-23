@@ -31,6 +31,6 @@
     "Click the Home button and dismiss any overlaying ads.",
     "Verify the browser has navigated to the home page URL."
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_ContactUs_StepDefs",
   "user_id": "test_user_admin"
 }

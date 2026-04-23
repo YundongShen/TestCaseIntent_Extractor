@@ -22,6 +22,6 @@
     "Click Home button",
     "Verify landing on home page successfully"
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_contact_us_form_feature",
   "user_id": "test_user_admin"
 }

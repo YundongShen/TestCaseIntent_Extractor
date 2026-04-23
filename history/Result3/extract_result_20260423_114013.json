@@ -17,6 +17,6 @@
     "Assert that the element is present in the document.",
     "Clean up the rendered DOM."
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_bug_ant_solid_test",
   "user_id": "test_user_admin"
 }

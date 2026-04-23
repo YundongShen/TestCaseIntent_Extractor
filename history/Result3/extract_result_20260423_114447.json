@@ -32,6 +32,6 @@
     "Click the \"Home\" button",
     "Verify that the user has landed on the home page"
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_contact_us_form_feature",
   "user_id": "test_user_admin"
 }

@@ -12,6 +12,6 @@
     "Verify the API endpoint https://test-api.k6.io meets performance criteria (response time) and maintains a low error rate when subjected to load."
   ],
   "activities": [],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_k6_api_load_test",
   "user_id": "test_user_admin"
 }

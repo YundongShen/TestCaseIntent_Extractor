@@ -7,6 +7,6 @@
   "objects": [],
   "goals": [],
   "activities": [],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_ContactUs_StepDefs",
   "user_id": "test_user_admin"
 }

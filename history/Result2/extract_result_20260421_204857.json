@@ -15,6 +15,6 @@
     "Query the DOM for the element using the test ID",
     "Assert the element is present in the document"
   ],
-  "test_case_id": "tc_admin_index_api",
+  "test_case_id": "tc_bug_ant_solid_test",
   "user_id": "test_user_admin"
 }
