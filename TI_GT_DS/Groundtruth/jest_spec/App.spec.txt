@@ -1,0 +1,10 @@
+**Test Object**
+App Component (Vue Root Component)
+
+**Test Goal**
+Confirm the component renders correctly, the onboarding text displays, and the count button increments when clicked.
+
+**Test Activities**
+1. Render the App and locate the text "Click on the Vite and Vue logos to learn more." Confirm it's on the page.
+2. Render again and locate the first button. Check that the initial text is "count is 0."
+3. Click the button; it should now display "count is 1."

@@ -1,0 +1,11 @@
+**Test Object**
+
+The login, search, add-to-cart, and checkout process on the Amazon India website's front-end page.
+
+**Test Goal**
+Ensure users can successfully log in to their accounts, search for desired products, and proceed to checkout.
+
+**Test Activities**
+1. Open Amazon.in, go to the login page via the account menu, and enter your email address and password to log in.
+2. Return to the homepage, search for "T-shirt," open a product in the results, and add it to your cart.
+3. Click "Proceed to checkout" to proceed to checkout.

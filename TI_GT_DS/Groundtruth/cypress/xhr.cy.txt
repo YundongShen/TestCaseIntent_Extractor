@@ -1,0 +1,9 @@
+**Test Object**
+`https://jsonplaceholder.cypress.io/comments` API
+
+**Test Goal**
+Ensure that this interface returns a normal response, and that the response content and type are correct.
+
+**Test Activities**
+1. Send GET requests to this API using different methods.
+2. After each request, check that the status code is 200, the body length is 500 characters, and the Content-Type header contains `application/json; charset=utf-8`.

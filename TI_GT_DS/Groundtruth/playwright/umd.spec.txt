@@ -1,0 +1,22 @@
+*Test Object**
+Submodule of the UMD package `@globus/sdk`
+
+**Test Goal**
+Confirm that the UMD build exposes all expected modules and that `window.globus` itself is defined.
+
+**Test Activities**
+1. Open the UMD test page `umd` and verify the page title.
+2. Check `window.globus` and a series of fields using `page.evaluate` to ensure they are defined.
+
+**Test Object**
+Globus Authorization Flow
+
+**Test Goal**
+Verify that `AuthorizationManager` can be created successfully and an OAuth login can be initiated, with the redirected URL containing the correct parameters.
+
+**Test Activities**
+1. Open the authorization test page `umd-authorization` and confirm that the page title is `'@globus/sdk'`.
+2. Verify that there is a button on the page with the text `'Sign In'`.
+3. Click the `'Sign In'` button. 
+4. Wait for the page to redirect.
+5. Get the current URL and check that it contains the correct fragment.

@@ -1,0 +1,9 @@
+**Test Object** 
+Automatic Alarm and Notification Functionality
+
+**Test Goal** 
+Confirm that the system can automatically push alerts to users' mobile phones when it detects potential diseases or pests and the risk exceeds a threshold; it can also issue timely preventative notifications when extreme weather such as frost is predicted to be approaching.
+
+**Test Activities**
+1. Simulate anomaly detection using sensor data and crop images, completing the process of "anomaly detection → locating specific disease/pest → risk exceeding threshold," and check if the mobile phone receives an alert.
+2. Import an extreme weather forecast, and check if users receive notifications as the event approaches.

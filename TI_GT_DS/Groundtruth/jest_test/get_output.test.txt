@@ -1,0 +1,12 @@
+**Test Object**
+`getOutput` Function
+
+**Test Goal**
+This function ensures that, without grouping information, it can directly add tasks to the output array and retain the task names; with grouping information, it can assign tasks to the correct group names.
+
+**Test Activities**
+1. Before each test, prepare an empty output array and a task named `mocha`.
+2. Call `getOutput(output, {}, task)` to test the case without grouping.
+3. Check that there is only one record in the output array, and the name is still `mocha`.
+4. Construct a group `{ 'Lint tools': ['jshint', 'mocha'] }`, and then submit the `mocha` and `jshint` tasks to `getOutput` for processing. 
+5. Finally, verify that there are two records in the output array, and the `group` field of the second record is `'Lint tools'`.
