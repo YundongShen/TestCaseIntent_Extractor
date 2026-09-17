@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_if_spec",
+  "source_file": "dataset/raw/jest_spec/if.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:20:36.457434",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "executeIf"
+  ],
+  "goals": [
+    "Verify executeIf correctly evaluates NODE_MAJOR_VERSION conditions and types",
+    "Verify executeIf accesses environment variables while preventing NODE_MAJOR_VERSION override"
+  ],
+  "activities": [
+    "Import executeIf function from module",
+    "Assert executeIf returns number type for NODE_MAJOR_VERSION",
+    "Assert executeIf evaluates condition NODE_MAJOR_VERSION > 0 as true",
+    "Assert executeIf evaluates condition NODE_MAJOR_VERSION > 1000 as false",
+    "Set environment variable ENV_VAR to value",
+    "Set environment variable NODE_MAJOR_VERSION to any",
+    "Assert executeIf returns value for ENV_VAR",
+    "Assert executeIf does not return any for NODE_MAJOR_VERSION"
+  ]
+}

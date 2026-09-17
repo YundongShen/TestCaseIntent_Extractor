@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_unit/test__5.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:42:25.674311",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "CustomerManager"
+  ],
+  "goals": [
+    "Verify that the `add_customer` method successfully adds a customer and returns a dictionary containing all expected customer attributes, including a generated ID."
+  ],
+  "activities": [
+    "Construct the database file path for the test.",
+    "Print the constructed database file path.",
+    "Initialize a TinyDB database at the specified path.",
+    "Create an instance of the CustomerManager.",
+    "Add a new customer with name 'John Doe', email 'john@example.com', age 30, and country 'USA'.",
+    "Assert that the returned customer information contains a 'name' field.",
+    "Assert that the returned customer information contains an 'email' field.",
+    "Assert that the returned customer information contains an 'age' field.",
+    "Assert that the returned customer information contains a 'country' field.",
+    "Assert that the returned customer information contains an 'id' field."
+  ]
+}

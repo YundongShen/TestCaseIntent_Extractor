@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_EstadistiquesTest_1",
+  "source_file": "dataset/raw/junit_unit/EstadistiquesTest_1.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:27:28.055165",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Estadistiques"
+  ],
+  "goals": [
+    "Verify that Estadistiques correctly ranks Partida objects based on their properties (e.g., number of colors and turns) after they are added."
+  ],
+  "activities": [
+    "Assert that mock 'p1' is not null.",
+    "Configure mock 'p1' to return 2 when 'getTornActual()' is called.",
+    "Configure mock 'p1' to return a list of four 'VERD' colors when 'getCodi()' is called.",
+    "Configure mock 'p1' to return 'true' when 'partidaAcabada()' is called.",
+    "Assert that mock 'p2' is not null.",
+    "Configure mock 'p2' to return 3 when 'getTornActual()' is called.",
+    "Configure mock 'p2' to return a list of four 'VERD' colors when 'getCodi()' is called.",
+    "Configure mock 'p2' to return 'true' when 'partidaAcabada()' is called.",
+    "Assert that mock 'p3' is not null.",
+    "Configure mock 'p3' to return a list of five 'VERD' colors when 'getCodi()' is called.",
+    "Configure mock 'p3' to return 'true' when 'partidaAcabada()' is called.",
+    "Create an empty ArrayList named 'solucio'.",
+    "Add mock 'p3' to the 'solucio' list.",
+    "Add mock 'p1' to the 'solucio' list.",
+    "Add mock 'p2' to the 'solucio' list.",
+    "Instantiate a new 'Estadistiques' object.",
+    "Add mock 'p1' to the 'Estadistiques' object.",
+    "Add mock 'p2' to the 'Estadistiques' object.",
+    "Add mock 'p3' to the 'Estadistiques' object.",
+    "Assert that the ranking obtained from 'Estadistiques' matches the 'solucio' list."
+  ]
+}

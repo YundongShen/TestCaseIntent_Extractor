@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_encryption_test",
+  "source_file": "dataset/raw/jest_test/encryption.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:12:46.495989",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "encryption"
+  ],
+  "goals": [
+    "Verify the encryption module correctly implements encrypt, decrypt, and reEncrypt operations",
+    "Verify the correct integration with wif and bip38 libraries during cryptographic workflows"
+  ],
+  "activities": [
+    "Mock wif.decode and bip38.encrypt dependencies for encryption test",
+    "Execute encryption.encrypt with value and passphrase",
+    "Verify wif.decode and bip38.encrypt integration calls",
+    "Verify encryption.encrypt returns expected encrypted key",
+    "Mock bip38.decrypt and wif.encode dependencies for decryption test",
+    "Execute encryption.decrypt with value and passphrase",
+    "Verify bip38.decrypt and wif.encode integration calls",
+    "Verify encryption.decrypt returns expected decrypted value",
+    "Spy on internal encryption.encrypt and encryption.decrypt methods",
+    "Mock return values for internal encrypt and decrypt methods",
+    "Execute encryption.reEncrypt with encrypted value and passphrases",
+    "Verify internal decrypt and encrypt calls with correct passphrases",
+    "Verify encryption.reEncrypt returns new encrypted value"
+  ]
+}

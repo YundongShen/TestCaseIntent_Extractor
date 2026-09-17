@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_sample_test_4",
+  "source_file": "dataset/raw/jest_test/sample.test_4.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:44:58.919512",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "document",
+    "msalConfig",
+    "app"
+  ],
+  "goals": [
+    "Verify that the index page is successfully served and includes the required MSAL CDN link.",
+    "Verify that the MSAL authentication configuration object is defined and contains a valid client ID and authority URI."
+  ],
+  "activities": [
+    "Read the local index.html file content synchronously",
+    "Load the HTML content into the global document element",
+    "Verify the 'src' attribute of the 'load-msal' element contains the expected CDN link",
+    "Load the MSAL configuration object into the global scope",
+    "Verify the MSAL configuration object is defined",
+    "Verify the client ID in the configuration object matches a GUID regex pattern",
+    "Verify the authority in the configuration object matches a URI regex pattern",
+    "Set the Node environment variable to 'test'",
+    "Send a GET request to the root ('/') endpoint",
+    "Read the local index.html file content asynchronously",
+    "Verify the response status code is 200",
+    "Verify the response text matches the read HTML file content"
+  ]
+}

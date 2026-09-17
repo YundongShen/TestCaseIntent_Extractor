@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_DtdUtilsTest",
+  "source_file": "dataset/raw/junit_unit/DtdUtilsTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:10:40.354953",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "DtdUtils"
+  ],
+  "goals": [
+    "verify WAITERS map clears when service becomes ready"
+  ],
+  "activities": [
+    "initialize mock DartToolingDaemonService",
+    "register mock service instance in project",
+    "mock service web socket ready state to true",
+    "instantiate DtdUtils object",
+    "call readyDtdService method with project",
+    "assert future is done",
+    "assert WAITERS map is empty",
+    "mock service web socket ready state to false",
+    "instantiate DtdUtils object",
+    "call readyDtdService method with project",
+    "assert WAITERS map contains project",
+    "mock service web socket ready state to true",
+    "wait for future completion",
+    "assert future is done",
+    "wait for WAITERS map to be empty",
+    "assert WAITERS map is empty"
+  ]
+}

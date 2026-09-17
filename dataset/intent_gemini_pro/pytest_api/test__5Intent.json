@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_api/test__5.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T07:59:35.109208",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "make_api_request"
+  ],
+  "goals": [
+    "Verify that the API response data conforms to the expected JSON schema.",
+    "Verify that the API request successfully returns the expected JSON data payload."
+  ],
+  "activities": [
+    "Mock the requests.get method to return a 200 status code and a predefined JSON payload",
+    "Call make_api_request to execute the API request and retrieve the data",
+    "Assert that the response status code is 200",
+    "Validate the retrieved API data against a defined JSON schema",
+    "Assert that the retrieved API data exactly matches the expected data dictionary"
+  ]
+}

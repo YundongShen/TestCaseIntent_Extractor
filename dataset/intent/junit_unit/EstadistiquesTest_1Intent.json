@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_EstadistiquesTest_1",
+  "source_file": "dataset/raw/junit_unit/EstadistiquesTest_1.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:24:37.621944",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "est"
+  ],
+  "goals": [
+    "Verify that the Estadistiques class correctly ranks Partida objects after adding them via afegirPartida"
+  ],
+  "activities": [
+    "Verify p1 mock is not null",
+    "Configure p1 mock behavior for turn, code, and finished status",
+    "Verify p2 mock is not null",
+    "Configure p2 mock behavior for turn, code, and finished status",
+    "Verify p3 mock is not null",
+    "Configure p3 mock behavior for code and finished status",
+    "Initialize expected ranking list",
+    "Add p3, p1, and p2 to expected ranking list",
+    "Instantiate Estadistiques object",
+    "Add p1 to Estadistiques",
+    "Add p2 to Estadistiques",
+    "Add p3 to Estadistiques",
+    "Assert ranking equals expected list"
+  ]
+}

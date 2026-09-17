@@ -1,0 +1,35 @@
+**Test Object**
+Homepage RSS Link
+
+**Test Goal**
+Verify that a link named "RSS" exists on the homepage.
+
+**Test Activities**
+1. Open the homepage `/`.
+2. Locate the link using the role "link" and name "RSS".
+3. Assert that the link exists.
+
+**Test Object**
+RSS Link Redirect Behavior and New Page
+
+**Test Goal**
+Verify that clicking the RSS link opens the RSS feed in a new tab.
+
+**Test Activities**
+1. Open the homepage `/`.
+2. Wait for the new page event.
+3. Click the link named "RSS".
+4. Wait for the new page to open.
+5. Retrieve all pages in the context and assert that the URL of the second page is `/rss.xml`.
+
+**Test Object**
+The XML content returned by `/rss.xml`
+
+**Test Goal**
+Validate that the RSS feed XML content is well-formed.
+
+**Test Activities**
+1. Directly access `/rss.xml`.
+2. Retrieve the complete page content.
+3. Validate the content using `XMLValidator.validate`.
+4. Assert the validation result as `true`.

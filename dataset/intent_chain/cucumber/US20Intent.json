@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_US20",
+  "source_file": "dataset/raw/cucumber/US20.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T17:02:38.108443",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Formulario de Ticket Soporte",
+    "Nombre de usuario",
+    "Tipo de solicitud de soporte",
+    "Problema que tiene el usuario",
+    "seccin de soporte",
+    "Gias o tutoriales",
+    "Guia 1",
+    "Guia 2",
+    "Guia 3",
+    "Imagen de la herramienta",
+    "Descripcin de la herramienta",
+    "Como llegar a la herramienta",
+    "Imagenes de como llegar a la herramiena",
+    "Ruta de herramienta de manera escrita",
+    "Como usar la herramienta",
+    "Video tutorial de la herramienta"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Llenar el formulario de ticket de soporte con nombre, tipo y problema",
+    "Enviar la solicitud de soporte tcnico",
+    "Confirmar contacto del tcnico en el plazo mximo de 24 horas",
+    "Acceder a la seccin de soporte de la aplicacin",
+    "Seleccionar y visualizar las guas o tutoriales disponibles",
+    "Examinar imgenes, descripciones y rutas de acceso a la herramienta",
+    "Verificar instrucciones de uso y video tutorial de la herramienta"
+  ]
+}

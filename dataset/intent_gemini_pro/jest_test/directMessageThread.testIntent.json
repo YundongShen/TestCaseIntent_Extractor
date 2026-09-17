@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_directMessageThread_test",
+  "source_file": "dataset/raw/jest_test/directMessageThread.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:42:14.705614",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "directMessageThread",
+    "messageConnection"
+  ],
+  "goals": [
+    "Verify fetching a direct message thread and its associated messages via GraphQL",
+    "Verify the pagination and ordering functionality of the message connection in a direct message thread"
+  ],
+  "activities": [
+    "Set expected assertions count to 1",
+    "Send a GraphQL request to fetch a direct message thread by ID",
+    "Assert that the result matches the snapshot",
+    "Set expected assertions count to 1",
+    "Send a GraphQL request to fetch a direct message thread's message connection",
+    "Assert that the result matches the snapshot",
+    "Set expected assertions count to 2",
+    "Send a GraphQL request to fetch the first message in the thread's message connection",
+    "Assert that the pageInfo indicates a next page exists but no previous page",
+    "Assert that the fetched message content matches the last message in the mock data",
+    "Set expected assertions count to 3",
+    "Send a GraphQL request to fetch the first message and its cursor in the thread's message connection",
+    "Assert that the pageInfo indicates a next page exists but no previous page",
+    "Extract the cursor from the fetched message edge",
+    "Send a second GraphQL request to fetch the next message using the extracted cursor",
+    "Assert that the new pageInfo indicates both next and previous pages exist",
+    "Assert that the newly fetched message content matches the second to last message in the mock data"
+  ]
+}

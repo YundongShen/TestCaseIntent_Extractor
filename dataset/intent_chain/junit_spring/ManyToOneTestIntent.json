@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_ManyToOneTest",
+  "source_file": "dataset/raw/junit_spring/ManyToOneTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T18:40:46.753367",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "User",
+    "Board"
+  ],
+  "goals": [
+    "Verify the Many-to-One relationship mapping between Board and User entities",
+    "Ensure correct persistence and retrieval of Board entities associated with a User"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

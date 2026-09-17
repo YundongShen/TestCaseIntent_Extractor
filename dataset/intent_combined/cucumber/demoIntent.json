@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_demo",
+  "source_file": "dataset/raw/cucumber/demo.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:25:29.583418",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Calculator"
+  ],
+  "goals": [
+    "Verify calculator addition and subtraction accuracy"
+  ],
+  "activities": [
+    "enter calc mode",
+    "ensure service is healthy",
+    "set input numbers",
+    "perform addition operation",
+    "verify addition result",
+    "perform subtraction operation",
+    "verify subtraction result"
+  ]
+}

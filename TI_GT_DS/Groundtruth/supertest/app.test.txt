@@ -1,0 +1,33 @@
+**Test Object**
+`GET /` Root Route
+
+**Test Goal**
+Confirm that accessing the root path returns the correct status code and text content.
+
+**Test Activities**
+1. Send a GET request to `/`.
+2. Verify that the response status code is 200.
+3. Verify that the response text is `"Helllooooo"`.
+
+**Test Object**
+`GET /watermelon` Route
+
+**Test Goal**
+Confirm that accessing this path ( `/watermelon`) returns the correct status code and text.
+
+**Test Activities**
+1. Send a GET request to `/watermelon`.
+2. Verify that the response status code is 200.
+3. Verify that the response text is `"watermelon 🐓"`.
+
+
+**Test Object**
+`GET /watermelon` route
+
+**Test Goal**
+Verify that accessing this path via async/await returns the correct status code and content.
+
+**Test Activities**
+1. Send a GET request to `/watermelon` using async/await.
+2. Verify that the response status code is 200.
+3. Verify that the response text is `"watermelon 🐓"`.

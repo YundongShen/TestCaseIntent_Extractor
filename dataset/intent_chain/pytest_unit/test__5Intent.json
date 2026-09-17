@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_unit/test__5.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:10:34.011465",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "CustomerManager"
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "Initialize CustomerManager instance",
+    "Add customer with specified name, email, age, and country",
+    "Verify returned customer info contains required fields"
+  ]
+}

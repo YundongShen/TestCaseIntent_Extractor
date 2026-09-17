@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_POPULATE_test_",
+  "source_file": "dataset/raw/pytest_unit/POPULATE_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:41:12.972296",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "POPULATE",
+    "res"
+  ],
+  "goals": [
+    "Verify the POPULATE function correctly generates various statistical distributions (uniform, normal, Poisson) based on input parameters, while preserving the input 'x' values and output shape."
+  ],
+  "activities": [
+    "Import the POPULATE module.",
+    "Create an input vector 'x' containing an array of even numbers from 0 to 98.",
+    "Call the POPULATE function with 'x', specifying a uniform distribution between 0 and 1.",
+    "Verify that the x-values of the result match the input vector's values.",
+    "Verify that all y-values of the result are less than 1.",
+    "Verify that all y-values of the result are greater than 0.",
+    "Import the POPULATE module.",
+    "Create an input vector 'x' containing an array of numbers from 0 to 99999.",
+    "Call the POPULATE function with 'x', specifying a normal distribution with mean 0 and standard deviation 1.",
+    "Verify that the x-values of the result match the input vector's values.",
+    "Verify that the shape of the result's y-values matches the input vector's shape.",
+    "Verify that the mean of the result's y-values is approximately 0.",
+    "Verify that the standard deviation of the result's y-values is approximately 1.",
+    "Import the POPULATE module.",
+    "Create an input vector 'x' containing an array of numbers from 0 to 99999.",
+    "Call the POPULATE function with 'x', specifying a Poisson distribution with 1 event.",
+    "Verify that the x-values of the result match the input vector's values.",
+    "Verify that the shape of the result's y-values matches the input vector's shape.",
+    "Verify that the mean of the result's y-values is approximately 1."
+  ]
+}

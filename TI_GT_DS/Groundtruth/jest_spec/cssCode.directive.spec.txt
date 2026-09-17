@@ -1,0 +1,10 @@
+**Test Object**
+`cssCode` directive
+
+**Test Goal**
+After the directive is compiled and rendered, the element will display the correct text.
+
+**Test Activities**
+1. Load the module and HTML template containing the directive.
+2. Create a new scope, compile `<css-code></css-code>`, and attach it to the DOM.
+3. Trigger a digest loop to check if the element's text content matches expectations.

@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_Login",
+  "source_file": "dataset/raw/cucumber/Login.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-11T07:33:40.441369",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "/login",
+    "Username",
+    "Password",
+    "Login",
+    "/profile"
+  ],
+  "goals": [
+    "Verify the user authentication process for both valid and invalid credentials.",
+    "Verify access control restrictions for unauthenticated users attempting to access protected pages."
+  ],
+  "activities": [
+    "Navigate to the login page",
+    "Enter 'admin' in the Username field",
+    "Enter 'admin123' in the Password field",
+    "Press the Login button",
+    "Verify redirection to the profile page",
+    "Verify the 'Welcome, admin' message is displayed",
+    "Navigate to the login page",
+    "Enter 'admin' in the Username field",
+    "Enter 'wrongpassword' in the Password field",
+    "Press the Login button",
+    "Verify the 'Invalid credentials' message is displayed",
+    "Ensure the user is not logged in",
+    "Navigate to the profile page",
+    "Verify the 'Please log in to access your profile.' message is displayed"
+  ]
+}

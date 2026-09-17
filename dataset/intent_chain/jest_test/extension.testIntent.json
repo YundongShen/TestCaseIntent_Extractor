@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_extension_test",
+  "source_file": "dataset/raw/jest_test/extension.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:08:28.877103",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App",
+    "CacheTab"
+  ],
+  "goals": [
+    "Verify App component rendering and tab switching functionality",
+    "Verify CacheTab component rendering"
+  ],
+  "activities": [
+    "Mock fetch response and render App component",
+    "Verify tab buttons count",
+    "Render App component and locate tab buttons",
+    "Click network, cache, settings, and query tabs sequentially and verify active state",
+    "Mock fetch response and render CacheTab component"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_AsyncWorkflowAESLambdaTest",
+  "source_file": "dataset/raw/junit_unit/AsyncWorkflowAESLambdaTest.java_",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:02.463923",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "AsyncWorkflowAESLambda",
+    "LISSMake",
+    "AESTransactionFactory",
+    "TransactionTable",
+    "Transaction",
+    "Context"
+  ],
+  "goals": [
+    "testthattheasyncWorkflowAESLambdalaunchesanAESTransactionsuccessfully"
+  ],
+  "activities": [
+    "mockContext",
+    "transactionTable",
+    "aesTransactionFactory",
+    "testTransaction",
+    "saveTransaction",
+    "verifySaveTransaction",
+    "verifyTransaction"
+  ]
+}

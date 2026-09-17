@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_US06",
+  "source_file": "dataset/raw/cucumber/US06.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:29:29.023720",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Crop Alert",
+    "Climate Event Notification"
+  ],
+  "goals": [
+    "Verify that an alert is sent to the user's mobile device when a crop disease or pest is detected and the risk level exceeds the threshold",
+    "Verify that a notification is sent to the user when an extreme climate event is forecasted"
+  ],
+  "activities": [
+    "Process sensor data and crop images to detect abnormal crop state",
+    "Search for disease or pest in the crop; verify risk level exceeds the threshold",
+    "Verify alert is sent to the user's mobile device",
+    "Receive extreme weather forecast; verify the event is approaching",
+    "Verify notification is sent to the user to prevent crop damage"
+  ]
+}

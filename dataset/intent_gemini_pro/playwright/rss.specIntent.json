@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_rss_spec",
+  "source_file": "dataset/raw/playwright/rss.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:57:09.930909",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "rss",
+    "pages[1]",
+    "feed"
+  ],
+  "goals": [
+    "Verify the RSS feed link is present on the homepage and correctly opens the feed in a new tab",
+    "Verify the RSS feed returns valid XML content"
+  ],
+  "activities": [
+    "Navigate to the home page",
+    "Locate the RSS link",
+    "Verify that the RSS link exists",
+    "Navigate to the home page",
+    "Wait for a new page event",
+    "Locate the RSS link",
+    "Click the RSS link",
+    "Wait for the new page to open",
+    "Retrieve all open pages",
+    "Verify that the new page URL is '/rss.xml'",
+    "Navigate to '/rss.xml'",
+    "Retrieve the page content",
+    "Validate the XML content",
+    "Verify that the XML validation result is true"
+  ]
+}

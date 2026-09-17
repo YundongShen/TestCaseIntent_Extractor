@@ -1,0 +1,40 @@
+**Test Object**
+Login Page (`/login`) and Protected Profile (`/profile`)
+
+- **Test Goal**
+Verify that a user can successfully log in with valid credentials.
+
+- **Test Activities**
+1. Access the `/login` page.
+2. Enter `admin` in the "Username" input box.
+3. Enter `admin123` in the "Password" input box.
+4. Click the "Login" button.
+5. Check if the page redirects to `/profile`.
+6. Check if the page displays the text `Welcome, admin`.
+
+- **Test Object**
+Login Page (`/login`)
+
+- **Test Goal**
+Verify that login with invalid credentials is rejected and an error message is displayed.
+
+- **Test Activities**
+1. Access the `/login` page.
+2. Enter `admin` in the "Username" input box.
+3. Enter `wrongpassword` in the "Password" input box.
+4. Click the "Login" button.
+5. Check the page displaying the text `Invalid credentials`.
+
+
+**Test Object**
+Access control for your profile page (`/profile`)
+
+
+**Test Goal**
+Verify that unauthenticated access to a protected page is blocked and a login prompt is displayed.
+
+
+**Test Activities**
+1. Ensure you are not currently logged in.
+2. Access the `/profile` page.
+3. Check the page displaying the text `Please log in to access your profile.`.

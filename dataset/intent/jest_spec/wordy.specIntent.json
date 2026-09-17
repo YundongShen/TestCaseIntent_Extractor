@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_wordy_spec",
+  "source_file": "dataset/raw/jest_spec/wordy.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:48:08.710006",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "WordProblem"
+  ],
+  "goals": [
+    "Verify correct arithmetic calculation for valid word problem inputs",
+    "Verify ArgumentError is thrown for invalid or unsupported word problem inputs"
+  ],
+  "activities": [
+    "Create WordProblem with 'What is 1 plus 1?' and verify answer equals 2",
+    "Create WordProblem with 'What is 53 plus 2?' and verify answer equals 55",
+    "Create WordProblem with 'What is -1 plus -10?' and verify answer equals -11",
+    "Create WordProblem with 'What is 123 plus 45678?' and verify answer equals 45801",
+    "Create WordProblem with 'What is 4 minus -12?' and verify answer equals 16",
+    "Create WordProblem with 'What is -3 multiplied by 25?' and verify answer equals -75",
+    "Create WordProblem with 'What is 33 divided by -3?' and verify answer equals -11",
+    "Create WordProblem with 'What is 1 plus 1 plus 1?' and verify answer equals 3",
+    "Create WordProblem with 'What is 1 plus 5 minus -2?' and verify answer equals 8",
+    "Create WordProblem with 'What is 20 minus 4 minus 13?' and verify answer equals 3",
+    "Create WordProblem with 'What is 17 minus 6 plus 3?' and verify answer equals 14",
+    "Create WordProblem with 'What is 2 multiplied by -2 multiplied by 3?' and verify answer equals -12",
+    "Create WordProblem with 'What is -3 plus 7 multiplied by -2?' and verify answer equals -8",
+    "Create WordProblem with 'What is -12 divided by 2 divided by -3?' and verify answer equals 2",
+    "Create WordProblem with 'What is 53 cubed?' and verify answer throws ArgumentError",
+    "Create WordProblem with 'Who is the president of the United States?' and verify answer throws ArgumentError"
+  ]
+}

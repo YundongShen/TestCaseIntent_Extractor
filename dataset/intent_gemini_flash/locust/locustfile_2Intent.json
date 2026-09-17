@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_locustfile_2",
+  "source_file": "dataset/raw/locust/locustfile_2.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T13:32:43.310332",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify the root endpoint ('/') returns the expected 'Hello, World!' response body.",
+    "Verify the root endpoint ('/') responds within an acceptable time limit (0.5 seconds)."
+  ],
+  "activities": [
+    "Pause for a random duration between 1 and 2.5 seconds.",
+    "Send an HTTP GET request to the root path.",
+    "Log the HTTP status code from the response.",
+    "Log the response body.",
+    "Validate the response body is 'Hello, World!' and mark the request as failed if it's not.",
+    "Validate the request duration is under 0.5 seconds and mark the request as failed if it exceeds.",
+    "Select a random page path.",
+    "Send an HTTP GET request to the selected random page path using default headers."
+  ]
+}

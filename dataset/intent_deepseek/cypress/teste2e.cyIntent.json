@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_teste2e_cy",
+  "source_file": "dataset/raw/cypress/teste2e.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:49:00.986328",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "cy"
+  ],
+  "goals": [
+    "verifythattheuserinterfaceisfunctional",
+    "verifythattheusercanaccessthemanagementpageafterlogin"
+  ],
+  "activities": []
+}

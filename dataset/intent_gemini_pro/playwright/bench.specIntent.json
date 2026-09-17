@@ -1,0 +1,45 @@
+{
+  "test_case_id": "tc_bench_spec",
+  "source_file": "dataset/raw/playwright/bench.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:55:52.066075",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "window.runAllBenchmarks",
+    "window.__benchComplete",
+    "window.__embedderResults",
+    "window.__rerankerResults",
+    "embedderResults",
+    "rerankerResults",
+    "result",
+    "window.runEmbedderBenchmarks",
+    "results",
+    "window.runRerankerBenchmarks"
+  ],
+  "goals": [
+    "Verify the successful execution and valid output generation of edge embedder and reranker models during benchmarking.",
+    "Verify the correctness of embedder output dimensions and the sanity of reranker scoring logic."
+  ],
+  "activities": [
+    "Set up console log forwarding from the browser",
+    "Navigate to the benchmark page",
+    "Verify the page heading contains 'Edge Model Benchmark'",
+    "Execute all benchmarks in the browser",
+    "Poll the browser until the benchmark completion flag is true",
+    "Retrieve embedder and reranker results from the browser window",
+    "Verify that embedder and reranker results are not empty",
+    "Verify each successful embedder result has dimensions greater than 0 and exactly 5 elements in the first5 array",
+    "Verify each successful reranker result has exactly 4 scores and the first score is greater than the second",
+    "Navigate to the benchmark page for embedder comparison",
+    "Execute embedder benchmarks in the browser",
+    "Poll the browser until exactly 3 embedder results are generated",
+    "Retrieve embedder results from the browser window",
+    "Verify the dimensions for 'mxbai-xsmall' and 'minilm-l6' models are exactly 384",
+    "Navigate to the benchmark page for reranker score sanity check",
+    "Execute reranker benchmarks in the browser",
+    "Poll the browser until exactly 3 reranker results are generated",
+    "Retrieve reranker results from the browser window",
+    "Verify the 'weather' score is lower than the 'binaryQuant' and 'hamming' scores for each reranker model"
+  ]
+}

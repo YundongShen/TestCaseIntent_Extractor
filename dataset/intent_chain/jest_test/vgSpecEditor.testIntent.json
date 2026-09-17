@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_vgSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vgSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:29:22.792945",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

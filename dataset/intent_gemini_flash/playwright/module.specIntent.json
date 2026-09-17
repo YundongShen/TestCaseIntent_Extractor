@@ -1,0 +1,45 @@
+{
+  "test_case_id": "tc_module_spec",
+  "source_file": "dataset/raw/playwright/module.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:35:58.587656",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "page",
+    "body",
+    ".alert-primary",
+    "[role=\"dialog\"]",
+    "text=Launch demo modal"
+  ],
+  "goals": [
+    "Verify Bootstrap 4 styling and initial page content display.",
+    "Verify Bootstrap 4 Modal component functionality."
+  ],
+  "activities": [
+    "Navigate to the base URL.",
+    "Assert that the page body is hidden.",
+    "Navigate to the base URL.",
+    "Assert that the page body is visible.",
+    "Navigate to the base URL.",
+    "Locate the first primary alert.",
+    "Retrieve the initial background color of the alert.",
+    "Wait for the Bootstrap CSS file to load.",
+    "Retrieve the styled background color of the alert.",
+    "Assert that the styled background color is different from the initial color.",
+    "Navigate to the base URL.",
+    "Locate the dialog modal.",
+    "Get the 'aria-hidden' attribute of the modal.",
+    "Assert that exactly one modal exists.",
+    "Assert that the modal is hidden (aria-hidden is 'true').",
+    "Navigate to the base URL.",
+    "Locate the 'Launch demo modal' button.",
+    "Assert that the 'Launch demo modal' button exists.",
+    "Navigate to the base URL.",
+    "Locate the dialog modal.",
+    "Get the 'aria-hidden' attribute of the modal.",
+    "Locate the 'Launch demo modal' button.",
+    "Click the 'Launch demo modal' button.",
+    "Assert that the modal is visible (aria-hidden is 'false')."
+  ]
+}

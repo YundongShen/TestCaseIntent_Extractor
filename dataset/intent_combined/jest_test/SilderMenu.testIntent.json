@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_SilderMenu_test",
+  "source_file": "dataset/raw/jest_test/SilderMenu.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:57:18.034123",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "getMeunMatcheys"
+  ],
+  "goals": [
+    "verify path matching logic against menu configuration"
+  ],
+  "activities": [
+    "call getMeunMatcheys with simple path",
+    "assert result matches expected simple path",
+    "call getMeunMatcheys with error path",
+    "assert result matches empty array",
+    "call getMeunMatcheys with secondary path",
+    "assert result matches expected secondary path",
+    "call getMeunMatcheys with parameter path",
+    "assert result matches expected parameter path",
+    "call getMeunMatcheys with three parameter path",
+    "assert result matches expected three parameter path"
+  ]
+}

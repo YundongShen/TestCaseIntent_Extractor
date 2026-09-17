@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_GraphTest",
+  "source_file": "dataset/raw/junit_unit/GraphTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:33.713717",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Graph",
+    "NumberOfIslands"
+  ],
+  "goals": [
+    "verifythatthemethodnumIslandsreturnsthecorrectnumberofislands"
+  ],
+  "activities": []
+}

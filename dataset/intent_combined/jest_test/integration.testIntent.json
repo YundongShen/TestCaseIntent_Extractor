@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_integration_test",
+  "source_file": "dataset/raw/jest_test/integration.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:45:44.266965",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

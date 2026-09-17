@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_SwotJobTest",
+  "source_file": "dataset/raw/junit_spring/SwotJobTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:52:02.776964",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "SwotJobTest",
+    "JobLauncherTestUtils",
+    "CassandraTemplate",
+    "SolrTemplate",
+    "DatasourceProperties",
+    "ApplicationProperties",
+    "SimpleQuery",
+    "JobExecution",
+    "StepExecution",
+    "ReadCount",
+    "WriteCount",
+    "FilterCount",
+    "ExitStatus",
+    "ExitCode",
+    "Granule",
+    "Dataset_s"
+  ],
+  "goals": [
+    "testJobCompletes",
+    "verifythatthejoblaunchesthecorrectjobparameters",
+    "ensurethatthejobreadsandwritescorrectamountofrecordsfromCassandraandSolr",
+    "checkthatthejobsuccessfullycompleteswithzeroerrors"
+  ],
+  "activities": []
+}

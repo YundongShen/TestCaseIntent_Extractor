@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_encryption_test",
+  "source_file": "dataset/raw/jest_test/encryption.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:48:32.698246",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "encryption module"
+  ],
+  "goals": [
+    "verify encryption, decryption, and re-encryption logic and dependency interactions"
+  ],
+  "activities": [
+    "mock wif.decode and bip38.encrypt dependencies",
+    "execute encryption.encrypt function",
+    "assert wif.decode call arguments",
+    "assert bip38.encrypt call arguments",
+    "assert encryption.encrypt return value",
+    "mock bip38.decrypt and wif.encode dependencies",
+    "execute encryption.decrypt function",
+    "assert bip38.decrypt call arguments",
+    "assert wif.encode call arguments",
+    "assert encryption.decrypt return value",
+    "spy on encryption.encrypt and encryption.decrypt functions",
+    "execute encryption.reEncrypt function",
+    "assert encryption.decrypt call arguments",
+    "assert encryption.encrypt call arguments",
+    "assert encryption.reEncrypt return value",
+    "clear function spies"
+  ]
+}

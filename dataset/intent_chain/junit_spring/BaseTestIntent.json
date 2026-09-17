@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_BaseTest",
+  "source_file": "dataset/raw/junit_spring/BaseTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T18:29:49.779114",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "Initialize Spring Boot test context with dev profile",
+    "Execute test method test",
+    "Assert boolean condition is true"
+  ]
+}

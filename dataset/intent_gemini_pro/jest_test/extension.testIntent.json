@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_extension_test",
+  "source_file": "dataset/raw/jest_test/extension.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:42:32.858900",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "App",
+    "CacheTab"
+  ],
+  "goals": [
+    "Verify that the App component renders correctly and handles tab navigation state changes.",
+    "Verify that the CacheTab component renders correctly with mocked server data."
+  ],
+  "activities": [
+    "Mock a fetch response with schema data",
+    "Render the App component",
+    "Query all tab buttons",
+    "Assert that 10 tabs are found",
+    "Render the App component",
+    "Query the query button",
+    "Query the network button",
+    "Query the cache button",
+    "Query the settings button",
+    "Click the network button",
+    "Assert that the active tab is 'network'",
+    "Click the cache button",
+    "Assert that the active tab is 'cache'",
+    "Click the settings button",
+    "Assert that the active tab is 'settings'",
+    "Click the query button",
+    "Assert that the active tab is 'query'",
+    "Mock a fetch response with server data",
+    "Render the CacheTab component"
+  ]
+}

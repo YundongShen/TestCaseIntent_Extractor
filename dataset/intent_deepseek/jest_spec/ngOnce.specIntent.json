@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_ngOnce_spec",
+  "source_file": "dataset/raw/jest_spec/ngOnce.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:59:27.062318",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "$once"
+  ],
+  "goals": [
+    "verifythatngOncemoduleimplementsone-timebindingonthe$oncefunctionandeventhandlingforthe'ngOnce.sound'broadcast"
+  ],
+  "activities": [
+    "beforeEach(module('ngOnce'))",
+    "beforeEach(inject(function(_$rootScope_){$rootScope=_$rootScope_;}))",
+    "it('shouldaddafunctioncalled$onceto$rootScope', function(){expect($rootScope.$once).to.be.a('function');})",
+    "it('shouldinvoketheeventhandler', function(){var$event,$sound;$rootScope.$once('ngOnce.sound', function(event, sound) { $event = event.name; $sound = sound; }); $rootScope.$broadcast('ngOnce.sound', 'boop'); expect($event).to.equal('ngOnce.sound'); expect($sound).to.equal('boop'); })",
+    "it('shouldinvoketheeventhandleronlyonce', function(){var$event,$sound;$rootScope.$once('ngOnce.sound', function(event, sound) { $event = event.name; $sound = sound; }); $rootScope.$broadcast('ngOnce.sound', 'boop'); $rootScope.$broadcast('ngOnce.sound', 'bang'); $rootScope.$broadcast('ngOnce.sound', 'pow'); expect($event).to.equal('ngOnce.sound'); expect($sound).to.equal('boop'); })",
+    "it('shouldworkwithchildscopesaswell', function(){var child=$rootScope.$new(); expect(child.$once).to.be.a('function'); var$event,$sound; child.$once('ngOnce.sound', function(event, sound) { $event = event.name; $sound = sound; }); $rootScope.$broadcast('ngOnce.sound', 'boop'); expect($event).to.equal('ngOnce.sound'); expect($sound).to.equal('boop'); })",
+    "it('shouldreturnthederegistrationfunction', function(){var deregistration=$rootScope.$once('ngOnce.sound', function(){}); expect(deregistration).to.be.a('function');})"
+  ]
+}

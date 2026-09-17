@@ -1,0 +1,21 @@
+**Test Object**
+`configurationEditor` directive
+
+**Test Goal**
+Confirms that the directive, after compilation, inserts a `<form>` inside the element.
+
+**Test Activities**
+1. Load the module, providing a mock `Config` service.
+2. Compile the `<configuration-editor></configuration-editor>` element and execute digest.
+3. Locate the `form` inside the compiled element and assert that its quantity is 1.
+
+**Test Object**
+`configurationEditor` directive
+
+**Test Goal**
+Confirms that the directive, after compilation, mounts the `Config` object to an isolated scope.
+
+**Test Activities**
+1. Load the module, providing a mock `Config` service.
+2. Compile the `<configuration-editor></configuration-editor>` element and execute digest.
+3. Obtain the directive's isolated scope and assert that its `Config` property is defined.

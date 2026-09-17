@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_app",
+  "source_file": "dataset/raw/cucumber/app.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T16:09:48.709770",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "image registration page",
+    "title field",
+    "URL field",
+    "submit button",
+    "error message",
+    "icon",
+    "list of registered images",
+    "localStorage",
+    "submitted image"
+  ],
+  "goals": [
+    "Verify input validation and error message display for empty title and URL fields",
+    "Verify successful image registration updates the list and persists data in localStorage"
+  ],
+  "activities": [
+    "Navigate to image registration page",
+    "Enter empty values in title and URL fields",
+    "Click submit button",
+    "Verify error messages and exclamation icons display for invalid inputs",
+    "Navigate to image registration page",
+    "Enter valid title and URL values",
+    "Verify check icons display for valid inputs",
+    "Submit form using enter key",
+    "Verify list updates and data persists in localStorage",
+    "Verify input fields are cleared",
+    "Navigate to image registration page",
+    "Enter valid title and URL values",
+    "Click submit button",
+    "Verify list updates and data persists in localStorage",
+    "Verify input fields are cleared",
+    "Navigate to image registration page",
+    "Submit an image by clicking the submit button",
+    "Refresh the page",
+    "Verify submitted image persists in the list"
+  ]
+}

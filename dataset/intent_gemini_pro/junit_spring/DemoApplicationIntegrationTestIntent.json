@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_DemoApplicationIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/DemoApplicationIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:46:56.594674",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "DemoApplication"
+  ],
+  "goals": [
+    "Verify that the application's root endpoint returns the expected 'Hello world' response"
+  ],
+  "activities": [
+    "Send a GET request to the root URL using RestTemplate and retrieve the response as a String",
+    "Verify that the response is equal to 'Hello world'"
+  ]
+}

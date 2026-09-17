@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_exercaula_cy",
+  "source_file": "dataset/raw/cypress/exercaula.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:56.503969",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "cy.get",
+    "cy.visit",
+    "cy.get('input[name=\"username\"]').type",
+    "cy.get('input[name=\"password\"]').type",
+    "cy.get('button[type=\"submit\"]').click",
+    "cy.get('.flash.success').should",
+    "cy.get('.flash.error').should",
+    "cy.get('button[type=\"submit\"]').click",
+    "cy.get('.flash.error').should"
+  ],
+  "goals": [
+    "verifythatusercanlogintoacorrectusernameandpassword",
+    "verifythatusercannotlogintoanincorrectusernameandpassword",
+    "verifythatusercannotlogintoanincorrectusernamenoincorrectpassword",
+    "verifythatallformfieldsarerequired"
+  ],
+  "activities": [
+    "visit_url",
+    "type_username",
+    "type_password",
+    "click_submit_button",
+    "check_flash_messages",
+    "validate_presence_of_error_messages"
+  ]
+}

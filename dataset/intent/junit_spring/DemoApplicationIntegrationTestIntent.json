@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_DemoApplicationIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/DemoApplicationIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T18:46:07.181491",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "DemoApplication"
+  ],
+  "goals": [
+    "Verify the Spring Boot application starts correctly and the root endpoint returns the expected response 'Hello world'"
+  ],
+  "activities": [
+    "Send HTTP GET request to localhost root endpoint",
+    "Verify response equals 'Hello world'"
+  ]
+}

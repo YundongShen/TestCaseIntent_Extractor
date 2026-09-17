@@ -1,0 +1,43 @@
+{
+  "test_case_id": "tc_focus_cy",
+  "source_file": "dataset/raw/cypress/focus.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:34:53.866188",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "focus control interface"
+  ],
+  "goals": [
+    "verify focus activation and graph index behavior"
+  ],
+  "activities": [
+    "visit page temp/citeproc.html",
+    "click node evergreen-notes-should-be-densely-linked",
+    "click graph control label",
+    "verify focus check is checked",
+    "verify focus input has focus",
+    "trigger keydown f on body",
+    "verify focus check is checked",
+    "click graph control label",
+    "verify focus check is checked",
+    "verify focus input has focus",
+    "verify graph has specific nodes",
+    "click reset button",
+    "verify graph has expanded nodes",
+    "click index button",
+    "verify index has specific items",
+    "click graph control label",
+    "scroll menu container to bottom",
+    "verify index has expanded items",
+    "verify focus input max attribute",
+    "verify focus input value attribute",
+    "set focus input value to 2",
+    "trigger input event on focus input",
+    "verify graph has expanded nodes",
+    "click graph control label",
+    "verify focus check is not checked",
+    "trigger keydown f on body",
+    "verify focus check is not checked"
+  ]
+}

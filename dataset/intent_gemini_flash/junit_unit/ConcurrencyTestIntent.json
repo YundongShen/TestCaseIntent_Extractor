@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_ConcurrencyTest",
+  "source_file": "dataset/raw/junit_unit/ConcurrencyTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:27:19.767925",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Concurrency",
+    "Thread"
+  ],
+  "goals": [
+    "Verify that `Concurrency.newDaemonThread` creates a daemon thread.",
+    "Verify that `Concurrency.newThread` uses the provided name format string correctly."
+  ],
+  "activities": [
+    "Create a new daemon thread with a specified name and runnable.",
+    "Verify that the created thread is a daemon thread.",
+    "Create a new thread with a specified name format and runnable.",
+    "Verify that the created thread's name matches the expected format."
+  ]
+}

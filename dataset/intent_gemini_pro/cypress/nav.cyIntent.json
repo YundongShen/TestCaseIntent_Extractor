@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_nav_cy",
+  "source_file": "dataset/raw/cypress/nav.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:36:45.116328",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "Nav"
+  ],
+  "goals": [
+    "Verify that clicking navigation links correctly updates the URL to the corresponding routes"
+  ],
+  "activities": [
+    "Mount the Nav component wrapped in a Router",
+    "Click on 'Reading List'",
+    "Verify the URL contains '/list'",
+    "Click on 'Finished Books'",
+    "Verify the URL contains '/finished'",
+    "Click on 'Discover'",
+    "Verify the URL contains '/discover'"
+  ]
+}

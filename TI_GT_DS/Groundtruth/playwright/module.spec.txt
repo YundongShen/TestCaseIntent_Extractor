@@ -1,0 +1,68 @@
+**Test Object**
+The page's `body` element
+
+**Test Goal**
+Confirm that the `body` element is hidden during initial page load.
+
+**Test Activities**
+1. Visit the homepage `/`.
+2. Check that the `body` element is hidden.
+
+**Test Object**
+The page's `body` element
+
+**Test Goal**
+Confirm that the `body` element becomes visible after the page loads.
+
+**Test Activities**
+1. Visit the homepage `/`.
+2. Check that the `body` element eventually becomes visible.
+
+**Test Object**
+The style of the `.alert-primary` element
+
+**Test Goal**
+Verify that the alert style is applied after Bootstrap CSS loads.
+
+**Test Activities**
+1. Visit the homepage `/`.
+2. Get the initial background color of the first `.alert-primary` element.
+3. Wait for the Bootstrap CSS request to complete.
+4. Get the background color of the same element again.
+5. Assert that the two colors are different.
+
+**Test Object**
+Modal element `[role="dialog"]`
+
+**Test Goal**
+Confirm that there is only one modal on the page, and its initial state is hidden.
+
+**Test Activities**
+1. Visit the homepage `/`.
+2. Locate the `[role="dialog"]` element.
+3. Assert that its quantity is 1.
+4. Get the `aria-hidden` attribute of this element.
+5. Assert that the attribute value is `"true"`.
+
+**Test Object**
+“Launch demo modal” button
+
+**Test Goal**
+Confirm that a button for opening a modal exists on the page.
+
+**Test Activities**
+1. Visit the homepage `/`.
+2. Find the button element with the text `"Launch demo modal"`.
+3. Assert that the element is defined (exists).
+
+**Test Object**
+Modal `[role="dialog"]` and its launch button
+
+**Test Goal**
+Verify that the modal opens after clicking the button.
+
+**Test Activities**
+1. Access the homepage `/`.
+2. Locate the modal and obtain its `aria-hidden` attribute.
+3. Find the `"Launch demo modal"` button and click it.
+4. Check if the modal's `aria-hidden` attribute value is `"false"`.

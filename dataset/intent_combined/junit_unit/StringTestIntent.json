@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_StringTest",
+  "source_file": "dataset/raw/junit_unit/StringTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:13:19.471717",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "StringTest"
+  ],
+  "goals": [
+    "Verify JNI string method functionality and data integrity"
+  ],
+  "activities": [
+    "call jniVoidMethodTakesString with simple string",
+    "call jniVoidMethodTakesString with punctuation string",
+    "call jniVoidMethodTakesTwoStrings with two strings",
+    "call jniVoidMethodTakesFiveStrings with five strings",
+    "verify voidMethodTakesString called with simple string",
+    "verify voidMethodTakesString called with punctuation string",
+    "verify voidMethodTakesTwoStrings called with two strings",
+    "verify voidMethodTakesFiveStrings called with five strings",
+    "call jniStringMethodTakesString with simple string",
+    "call jniStringMethodTakesString with punctuation string",
+    "call jniStringMethodTakesTwoStrings with two strings",
+    "call jniStringMethodTakesFiveStrings with five strings",
+    "verify stringMethodTakesString called with simple string",
+    "verify stringMethodTakesString called with punctuation string",
+    "verify stringMethodTakesTwoStrings called with two strings",
+    "verify stringMethodTakesFiveStrings called with five strings",
+    "create new StringTestHelper instance",
+    "call jniStringMethodTakesString with simple string and assert result",
+    "call jniStringMethodTakesString with empty string",
+    "call jniStringMethodTakesString with punctuation string and assert result",
+    "call jniStringMethodTakesString with nested jniStringMethodTakesTwoStrings and assert result",
+    "call jniStringMethodTakesFiveStrings with five strings and assert result"
+  ]
+}

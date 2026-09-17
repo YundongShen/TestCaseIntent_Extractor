@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_locustfile_2",
+  "source_file": "dataset/raw/locust/locustfile_2.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:20:09.828668",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the root endpoint returns the expected response content",
+    "Verify the root endpoint response time meets the performance threshold"
+  ],
+  "activities": [
+    "Send HTTP GET request to root URL",
+    "Log response status code and text",
+    "Assert response text equals \"Hello, World!\"",
+    "Assert response time is less than 0.5 seconds",
+    "Generate random page URL",
+    "Send HTTP GET request to random page with headers"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_props_test",
+  "source_file": "dataset/raw/jest_test/props.test.jsx",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:29.069928",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "NumericInput"
+  ],
+  "goals": [],
+  "activities": [
+    "Step 1: Extract every action executed during the test execution from the code.",
+    "Step 2: Simplify overly detailed implementation statements into concise language, and arrange all extracted actions strictly in their original execution order.",
+    "Step 3 (Optional): Aggregate adjacent actions of the same type or operations serving the same purpose when necessary. For this extraction, output the sequence without aggregation unless it significantly improves clarity (Be careful not to over-aggregate).",
+    "Step 4: Test code starts by defining TestActivities, which is a set of purposeful operations directed toward testing object to trigger, observe, record, and inspect their behaviors, attributes, and states.",
+    "it('handles properly all the props', done):",
+    "1. Extract props map data from cfg.",
+    "2. Create a Promise that resolves once all tests are executed.",
+    "3. Test each propName and its corresponding value using the test prop function.",
+    "4. If the result does not match the expected output, reject the Promise.",
+    "5. Once all tests are passed, resolve the Promise.",
+    "6. Finally, call done to mark the test as complete.",
+    "it('can disable inline styles', done):",
+    "1. Render the NumericInput with style set to false.",
+    "2. Test if inline styles are truly disabled by checking if the ref's wrapper has no style attribute.",
+    "3. Render the NumericInput with mobile set to true.",
+    "4. Test if mobile specific styles are applied.",
+    "5. Call done to mark the test as complete.",
+    "Note: The extracted activities follow the three-step process and are presented in clear, concise language, preserving the original execution order as much as possible."
+  ]
+}

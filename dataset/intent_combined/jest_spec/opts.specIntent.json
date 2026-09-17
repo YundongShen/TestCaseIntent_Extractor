@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_opts_spec",
+  "source_file": "dataset/raw/jest_spec/opts.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:42:01.693325",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "..."
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

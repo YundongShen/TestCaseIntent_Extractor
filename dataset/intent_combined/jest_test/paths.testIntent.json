@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_paths_test",
+  "source_file": "dataset/raw/jest_test/paths.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:54:38.040452",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "treeviewString, fileviewString, pullTreeviewString, pullFileviewString"
+  ],
+  "goals": [
+    "verify correct string output for repository path generation functions"
+  ],
+  "activities": [
+    "call treeview string function with owner and repo",
+    "verify returned string equals foo/bar/tree",
+    "call fileview string function with owner and repo",
+    "verify returned string equals foo/bar/blob",
+    "call pull treeview string function with owner repo and pull id",
+    "verify returned string equals foo/bar/pull/123/tree",
+    "call pull fileview string function with owner repo and pull id",
+    "verify returned string equals foo/bar/pull/123/blob"
+  ]
+}

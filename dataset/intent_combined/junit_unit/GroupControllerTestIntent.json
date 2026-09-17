@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_GroupControllerTest",
+  "source_file": "dataset/raw/junit_unit/GroupControllerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:10:13.848356",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "PersonController"
+  ],
+  "goals": [
+    "verify get person endpoint returns correct status and content"
+  ],
+  "activities": [
+    "mock person manager to return null",
+    "perform get request to person endpoint",
+    "assert response status is ok",
+    "create person objects",
+    "create list of persons",
+    "mock person manager to return list",
+    "perform get request to person endpoint",
+    "assert response status is ok",
+    "assert response content matches json"
+  ]
+}

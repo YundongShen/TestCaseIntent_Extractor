@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_opts_spec",
+  "source_file": "dataset/raw/jest_spec/opts.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:32:30.618198",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "getSizes",
+    "getVariances"
+  ],
+  "goals": [
+    "Verify correct parsing and validation of size options",
+    "Verify correct parsing and validation of variance options"
+  ],
+  "activities": [
+    "Verify getSizes returns defaults matching snapshot",
+    "Verify getVariances returns defaults matching snapshot",
+    "Verify getSizes parses single resolution option",
+    "Verify getSizes parses multiple resolution options",
+    "Verify getSizes throws on malformed resolution option",
+    "Verify getVariances parses single variance option",
+    "Verify getVariances parses multiple variance options",
+    "Verify getVariances throws on invalid variance options"
+  ]
+}

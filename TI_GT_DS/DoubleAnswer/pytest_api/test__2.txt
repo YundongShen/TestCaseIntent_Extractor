@@ -1,0 +1,11 @@
+**Test Object**
+A web service started via Docker Compose.
+
+**Test Goal**
+Verify that the web service started with Compose responds correctly and that the counter increments with each access.
+
+**Test Activities**
+1. Start the project using `docker-compose up -d` and wait 1 second for the service to be ready.
+2. Send the first GET request to `/` and see the response "Hello World! I have been seen 1 time.".
+3. Wait 1 second, then send another GET request and see the counter become 2.
+4. Stop the service after testing.

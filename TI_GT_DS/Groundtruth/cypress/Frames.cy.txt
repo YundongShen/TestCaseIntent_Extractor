@@ -1,0 +1,34 @@
+**Test Object**
+A rich text editor within an iframe
+
+**Test Goal**
+Verify that text can be entered and bolded in the iframe editor.
+
+**Test Activities**
+1. Open the page containing the iframe.
+2. Locate the iframe, obtain its internal `body` element, and confirm its visibility.
+3. Enter "Hello" in the editor and select all.
+4. Click the bold button in the toolbar.
+
+**Test Object**
+A rich text editor within an iframe
+
+**Test Goal**
+Verify that the custom iframe command can locate the iframe and complete the input and bolding operations.
+
+**Test Activities**
+1. Open the page containing the iframe.
+2. Use the custom command `getIframe` to locate the editor and enter "Hello" to select all.
+3. Click the bold button.
+
+**Test Object**
+A rich text editor within an iframe
+
+**Test Goal**
+Verify that the iframe plugin loads and operates the editor correctly, allowing for text input and bolding.
+
+**Test Activities**
+1. Open the page containing the iframe.
+2. Use `frameLoaded` to wait for the iframe to finish loading.
+3. Use the `iframe` command to locate the editor and type "Hello" to select all.
+4. Click the bold button.

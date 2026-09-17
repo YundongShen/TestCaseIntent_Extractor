@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_SLOGDET_test_",
+  "source_file": "dataset/raw/pytest_unit/SLOGDET_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:12:44.928913",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "SLOGDET.SLOGDET"
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "Initialize primary test input using a 5x5 identity matrix",
+    "Initialize fallback test input using a reshaped 9x9 identity matrix",
+    "Invoke SLOGDET.SLOGDET with the primary matrix input",
+    "Invoke SLOGDET.SLOGDET with the fallback matrix input if LinAlgError is raised",
+    "Verify the result is an instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

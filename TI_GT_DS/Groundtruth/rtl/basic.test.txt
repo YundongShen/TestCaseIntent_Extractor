@@ -1,0 +1,11 @@
+**Test Object**
+`App` Component
+
+**Test Goal**
+Confirm the functionality of clicking the "Add Item" button.
+
+**Test Activities**
+1. Render the `App` component.
+2. Initially check that there are no list items on the page and that the text "no items yet" is visible.
+3. Locate the "Add Item" button and click it.
+4. Verify that the list item becomes one, with the content "Item 1", and that "no items yet" is no longer displayed.

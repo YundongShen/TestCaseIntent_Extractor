@@ -1,0 +1,13 @@
+**Test Object**
+`PUT /workshop/{id}` Update API
+
+**Test Goal**
+After confirming that the valid update fields were passed, the API returned normally, and the workshop data changed as expected.
+
+**Test Activities**
+1. Clear the data and insert a workshop entry.
+2. Construct the request body, including the new name, description, and category, and intentionally add some irrelevant fields.
+3. Send a PUT request to `/workshop/{id}`.
+4. Check the response status code: 200, Content-Type: application/json.
+5. For the return body: status 200, msg is a success message, workshop information in data has been updated, but detail is not present.
+6. Check the database for this workshop entry and confirm that the fields are consistent with the update body.

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_login_test",
+  "source_file": "dataset/raw/rtl/login.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T04:54:04.629064",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Login Page"
+  ],
+  "goals": [
+    "Verify login page rendering, loading state, and successful login redirection"
+  ],
+  "activities": [
+    "render login page",
+    "verify login heading text",
+    "type email address",
+    "type password",
+    "click login button",
+    "verify loading state text",
+    "verify navigation function call",
+    "verify navigation destination"
+  ]
+}

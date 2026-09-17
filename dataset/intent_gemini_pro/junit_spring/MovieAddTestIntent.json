@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_MovieAddTest",
+  "source_file": "dataset/raw/junit_spring/MovieAddTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:47:59.094101",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "MovieCreateResponseDTO",
+    "movie"
+  ],
+  "goals": [
+    "Verify that a movie is successfully created and all fields are saved in the database when valid data is provided.",
+    "Verify that a movie creation event is properly published when a movie is created by a normal or admin user.",
+    "Verify that the system returns a 400 Bad Request when attempting to create a movie with invalid or missing required attributes."
+  ],
+  "activities": [
+    "Initialize WebTestClient and ScenarioExecutor with the server base URL and data source",
+    "Build a movie creation request with invalid name data",
+    "Log in as a normal user",
+    "Attempt to create a movie with the invalid request and verify a 400 return code",
+    "Build a valid movie creation request",
+    "Verify no events exist in the system",
+    "Log in as a normal user",
+    "Create a movie with the valid request and verify a 200 return code",
+    "Assert that the movie creation response and movie ID are not null",
+    "Retrieve the movie from the database and verify all fields match the creation request",
+    "Build a valid movie creation request",
+    "Verify no events exist in the system",
+    "Log in as a normal user",
+    "Create a movie with the valid request and verify a 200 return code",
+    "Assert that the movie creation response and movie ID are not null",
+    "Verify that a movie creation event is published for the normal user",
+    "Build a valid movie creation request",
+    "Verify no events exist in the system",
+    "Log in as an admin user",
+    "Create a movie as an admin with the valid request and verify a 200 return code",
+    "Assert that the movie creation response and movie ID are not null",
+    "Retrieve the movie from the database and verify all fields match the creation request",
+    "Verify that a movie creation event is published for the admin user",
+    "Provide a movie creation request with missing required attributes",
+    "Verify no events exist in the system",
+    "Log in as a normal user",
+    "Attempt to create a movie with the incomplete request and verify a 400 return code"
+  ]
+}

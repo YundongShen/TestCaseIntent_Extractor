@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_RepositoryTest",
+  "source_file": "dataset/raw/junit_spring/RepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:51:49.930894",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    {
+      "name": "Xxx",
+      "type": "class"
+    },
+    {
+      "name": "Xxxx",
+      "type": "class"
+    },
+    {
+      "name": "xxxRepository",
+      "type": "interface"
+    }
+  ],
+  "goals": [],
+  "activities": [
+    "canCreateXxx",
+    "canUpdateXxx",
+    "canDeleteXxx"
+  ]
+}

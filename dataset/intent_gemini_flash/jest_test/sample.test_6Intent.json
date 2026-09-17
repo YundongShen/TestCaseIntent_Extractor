@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_sample_test_6",
+  "source_file": "dataset/raw/jest_test/sample.test_6.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:08.970730",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "HTML element with ID 'load-msal'",
+    "msalConfig"
+  ],
+  "goals": [
+    "Verify the application's client-side MSAL integration and authentication configuration.",
+    "Verify the application server successfully serves the main web pages."
+  ],
+  "activities": [
+    "Initialize test environment by loading necessary modules (supertest, path, fs, server app).",
+    "Disable Jest's automatic mocking for the 'fs' module.",
+    "Read the content of 'App/index.html' file.",
+    "Set the global document's inner HTML to the content of 'App/index.html'.",
+    "Retrieve the 'src' attribute of the element with ID 'load-msal'.",
+    "Verify that the 'src' attribute contains the expected CDN link for MSAL.",
+    "Load the MSAL configuration object from 'App/authConfig.js'.",
+    "Verify that the MSAL configuration object is defined.",
+    "Define a regular expression for GUID format.",
+    "Test if the 'clientId' in the MSAL configuration matches the GUID regular expression.",
+    "Verify that the 'clientId' does not match the GUID format, ensuring no credentials are hardcoded.",
+    "Define a regular expression for URI format.",
+    "Test if the 'authority' in the MSAL configuration matches the URI regular expression.",
+    "Verify that the 'authority' matches the URI format, ensuring it's a valid URI.",
+    "Set the Node.js environment variable `NODE_ENV` to 'test'.",
+    "Send an HTTP GET request to the root path '/'.",
+    "Read the content of 'App/index.html' file from the filesystem.",
+    "Verify that the HTTP response status code for the root path is 200.",
+    "Verify that the HTTP response body for the root path matches the content of 'App/index.html'.",
+    "Send an HTTP GET request to the '/signout' path.",
+    "Read the content of 'App/signout.html' file from the filesystem.",
+    "Verify that the HTTP response status code for the '/signout' path is 200.",
+    "Verify that the HTTP response body for the '/signout' path matches the content of 'App/signout.html'."
+  ]
+}

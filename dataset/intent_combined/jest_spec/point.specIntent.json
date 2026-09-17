@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_point_spec",
+  "source_file": "dataset/raw/jest_spec/point.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:47:50.713366",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Point"
+  ],
+  "goals": [
+    "verify arithmetic operations on Point objects"
+  ],
+  "activities": [
+    "create Point instance",
+    "add numeric Point objects",
+    "verify addition result",
+    "add string Point objects",
+    "verify string addition result",
+    "multiply Point objects",
+    "verify multiplication result",
+    "subtract Point objects",
+    "verify subtraction result",
+    "divide Point objects",
+    "verify division result"
+  ]
+}

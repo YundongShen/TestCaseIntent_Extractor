@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_fps_spec",
+  "source_file": "dataset/raw/jest_spec/fps.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:20:07.479934",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify that the fps function logs FPS metrics to the console logger exactly twice with the expected content."
+  ],
+  "activities": [
+    "Create console mock object",
+    "Initialize time variable",
+    "Mock requestAnimationFrame function",
+    "Create configuration object",
+    "Initialize fps function with config",
+    "Invoke fps instance",
+    "Invoke cleanUp method",
+    "Verify console warn call count",
+    "Verify first console warn call arguments",
+    "Verify second console warn call arguments"
+  ]
+}

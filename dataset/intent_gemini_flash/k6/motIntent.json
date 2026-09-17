@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_mot",
+  "source_file": "dataset/raw/k6/mot.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T13:30:42.743187",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "http://nicole.com.ph",
+    "http://nicole.com.ph/product/OLJCESPC7Z",
+    "http://nicole.com.ph/cart"
+  ],
+  "goals": [
+    "Verify the successful loading and content display of the e-commerce website's home and product pages.",
+    "Verify the successful addition of a product to the shopping cart."
+  ],
+  "activities": [
+    "Send a GET request to the home page.",
+    "Verify the response status is 200.",
+    "Verify the response body contains 'Free shipping with $75 purchase!'.",
+    "Pause for a random duration."
+  ]
+}

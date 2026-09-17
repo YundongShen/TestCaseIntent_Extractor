@@ -1,0 +1,40 @@
+{
+  "test_case_id": "tc_taskletTest",
+  "source_file": "dataset/raw/junit_unit/taskletTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:51:13.133096",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "loadDataTasklet",
+    "loadDataJob",
+    "loadDataStep",
+    "jobRunner"
+  ],
+  "goals": [
+    "Verify the execution logic of LoadDataTasklet with both populated and empty query results",
+    "Verify the Spring Batch configuration correctly initializes the Job and Step beans",
+    "Verify the end-to-end integration and successful execution of the loadDataJob",
+    "Verify that the JobRunner correctly launches the batch job"
+  ],
+  "activities": [
+    "Initialize Mockito mocks for LoadDataTaskletTest",
+    "Define SQL query and create mock data list",
+    "Mock JdbcTemplate to return the mock data for the SQL query",
+    "Execute LoadDataTasklet with mock step contribution and chunk context",
+    "Assert that the tasklet execution status is FINISHED",
+    "Verify that JdbcTemplate queryForList was called exactly once with the specific SQL",
+    "Mock JdbcTemplate to return an empty list for any query",
+    "Execute LoadDataTasklet with mock step contribution and chunk context",
+    "Assert that the tasklet execution status is FINISHED",
+    "Assert that the injected loadDataJob and loadDataStep beans are not null",
+    "Assert that the names of the job and step are 'loadDataJob' and 'loadDataStep' respectively",
+    "Launch the loadDataJob with new JobParameters",
+    "Assert that the job execution status is successful",
+    "Assert that the job execution exit code is 'COMPLETED'",
+    "Initialize Mockito mocks for JobRunnerTest",
+    "Mock JobLauncher to return null when running any job",
+    "Execute the JobRunner",
+    "Verify that JobLauncher was called exactly once with the loadDataJob and any JobParameters"
+  ]
+}

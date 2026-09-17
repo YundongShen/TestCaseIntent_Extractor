@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_SampleSmokeTest",
+  "source_file": "dataset/raw/junit_spring/SampleSmokeTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:47:59.468837",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify that the application's root endpoint is accessible, returning a 200 HTTP status code and a welcome message"
+  ],
+  "activities": [
+    "Set the base URI to the test URL",
+    "Enable relaxed HTTPS validation",
+    "Send a GET request with JSON content type",
+    "Verify that the response status code is 200",
+    "Verify that the response body starts with 'Welcome'"
+  ]
+}

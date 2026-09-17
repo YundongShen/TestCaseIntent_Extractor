@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_get_output_test",
+  "source_file": "dataset/raw/jest_test/get_output.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T18:02:45.445882",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "getOutput"
+  ],
+  "goals": [
+    "Verify getOutput function handles the case when there are no groups",
+    "Verify getOutput function handles the case where there are groups"
+  ],
+  "activities": [
+    "Initialize output array and task object",
+    "Call getOutput with empty groups and task object",
+    "Verify output array length is 1",
+    "Verify first output item name is 'mocha'",
+    "Initialize output array and task object",
+    "Define groups object with Lint tools",
+    "Call getOutput with groups and task object",
+    "Call getOutput with groups and jshint task object",
+    "Verify output array length is 2",
+    "Verify second output item group is 'Lint tools'"
+  ]
+}

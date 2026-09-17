@@ -1,0 +1,50 @@
+{
+  "test_case_id": "tc_app",
+  "source_file": "dataset/raw/cucumber/app.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:17:37.231627",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "image registration page",
+    "title field",
+    "URL field",
+    "submit button",
+    "list of registered images",
+    "localStorage",
+    "form"
+  ],
+  "goals": [
+    "Verify input validation and error handling for image title and URL fields",
+    "Verify image submission, list updates, localStorage storage, and data persistence"
+  ],
+  "activities": [
+    "Navigate to image registration page",
+    "Enter empty string in title field",
+    "Enter empty string in URL field",
+    "Click submit button",
+    "Verify error message 'Please type a title for the image' above title field",
+    "Verify error message 'Please type a valid URL' above imageUrl field",
+    "Verify exclamation icon in title and URL fields",
+    "Navigate to image registration page",
+    "Enter 'Alien BR' in title field",
+    "Verify check icon in title field",
+    "Enter valid image URL in URL field",
+    "Verify check icon in imageUrl field",
+    "Press enter key to submit form",
+    "Verify list of registered images updated with new item",
+    "Verify new item stored in localStorage",
+    "Verify inputs are cleared",
+    "Navigate to image registration page",
+    "Enter 'BR Alien' in title field",
+    "Enter valid image URL in URL field",
+    "Click submit button",
+    "Verify list of registered images updated with new item",
+    "Verify new item stored in localStorage",
+    "Verify inputs are cleared",
+    "Navigate to image registration page",
+    "Submit image by clicking submit button",
+    "Refresh the page",
+    "Verify submitted image remains in list of registered images"
+  ]
+}

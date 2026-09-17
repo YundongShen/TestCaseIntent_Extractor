@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_locustfile_1",
+  "source_file": "dataset/raw/locust/locustfile_1.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:19:49.367308",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "/",
+    "/api/translate"
+  ],
+  "goals": [
+    "Verify the performance and stability of the website homepage under simulated concurrent user load",
+    "Verify the performance and stability of the translation API endpoint under simulated concurrent user load with varied target languages"
+  ],
+  "activities": [
+    "Wait for a random duration between 5 and 15 seconds",
+    "Send GET request to the root URL",
+    "Prepare translation payload with text and random target language",
+    "Send POST request to the translation API endpoint"
+  ]
+}

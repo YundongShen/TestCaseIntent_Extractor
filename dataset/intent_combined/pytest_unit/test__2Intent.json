@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_test__2",
+  "source_file": "dataset/raw/pytest_unit/test__2.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:37:00.193887",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "pyetymology.eobjects.mwparserhelper"
+  ],
+  "goals": [
+    "verify parsing helper functions and query retrieval logic"
+  ],
+  "activities": [
+    "check exact prefix matching for Spanish string",
+    "check exact prefix matching for Etymology string",
+    "fetch wiki response domain for llevar",
+    "check sections by level for level 6",
+    "skip query fetch comparison test"
+  ]
+}

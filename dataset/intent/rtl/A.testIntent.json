@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_A_test",
+  "source_file": "dataset/raw/rtl/A.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-02T02:27:48.857910",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "A"
+  ],
+  "goals": [
+    "Verify component A renders expected link content",
+    "Verify component A click interaction and missing href warning behavior"
+  ],
+  "activities": [
+    "Render component A with data-testid \"a.link\" and text \"Link\"",
+    "Verify element with testid \"a.link\" contains HTML \"Link\"",
+    "Mock console.warn function",
+    "Render component A with text \"click link\"",
+    "Verify warning message equals \"missing href\"",
+    "Initialize click state variable",
+    "Define onClick handler to update state and assert",
+    "Render component A with data-testid \"a.clickme\" and onClick handler",
+    "Click element with testid \"a.clickme\""
+  ]
+}

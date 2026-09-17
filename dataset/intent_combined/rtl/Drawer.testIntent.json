@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_Drawer_test",
+  "source_file": "dataset/raw/rtl/Drawer.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T04:53:00.743964",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Drawer"
+  ],
+  "goals": [
+    "verify Drawer visibility toggle functionality"
+  ],
+  "activities": [
+    "render the test component",
+    "locate the toggle button",
+    "locate the drawer dialog",
+    "verify drawer initial hidden state",
+    "click the toggle button",
+    "verify drawer shown state",
+    "click the toggle button",
+    "verify drawer hidden state"
+  ]
+}

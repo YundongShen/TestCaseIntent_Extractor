@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_test__11",
+  "source_file": "dataset/raw/pytest_api/test__11.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:19.711178",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "UpdateWorkshop",
+    "UpdateWorkshopRepBody",
+    "Server",
+    "WorkshopTest",
+    "WorkshopCategories"
+  ],
+  "goals": [
+    "Test that the workshop is updated successfully with the provided parameters and categories"
+  ],
+  "activities": [
+    "test_api_ok"
+  ]
+}

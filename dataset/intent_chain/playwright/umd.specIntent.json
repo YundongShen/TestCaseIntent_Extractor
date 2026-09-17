@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_umd_spec",
+  "source_file": "dataset/raw/playwright/umd.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:41:04.072638",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify that the SDK is correctly exported globally under the 'globus' namespace with all expected modules defined",
+    "Verify that the authorization flow initiates correctly by redirecting to the Globus Auth service with valid OAuth parameters"
+  ],
+  "activities": [
+    "Navigate to the SDK demo page",
+    "Verify the 'globus' namespace is globally exported with all expected modules",
+    "Navigate to the authorization demo page",
+    "Click the 'Sign In' button to initiate the authorization flow",
+    "Verify redirection to the Globus Auth service with valid OAuth parameters"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_FirstTest",
+  "source_file": "dataset/raw/junit_unit/FirstTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:59:55.465761",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "mockDao",
+    "task"
+  ],
+  "goals": [
+    "test_create_key_returns_correct_value",
+    "test_get_returns_correct_task"
+  ],
+  "activities": []
+}

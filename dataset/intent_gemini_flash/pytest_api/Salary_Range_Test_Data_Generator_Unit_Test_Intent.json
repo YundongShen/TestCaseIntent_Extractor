@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:37:53.220667",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "hourlyRateRange",
+    "hourlyRateRangeSoup",
+    "minSelect",
+    "minOptions",
+    "option",
+    "maxSelect",
+    "maxOptions",
+    "annualRateRange",
+    "annualRateRangeSoup"
+  ],
+  "goals": [
+    "Verify that the hourly rate salary range filter dropdowns on the Gumtree job search page contain 11 options.",
+    "Verify that the annual salary range filter dropdowns on the Gumtree job search page contain 11 options."
+  ],
+  "activities": [
+    "Make an HTTP GET request to the hourly rate jobs URL.",
+    "Assert that the HTTP request was successful.",
+    "Parse the HTML content of the response.",
+    "Find the HTML element for the minimum salary range filter.",
+    "Parse the HTML content of the minimum salary range filter element.",
+    "Extract all non-empty integer values from the minimum salary options.",
+    "Assert that 11 minimum salary options were extracted.",
+    "Find the HTML element for the maximum salary range filter.",
+    "Parse the HTML content of the maximum salary range filter element.",
+    "Extract all non-empty integer values from the maximum salary options.",
+    "Assert that 11 maximum salary options were extracted.",
+    "Make an HTTP GET request to the annual salary jobs URL.",
+    "Parse the HTML content of the response.",
+    "Find the HTML element for the minimum salary range filter.",
+    "Parse the HTML content of the minimum salary range filter element.",
+    "Extract all non-empty integer values from the minimum salary options.",
+    "Assert that 11 minimum salary options were extracted.",
+    "Find the HTML element for the maximum salary range filter.",
+    "Parse the HTML content of the maximum salary range filter element.",
+    "Extract all non-empty integer values from the maximum salary options.",
+    "Assert that 11 maximum salary options were extracted."
+  ]
+}

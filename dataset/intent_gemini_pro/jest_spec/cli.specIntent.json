@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_cli_spec",
+  "source_file": "dataset/raw/jest_spec/cli.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:38:23.493974",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "cli.parseCozyURL"
+  ],
+  "goals": [
+    "Verify that parseCozyURL correctly normalizes URLs by removing trailing slashes and app suffixes",
+    "Verify that parseCozyURL throws an error if the provided URL does not start with the 'http' protocol"
+  ],
+  "activities": [
+    "Set URL input to 'https://toto.mycozy.cloud'",
+    "Assert that parseCozyURL returns 'https://toto.mycozy.cloud'",
+    "Set URL input to 'https://toto.mycozy.cloud/'",
+    "Assert that parseCozyURL returns 'https://toto.mycozy.cloud'",
+    "Set URL input to 'https://toto-drive.mycozy.cloud/'",
+    "Assert that parseCozyURL returns 'https://toto.mycozy.cloud'",
+    "Set URL input to 'toto.mycozy.cloud'",
+    "Call parseCozyURL with the input and catch the thrown error",
+    "Assert that the error message matches 'Cozy url must start with `http`'"
+  ]
+}

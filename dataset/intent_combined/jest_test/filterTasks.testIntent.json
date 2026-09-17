@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_filterTasks_test",
+  "source_file": "dataset/raw/jest_test/filterTasks.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:57:47.381205",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "filterTasks"
+  ],
+  "goals": [
+    "verify task filtering behavior under different modes and edge cases"
+  ],
+  "activities": [
+    "initialize tasks array with sample data",
+    "call filterTasks with no filter specified",
+    "verify output equals original tasks",
+    "call filterTasks with empty filter list",
+    "verify output equals original tasks",
+    "call filterTasks with exclude mode and task name",
+    "verify output length equals four",
+    "call filterTasks with include mode and task name",
+    "verify output length equals one"
+  ]
+}

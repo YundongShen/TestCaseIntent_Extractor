@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_CountryResourceTest",
+  "source_file": "dataset/raw/junit_spring/CountryResourceTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T08:00:45.955251",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "/countries"
+  ],
+  "goals": [
+    "Verify the /countries endpoint returns a list of countries that includes 'Brasil' and 'Brazil'."
+  ],
+  "activities": [
+    "Make an HTTP GET request to the '/countries' endpoint.",
+    "Assert that the response body contains 'Brasil'.",
+    "Assert that the response body contains 'Brazil'."
+  ]
+}

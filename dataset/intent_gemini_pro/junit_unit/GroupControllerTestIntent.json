@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_GroupControllerTest",
+  "source_file": "dataset/raw/junit_unit/GroupControllerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:50:34.614737",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "PersonController"
+  ],
+  "goals": [
+    "Verify the GET '/person' endpoint returns an OK status when no persons are found",
+    "Verify the GET '/person' endpoint returns an OK status and the correct JSON content when persons exist"
+  ],
+  "activities": [
+    "Initialize MockMvc with the PersonController and create an ObjectMapper",
+    "Mock personManager.findAll() to return null",
+    "Perform a GET request to '/person'",
+    "Assert that the response status is OK",
+    "Create Person objects and add them to a list",
+    "Mock personManager.findAll() to return the list of persons",
+    "Perform a GET request to '/person'",
+    "Assert that the response status is OK",
+    "Assert that the response content matches the JSON representation of the persons list"
+  ]
+}

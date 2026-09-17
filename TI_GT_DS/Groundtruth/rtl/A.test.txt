@@ -1,0 +1,33 @@
+**Test Object**
+`<A>` Component
+
+**Test Goal**
+Confirm that the component renders correctly and displays the passed-in text content.
+
+**Test Activities**
+1. Render `<A data-testid="a.link">Link</A>`.
+2. Find the element using `data-testid`.
+3. Assert that the element contains the text `Link`.
+
+**Test Object**
+`<A>` Component
+
+**Test Goal**
+Verify that when the component lacks the `href` attribute, the console outputs a warning.
+
+**Test Activities**
+1. Simulate the `console.warn` function.
+2. Render `<A>click link</A>`.
+3. Assert that `console.warn` is called with the parameter `'missing href'`.
+
+**Test Object**
+`<A>` Component
+
+**Test Goal**
+Confirm that the bound `onClick` callback is triggered correctly when the component is clicked.
+
+**Test Activities**
+1. Prepare a flag variable `io`, initialized to 0, and set to 1 by the `onClick` callback.
+2. Render `<A data-testid="a.clickme" onClick={onClick}>click</A>`.
+3. Find the element using `data-testid` and simulate a click.
+4. Assert that `io` becomes 1 (callback is invoked).

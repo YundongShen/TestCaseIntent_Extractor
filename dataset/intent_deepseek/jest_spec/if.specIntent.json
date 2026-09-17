@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_if_spec",
+  "source_file": "dataset/raw/jest_spec/if.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:29.065548",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "NODE_MAJOR_VERSION",
+    "ENV_VAR"
+  ],
+  "goals": [
+    "verifyifNODE_MAJOR_VERSIONissomeNumberandaccessiblebyENV_VAR"
+  ],
+  "activities": [
+    "extractAndSimplifyTestCode",
+    "extractAllTestActions",
+    "describeIfConditions",
+    "accessEnvironmentVariables"
+  ]
+}

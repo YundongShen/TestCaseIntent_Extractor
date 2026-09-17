@@ -1,0 +1,10 @@
+**Test Object**
+The root route of DemoApplication: `/`
+
+**Test Goal**
+Confirm that the application starts normally and accessing the root path returns the correct result.
+
+**Test Activities**
+1. Start the application on a random port.
+2. Use RestTemplate to request `http://localhost:{port}/`.
+3. Check if the returned result is "Hello world".

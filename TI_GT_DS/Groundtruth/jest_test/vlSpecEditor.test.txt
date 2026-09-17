@@ -1,0 +1,11 @@
+**Test Object**
+`vlSpecEditor` directive
+
+**Test Goal**
+After compiling the directive, confirm that the source code editor and abbreviated fields correctly display their initial values.
+
+**Test Activities**
+1. Load the module, inject vl constants, a simulated uiZeroclipDirective, and the Spec service.
+2. Create a scope, compile the `<vl-spec-editor></vl-spec-editor>` element, and trigger a digest.
+3. Check that the value of the `.vlspec` element is `'{}'`.
+4. Check that the value of the `.shorthand` element is `'point.'`.

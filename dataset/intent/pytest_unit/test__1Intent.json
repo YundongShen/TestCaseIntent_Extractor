@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_test__1",
+  "source_file": "dataset/raw/pytest_unit/test__1.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:27:11.934370",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "myCode.build_url",
+    "myCode.get_meaning_of_life",
+    "myCode.get_product"
+  ],
+  "goals": [
+    "Verify build_url function constructs correct URL strings with query parameters",
+    "Verify get_meaning_of_life and get_product functions format output strings correctly with mocked dependencies"
+  ],
+  "activities": [
+    "Patch myCode.BASE_URL to http://localhost/products",
+    "Execute myCode.build_url with minPrice=100, maxPrice=500, order=desc",
+    "Set expected value to http://localhost/products?minPrice=100&maxPrice=500&order=desc",
+    "Assert actual equals expected",
+    "Patch mockdemo.myCode.calculate_meaning_of_life to return wibble",
+    "Execute myCode.get_meaning_of_life",
+    "Set expected value to The meaning of life is wibble",
+    "Assert actual equals expected",
+    "Patch mockdemo.myCode.DataLoader.load_product to return wibble",
+    "Execute myCode.get_product",
+    "Set expected value to Product is wibble",
+    "Assert actual equals expected"
+  ]
+}

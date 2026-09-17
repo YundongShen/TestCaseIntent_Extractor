@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_app_test",
+  "source_file": "dataset/raw/supertest/app.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-02T02:37:02.342190",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify HTTP GET request to '/' returns status 200 and expected response body",
+    "Verify HTTP GET request to '/watermelon' returns status 200 and expected response body"
+  ],
+  "activities": [
+    "Send GET request to /",
+    "Verify response body contains Helllooooo",
+    "Verify HTTP status code is 200",
+    "Send GET request to /watermelon",
+    "Verify response body contains watermelon ",
+    "Verify HTTP status code is 200",
+    "Send GET request to /watermelon",
+    "Verify HTTP status code is 200",
+    "Verify response body contains watermelon "
+  ]
+}

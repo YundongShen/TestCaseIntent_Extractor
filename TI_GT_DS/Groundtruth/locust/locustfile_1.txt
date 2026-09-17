@@ -1,0 +1,11 @@
+**Test Object**
+Translation Service (Homepage `/` and Translation API `/api/translate`)
+
+**Test Goal**
+Verify that the translation service can respond normally to homepage requests under high concurrency and can handle translation requests for multiple target languages.
+
+**Test Activities**
+1. Each virtual user randomly waits 5 to 15 seconds before executing a task.
+2. Access the homepage `GET /` at a low frequency.
+3. Send POST requests to `/api/translate` at a high frequency, carrying a piece of English text, with the target language randomly selected from 8 languages.
+4. Continuously execute the above operations to simulate mixed access by real users.

@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_locustfile_3",
+  "source_file": "dataset/raw/locust/locustfile_3.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:17:48.938117",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify performance and stability of index and prediction endpoints under simulated concurrent user load"
+  ],
+  "activities": [
+    "Send HTTP GET request to the root URL",
+    "Send HTTP POST request to the predict endpoint with booking parameters"
+  ]
+}

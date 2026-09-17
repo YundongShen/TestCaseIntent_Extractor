@@ -1,0 +1,11 @@
+**Test Object** 
+Application root path (`/`)
+
+**Test Goal** 
+Verify that the application starts and responds normally.
+
+**Test Activities** 
+1. Set the base URI and target address.
+2. Send a GET request to `/` (Content-Type is JSON).
+3. Verify that the status code is 200.
+4. Verify that the response string begins with "Welcome".

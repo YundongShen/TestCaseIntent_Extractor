@@ -1,0 +1,26 @@
+**Test Object**
+Amazon India Login Functionality
+
+**Test Goal**
+Verify that a user can successfully log in to their account using their email address and password.
+
+**Test Activities**
+1. Open the Amazon India homepage.
+2. Hover your mouse over the account list link and click to enter the login page.
+3. Enter `grewal.pukhraj@gmail.com` in the email input box.
+4. Click the Continue button.
+5. Enter `Password@1` in the password input box.
+6. Click the Login button to complete the login.
+
+**Test Object**
+Amazon India Product Search, Add-to-Cart, and Checkout Process
+
+**Test Goal**
+Verify that a user can search for products, select an item from the results, add it to their cart, and proceed to the checkout page.
+
+**Test Activities**
+1. Open the Amazon India homepage.
+2. Enter `T-shirt` in the search box and click the search button.
+3. Locate the first product link in the search results, remove the `target` attribute, and click to enter the product details page.
+4. Click the "Add to Cart" button to add the product to your shopping cart.
+5. Click the "Proceed to checkout" button to proceed to the checkout page.

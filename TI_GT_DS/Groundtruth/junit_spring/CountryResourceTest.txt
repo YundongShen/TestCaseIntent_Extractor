@@ -1,0 +1,10 @@
+**Test Object**
+`/countries` API
+
+**Test Goal**
+Verify that the API returns the expected country data.
+
+**Test Activities**
+1. Start the application on a random port and obtain the actual port number.
+2. Send a GET request to `/countries` using TestRestTemplate.
+3. Check that the response string contains "Brasil" and "Brazil".

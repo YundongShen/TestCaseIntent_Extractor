@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_app_test",
+  "source_file": "dataset/raw/supertest/app.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:17:35.422680",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Send GET request to endpoint '/'",
+    "Verify response status code is 200 and body is 'Helllooooo'",
+    "Send GET request to endpoint '/watermelon'",
+    "Verify response status code is 200 and body is 'watermelon '",
+    "Send GET request to endpoint '/watermelon'",
+    "Verify response status code is 200 and body is 'watermelon '"
+  ]
+}

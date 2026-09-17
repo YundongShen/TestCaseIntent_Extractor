@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_AccountTest",
+  "source_file": "dataset/raw/junit_unit/AccountTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:48:55.874548",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "acc",
+    "base",
+    "friends",
+    "friendMap"
+  ],
+  "goals": [
+    "Verify that an account correctly checks if it contains a specific friend",
+    "Verify that a friendship is correctly added to a category in the database"
+  ],
+  "activities": [
+    "Initialize Account and DataBase mocks",
+    "Initialize friends list and friendMap, and map the friends list to a category",
+    "Stub Account containsFriend to return true",
+    "Call containsFriend on the Account mock",
+    "Assert that the containsFriend result is true",
+    "Call addFriendShip on the DataBase mock",
+    "Retrieve the friends list from the friendMap",
+    "Check if the friends list does not contain the friend",
+    "Add the friend to the friends list",
+    "Assert that the friends list contains the friend",
+    "Update the friendMap with the friends list",
+    "Assert that the friends list equals the list retrieved from the friendMap",
+    "Call addFriendShip on the DataBase mock",
+    "Retrieve the friends list from the friendMap",
+    "Add the friend to the friends list",
+    "Update the friendMap with the friends list",
+    "Assert that the friends list equals the list retrieved from the friendMap"
+  ]
+}

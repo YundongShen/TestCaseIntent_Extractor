@@ -1,0 +1,14 @@
+**Test Object**
+The `POST /workshop/{id}/files` file upload API.
+
+**Test Goal**
+Verify that after uploading a file to the workshop, the API returns a normal response, the response body structure is correct, and the file is indeed stored in the database and file storage.
+
+**Test Activities**
+1. Clean up the environment, create a new workshop, and prepare two test files (one txt, one png).
+2. POST both files together using the multipart method.
+3. Check that the status code is 201 and the Content-Type is application/json.
+4. Compare the status, msg, data, and detail in the response body; they all match expectations.
+5. Check the workshop data in the database; it is intact.
+6. Confirm that both files can be found in storage.
+7. Clean up the test files after running the test.

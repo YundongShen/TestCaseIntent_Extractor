@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_TestMapperTest",
+  "source_file": "dataset/raw/junit_spring/TestMapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T18:55:13.595522",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "testMapper"
+  ],
+  "goals": [
+    "Verify that TestMapper.version() returns the expected version string '5.7.21'"
+  ],
+  "activities": [
+    "Call testMapper.version() method to retrieve version",
+    "Print version string to console",
+    "Assert version string equals expected value 5.7.21"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_8_job_test_js",
+  "source_file": "dataset/raw/jest_test/8-job.test.js.1",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:55:42.813585",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "createPushNotificationsJobs",
+    "QUEUE",
+    "Push3"
+  ],
+  "goals": [
+    "Verify the createPushNotificationsJobs function handles invalid input by throwing an error when the 'jobs' argument is not an array.",
+    "Verify the createPushNotificationsJobs function correctly creates and configures push notification jobs in the queue, including their data, type, and event listeners."
+  ],
+  "activities": [
+    "Create a Sinon sandbox for test isolation.",
+    "Initialize a Kue queue instance named 'push_notification_code_test'.",
+    "Enter test mode for the queue to track job creation.",
+    "Define an invalid jobs object (not an array).",
+    "Call the 'createPushNotificationsJobs' function with the invalid jobs object and the queue.",
+    "Assert that calling the function throws an error with the message 'Jobs is not an array'.",
+    "Define an array of job information objects.",
+    "Call the 'createPushNotificationsJobs' function with the job information and the queue.",
+    "Assert that two jobs were added to the queue in test mode.",
+    "Assert that the data of the first job in the queue matches the first defined job information.",
+    "Assert that the type of the first job in the queue is 'push_notification_code_3'.",
+    "Define an array with a single job information object.",
+    "Create a mock job object with stubbed 'on' and 'save' methods.",
+    "Stub the 'QUEUE.create' method to return the mock job object.",
+    "Call the 'createPushNotificationsJobs' function with the job information and the queue.",
+    "Assert that 'QUEUE.create' was called once.",
+    "Assert that 'QUEUE.create' was called with 'push_notification_code_3' and the job data.",
+    "Assert that the 'save' method of the created job was called once.",
+    "Assert that the 'on' method of the created job was called three times.",
+    "Assert that the 'on' method was called for the 'complete' event.",
+    "Assert that the 'on' method was called for the 'progress' event.",
+    "Assert that the 'on' method was called for the 'failed' event.",
+    "Restore the Sinon sandbox.",
+    "Clear all jobs from the queue in test mode.",
+    "Exit test mode for the queue."
+  ]
+}

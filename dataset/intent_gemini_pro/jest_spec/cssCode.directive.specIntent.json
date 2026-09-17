@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_cssCode_directive_spec",
+  "source_file": "dataset/raw/jest_spec/cssCode.directive.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:38:47.432315",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "cssCode",
+    "element"
+  ],
+  "goals": [
+    "Verify that the cssCode directive compiles and renders the expected text content."
+  ],
+  "activities": [
+    "Load the 'googleWebfontsHelperApp' module",
+    "Load the 'app/cssCode/cssCode.html' template module",
+    "Create a new scope from the root scope",
+    "Create an angular element with the '<css-code></css-code>' tag",
+    "Compile the element with the new scope",
+    "Apply the scope to trigger a digest cycle",
+    "Verify that the element's text is 'this is the cssCode directive'"
+  ]
+}

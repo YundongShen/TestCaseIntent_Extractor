@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_api_test_1",
+  "source_file": "dataset/raw/supertest/api.test_1.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T08:00:27.772114",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "request",
+    "res",
+    "newBook",
+    "res.body",
+    "res.statusCode"
+  ],
+  "goals": [
+    "testingthesuccessoftheGET/api/booksrequest",
+    "testingthesuccessofindividualtestcases"
+  ],
+  "activities": [
+    "test 'GET/api/books should return all books'",
+    "test 'GET/api/books/:id should return a book'",
+    "test 'GET/api/books/:id should return 404 for invalid ID'",
+    "test 'POST/api/books should create a new book'",
+    "test 'PUT/api/books/:id should update a book'",
+    "test 'PUT/api/books/:id should return 404 if not found'",
+    "test 'DELETE/api/books/:id should delete a book'",
+    "test 'DELETE/api/books/:id should return 404 if not found'"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_pytest_",
+  "source_file": "dataset/raw/pytest_unit/pytest_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:48.413501",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "test_function",
+    "coverage_",
+    "can_passthru_k_x_and_arbitrary_opts",
+    "can_turn_off_or_change_defaults",
+    "default_args",
+    "report_type",
+    "opts",
+    "test_task",
+    "with_expect"
+  ],
+  "goals": [],
+  "activities": [
+    "def defaults_to_verbose_color_and_syscapture_with_pty_True",
+    "def can_turn_off_or_change_defaults",
+    "def can_passthru_k_x_and_arbitrary_opts",
+    "def disable_warnings",
+    "def test_function",
+    "def can_append_additional_test_tasks",
+    "def open_html_report",
+    "def coverage_support"
+  ]
+}

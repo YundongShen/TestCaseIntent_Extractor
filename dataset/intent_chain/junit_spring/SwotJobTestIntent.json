@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_SwotJobTest",
+  "source_file": "dataset/raw/junit_spring/SwotJobTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T18:48:53.881005",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the SWOT batch job executes successfully and completes with expected status",
+    "Verify the job correctly processes and persists the expected number of records into Solr and Cassandra databases"
+  ],
+  "activities": [
+    "Clear Solr collection and truncate Cassandra table",
+    "Configure job parameters with input granule file",
+    "Launch the SWOT batch job",
+    "Verify job exit status is COMPLETED",
+    "Verify step execution read, write, and filter counts match expected values",
+    "Verify Solr database contains expected number of records",
+    "Verify Cassandra database contains expected number of records"
+  ]
+}

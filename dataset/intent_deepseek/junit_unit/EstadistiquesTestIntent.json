@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_EstadistiquesTest",
+  "source_file": "dataset/raw/junit_unit/EstadistiquesTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:18.052601",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Partidap4",
+    "Partidap2",
+    "Partidap3",
+    "Partidap1",
+    "Estadistiquesest"
+  ],
+  "goals": [
+    "test that the estadistiques object correctly sums up the puntuacio humana and maquina of each partida included in the list"
+  ],
+  "activities": [
+    "extractMockPartidas",
+    "setValuesForMockPartidas",
+    "addPartidaToSolution",
+    "callEstadistiquesMethod",
+    "printRanking"
+  ]
+}

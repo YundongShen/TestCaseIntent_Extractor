@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_LOG_test_",
+  "source_file": "dataset/raw/pytest_unit/LOG_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:41.925185",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "LOG",
+    "Vector",
+    "Scalar",
+    "OrderedPair"
+  ],
+  "goals": [
+    "verify_log_function_with_vector",
+    "verify_log_function_with_scalars",
+    "verify_log_function_with_ordered_pair"
+  ],
+  "activities": [
+    "importnumpyasnpfromflojoy",
+    "importOrderedPair,Vector,Scalar,deftest_LOG_Vector_Vector,deftest_LOG_Vector_Scalar,deftest_LOG_OrderedPair_Vector,importLOG,importflojoy,np,Scalar,OrderedPair,scalardeftest_LOG_Vector_Scalar,scalardeftest_LOG_OrderedPair_Vector",
+    "defmock_flojoy_decorator:returnflojoy.mock_flojoy",
+    "test_LOG_Vector_Vector,test_LOG_Vector_Scalar,test_LOG_OrderedPair_Vector",
+    "np.testing.assert_allclose",
+    "assert"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_StubHandlerTest",
+  "source_file": "dataset/raw/junit_unit/StubHandlerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:29:16.535696",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "{{ operation }}Handler",
+    "ProgressEvent"
+  ],
+  "goals": [
+    "Verify that the handler's handleRequest method completes successfully.",
+    "Verify that the handler's handleRequest method returns the requested resource model upon successful completion."
+  ],
+  "activities": [
+    "Instantiate the resource handler.",
+    "Create an empty resource model.",
+    "Build a resource handler request with the created model.",
+    "Invoke the handler's handleRequest method with the proxy, request, null context, and logger.",
+    "Assert that the response is not null.",
+    "Assert that the response status is SUCCESS.",
+    "Assert that the response context is null.",
+    "Assert that the response callback delay is 0.",
+    "Assert that the response resource model matches the desired resource state from the request.",
+    "Assert that the response resource models list is null.",
+    "Assert that the response message is null.",
+    "Assert that the response error code is null."
+  ]
+}

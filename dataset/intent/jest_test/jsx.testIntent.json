@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_jsx_test",
+  "source_file": "dataset/raw/jest_test/jsx.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T18:09:00.625670",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "nano"
+  ],
+  "goals": [
+    "Verify that the jsx addon correctly installs the jsx interface",
+    "Verify that the jsx method creates a valid component function"
+  ],
+  "activities": [
+    "Initialize nano instance using createNano helper",
+    "Verify nano.jsx property is a function",
+    "Initialize nano instance using createNano helper",
+    "Invoke nano.jsx method with button tag and style props",
+    "Verify returned component is a function"
+  ]
+}

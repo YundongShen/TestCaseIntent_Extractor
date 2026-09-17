@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_Row_test",
+  "source_file": "dataset/raw/rtl/Row.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T13:44:35.723654",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Row component",
+    "spinbutton input",
+    "unit selection combobox",
+    "ingredient selection combobox",
+    "conversion result text"
+  ],
+  "goals": [
+    "Verify the Row component correctly calculates and dynamically updates ingredient conversions based on user input, selected units/ingredients, and the provided scale factor."
+  ],
+  "activities": [
+    "Render the Row component with a scale of 1.",
+    "Locate the spinbutton input field.",
+    "Type '2' into the input field.",
+    "Verify that '232.0 g' is displayed.",
+    "Render the Row component with a scale of 1.",
+    "Locate the spinbutton input field.",
+    "Type '1' into the input field.",
+    "Verify that '116.0 g' is displayed.",
+    "Locate the unit selection combobox.",
+    "Click the unit selection combobox.",
+    "Click the 'Ounce' option.",
+    "Verify that '14.5 g' is displayed.",
+    "Render the Row component with a scale of 1.",
+    "Locate the spinbutton input field.",
+    "Type '1' into the input field.",
+    "Verify that '116.0 g' is displayed.",
+    "Locate the ingredient selection combobox.",
+    "Click the ingredient selection combobox.",
+    "Click the 'Agave syrup' option.",
+    "Verify that '336.0 g' is displayed.",
+    "Render the Row component with a scale of 2.",
+    "Locate the spinbutton input field.",
+    "Type '1' into the input field.",
+    "Verify that '232.0 g' is displayed."
+  ]
+}

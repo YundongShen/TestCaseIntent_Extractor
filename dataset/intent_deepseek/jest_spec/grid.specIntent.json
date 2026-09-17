@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_grid_spec",
+  "source_file": "dataset/raw/jest_spec/grid.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:28.113929",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Grid"
+  ],
+  "goals": [
+    "Test that Grid.create correctly throws an error when provided an invalid seed by the length",
+    "Test that Grid.create returns the correct number of neighbors for each cell"
+  ],
+  "activities": [
+    "Grid.create(3,3,\"100110\")",
+    "Grid.create(3,3,\"100110\").neighbors(7)",
+    "Grid.create(3,3,\"100110\").neighbors(-1)",
+    "Grid.create(3,3,\"100110\").neighbors(4)",
+    "Grid.create(3,3,\"100110\").neighbors(0)",
+    "Grid.create(3,3,\"100110\").neighbors(2)",
+    "Grid.create(3,3,\"100110\").neighbors(6)",
+    "Grid.create(3,3,\"100110\").neighbors(8)"
+  ]
+}

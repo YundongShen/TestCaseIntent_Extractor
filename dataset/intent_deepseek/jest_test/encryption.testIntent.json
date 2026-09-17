@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_encryption_test",
+  "source_file": "dataset/raw/jest_test/encryption.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:11.176380",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "test&description",
+    "verify&encryption&assertions"
+  ],
+  "activities": [
+    "extract_value",
+    "decode_value",
+    "encrypt_decoded_key",
+    "encrypt_value",
+    "verify_encrypted_value",
+    "decodesthevalueasaWIFkey",
+    "decryptstheencryptedvalue",
+    "verify_decrypted_value",
+    "reEncrypt_encryptedValue"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "test_case_id": "tc_CharManagerTest",
+  "source_file": "dataset/raw/junit_unit/CharManagerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:49:27.363760",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "CharManager"
+  ],
+  "goals": [
+    "Verify that CharManager retrieves results from the cache without invoking the calculator when a cache hit occurs.",
+    "Verify that CharManager computes results via the calculator and updates the cache when a cache miss occurs."
+  ],
+  "activities": [
+    "Initialize Mockito annotations, instantiate CharManager, and inject calculator and cache mocks",
+    "Define an input string and expected character count string",
+    "Mock the cache to return the expected string",
+    "Call countUniqueChars on the manager with the input string",
+    "Verify the calculator is never called",
+    "Assert the result equals the expected string",
+    "Define an input string and expected character count string",
+    "Mock the cache to return null",
+    "Mock the calculator to return the expected string",
+    "Call countUniqueChars on the manager with the input string",
+    "Verify the calculator is called exactly once",
+    "Assert the result equals the expected string",
+    "Manually create calculator and cache mocks, instantiate CharManager, and inject the mocks",
+    "Define an input string and expected character count string",
+    "Mock the cache to return null",
+    "Mock the calculator to return the expected string",
+    "Call countUniqueChars on the manager with the input string",
+    "Verify the cache get method is called once",
+    "Verify the cache put method is called once",
+    "Verify the calculator is called once",
+    "Assert the result equals the expected string",
+    "Manually create calculator and cache mocks, instantiate CharManager, and inject the mocks",
+    "Define an input string and expected character count string",
+    "Mock the cache to return the expected string",
+    "Call countUniqueChars on the manager with the input string",
+    "Verify the cache get method is called once",
+    "Verify the cache put method is never called",
+    "Verify the calculator is never called",
+    "Assert the result equals the expected string",
+    "Define an empty input string and expected empty string",
+    "Mock the cache to return the expected empty string",
+    "Call countUniqueChars on the manager with the empty input string",
+    "Verify the calculator is never called",
+    "Assert the result equals the expected empty string"
+  ]
+}

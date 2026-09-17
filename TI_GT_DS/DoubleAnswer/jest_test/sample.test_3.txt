@@ -1,0 +1,40 @@
+**Test Object**
+The `authConfig.js` configuration file
+
+**Test Goal**
+Confirm that the configuration object can be loaded and defined correctly.
+
+**Test Activities**
+1. Load `authConfig.js` before testing and assign it to the global `config`.
+2. Assert that `config` is not undefined.
+
+**Test Object**
+The `credentials.clientID` field in `authConfig.js`
+
+**Test Goal**
+Verify that the client ID field does not contain a real GUID to prevent sensitive information leakage.
+
+**Test Activities**
+1. Use a GUID regular expression to match `config.credentials.clientID`.
+2. Assert that the match result is false.
+
+**Test Object**
+The `credentials.tenantId` field in `authConfig.js`
+
+**Test Goal**
+Verify that the tenant ID field does not contain a real GUID to prevent sensitive information leakage.
+
+**Test Activities**
+1. Use a GUID regular expression to match `config.credentials.tenantId`.
+2. Assert the match result as false.
+
+**Test Object**
+GET /api` API
+
+**Test Goal**
+Verify that the API endpoint rejects unauthenticated requests.
+
+**Test Activities**
+1. Set the environment variable `NODE_ENV` to `'test'`.
+2. Send a GET request to `/api`.
+3. Assert the response status code as 401.

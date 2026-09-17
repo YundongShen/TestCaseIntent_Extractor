@@ -1,0 +1,11 @@
+**Test Object**
+The `GET /workshop/{id}` API call.
+
+**Test Goal**
+The `GET /workshop/{id}` API call is running normally and returns a normal response.
+
+**Test Activities**
+1. Clear the data, insert two `workshop` instances into the database, and note the ID of the first one.
+2. Construct the URL using this ID and send a GET request.
+3. Check that the status code is 200 and the Content-Type is `application/json`.
+4. Compare the `status`, `msg`, and `data` fields in the response body to match expectations; the `detail` field is missing.

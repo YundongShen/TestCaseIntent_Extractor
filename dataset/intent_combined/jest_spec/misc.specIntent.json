@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_misc_spec",
+  "source_file": "dataset/raw/jest_spec/misc.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:40:37.677242",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "panic, generatePropsFromAttributes, memoize"
+  ],
+  "goals": [
+    "verify error throwing, attribute conversion, and memoization behavior"
+  ],
+  "activities": [
+    "invoke panic function with error argument",
+    "assert panic throws an error",
+    "invoke generatePropsFromAttributes with attribute configuration",
+    "assert output matches expected props object",
+    "invoke generatePropsFromAttributes with ref configuration",
+    "assert output matches expected ref props object",
+    "initialize counter variable for tracking calls",
+    "wrap increment function using memoize utility",
+    "execute memoized function with identical arguments twice",
+    "assert counter value indicates single execution"
+  ]
+}

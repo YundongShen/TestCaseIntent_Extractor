@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_locustfile",
+  "source_file": "dataset/raw/locust/locustfile.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:34.458913",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Task",
+    "Test",
+    "HttpUser",
+    "user_id",
+    "group_id"
+  ],
+  "goals": [
+    "test the functionality of the /api/register endpoint by registering two users",
+    "verify the creation of a new group with the correct member IDs and attributes"
+  ],
+  "activities": [
+    "register_two_users",
+    "register_third_user",
+    "get_token_for_third_user",
+    "get_group",
+    "create_group",
+    "get_split_endpoint",
+    "split_group",
+    "post_split"
+  ]
+}

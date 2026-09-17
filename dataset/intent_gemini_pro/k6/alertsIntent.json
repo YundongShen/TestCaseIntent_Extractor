@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_alerts",
+  "source_file": "dataset/raw/k6/alerts.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-11T07:51:52.861532",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "/api/alerts/register"
+  ],
+  "goals": [
+    "Verify that the alert registration endpoint accepts and processes requests, responding with 200 (email sent) or 500 (SMTP failure)"
+  ],
+  "activities": [
+    "Select a random server name",
+    "Construct a JSON payload containing the test email and selected server name",
+    "Send a POST request to the alert registration endpoint with the payload",
+    "Verify the response status is 200 or 500",
+    "Pause execution for 2 seconds"
+  ]
+}

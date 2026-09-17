@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_getDedupedArticleReplies_test",
+  "source_file": "dataset/raw/jest_test/getDedupedArticleReplies.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:43:11.000803",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "getDedupedArticleReplies"
+  ],
+  "goals": [
+    "Verify that getDedupedArticleReplies handles undefined search results by returning an empty array.",
+    "Verify that getDedupedArticleReplies correctly formats article replies, deduplicates them, and filters out existing reply IDs."
+  ],
+  "activities": [
+    "Call getDedupedArticleReplies with undefined search results and an empty array of existing reply IDs",
+    "Assert that the result matches an empty array snapshot",
+    "Initialize a mock search result object containing edges with various article replies",
+    "Initialize an array of existing reply IDs to be filtered out",
+    "Call getDedupedArticleReplies with the mock search result and existing reply IDs",
+    "Assert that the result matches the expected snapshot containing only deduplicated replies that are not in the existing reply IDs"
+  ]
+}

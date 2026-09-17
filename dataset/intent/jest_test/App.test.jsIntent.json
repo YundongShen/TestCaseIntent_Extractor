@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_App_test_js",
+  "source_file": "dataset/raw/jest_test/App.test.js.txt",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T17:24:10.518278",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

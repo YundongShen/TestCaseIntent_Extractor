@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_put_test",
+  "source_file": "dataset/raw/supertest/put.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:46:08.977805",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "webapp",
+    "db.collection('users')",
+    "db.collection('comments')"
+  ],
+  "goals": [
+    "Verify that a comment can be successfully updated via the API, returning a success status, and that the changes are persisted in the database.",
+    "Verify that the API returns an appropriate error status (e.g., 404) when an update request is made with missing required content."
+  ],
+  "activities": [
+    "Generate a JWT token for 'testUser'.",
+    "Connect to the MongoDB database.",
+    "Get the database instance.",
+    "Insert a test user into the 'users' collection.",
+    "Send a POST request to the '/comment' endpoint with authorization and test comment data.",
+    "Extract the ID of the created comment from the response.",
+    "Send a PUT request to the '/comment/:id' endpoint with authorization and updated content.",
+    "Assert that the response status is 200.",
+    "Assert that the response type is 'application/json'.",
+    "Find the updated comment in the 'comments' collection by its ID.",
+    "Assert that the content of the updated comment in the database matches 'music is my life'.",
+    "Send a PUT request to the '/comment/:id' endpoint with authorization but missing content.",
+    "Assert that the response status is 404.",
+    "Delete the test user from the 'users' collection.",
+    "Delete the test comment from the 'comments' collection.",
+    "Close the primary MongoDB connection.",
+    "Close any other MongoDB connections."
+  ]
+}

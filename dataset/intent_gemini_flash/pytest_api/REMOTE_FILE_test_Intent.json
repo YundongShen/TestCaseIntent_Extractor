@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_REMOTE_FILE_test_",
+  "source_file": "dataset/raw/pytest_api/REMOTE_FILE_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:37:26.999979",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "REMOTE_FILE.REMOTE_FILE"
+  ],
+  "goals": [
+    "Ensure the REMOTE_FILE function correctly loads supported remote file types and returns the appropriate Flojoy data objects.",
+    "Validate that the REMOTE_FILE function handles invalid or unsupported remote file URLs by raising appropriate exceptions."
+  ],
+  "activities": [
+    "Import the REMOTE_FILE module.",
+    "Call the REMOTE_FILE function with a valid image URL and 'Image' type.",
+    "Assert that the returned object is an Image instance.",
+    "Call the REMOTE_FILE function with a valid grayscale image URL and 'Grayscale' type.",
+    "Assert that the returned object is a Grayscale instance.",
+    "Call the REMOTE_FILE function with a valid CSV file URL and 'CSV' type.",
+    "Assert that the returned object is a DataFrame instance.",
+    "Call the REMOTE_FILE function with a valid JSON file URL and 'JSON' type.",
+    "Assert that the returned object is a DataFrame instance.",
+    "Call the REMOTE_FILE function with a valid XML file URL and 'XML' type.",
+    "Assert that the returned object is a DataFrame instance.",
+    "Import the REMOTE_FILE module.",
+    "Attempt to call the REMOTE_FILE function with an invalid URL 'not_valid' and 'Image' type, expecting a ValueError.",
+    "Attempt to call the REMOTE_FILE function with an invalid URL '/not/a/valid/url' and 'Image' type, expecting a ValueError.",
+    "Attempt to call the REMOTE_FILE function with an invalid URL 'ftp://not_existing.url' and 'Image' type, expecting a ValueError.",
+    "Attempt to call the REMOTE_FILE function with an invalid URL 'htp://misstyped.url' and 'Image' type, expecting a ValueError.",
+    "Import the REMOTE_FILE module.",
+    "Attempt to call the REMOTE_FILE function with an unsupported URL 'gcp://not_yet_supported' and 'Image' type, expecting a requests.exceptions.InvalidSchema with a specific error message.",
+    "Attempt to call the REMOTE_FILE function with an unsupported URL 's3://not_yet_supported' and 'Image' type, expecting a requests.exceptions.InvalidSchema with a specific error message."
+  ]
+}

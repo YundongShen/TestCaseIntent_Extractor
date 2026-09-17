@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_e2e_spec",
+  "source_file": "dataset/raw/playwright/e2e.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:56:15.976277",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "page"
+  ],
+  "goals": [
+    "Verify that users can navigate to a specific post page and view its content",
+    "Verify that users can navigate to the blog page and see the list of all posts"
+  ],
+  "activities": [
+    "Navigate to http://localhost:3000/",
+    "Verify the page title is 'simple-remix-blog'",
+    "Verify the text 'Acheronta altoque' is visible",
+    "Click the first 'Read more' text",
+    "Verify the URL is 'http://localhost:3000/posts/example-post-2'",
+    "Verify the 'Author's avatar' image is visible",
+    "Verify the text 'August 30, 2022' is visible",
+    "Verify the text 'Sine aequum praeferret mihi' is visible",
+    "Verify the text 'Lorem markdownum figuris arcum, vestes, traharis reperire quia.' is visible",
+    "Verify the text 'Magno adspexit Phorbas velles in qua terras, nec cuique plus tenet.' is visible",
+    "Click the 'Blog' link",
+    "Verify the URL is 'http://localhost:3000/blog'",
+    "Verify the text 'All posts' is visible",
+    "Navigate to http://localhost:3000/",
+    "Verify the page title is 'simple-remix-blog'",
+    "Click the 'Blog' link",
+    "Verify the URL is 'http://localhost:3000/blog'",
+    "Verify the text 'All posts' is visible",
+    "Verify the count of 'Read more' texts is exactly 4"
+  ]
+}

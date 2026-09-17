@@ -1,0 +1,51 @@
+{
+  "test_case_id": "tc_test__1",
+  "source_file": "dataset/raw/pytest_api/test__1.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:37:50.727447",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "score.score function",
+    "Flask application",
+    "Dockerized application"
+  ],
+  "goals": [
+    "Verify the `score.score` function's core logic, including output types, value ranges, and classification accuracy for spam/non-spam messages.",
+    "Verify the Flask application's `/score` API endpoint correctly processes text input and provides accurate spam predictions.",
+    "Verify the Dockerized application's `/score` API endpoint correctly processes text input and provides accurate spam predictions."
+  ],
+  "activities": [
+    "Load the pre-trained machine learning model for spam classification.",
+    "Generate a random text string for testing.",
+    "Generate a random classification threshold.",
+    "Score the random text using the loaded model and random threshold.",
+    "Assert that the prediction output is a boolean type.",
+    "Assert that the propensity output is a float64 type.",
+    "Assert that the prediction output is either True or False.",
+    "Assert that the propensity output is between 0 and 1, inclusive.",
+    "Score the random text with a threshold of 0 and assert the prediction is True.",
+    "Score the random text with a threshold of 1 and assert the prediction is False.",
+    "Define a known spam text string.",
+    "Score the known spam text with a threshold of 0.5 and assert the prediction is True.",
+    "Define a known non-spam text string.",
+    "Score the known non-spam text with a threshold of 0.5 and assert the prediction is False.",
+    "Start the Flask application as a subprocess.",
+    "Wait for 10 seconds for the Flask application to initialize.",
+    "Define a known spam text string.",
+    "Send a POST request to the Flask application's /score endpoint with the spam text.",
+    "Parse the JSON response received from the Flask application.",
+    "Assert that the prediction from the Flask application is True.",
+    "Assert that the propensity from the Flask application is greater than 0.5.",
+    "Terminate the Flask application subprocess.",
+    "Run a Docker container for the application, mapping port 5000.",
+    "Wait for 10 seconds for the Docker container to start.",
+    "Define a known spam text string.",
+    "Send a POST request to the Docker application's /score endpoint with the spam text.",
+    "Parse the JSON response received from the Docker application.",
+    "Assert that the prediction from the Docker application is True.",
+    "Assert that the propensity from the Docker application is greater than 0.5.",
+    "Stop the running Docker container.",
+    "Remove the stopped Docker container."
+  ]
+}

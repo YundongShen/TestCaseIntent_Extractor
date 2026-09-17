@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_AccountTest",
+  "source_file": "dataset/raw/junit_unit/AccountTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T18:50:01.334103",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "friends",
+    "friendMap"
+  ],
+  "goals": [
+    "Verify the correct update of the friends list when adding a new friend",
+    "Verify the consistency between the friends list and the friendMap after modification"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

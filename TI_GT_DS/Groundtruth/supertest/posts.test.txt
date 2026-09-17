@@ -1,0 +1,10 @@
+**Test Object**
+GET /posts API
+
+**Test Goal**
+Verify that the API returns an empty array when there are no posts in the database.
+
+**Test Activities**
+1. Mock Prisma's `post.findMany` returns an empty array.
+2. Send a GET request to `/posts`.
+3. Check that the status code is 200 and the response body is `[]`.

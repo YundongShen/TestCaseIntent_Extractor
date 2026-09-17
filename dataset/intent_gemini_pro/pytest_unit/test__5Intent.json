@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_unit/test__5.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:03:36.230133",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "CustomerManager",
+    "add_customer"
+  ],
+  "goals": [
+    "Verify that the add_customer method successfully creates a customer and returns their details including an assigned ID"
+  ],
+  "activities": [
+    "Initialize the mock database fixture",
+    "Initialize the CustomerManager",
+    "Add a new customer with name, email, age, and country",
+    "Verify that the returned customer information contains the keys 'name', 'email', 'age', 'country', and 'id'"
+  ]
+}

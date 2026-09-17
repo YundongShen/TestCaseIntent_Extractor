@@ -1,0 +1,49 @@
+{
+  "test_case_id": "tc_ngOnce_spec",
+  "source_file": "dataset/raw/jest_spec/ngOnce.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:54:43.065828",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "$rootScope",
+    "$rootScope.$once",
+    "child",
+    "child.$once"
+  ],
+  "goals": [
+    "Verify that the $once function is correctly added to scopes and can register event handlers.",
+    "Verify that event handlers registered with $once are invoked exactly once per event, even if broadcast multiple times."
+  ],
+  "activities": [
+    "Load the 'ngOnce' module.",
+    "Inject the '$rootScope' service.",
+    "Assert that '$rootScope.$once' is a function.",
+    "Load the 'ngOnce' module.",
+    "Inject the '$rootScope' service.",
+    "Register a one-time event handler for 'ngOnce.sound' on '$rootScope'.",
+    "Broadcast the 'ngOnce.sound' event with 'boop'.",
+    "Assert the event name received by the handler is 'ngOnce.sound'.",
+    "Assert the sound data received by the handler is 'boop'.",
+    "Load the 'ngOnce' module.",
+    "Inject the '$rootScope' service.",
+    "Register a one-time event handler for 'ngOnce.sound' on '$rootScope'.",
+    "Broadcast the 'ngOnce.sound' event with 'boop'.",
+    "Broadcast the 'ngOnce.sound' event with 'bang'.",
+    "Broadcast the 'ngOnce.sound' event with 'pow'.",
+    "Assert the event name received by the handler is 'ngOnce.sound'.",
+    "Assert the sound data received by the handler is 'boop'.",
+    "Load the 'ngOnce' module.",
+    "Inject the '$rootScope' service.",
+    "Create a new child scope.",
+    "Assert that the child scope has a function property named '$once'.",
+    "Register a one-time event handler for 'ngOnce.sound' on the child scope.",
+    "Broadcast the 'ngOnce.sound' event with 'boop' from '$rootScope'.",
+    "Assert the event name received by the handler is 'ngOnce.sound'.",
+    "Assert the sound data received by the handler is 'boop'.",
+    "Load the 'ngOnce' module.",
+    "Inject the '$rootScope' service.",
+    "Register a one-time event handler for 'ngOnce.sound' and capture its deregistration function.",
+    "Assert that the captured deregistration function is a function."
+  ]
+}

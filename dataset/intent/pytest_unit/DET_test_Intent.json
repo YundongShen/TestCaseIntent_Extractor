@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_DET_test_",
+  "source_file": "dataset/raw/pytest_unit/DET_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:05:56.007838",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "DET.DET"
+  ],
+  "goals": [
+    "Verify that the DET function returns a result of type Scalar, OrderedPair, or Matrix when given a Matrix input"
+  ],
+  "activities": [
+    "Import the DET module",
+    "Create a 5x5 identity matrix",
+    "Create a 9x9 identity matrix",
+    "Reshape the second matrix to (3, 3, 3, 3)",
+    "Convert the first matrix to a Matrix object",
+    "Invoke the DET function with the first Matrix object",
+    "Catch np.linalg.LinAlgError exception",
+    "Convert the second matrix to a Matrix object",
+    "Invoke the DET function with the second Matrix object",
+    "Verify the result is an instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

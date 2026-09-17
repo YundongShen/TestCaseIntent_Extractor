@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_blog_test",
+  "source_file": "dataset/raw/jest_test/blog.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:41:34.131379",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the blog controller correctly handles Server-Side Rendering (SSR) for standard and SPA routes.",
+    "Verify the blog controller correctly handles Client-Side Rendering (CSR) for designated routes."
+  ],
+  "activities": [
+    "Set the mock environment to 'local'",
+    "Initialize the mock application",
+    "Wait for the application to be ready",
+    "Wait for webpack to be ready",
+    "Send a GET request to '/'",
+    "Verify the response status is 200",
+    "Assert the response text contains '<h1>Egg Vue</h1>'",
+    "Assert the response uses SSR",
+    "Assert the response includes the 'blog/home' dev JS resource",
+    "Restore the mock environment",
+    "Send a GET request to '/blog/about'",
+    "Verify the response status is 200",
+    "Assert the response uses SSR",
+    "Assert the response includes the 'blog/about' dev JS resource",
+    "Restore the mock environment",
+    "Send a GET request to '/blog/csr'",
+    "Verify the response status is 200",
+    "Assert the response uses CSR",
+    "Assert the response includes the 'blog/home' dev JS resource",
+    "Restore the mock environment",
+    "Close the application"
+  ]
+}

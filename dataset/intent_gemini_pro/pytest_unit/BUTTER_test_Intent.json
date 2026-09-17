@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_BUTTER_test_",
+  "source_file": "dataset/raw/pytest_unit/BUTTER_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:01:04.404007",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "BUTTER.BUTTER"
+  ],
+  "goals": [
+    "Verify that the BUTTER function correctly applies a highpass filter to an input signal to remove its DC offset."
+  ],
+  "activities": [
+    "Generate x and y data arrays representing a sine wave with an offset",
+    "Assert that the mean of the generated y values is between 0.9 and 1.1",
+    "Initialize an OrderedPair object with the generated x and y data",
+    "Execute the BUTTER highpass filter function on the OrderedPair with specified filter parameters",
+    "Assert that the mean of the resulting filtered y values is close to 0"
+  ]
+}

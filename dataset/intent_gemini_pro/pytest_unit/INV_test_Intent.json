@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_INV_test_",
+  "source_file": "dataset/raw/pytest_unit/INV_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:01:47.253970",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "INV.INV"
+  ],
+  "goals": [
+    "Verify that the INV function returns a Scalar, OrderedPair, or Matrix when processing a matrix input."
+  ],
+  "activities": [
+    "Initialize a 5x5 identity matrix",
+    "Initialize a 9x9 identity matrix and reshape it into a 3x3x3x3 array",
+    "Attempt to execute the INV function using the 5x5 matrix wrapped in a Matrix object",
+    "On LinAlgError, fallback to executing the INV function using the reshaped 9x9 matrix wrapped in a Matrix object",
+    "Assert that the result is an instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

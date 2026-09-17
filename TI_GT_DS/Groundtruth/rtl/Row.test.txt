@@ -1,0 +1,45 @@
+**Test Object**
+`Row` Component
+
+**Test Goal**
+Verify that entering a value displays the correct conversion result.
+
+**Test Activities**
+1. Render the `Row` component with `scale={1}`.
+2. Locate the number input box and enter `2`.
+3. Wait and confirm that the result text `232.0 g` appears on the page.
+
+**Test Object**
+`Row` Component
+
+**Test Goal**
+Verify that changing the unit recalculates the result correctly.
+
+**Test Activities**
+1. Render the `Row` component with `scale={1}`.
+2. Enter `1` in the input box and confirm that the initial result displays `116.0 g`.
+3. Open the first dropdown menu (unit selection) and select `Ounce`.
+4. Confirm that the result is updated to `14.5 g`.
+
+**Test Object**
+`Row` Component
+
+**Test Goal**
+Verify that changing the ingredient recalculates the result based on the new ingredient's density.
+
+**Test Activities**
+1. Render the `Row` component with `scale={1}`.
+2. Enter `1` in the input box and confirm the initial result displays `116.0 g`.
+3. Open the second dropdown (ingredient selection) and select `Agave syrup`.
+4. Confirm the result is updated to `336.0 g`.
+
+**Test Object**
+`Row` Component
+
+**Test Goal**
+Confirm that the `scale` property affects the final calculation result.
+
+**Test Activities**
+1. Render the `Row` component with `scale={2}`.
+2. Enter `1` in the input box.
+3. Confirm the result displays `232.0 g` (twice the base value).

@@ -1,0 +1,12 @@
+**Test Object**
+The `/books/title` and `/books/{isbn}` endpoints of the Books API.
+
+**Test Goal**
+Verify that the book title lookup and ISBN deletion process can be completed normally under certain concurrency.
+
+**Test Activities**
+1. Randomly select one book title from a prepared list of 200.
+2. Use this book title to call `GET /books/title` to look up the book's ISBN.
+3. If the book is found and has an ISBN, send a `DELETE /books/{isbn}` to delete the book.
+4. Check if the deletion request returns a 200 or 404 status code.
+5. Pause for half a second after each execution.

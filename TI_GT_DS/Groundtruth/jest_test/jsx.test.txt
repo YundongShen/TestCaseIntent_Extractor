@@ -1,0 +1,20 @@
+**Test Object**
+`nano.jsx` Method
+
+**Test Goal**
+Confirms that the `jsx` method is mounted on the nano instance after the jx plugin is installed.
+
+**Test Activities**
+1. Create a nano instance and install the jx plugin.
+2. Check if `typeof nano.jsx` is `'function'`.
+
+**Test Object**
+`nano.jsx` Method
+
+**Test Goal**
+Confirms that calling the `jsx` method successfully generates a styled component.
+
+**Test Activities**
+1. Create a nano instance and install the jx plugin.
+2. Call `nano.jsx('button', {color: 'red'})`.
+3. Check if the `typeof` of the returned value is `'function'`.

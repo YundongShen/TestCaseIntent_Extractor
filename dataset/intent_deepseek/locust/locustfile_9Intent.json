@@ -1,0 +1,15 @@
+{
+  "test_case_id": "tc_locustfile_9",
+  "source_file": "dataset/raw/locust/locustfile_9.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:37.988037",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "UserBehavior"
+  ],
+  "goals": [
+    "verifythattheexpectationresponsebodyis\"somesimpleresponse\""
+  ],
+  "activities": []
+}

@@ -1,0 +1,24 @@
+**Test Object**
+`getOutput` Function
+
+**Test Goal**
+When there is no grouping information, the function directly puts the task into the output array, keeping the task name unchanged.
+
+**Test Activities**
+1. Prepare an empty array `output = []` and the task `{ name: 'mocha' }`.
+2. Call `getOutput(output, {}, task)`.
+3. Assert that the length of `output` is 1.
+4. Assert that `output[0].name` equals `'mocha'`.
+
+**Test Object**
+`getOutput` Function
+
+**Test Goal**
+When there is grouping information, the function can group the task into the corresponding group based on the task name.
+
+**Test Activities**
+1. Define the group `{ 'Lint tools': ['jshint', 'mocha'] }`.
+2. First, call `getOutput(output, groups, task)` to process `{ name: 'mocha' }`.
+3. Then call `getOutput(output, groups, { name: 'jshint' })`.
+4. Assert that the length of `output` is 2.
+5. Assert that `output[1].group` is equal to `'Lint tools'`.

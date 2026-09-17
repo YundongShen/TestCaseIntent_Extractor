@@ -1,0 +1,40 @@
+**Test Object**
+`POST /users/connection` Login Interface
+
+**Test Goal**
+Verify that login with correct credentials returns a successful result with a valid token.
+
+**Test Activities**
+1. Create a user before each test.
+2. Send a POST request to `/users/connection` with the correct email address and password.
+3. Check that the status code is 200, `result` in the body is true, and `token` and `username` are consistent with those created.
+
+**Test Object**
+`POST /users/connection` Login Interface
+
+**Test Goal**
+Verify that login without required fields returns a failure result with an appropriate error message.
+
+**Test Activities**
+1. Send a POST request to `/users/connection`, sending only the password and not the email address.
+2. Check that the status code is 200, `result` is false, and `error` is "Missing or empty fields".
+
+ **Test Object**
+POST /users/connection Login Interface
+
+**Test Goal**
+Verify that login with an incorrect password fails and returns the appropriate error message.
+
+**Test Activities**
+1. Send a POST request with a correct email address but an incorrect password `"wrongpassword"`.
+2. Check for a 200 status code, `result` of `false`, and `error` of `"User not found or wrong password"`.
+
+**Test Object**
+POST /users/connection Login Interface
+
+**Test Goal**
+Verify that login with a non-existent email address fails and returns the appropriate error message.
+
+**Test Activities**
+1. Send a POST request with a non-existent email address `"nonexistent@example.com"` and a correct password.
+2. Check for a 200 status code, `result` of `false`, and `error` of `"User not found or wrong password"`.

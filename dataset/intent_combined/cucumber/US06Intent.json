@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_US06",
+  "source_file": "dataset/raw/cucumber/US06.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:26:46.635259",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Sistema de Alertas Automatizadas"
+  ],
+  "goals": [
+    "Verificar el envo de alertas al usuario ante condiciones crticas como enfermedades o eventos climticos"
+  ],
+  "activities": [
+    "Detectar estado anormal en el cultivo",
+    "Buscar enfermedad o plaga especifica",
+    "Verificar si el nivel de riesgo supera el umbral",
+    "Enviar alerta al celular del usuario",
+    "Recibir pronstico climtico con evento extremo",
+    "Verificar si el evento se acerca",
+    "Enviar notificacin para prevenir daos"
+  ]
+}

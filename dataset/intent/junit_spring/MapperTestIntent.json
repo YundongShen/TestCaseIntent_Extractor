@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_MapperTest",
+  "source_file": "dataset/raw/junit_spring/MapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T18:51:58.266326",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "TestModelMapper",
+    "TestModelService"
+  ],
+  "goals": [
+    "Verify TestModelMapper insert operation executes successfully",
+    "Verify TestModelService pagination query returns expected data size"
+  ],
+  "activities": [
+    "Create a new TestModel object",
+    "Set TestModel attributes including age, timestamps, and username",
+    "Insert the TestModel object into the database",
+    "Iterate 100 times to create and insert TestModel objects",
+    "Invoke service method to query models with pagination",
+    "Assert page size is greater than or equal to 5",
+    "Assert result list size is equal to 20"
+  ]
+}

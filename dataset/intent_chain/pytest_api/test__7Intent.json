@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_api/test__7.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:47:55.951370",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "score.score",
+    "app"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Load the machine learning model from MLflow artifacts",
+    "Generate random input text and threshold",
+    "Execute score.score with random inputs and verify output types and ranges",
+    "Execute score.score with threshold 0 and verify prediction is True",
+    "Execute score.score with threshold 1 and verify prediction is False",
+    "Execute score.score with known spam text and verify prediction is True",
+    "Execute score.score with known non-spam text and verify prediction is False",
+    "Start the Flask application server via subprocess",
+    "Send POST request to the score endpoint with spam text",
+    "Verify API response prediction and propensity values",
+    "Terminate the Flask application process"
+  ]
+}

@@ -1,0 +1,35 @@
+**Test Object**
+`https://jsonplaceholder.cypress.io/comments` API
+
+**Test Goal**
+Verify the correctness of the API's return value.
+
+**Test Activities**
+1. Send a GET request directly to this address using `cy.request`.
+2. Check in the callback if the response status code is 200.
+3. Check if the array length of the response body is 500.
+4. Check if the response object contains the `headers` property.
+5. Check if the response header `content-type` is `'application/json; charset=utf-8'`.
+
+**Test Object**
+`https://jsonplaceholder.cypress.io/comments` API
+
+**Test Goal**
+Confirm the correctness of the API's return value by passing a configuration object through `cy.request`.
+
+**Test Activities**
+1. Send a request using `cy.request` with a `url` and `method: 'GET'`.
+2. Check the response status code for 200 in the `.then` callback.
+3. Check if the response body array length is 500.
+4. Check if the response object contains the `headers` property.
+5. Check if the `content-type` header is `'application/json; charset=utf-8'`.
+
+**Test Object**
+The `https://jsonplaceholder.cypress.io/comments` API
+
+**Test Goal**
+Verify that the API returns the expected Content-Type and status code.
+
+**Test Activities**
+1. Make the first request, using `.its('headers').its('content-type')` chained assertions to confirm that it contains `'application/json'`.
+2. Make the second request, using `.its('status')` to confirm that the status code is 200.

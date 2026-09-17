@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/jest_spec/app.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:40:08.469565",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "administrative student management API"
+  ],
+  "goals": [
+    "verify student management API functionality including creation, update, and deletion with error handling"
+  ],
+  "activities": [
+    "send login request to obtain authentication cookie",
+    "send POST request to create new student with valid data",
+    "verify creation response status is 201",
+    "send POST request to create student with existing credentials",
+    "verify duplicate creation response status is 409",
+    "send POST request to create student with missing data",
+    "verify missing data response status is 500",
+    "send POST request to update existing student",
+    "verify update response status is 200",
+    "send GET request to delete existing student",
+    "verify deletion response status is 302",
+    "send GET request to delete non-existent student",
+    "verify non-existent deletion response status is 500"
+  ]
+}

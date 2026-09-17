@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_vlSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vlSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:51:30.822106",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "vl",
+    "chart",
+    "mock",
+    "point"
+  ],
+  "goals": [
+    "testthecorrectfunctionalityofthevlSpecEditorbycheckingwhetheritshowsthesourcecodeandshorthandlespec"
+  ],
+  "activities": [
+    "_beforeEach",
+    "module",
+    "inject",
+    "compile",
+    "find",
+    "to",
+    "eql",
+    "_it",
+    "end"
+  ]
+}

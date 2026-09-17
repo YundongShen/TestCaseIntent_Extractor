@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_locustfile_1",
+  "source_file": "dataset/raw/locust/locustfile_1.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T15:14:34.575109",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Website Translation API"
+  ],
+  "goals": [
+    "Validate endpoint functionality and stability under concurrent user simulation"
+  ],
+  "activities": [
+    "set user wait time between 5 and 15 seconds",
+    "perform GET request to root index path",
+    "define source text content about jazz music",
+    "select random target language from predefined list",
+    "create JSON payload with text and language parameters",
+    "perform POST request to translation API endpoint"
+  ]
+}

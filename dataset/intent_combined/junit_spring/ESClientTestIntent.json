@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_ESClientTest",
+  "source_file": "dataset/raw/junit_spring/ESClientTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T15:00:04.003808",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "QueryDAO"
+  ],
+  "goals": [
+    "Verify QueryDAO indexing, querying, and deletion operations"
+  ],
+  "activities": [
+    "create document instance",
+    "execute index request via dao",
+    "verify index request returns non null value",
+    "execute match all query via dao",
+    "verify match all query returns non empty list",
+    "execute wildcard query via dao",
+    "verify wildcard query returns non empty list",
+    "retrieve all documents via match all query",
+    "delete each document in the retrieved list",
+    "execute refresh request via dao",
+    "execute match all query via dao",
+    "verify match all query returns empty list"
+  ]
+}

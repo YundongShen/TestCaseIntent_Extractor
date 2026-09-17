@@ -1,0 +1,10 @@
+**Test Object**
+`Estadistiques` class (statistics/ranking logic)
+
+**Test Goal**
+Verify that after adding multiple games, `getRanking` can correctly rank them according to the rules.
+
+**Test Activities**
+1. Create three mock `Partida` objects, set their code sequence and round number respectively, and mark them all as finished.
+2. Instantiate `Estadistiques`, and add the three games sequentially using `afegirPartida`.
+3. Call `getRanking` to get the ranking list and compare it with the expected order (p3 → p1 → p2).

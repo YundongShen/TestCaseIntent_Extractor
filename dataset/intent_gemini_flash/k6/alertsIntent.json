@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_alerts",
+  "source_file": "dataset/raw/k6/alerts.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T13:30:31.135691",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "/api/alerts/register endpoint"
+  ],
+  "goals": [
+    "Verify that the alert registration endpoint accepts requests and processes them to initiate verification email delivery."
+  ],
+  "activities": [
+    "Select a random server name from a predefined list.",
+    "Construct a JSON request payload containing a test email and the selected server name.",
+    "Send an HTTP POST request to the `/api/alerts/register` endpoint with the JSON payload, setting content type and a 65-second timeout.",
+    "Verify that the HTTP response status is either 200 (OK) or 500 (Internal Server Error).",
+    "Verify that the HTTP response status is 200 (indicating successful email sending).",
+    "Pause the test execution for 2 seconds."
+  ]
+}

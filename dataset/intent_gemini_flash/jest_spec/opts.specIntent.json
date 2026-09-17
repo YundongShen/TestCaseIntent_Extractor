@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_opts_spec",
+  "source_file": "dataset/raw/jest_spec/opts.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:54:22.323248",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "getSizes",
+    "getVariances"
+  ],
+  "goals": [
+    "Verify that the `getSizes` function correctly parses and validates resolution options, including default behavior and error handling for malformed input.",
+    "Verify that the `getVariances` function correctly parses and validates variance options, including default behavior and error handling for invalid input."
+  ],
+  "activities": [
+    "Call getSizes function with no arguments.",
+    "Assert that the result of getSizes matches a snapshot.",
+    "Call getVariances function with no arguments.",
+    "Assert that the result of getVariances matches a snapshot.",
+    "Call getSizes function with a single resolution string '200x200'.",
+    "Assert that the result of getSizes equals [{ h: 200, w: 200 }].",
+    "Call getSizes function with multiple resolution strings ['100x200', '300x400'].",
+    "Assert that the result of getSizes equals [{ w: 100, h: 200}, { w: 300, h: 400 }].",
+    "Call getSizes function with a malformed resolution string '100xFoo'.",
+    "Assert that the call to getSizes throws an error.",
+    "Call getVariances function with a single variance string '0.61'.",
+    "Assert that the result of getVariances equals [0.61].",
+    "Call getVariances function with multiple variance strings ['0.333', '0.1', '1'].",
+    "Assert that the result of getVariances equals [0.333, 0.1, 1].",
+    "Call getVariances function with an invalid variance string '1.1'.",
+    "Assert that the call to getVariances throws an error.",
+    "Call getVariances function with an invalid variance string '-1'.",
+    "Assert that the call to getVariances throws an error.",
+    "Call getVariances function with an invalid variance string 'foo'.",
+    "Assert that the call to getVariances throws an error."
+  ]
+}

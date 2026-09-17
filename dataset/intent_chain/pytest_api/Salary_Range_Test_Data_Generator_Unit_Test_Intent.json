@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:43:13.897558",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the count of hourly rate salary range filter options",
+    "Verify the count of annual salary package filter options"
+  ],
+  "activities": [
+    "Fetch and parse hourly rate salary webpage",
+    "Extract and verify count of hourly rate minimum salary filter options",
+    "Extract and verify count of hourly rate maximum salary filter options",
+    "Fetch and parse annual salary package webpage",
+    "Extract and verify count of annual salary minimum filter options",
+    "Extract and verify count of annual salary maximum filter options"
+  ]
+}

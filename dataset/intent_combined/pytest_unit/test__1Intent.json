@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_test__1",
+  "source_file": "dataset/raw/pytest_unit/test__1.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:33:48.322187",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "myCode"
+  ],
+  "goals": [
+    "verify myCode function outputs and logic"
+  ],
+  "activities": [
+    "patch BASE_URL constant",
+    "call build_url function",
+    "assert build_url output",
+    "patch calculate_meaning_of_life function",
+    "call get_meaning_of_life function",
+    "assert get_meaning_of_life output",
+    "patch DataLoader.load_product method",
+    "call get_product function",
+    "assert get_product output"
+  ]
+}

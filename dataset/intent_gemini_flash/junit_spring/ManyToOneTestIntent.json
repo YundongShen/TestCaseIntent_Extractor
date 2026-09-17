@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_ManyToOneTest",
+  "source_file": "dataset/raw/junit_spring/ManyToOneTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T08:01:21.804540",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "User",
+    "Board"
+  ],
+  "goals": [
+    "Verify the persistence and retrieval of entities involved in a ManyToOne relationship (Board and User)."
+  ],
+  "activities": [
+    "Create a new User object.",
+    "Set properties for the User object (ID, password, name, email, creation date, update date).",
+    "Save the User object to the repository.",
+    "Create a new Board object (b1).",
+    "Set properties for Board b1 (number, title, content, associated user, view count, creation date, update date).",
+    "Save Board b1 to the repository.",
+    "Create a new Board object (b2).",
+    "Set properties for Board b2 (number, title, content, associated user, view count, creation date, update date).",
+    "Save Board b2 to the repository.",
+    "Find Board b1 by its ID from the repository.",
+    "Find Board b2 by its ID from the repository.",
+    "Print Board b1's details to the console.",
+    "Print Board b2's details to the console."
+  ]
+}

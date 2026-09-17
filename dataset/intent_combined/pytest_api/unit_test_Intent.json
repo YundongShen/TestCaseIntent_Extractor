@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_unit_test_",
+  "source_file": "dataset/raw/pytest_api/unit_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-13T04:17:31.204532",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "obtainUserNameEmail"
+  ],
+  "goals": [
+    "verify obtainUserNameEmail endpoint returns correct user data and status 200"
+  ],
+  "activities": [
+    "define test credentials and expected output",
+    "send login request to retrieve session token",
+    "extract session token from response",
+    "configure authorization headers",
+    "send request to obtainUserNameEmail endpoint",
+    "assert response status code is 200",
+    "assert response JSON matches expected output"
+  ]
+}

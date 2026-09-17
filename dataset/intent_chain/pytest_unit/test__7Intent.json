@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_unit/test__7.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:10:42.737616",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "AutonomousAgent",
+    "crypto_filter_handler",
+    "get_erc20_balance_behaviour"
+  ],
+  "goals": [
+    "Verify that the AutonomousAgent correctly processes messages and the crypto_filter_handler executes ERC-20 token transfers with proper logging.",
+    "Verify that the get_erc20_balance_behaviour function accurately queries and logs ERC-20 token balances using Web3."
+  ],
+  "activities": [
+    "Initialize AutonomousAgent instance and message queues",
+    "Start agent message processing task",
+    "Send hello message to inbox and verify filter logging",
+    "Mock ERC-20 transfer environment and agent properties",
+    "Send crypto message and execute crypto_filter_handler",
+    "Assert transaction hash and transfer status logging",
+    "Mock Web3 connection and token contract for balance check",
+    "Execute get_erc20_balance_behaviour function",
+    "Verify balanceOf call and balance logging output"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_PINV_test_",
+  "source_file": "dataset/raw/pytest_unit/PINV_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:30:35.154118",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "PINV.PINV"
+  ],
+  "goals": [
+    "verify PINV function returns valid output type"
+  ],
+  "activities": [
+    "create identity matrix array1",
+    "create identity matrix array2",
+    "reshape array2 to 3 3 3 3 dimensions",
+    "wrap array1 into Matrix object",
+    "execute PINV function with Matrix object",
+    "catch LinAlgError exception",
+    "wrap array2 into Matrix object on error",
+    "execute PINV function with fallback Matrix object",
+    "assert result is instance of Scalar OrderedPair or Matrix"
+  ]
+}

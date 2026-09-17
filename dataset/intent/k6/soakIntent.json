@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_soak",
+  "source_file": "dataset/raw/k6/soak.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-01T21:08:59.593065",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify the /urls/test endpoint returns an HTTP 301 redirect status",
+    "Validate system behavior under 5000 virtual users load"
+  ],
+  "activities": [
+    "Send HTTP GET request to http://localhost:5249/urls/test",
+    "Verify response status is 301",
+    "Wait for 1 second"
+  ]
+}

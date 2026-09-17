@@ -1,0 +1,12 @@
+**Test Object**
+The `DELETE /workshop/{id}` API.
+
+**Test Goal**
+Verify that the DELETE API removes the target workshop instance and leaves other instances unaffected.
+
+**Test Activities**
+1. Clear the environment and insert two workshop records.
+2. Use the ID from the first workshop instance to construct a DELETE request and send it.
+3. The status code is 200, and the Content-Type is application/json.
+4. Compare the status, msg, and data in the response body; they are correct, but the detail is missing.
+5. Check the database again to confirm that the deleted workshop instance is gone, while the untouched workshop instance remains.

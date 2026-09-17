@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_unit/test__6.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:20:09.342229",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app",
+    "get_average_last_hour"
+  ],
+  "goals": [
+    "Verify the correctness of the average sensor value calculation logic",
+    "Verify the web application endpoints correctly return and display the average sensor data"
+  ],
+  "activities": [
+    "Define mock sensor response data",
+    "Mock requests.get to return mock response",
+    "Execute get_average_last_hour function",
+    "Print received data for debugging",
+    "Verify response contains average key",
+    "Verify average value equals 5.27",
+    "Define mock sensor response data",
+    "Mock app.get_average_last_hour to return mock average",
+    "Send GET request to root URL",
+    "Verify response status code is 200",
+    "Verify response data contains welcome message",
+    "Define mock sensor response data",
+    "Mock app.get_average_last_hour to return mock average",
+    "Send GET request to refresh_average endpoint",
+    "Verify response status code is 200",
+    "Parse response data as JSON",
+    "Verify response contains average key",
+    "Verify average value equals 5.27"
+  ]
+}

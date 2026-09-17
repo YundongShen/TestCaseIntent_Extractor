@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_App_test",
+  "source_file": "dataset/raw/rtl/App.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-13T20:17:28.076953",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify the App component renders weather information and handles API error states",
+    "Verify the App component updates UI based on user location search and unit preferences"
+  ],
+  "activities": [
+    "Render App component",
+    "Verify default location text",
+    "Mock API error response",
+    "Render App component",
+    "Verify error message",
+    "Set unit preference in local storage",
+    "Render App component",
+    "Verify default location text",
+    "Verify weather status unit",
+    "Render App component",
+    "Mock location and weather APIs",
+    "Verify default location text",
+    "Type search query into input",
+    "Wait for search suggestion",
+    "Click search suggestion",
+    "Verify updated location text"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_EstadistiquesTest",
+  "source_file": "dataset/raw/junit_unit/EstadistiquesTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:33:27.484247",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "est"
+  ],
+  "goals": [
+    "Verify the correct ranking order of matches after adding them to the Estadistiques object"
+  ],
+  "activities": [
+    "Verify mock p1 is not null",
+    "Configure mock p1 behavior for getRondes, getPuntuacioHuma, getPuntuacioMaquina, partidaAcabada, and posicions",
+    "Verify mock p2 is not null",
+    "Configure mock p2 behavior for getPuntuacioHuma, getPuntuacioMaquina, partidaAcabada, and posicions",
+    "Verify mock p3 is not null",
+    "Configure mock p3 behavior for getRondes, getPuntuacioHuma, getPuntuacioMaquina, partidaAcabada, and posicions",
+    "Verify mock p4 is not null",
+    "Configure mock p4 behavior for getPuntuacioHuma, getPuntuacioMaquina, partidaAcabada, and posicions",
+    "Initialize expected result list solucio",
+    "Add Partida objects p4, p2, p3, and p1 to expected result list",
+    "Print expected result list",
+    "Instantiate Estadistiques object",
+    "Add Partida objects p1, p2, p3, and p4 to Estadistiques instance",
+    "Print actual ranking from Estadistiques",
+    "Assert actual ranking equals expected result list"
+  ]
+}

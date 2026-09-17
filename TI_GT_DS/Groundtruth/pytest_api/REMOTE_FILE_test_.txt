@@ -1,0 +1,32 @@
+**Test Object**
+`REMOTE_FILE.REMOTE_FILE` Function
+
+**Test Goal**
+Verifies that this function can correctly load and return an object of the expected type from a remote URL for various file types.
+
+**Test Activities**
+1. For each file type, pass in the corresponding remote file URL and the `file_type` parameter.
+2. Call `REMOTE_FILE.REMOTE_FILE(file_url, file_type)`.
+3. Assert that the type of the returned object matches the expected output type.
+
+**Test Object**
+`REMOTE_FILE.REMOTE_FILE` Function
+
+**Test Goal**
+Verifies that the function throws a `ValueError` when an invalid or unsupported URL format is passed in.
+
+**Test Activities**
+1. Use malformed or unrecognized URLs (e.g., `"not_valid", `"/not/a/valid/url", `"ftp://not_existing.url", `"htp://misstyped.url").
+2. Call `REMOTE_FILE.REMOTE_FILE(file_url, file_type="Image")`.
+3. Assert that a `ValueError` is thrown.
+
+**Test Object**
+The `REMOTE_FILE.REMOTE_FILE` function
+
+**Test Goal**
+Verify that when a protocol not currently supported is passed in, the function throws `requests.exceptions.InvalidSchema` with the correct error message.
+
+**Test Activities**
+1. Use `"gcp://not_yet_supported"` and `"s3://not_yet_supported"` as URLs.
+2. Call `REMOTE_FILE.REMOTE_FILE(file_url, file_type="Image")`.
+3. Assert that `requests.exceptions.InvalidSchema` is thrown, and the error message matches `No connection adapters were found for '{file_url}'`.

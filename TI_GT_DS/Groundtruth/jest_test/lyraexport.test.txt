@@ -1,0 +1,10 @@
+**Test Object**
+`lyraExport` directive
+
+**Test Goal**
+Confirm that the element displays the correct text after the directive is compiled.
+
+**Test Activities**
+1. Load the module containing the directive and inject a mock `Spec` service.
+2. Create a new scope and compile `<lyra-export></lyra-export>` and attach it.
+3. Check that the element's text content is indeed "Export to lyra".

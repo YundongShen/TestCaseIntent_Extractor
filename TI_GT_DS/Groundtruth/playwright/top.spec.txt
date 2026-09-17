@@ -1,0 +1,35 @@
+**Test Object**
+Homepage (`/`) Navigation Area
+
+**Test Goal**
+Verify that the homepage navigation bar displays the application name and that the login link is visible.
+
+**Test Activities**
+1. Open the homepage `/`.
+2. Check that the navigation area contains the text "SPARQList".
+3. Check that the link named "Login" is visible.
+
+**Test Object**
+Homepage "Login" Link and Login Page Route
+
+**Test Goal**
+Verify that clicking the login link correctly redirects to the login page.
+
+**Test Activities**
+1. Open the homepage `/`.
+2. Click the link with the text "Login".
+3. Check that the current URL changes to `/-login`.
+
+**Test Object**
+Homepage search box and list filtering function
+
+**Test Goal**
+Verify that after searching using the ID of the first item in the list, the list will be filtered down to only one item, and the link of that item matches the search keyword.
+
+**Test Activities**
+1. Open the homepage `/`.
+2. Get all list items, confirming the initial number is greater than 1.
+3. Confirm the first item is visible, and get its `href` attribute, removing the leading `/` as the search keyword.
+4. Enter the keyword in the search box.
+5. Check that the number of list items becomes 1.
+6. Check that the `href` attribute of the first item is `/${firstItemId}`.

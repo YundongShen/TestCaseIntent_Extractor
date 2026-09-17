@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_test__8",
+  "source_file": "dataset/raw/pytest_api/test__8.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:52.768093",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Server",
+    "WorkshopTest",
+    "WorkshopCategories",
+    "GetAllWorkshop",
+    "GetAllWorkshopRepBody"
+  ],
+  "goals": [],
+  "activities": [
+    "test_api_ok",
+    "test_api_ok_with_args",
+    "test_api_ok_with_args_complex"
+  ]
+}

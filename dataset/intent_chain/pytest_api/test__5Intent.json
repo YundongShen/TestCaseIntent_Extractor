@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_api/test__5.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:50:18.668376",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "make_api_request"
+  ],
+  "goals": [
+    "Verify that the API response status code is 200",
+    "Verify that the returned JSON data conforms to the expected schema and content"
+  ],
+  "activities": [
+    "Mock the HTTP request and configure the simulated response status and data",
+    "Execute the make_api_request function to retrieve data",
+    "Verify the API response status code is 200",
+    "Validate the returned JSON data against the expected schema",
+    "Verify the returned data matches the expected content"
+  ]
+}

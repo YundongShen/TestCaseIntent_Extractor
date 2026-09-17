@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_index_test",
+  "source_file": "dataset/raw/supertest/index.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:45:55.601240",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "index"
+  ],
+  "goals": [
+    "Verify the root route (/) returns specific JSON content and a 200 status code.",
+    "Verify the /test route correctly processes POSTed data and allows its retrieval via GET."
+  ],
+  "activities": [
+    "Initialize a test request for the application.",
+    "Send a GET request to the \"/\" endpoint.",
+    "Expect the response Content-Type header to be JSON.",
+    "Expect the response body to be { name: \"frodo\" }.",
+    "Expect the response status code to be 200.",
+    "Initialize a test request for the application.",
+    "Send a POST request to the \"/test\" endpoint.",
+    "Set the request type to \"form\".",
+    "Send the data { item: \"hey\" } in the request body.",
+    "Initialize another test request for the application.",
+    "Send a GET request to the \"/test\" endpoint.",
+    "Expect the response body to be { array: [\"hey\"] }."
+  ]
+}

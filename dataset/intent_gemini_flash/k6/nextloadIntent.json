@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_nextload",
+  "source_file": "dataset/raw/k6/nextload.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T13:30:51.131837",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "https://lol.com/",
+    "https://lol.com/api/hello"
+  ],
+  "goals": [
+    "Evaluate the availability of the application's main page and API endpoint under a simulated load.",
+    "Assess the response time performance of the application's main page and API endpoint under a simulated load."
+  ],
+  "activities": [
+    "Send a GET request to 'https://lol.com/'",
+    "Verify the response from the first request: status is 200 and response time is less than 500ms",
+    "Send a GET request to 'https://lol.com/api/hello'",
+    "Verify the response from the second request: status is 200 and response time is less than 500ms",
+    "Pause execution for 1 second"
+  ]
+}

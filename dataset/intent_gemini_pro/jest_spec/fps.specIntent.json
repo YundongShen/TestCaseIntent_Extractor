@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_fps_spec",
+  "source_file": "dataset/raw/jest_spec/fps.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:38:48.566726",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "fps",
+    "mogwais"
+  ],
+  "goals": [
+    "Verify that the fps module correctly calculates and logs the frames per second."
+  ],
+  "activities": [
+    "Mock console.warn",
+    "Mock window.requestAnimationFrame to simulate time progression",
+    "Create a configuration object with the mocked logger and window",
+    "Initialize the fps mogwais with the configuration",
+    "Execute the mogwais function",
+    "Call the cleanUp method on the mogwais",
+    "Assert that console.warn was called exactly two times",
+    "Assert the arguments of the first console.warn call",
+    "Assert the arguments of the second console.warn call"
+  ]
+}

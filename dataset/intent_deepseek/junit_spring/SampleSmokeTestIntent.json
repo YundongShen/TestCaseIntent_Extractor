@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_SampleSmokeTest",
+  "source_file": "dataset/raw/junit_spring/SampleSmokeTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:51:56.943376",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "SampleSmokeTest",
+    "TEST_URL"
+  ],
+  "goals": [],
+  "activities": [
+    "set up the base URI and use relaxed HTTPS validation.",
+    "send a GET request to the specified URL.",
+    "expect the response status code to be 200.",
+    "verify the response body starts with 'Welcome'."
+  ]
+}

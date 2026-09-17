@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_DemoApplicationIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/DemoApplicationIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:53:50.989391",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verifythatthemethodwillsuccessfullyreturnthestring\"HelloWorld\""
+  ],
+  "activities": [
+    "callRestTemplate",
+    "sendGetRequest",
+    "verifyResponse"
+  ]
+}

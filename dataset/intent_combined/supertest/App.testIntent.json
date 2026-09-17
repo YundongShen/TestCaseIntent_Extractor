@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_App_test",
+  "source_file": "dataset/raw/supertest/App.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-13T04:54:19.770887",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "POST /send-message endpoint"
+  ],
+  "goals": [
+    "Verify response status codes and content type for message sending requests"
+  ],
+  "activities": [
+    "Send POST request to /send-message with name payload",
+    "Set Accept header to application/json",
+    "Expect Content-Type to match json",
+    "Expect status code 400",
+    "Send POST request to /send-message with sender and registrationIds payload",
+    "Set Accept header to application/json",
+    "Expect Content-Type to match json",
+    "Expect status code 200"
+  ]
+}

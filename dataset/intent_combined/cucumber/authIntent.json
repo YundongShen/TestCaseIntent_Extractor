@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_auth",
+  "source_file": "dataset/raw/cucumber/auth.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:29:09.923787",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "user"
+  ],
+  "goals": [
+    "verify user authentication, authorization, and profile management functionality"
+  ],
+  "activities": [
+    "create user with local credentials",
+    "log in with username and password",
+    "verify JWT validity",
+    "update user custom data",
+    "get user info",
+    "verify response content",
+    "logout",
+    "verify JWT invalid",
+    "get user rights",
+    "verify rights vector",
+    "refresh JWT token"
+  ]
+}

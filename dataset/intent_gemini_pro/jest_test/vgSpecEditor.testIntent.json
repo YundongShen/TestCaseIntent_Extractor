@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_vgSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vgSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:45:42.443860",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "vg-spec-editor",
+    "element"
+  ],
+  "goals": [
+    "Verify that the vgSpecEditor directive shows the source code"
+  ],
+  "activities": [
+    "Load the 'polestar' module",
+    "Mock the 'vl' constant and 'uiZeroclipDirective' factory",
+    "Mock the 'Spec' service with an empty 'vgSpec' object",
+    "Create a new root scope",
+    "Create an angular element for the vg-spec-editor directive",
+    "Compile the element with the scope",
+    "Trigger a scope digest cycle",
+    "Verify that the value of the '.vgspec' element equals '{}'"
+  ]
+}

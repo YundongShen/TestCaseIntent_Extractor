@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_Game_cy",
+  "source_file": "dataset/raw/cypress/Game.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T16:50:50.208078",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Game"
+  ],
+  "goals": [
+    "Verify the Game component initializes with the correct number of empty cells",
+    "Verify the win message is displayed after correctly solving the puzzle"
+  ],
+  "activities": [
+    "Mount the Game component with providers and initial data",
+    "Verify there are 3 empty cells",
+    "Intercept GET request for times data",
+    "Click the first game cell",
+    "Click the number 1 button",
+    "Click the second game cell",
+    "Click the number 4 button",
+    "Click the third game cell",
+    "Click the number 5 button",
+    "Verify the win message is visible",
+    "Wait for the intercepted network request"
+  ]
+}

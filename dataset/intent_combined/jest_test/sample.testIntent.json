@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_sample_test",
+  "source_file": "dataset/raw/jest_test/sample.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:58:39.866802",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "application server and configuration object"
+  ],
+  "goals": [
+    "verify configuration security and page serving correctness"
+  ],
+  "activities": [
+    "read index html file",
+    "set global document inner html",
+    "verify cdn link source attribute",
+    "load msal configuration object",
+    "verify configuration object definition",
+    "verify client id does not match guid",
+    "verify authority matches uri format",
+    "set node environment variable",
+    "send get request to server",
+    "read index html file content",
+    "verify response status code",
+    "verify response text matches file"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_qa_spec",
+  "source_file": "dataset/raw/playwright/qa.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T07:54:04.194431",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "test",
+    "describe",
+    "waitForApp",
+    "page",
+    "expect",
+    "mockApiRoutes",
+    "fixture"
+  ],
+  "goals": [
+    "testQAView",
+    "verifyQAmetricsandcards",
+    "verifytestresultsandstatus",
+    "verifycoverageandchartelements"
+  ],
+  "activities": []
+}

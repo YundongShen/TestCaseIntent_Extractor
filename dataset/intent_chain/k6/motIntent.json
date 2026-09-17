@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_mot",
+  "source_file": "dataset/raw/k6/mot.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T19:18:58.042052",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "res"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

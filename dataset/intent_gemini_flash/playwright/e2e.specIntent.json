@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_e2e_spec",
+  "source_file": "dataset/raw/playwright/e2e.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:35:34.381348",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "page",
+    "page.getByText(\"Acheronta altoque\")",
+    "page.getByText(\"Read more\").nth(0)",
+    "page.getByAltText(\"Author's avatar\")",
+    "page.getByText(\"August 30, 2022\")",
+    "page.getByText(\"Sine aequum praeferret mihi\")",
+    "page.getByText(\"Lorem markdownum figuris arcum, vestes, traharis reperire quia.\")",
+    "page.getByText(\"Magno adspexit Phorbas velles in qua terras, nec cuique plus tenet.\")",
+    "page.getByRole(\"link\", { name: \"Blog\" })",
+    "page.getByText(\"All posts\")",
+    "page.getByText(\"Read more\")"
+  ],
+  "goals": [
+    "Verify users can navigate from the home page to a specific post page and view its content, then navigate to the blog page.",
+    "Verify users can navigate to the blog page and see a list of all available posts."
+  ],
+  "activities": [
+    "Navigate to the home page.",
+    "Verify the page title is \"simple-remix-blog\".",
+    "Verify the post title \"Acheronta altoque\" is visible.",
+    "Click the first \"Read more\" link.",
+    "Verify the URL is \"http://localhost:3000/posts/example-post-2\".",
+    "Verify the author's avatar is visible.",
+    "Verify the date \"August 30, 2022\" is visible.",
+    "Verify the text \"Sine aequum praeferret mihi\" is visible.",
+    "Verify the text \"Lorem markdownum figuris arcum, vestes, traharis reperire quia.\" is visible.",
+    "Verify the text \"Magno adspexit Phorbas velles in qua terras, nec cuique plus tenet.\" is visible.",
+    "Click the \"Blog\" link.",
+    "Verify the URL is \"http://localhost:3000/blog\".",
+    "Verify the text \"All posts\" is visible.",
+    "Navigate to the home page.",
+    "Verify the page title is \"simple-remix-blog\".",
+    "Click the \"Blog\" link.",
+    "Verify the URL is \"http://localhost:3000/blog\".",
+    "Verify the text \"All posts\" is visible.",
+    "Verify that 4 \"Read more\" links are present."
+  ]
+}

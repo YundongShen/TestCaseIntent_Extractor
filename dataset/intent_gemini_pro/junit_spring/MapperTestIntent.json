@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_MapperTest",
+  "source_file": "dataset/raw/junit_spring/MapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:47:44.924647",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "testModelMapper",
+    "testModelService"
+  ],
+  "goals": [
+    "Verify the successful insertion of a new entity using the MyBatis mapper",
+    "Verify the pagination functionality when querying entities using PageHelper"
+  ],
+  "activities": [
+    "Create a TestModel instance and set its attributes including age, creation date, update date, and username",
+    "Insert the TestModel entity into the database using the mapper",
+    "Create and insert 100 TestModel entities in a loop to populate the database for pagination testing",
+    "Query a paginated list of TestModel entities with an ID greater than 0 using the service",
+    "Assert that the page size of the queried result is greater than or equal to 5",
+    "Assert that the number of elements in the queried page is exactly 20"
+  ]
+}

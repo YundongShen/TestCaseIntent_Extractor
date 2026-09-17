@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_ConcurrencyTest",
+  "source_file": "dataset/raw/junit_unit/ConcurrencyTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:15:39.566101",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Concurrency",
+    "Thread"
+  ],
+  "goals": [
+    "Verify that Concurrency.newDaemonThread creates a daemon thread",
+    "Verify that Concurrency.newThread formats the thread name correctly"
+  ],
+  "activities": [
+    "Create a daemon thread with name 't' and the mock runnable",
+    "Assert that the thread is a daemon",
+    "Create a thread with name format 'test-%d' and the mock runnable",
+    "Assert that the thread name is 'test-0'"
+  ]
+}

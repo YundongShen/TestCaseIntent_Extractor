@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_auth_test",
+  "source_file": "dataset/raw/supertest/auth.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:28:59.783947",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify that the app successfully registers a new user and returns an authentication token."
+  ],
+  "activities": [
+    "Send POST request to /api/auth/register with user credentials",
+    "Verify response status code is 201",
+    "Verify response body contains authentication token"
+  ]
+}

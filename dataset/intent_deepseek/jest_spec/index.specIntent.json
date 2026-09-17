@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_index_spec",
+  "source_file": "dataset/raw/jest_spec/index.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:29.064187",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "sut",
+    "car",
+    "bmw",
+    "animal",
+    "bird"
+  ],
+  "goals": [],
+  "activities": [
+    "extract_and_simplify_code",
+    "extract_test_object_creation_and_inheritance",
+    "describe_object_creation",
+    "describe_inheritance",
+    "test_arrows_function",
+    "test_object_creating",
+    "test_inheritance"
+  ]
+}

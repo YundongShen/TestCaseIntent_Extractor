@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_Docs_cy",
+  "source_file": "dataset/raw/cypress/Docs.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T16:46:58.999645",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

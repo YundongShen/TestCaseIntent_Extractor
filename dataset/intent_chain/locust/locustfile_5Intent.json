@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_locustfile_5",
+  "source_file": "dataset/raw/locust/locustfile_5.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T19:27:22.065144",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_UserServiceTest",
+  "source_file": "dataset/raw/junit_unit/UserServiceTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:09:19.561994",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "UserService"
+  ],
+  "goals": [
+    "verify age validation and user creation request execution"
+  ],
+  "activities": [
+    "initialize UserService instance",
+    "invoke validateAge with input 18",
+    "assert validation result is true",
+    "invoke createUser with user object",
+    "verify request execute interaction"
+  ]
+}

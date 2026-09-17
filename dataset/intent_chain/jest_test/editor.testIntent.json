@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_editor_test",
+  "source_file": "dataset/raw/jest_test/editor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:07:50.062800",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "addListStyle"
+  ],
+  "goals": [
+    "Verify addListStyle correctly applies bulleted or numbered list prefixes to text content",
+    "Verify addListStyle correctly updates selection positions after applying list styles"
+  ],
+  "activities": [
+    "string1",
+    "string2"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_alertas_cy",
+  "source_file": "dataset/raw/cypress/alertas.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T17:03:46.827596",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "https://automacaocombatista.herokuapp.com/mudancadefoco/alert",
+    ":nth-child(7) > .btn",
+    "#result",
+    "https://automacaocombatista.herokuapp.com/mudancadefoco/janela",
+    ".btn",
+    "url"
+  ],
+  "goals": [
+    "Verify that the application correctly captures and displays input from a JavaScript prompt dialog",
+    "Verify that clicking a button opens a new window and displays the expected content"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

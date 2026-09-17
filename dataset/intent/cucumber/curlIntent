@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_curl",
+  "source_file": "dataset/raw/cucumber/curl.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:27:06.967526",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "gauntlt"
+  ],
+  "goals": [
+    "Verify that the gauntlt tool successfully executes HTTP attack scenarios defined in .attack files",
+    "Validate that specific attack types (simple, cookies, verbs) complete with expected pass results"
+  ],
+  "activities": [
+    "Ensure attack \"curl\" exists",
+    "Copy attack files from examples/curl folder",
+    "Verify existence of attack files simple.attack, cookies.attack, verbs.attack",
+    "Execute gauntlt simple.attack command",
+    "Verify execution passes with 4 steps",
+    "Execute gauntlt cookies.attack command",
+    "Verify execution passes with 4 steps",
+    "Execute gauntlt verbs.attack command",
+    "Verify execution passes with 5 scenarios"
+  ]
+}

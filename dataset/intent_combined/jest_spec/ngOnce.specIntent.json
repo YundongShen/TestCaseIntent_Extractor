@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_ngOnce_spec",
+  "source_file": "dataset/raw/jest_spec/ngOnce.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:44:09.942466",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "$rootScope.$once"
+  ],
+  "goals": [
+    "verify $once method functionality including single invocation and scope inheritance"
+  ],
+  "activities": [
+    "verify $once is a function on $rootScope",
+    "register one-time event listener",
+    "broadcast event to trigger listener",
+    "verify listener captured event name",
+    "verify listener captured sound data",
+    "broadcast event multiple times",
+    "verify listener invoked only once",
+    "create child scope",
+    "verify $once exists on child scope",
+    "verify $once returns deregistration function"
+  ]
+}

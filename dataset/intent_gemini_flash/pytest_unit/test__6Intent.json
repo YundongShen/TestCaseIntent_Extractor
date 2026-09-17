@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_unit/test__6.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:42:40.597110",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "get_average_last_hour"
+  ],
+  "goals": [
+    "Verify that the `get_average_last_hour` function correctly calculates and returns the average of sensor values.",
+    "Verify that the home page (`/`) loads successfully and displays the expected content.",
+    "Verify that the `/refresh_average` endpoint returns the calculated average in a JSON format."
+  ],
+  "activities": [
+    "Define a mock API response for sensor data.",
+    "Mock the external HTTP GET request to return the predefined mock response.",
+    "Call the get_average_last_hour function.",
+    "Verify that the returned data includes an \"average\" key.",
+    "Verify that the calculated average value is 5.27.",
+    "Mock the internal get_average_last_hour function to return a specific average value.",
+    "Send an HTTP GET request to the home page endpoint (\"/\").",
+    "Verify that the HTTP response status code is 200.",
+    "Verify that the response content contains \"Welcome to Sensor Dashboard\".",
+    "Mock the internal get_average_last_hour function to return a specific average value.",
+    "Send an HTTP GET request to the \"/refresh_average\" endpoint.",
+    "Verify that the HTTP response status code is 200.",
+    "Parse the JSON response body.",
+    "Verify that the parsed data includes an \"average\" key.",
+    "Verify that the \"average\" value in the response is 5.27."
+  ]
+}

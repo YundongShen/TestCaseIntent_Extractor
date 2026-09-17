@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_unit/test__7.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:45:36.060926",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "AutonomousAgent and token operation functions"
+  ],
+  "goals": [
+    "Verify message handling and ERC20 token operation behaviors"
+  ],
+  "activities": [
+    "Send hello message to agent inbox",
+    "Wait for message processing",
+    "Verify hello message logging",
+    "Configure mock agent for crypto transfer",
+    "Send crypto message to inbox",
+    "Execute crypto filter handler",
+    "Verify crypto transfer logging",
+    "Configure mock Web3 and settings",
+    "Execute get ERC20 balance behaviour",
+    "Verify balance retrieval and logging"
+  ]
+}

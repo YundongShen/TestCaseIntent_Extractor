@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_nextload",
+  "source_file": "dataset/raw/k6/nextload.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T15:13:56.139009",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "lol.com web service"
+  ],
+  "goals": [
+    "verify endpoint availability and performance under load"
+  ],
+  "activities": [
+    "send GET request to home page",
+    "verify response status is 200",
+    "verify response time is under 500ms",
+    "send GET request to API endpoint",
+    "verify response status is 200",
+    "verify response time is under 500ms",
+    "wait for 1 second"
+  ]
+}

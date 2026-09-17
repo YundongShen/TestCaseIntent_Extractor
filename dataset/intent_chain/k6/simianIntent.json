@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_simian",
+  "source_file": "dataset/raw/k6/simian.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T19:14:36.940722",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "res"
+  ],
+  "goals": [
+    "Verify the DNA submission API returns HTTP status 200",
+    "Verify API stability under concurrent load stages"
+  ],
+  "activities": [
+    "Configure load stages and thresholds",
+    "Construct DNA payload and headers",
+    "Send POST request to DNA API",
+    "Pause execution for 1 second",
+    "Verify response status code is 200"
+  ]
+}

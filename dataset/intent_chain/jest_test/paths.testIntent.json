@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_paths_test",
+  "source_file": "dataset/raw/jest_test/paths.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:16:56.394361",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "treeviewString",
+    "fileviewString",
+    "pullTreeviewString",
+    "pullFileviewString"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Invoke treeviewString with owner 'foo' and repo 'bar', verify output is 'foo/bar/tree'",
+    "Invoke fileviewString with owner 'foo' and repo 'bar', verify output is 'foo/bar/blob'",
+    "Invoke pullTreeviewString with owner 'foo', repo 'bar', and pullId '123', verify output is 'foo/bar/pull/123/tree'",
+    "Invoke pullFileviewString with owner 'foo', repo 'bar', and pullId '123', verify output is 'foo/bar/pull/123/blob'"
+  ]
+}

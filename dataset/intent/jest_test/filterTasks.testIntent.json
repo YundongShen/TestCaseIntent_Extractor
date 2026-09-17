@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_filterTasks_test",
+  "source_file": "dataset/raw/jest_test/filterTasks.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T17:54:12.131566",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "filterTasks"
+  ],
+  "goals": [
+    "Verify the filterTasks function correctly filters tasks based on include or exclude modes",
+    "Verify the filterTasks function returns the original task list when no filter is specified"
+  ],
+  "activities": [
+    "Initialize tasks array with five task objects",
+    "Invoke filterTasks with false, false, and tasks",
+    "Verify result equals tasks",
+    "Invoke filterTasks with false, empty array, and tasks",
+    "Verify result equals tasks",
+    "Invoke filterTasks with exclude mode, being task, and tasks",
+    "Verify result length is 4",
+    "Invoke filterTasks with include mode, tested task, and tasks",
+    "Verify result length is 1"
+  ]
+}

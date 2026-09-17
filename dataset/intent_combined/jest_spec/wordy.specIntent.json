@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_wordy_spec",
+  "source_file": "dataset/raw/jest_spec/wordy.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:46:12.515777",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "WordProblem"
+  ],
+  "goals": [
+    "Verify arithmetic calculation from word questions and error handling for invalid inputs"
+  ],
+  "activities": [
+    "instantiate WordProblem with question string",
+    "call answer method on instance",
+    "assert result equals expected value",
+    "assert answer method throws ArgumentError"
+  ]
+}

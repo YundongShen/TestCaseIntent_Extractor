@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_quiz3_cy_js",
+  "source_file": "dataset/raw/cypress/quiz3.cy.js.txt",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:43.350123",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "CypressApp",
+    "CypressVisit",
+    "CypressGet",
+    "CypressShould",
+    "CypressAnd",
+    "CypressClick",
+    "CypressUrl",
+    "CypressContains",
+    "CypressDemoLoginPage",
+    "CypressDemoLoginPageTC01",
+    "CypressDemoLoginPageTC02",
+    "CypressDemoLoginPageTC03",
+    "CypressDemoLoginPageTC04",
+    "CypressDemoLoginPageTC05",
+    "CypressDemoLoginPageTC06",
+    "CypressDemoLoginPageTC07"
+  ],
+  "goals": [
+    "Menampilkanlogoperusahaan",
+    "Loginberhasildengankredensialvalid",
+    "Linkforgotpassworddapatdiklik",
+    "Menampilkandemocredentials"
+  ],
+  "activities": [
+    "extract_visibility_of_company_branding",
+    "extract_visibility_of_login_title",
+    "extract_visibility_of_user_input_fields",
+    "extract_visibility_of_submit_button",
+    "perform_login_with_valid_credentials",
+    "perform_login_with_invalid_credentials",
+    "perform_click_on_forgot_password_link",
+    "perform_check_visibility_of_demo_credentials"
+  ]
+}

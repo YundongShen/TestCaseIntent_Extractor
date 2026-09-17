@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_xhr_cy",
+  "source_file": "dataset/raw/cypress/xhr.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T17:08:15.966319",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify the API endpoint returns a 200 status code",
+    "Verify the response body length is 500 and content-type is application/json"
+  ],
+  "activities": [
+    "Send HTTP request to comments endpoint",
+    "Verify response status is 200",
+    "Verify response body length is 500",
+    "Verify response has headers property",
+    "Verify content-type header is application/json; charset=utf-8",
+    "Send HTTP GET request to comments endpoint",
+    "Verify response status is 200",
+    "Verify response body length is 500",
+    "Verify response has headers property",
+    "Verify content-type header is application/json; charset=utf-8",
+    "Send HTTP request to comments endpoint",
+    "Retrieve headers from response",
+    "Retrieve content-type from headers",
+    "Verify content-type includes application/json",
+    "Send HTTP request to comments endpoint",
+    "Retrieve status from response",
+    "Verify status is 200"
+  ]
+}

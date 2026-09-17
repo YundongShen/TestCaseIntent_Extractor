@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_GraphTest",
+  "source_file": "dataset/raw/junit_unit/GraphTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:27:32.886122",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "o1"
+  ],
+  "goals": [
+    "Verify that the NumberOfIslands.numIslands method correctly counts the number of islands in the provided grid"
+  ],
+  "activities": [
+    "Initialize 2D character array grid with island map data",
+    "Set expected number of islands to 3",
+    "Instantiate NumberOfIslands object from mocked Graph",
+    "Invoke numIslands method with grid input",
+    "Assert equality between expected and actual result"
+  ]
+}

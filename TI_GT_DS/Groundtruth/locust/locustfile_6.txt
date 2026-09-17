@@ -1,0 +1,12 @@
+**Test Object**
+Web services (including the homepage `/` and the wallet dashboard `/{wallet_address}`)
+
+**Test Goal**
+Verify that under concurrent load, the homepage responds normally, all wallet pages return correctly, and the backend wallet-related data query process does not fail under pressure.
+
+**Test Activities**
+1. Each user performs an operation randomly every 1-5 seconds.
+2. Access the homepage at a low frequency.
+3. Randomly select a wallet address at a higher frequency and access its dashboard.
+4. After each dashboard access, run the Sigma data reading process.
+5. Record a failure log entry for any wallet page that returns a non-200 error.

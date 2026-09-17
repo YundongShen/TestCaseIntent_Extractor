@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_test__9",
+  "source_file": "dataset/raw/pytest_api/test__9.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T08:00:33.435969",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "response",
+    "response_body"
+  ],
+  "goals": [
+    "Verify the successful upload of multiple files to a workshop via the POST API, ensuring a 201 response, correct database updates, and file storage."
+  ],
+  "activities": [
+    "Clean the workshop test environment",
+    "Insert a new workshop test record and retrieve its ID",
+    "Create two file objects associated with the workshop ID",
+    "Prepare the files payload for the API request",
+    "Send a POST request to upload the files to the workshop",
+    "Parse the JSON response body",
+    "Add the files to the local workshop test object",
+    "Assert the response status code is 201",
+    "Assert the response Content-Type header is application/json",
+    "Assert the response body status is 201",
+    "Assert the response body message is the expected success message",
+    "Assert the response body data matches the expected workshop data",
+    "Assert the response body detail matches the expected success details",
+    "Check the workshop data in the database by ID",
+    "Verify that both files exist in the file storage",
+    "Clean up the test environment and test files"
+  ]
+}

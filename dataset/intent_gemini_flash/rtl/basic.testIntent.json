@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_basic_test",
+  "source_file": "dataset/raw/rtl/basic.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T13:43:36.701219",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify that the App component correctly adds items to the list and updates the UI state."
+  ],
+  "activities": [
+    "Initialize user event simulation.",
+    "Render the application component.",
+    "Assert that no list items are present.",
+    "Assert that the 'no items yet' message is visible.",
+    "Locate the 'Add Item' button.",
+    "Click the 'Add Item' button.",
+    "Assert that one list item is present.",
+    "Assert that the first list item's text content is 'Item 1'.",
+    "Assert that the 'no items yet' message is no longer visible."
+  ]
+}

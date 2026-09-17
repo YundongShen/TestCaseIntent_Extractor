@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_locustfile_6",
+  "source_file": "dataset/raw/locust/locustfile_6.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:26.780494",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "WebsiteUser",
+    "load_homepage",
+    "load_specific_wallet_dashboard",
+    "between",
+    "random",
+    "utils.api_reader",
+    "SigmaWalletReader",
+    "self.wallet_addresses",
+    "self.sigma_reader",
+    "self.client",
+    "response",
+    "200"
+  ],
+  "goals": [
+    "test the functionality of loading the homepage",
+    "test the functionality of loading a specific wallet dashboard and updating data"
+  ],
+  "activities": []
+}

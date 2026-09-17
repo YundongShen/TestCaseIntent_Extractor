@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_kalkulator_cy",
+  "source_file": "dataset/raw/cypress/kalkulator.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T17:07:38.951682",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Calculator Buttons",
+    "Calculator Display"
+  ],
+  "goals": [
+    "Verify correct calculation results for arithmetic operations (addition and multiplication)",
+    "Verify the clear function resets the calculator display correctly"
+  ],
+  "activities": [
+    "Visit the calculator application at http://127.0.0.1:8080",
+    "Click the '2' button",
+    "Click the '+' button",
+    "Click the '3' button",
+    "Click the '=' button",
+    "Verify the output display text is '5'",
+    "Click the '6' button",
+    "Click the '*' button",
+    "Click the '7' button",
+    "Click the '=' button",
+    "Verify the output display text is '42'",
+    "Click the '9' button",
+    "Click the 'clear' button",
+    "Verify the input display text is empty",
+    "Verify the output display text is empty"
+  ]
+}

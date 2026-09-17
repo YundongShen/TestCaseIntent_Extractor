@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_locustfile",
+  "source_file": "dataset/raw/locust/locustfile.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-11T07:54:59.259845",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "self.client"
+  ],
+  "goals": [
+    "Verify the performance and stability of the API endpoints for user profiles, group management, and bill splitting under simulated random user load."
+  ],
+  "activities": [
+    "Register a first user with a random username and password",
+    "Register a second user with a random username and password",
+    "Register a third user with a random username and password, and extract the authentication token and user ID",
+    "Create a new group containing the three registered users and extract the group ID",
+    "Randomly select an action number between 1 and 4",
+    "If action 1 is selected, send a GET request to retrieve the user profile",
+    "If action 2 is selected, send a GET request to retrieve the user's groups",
+    "If action 3 is selected, send a GET request to retrieve the specific group details",
+    "If action 4 is selected, send a POST request to split a bill among the group members"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_FirstTest",
+  "source_file": "dataset/raw/junit_unit/FirstTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:33:58.825544",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify TaskDaoImpl.create returns expected key",
+    "Verify TaskDaoImpl.get returns expected Task object"
+  ],
+  "activities": [
+    "Initialize mock annotations",
+    "Stub mockDao.create to return \"a_key\"",
+    "Stub mockDao.get to return task",
+    "Invoke mockDao.create with \"hi\" and 12",
+    "Assert returned key equals \"a_key\"",
+    "Invoke mockDao.get with \"a_key\"",
+    "Assert returned task equals task"
+  ]
+}

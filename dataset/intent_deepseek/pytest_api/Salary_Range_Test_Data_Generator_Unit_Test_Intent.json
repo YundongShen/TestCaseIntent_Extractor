@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:20.700971",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "MyTestCase",
+    "requests",
+    "BeautifulSoup",
+    "unittest",
+    "minOptions",
+    "maxOptions",
+    "testMin",
+    "testMax"
+  ],
+  "goals": [
+    "test_generateHourlyRateData",
+    "test_generateAnnualSalaryData"
+  ],
+  "activities": []
+}

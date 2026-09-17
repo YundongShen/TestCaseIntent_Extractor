@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_index_test",
+  "source_file": "dataset/raw/supertest/index.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:33:51.417615",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the root route returns expected JSON response and status code",
+    "Verify the test route correctly handles POST submission and GET retrieval"
+  ],
+  "activities": [
+    "Initialize express application with middleware and route mounting",
+    "Send GET request to root route and verify JSON response, body, and status code",
+    "Send POST request to test route with form data",
+    "Send GET request to test route and verify response body contains expected array"
+  ]
+}

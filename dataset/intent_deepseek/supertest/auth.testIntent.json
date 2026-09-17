@@ -1,0 +1,47 @@
+{
+  "test_case_id": "tc_auth_test",
+  "source_file": "dataset/raw/supertest/auth.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T07:56:54.478887",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "app",
+    "describe",
+    "beforeAll",
+    "afterAll",
+    "request",
+    "expect",
+    "send",
+    "useNewUrlParser",
+    "useUnifiedTopology",
+    "mongoose",
+    "index",
+    "it",
+    "testuser",
+    "email",
+    "password123"
+  ],
+  "goals": [
+    "testtheregistrationofanewuserwiththeapi"
+  ],
+  "activities": [
+    "beforeAll",
+    "it",
+    "async",
+    "beforeAll",
+    "async",
+    "request",
+    "post",
+    "send",
+    "expect",
+    "toEqual",
+    "201",
+    "haveProperty",
+    "token",
+    "afterAll",
+    "async",
+    "close",
+    "afterAll"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_blog_test",
+  "source_file": "dataset/raw/jest_test/blog.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:04:48.099516",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Initialize test environment and start application",
+    "Send HTTP GET request to root path and verify SSR response",
+    "Send HTTP GET request to about path and verify SSR response",
+    "Send HTTP GET request to csr path and verify CSR response",
+    "Close application and restore test mocks"
+  ]
+}

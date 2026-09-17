@@ -1,0 +1,32 @@
+**Test Object**
+The `myCode.build_url` function
+
+**Test Goal**
+Verify that, under a mock `BASE_URL`, `build_url` can construct the correct query string based on the passed price range and sorting parameters.
+
+**Test Activities**
+1. Temporarily replace `myCode.BASE_URL` with `'http://localhost/products'` using a mocker.
+2. Call `myCode.build_url`.
+3. Assert that the returned URL equals `'http://localhost/products?minPrice=100&maxPrice=500&order=desc'`.
+
+**Test Object**
+The `myCode.get_meaning_of_life` function
+
+**Test Goal**
+Verify that `get_meaning_of_life` returns a correctly formatted string when the underlying calculation is mocked.
+
+**Test Activities**
+1. Replace `mockdemo.myCode.calculate_meaning_of_life` with a lambda that returns `'wibble'` using a mocker.
+2. Call `myCode.get_meaning_of_life()`.
+3. Assert the return value as `'The meaning of life is wibble'`.
+
+**Test Object**
+The `myCode.get_product` function
+
+**Test Goal**
+Verify that `get_product` returns the correct string when the data loader is mocked.
+
+**Test Activities**
+1. Replace `myCode.DataLoader.load_product` with a lambda that returns `'wibble'` using a mocker.
+2. Call `myCode.get_product()`.
+3. Assert the return value as `'Product is wibble'`.

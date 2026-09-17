@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_put_test",
+  "source_file": "dataset/raw/supertest/put.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:39:34.830483",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "webapp",
+    "comments"
+  ],
+  "goals": [
+    "Verify the webapp correctly processes valid comment update requests and persists changes to the database",
+    "Verify the webapp returns appropriate error responses for invalid comment update requests"
+  ],
+  "activities": [
+    "Connect to database and create initial test comment via POST request",
+    "Send PUT request with valid content to update the comment",
+    "Verify response status code is 200 and content type is JSON",
+    "Query database to verify updated comment content is persisted",
+    "Send PUT request without content field to test invalid update",
+    "Verify response status code is 404 for invalid request",
+    "Delete test data and close database connections"
+  ]
+}

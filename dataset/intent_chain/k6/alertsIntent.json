@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_alerts",
+  "source_file": "dataset/raw/k6/alerts.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T19:11:51.406982",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "/api/alerts/register"
+  ],
+  "goals": [
+    "Verify the alert registration endpoint is accessible and responds with valid HTTP status codes",
+    "Verify the alert registration request successfully triggers the verification email sending process"
+  ],
+  "activities": [
+    "Construct registration payload with test email and server name",
+    "Send POST request to /api/alerts/register endpoint",
+    "Verify endpoint responds with valid HTTP status codes",
+    "Verify response indicates verification email sending process"
+  ]
+}

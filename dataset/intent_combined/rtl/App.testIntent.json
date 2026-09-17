@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_App_test",
+  "source_file": "dataset/raw/rtl/App.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T04:48:40.919026",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify App rendering, error handling, unit preference, and location change functionality"
+  ],
+  "activities": [
+    "render App component",
+    "wait for and verify Los Angeles text",
+    "configure server to return error response",
+    "render App component",
+    "wait for and verify error message text",
+    "set local storage unit to Fahrenheit",
+    "render App component",
+    "wait for and verify Los Angeles text",
+    "get weather status element",
+    "verify weather status text content",
+    "render App component",
+    "configure server to return New York geo data",
+    "configure server to return New York weather data",
+    "wait for and verify Los Angeles text",
+    "type New Work into search input",
+    "wait for New York County suggestion text",
+    "click New York County suggestion",
+    "wait for and verify New York County text"
+  ]
+}

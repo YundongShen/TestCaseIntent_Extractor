@@ -1,0 +1,69 @@
+**Test Object**
+The `getSizes` and `getVariances` functions
+
+**Test Goal**
+Confirm that both functions return reasonable default values ​​when no arguments are passed.
+
+**Test Activities**
+1. Call `getSizes()` without arguments and use snapshot assertion to check the return value.
+2. Call `getVariances()` without arguments and use snapshot assertion to check the return value.
+
+**Test Object**
+The `getSizes` function
+
+**Test Goal**
+Verify that a single resolution string is correctly parsed into an array of sizes.
+
+**Test Activities**
+1. Call `getSizes('200x200')`.
+2. Assert the result as `[{ h: 200, w: 200 }]`.
+
+**Test Object**
+The `getSizes` function
+
+**Test Goal**
+Verify that an array of multiple resolution strings is correctly parsed into an array of objects of corresponding sizes. 
+
+**Test Activities**
+1. Call `getSizes(['100x200', '300x400'])`.
+2. Assert the result as `[{ w: 100, h: 200 }, { w: 300, h: 400 }]`.
+
+**Test Object**
+The `getSizes` function
+
+**Test Goal**
+An exception is thrown if an incorrectly formatted resolution string is passed in.
+
+**Test Activities**
+1. Call `getSizes('100xFoo')`.
+2. The assertion function throws an exception.
+
+**Test Object**
+The `getVariances` function
+
+**Test Goal**
+Verify that a single variance string can be correctly parsed as an array.
+
+**Test Activities**
+1. Call `getVariances('0.61')`.
+2. Assert the result as `[0.61]`.
+
+**Test Object**
+`getVariances` function
+
+**Test Goal**
+Verifies that multiple variance string arrays can be correctly parsed into corresponding numeric arrays.
+
+**Test Activities**
+1. Call `getVariances(['0.333', '0.1', '1'])`.
+2. Assert the result as `[0.333, 0.1, 1]`.
+
+**Test Object**
+`getVariances` function
+
+**Test Goal**
+Throws an exception if an out-of-range or invalid variance value is passed in.
+
+**Test Activities**
+1. Call `getVariances('1.1')`, `getVariances('-1')`, and `getVariances('foo')` respectively.
+2. Assert that an exception is thrown on each call.

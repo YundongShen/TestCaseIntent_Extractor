@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_faq_spec",
+  "source_file": "dataset/raw/playwright/faq.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:56:19.181498",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "page",
+    "combobox",
+    "badges",
+    "textbox"
+  ],
+  "goals": [
+    "Verify the FAQ category filtering functionality updates the URL and displays the correct category badges",
+    "Verify the FAQ search functionality correctly handles valid keywords, specific questions, and invalid inputs"
+  ],
+  "activities": [
+    "Navigate to the FAQ page",
+    "Wait for the 'Kategori Pertanyaan' combobox to be visible",
+    "Select a category from the 'Kategori Pertanyaan' combobox",
+    "Verify that the URL contains the selected category parameter",
+    "Verify that the badge matching the selected category name is visible",
+    "Navigate to the FAQ page",
+    "Fill the search textbox with the keyword 'Isoman'",
+    "Press 'Enter' in the search textbox",
+    "Verify that the first text containing 'isoman' is visible",
+    "Verify that the URL contains the search query parameter '?q=Isoman'",
+    "Navigate to the FAQ page",
+    "Fill the search textbox with a specific question",
+    "Press 'Enter' in the search textbox",
+    "Verify that the corresponding answer text is visible",
+    "Navigate to the FAQ page",
+    "Fill the search textbox with an invalid keyword 'qwerty'",
+    "Press 'Enter' in the search textbox",
+    "Verify that the 'Pertanyaan tidak ditemukan' message is visible",
+    "Verify that the URL contains the search query parameter '?q=qwerty'"
+  ]
+}

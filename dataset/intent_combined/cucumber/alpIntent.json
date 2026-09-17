@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_alp",
+  "source_file": "dataset/raw/cucumber/alp.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:29:17.072668",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "alp"
+  ],
+  "goals": [
+    "verify alp data forwarding and response routing behavior"
+  ],
+  "activities": [
+    "configure default access class",
+    "set requester to default access class",
+    "create different access class on requester",
+    "configure responder to listen for foreground packets",
+    "configure interface using access class",
+    "create file containing configuration or bytes",
+    "define command with indirect forward",
+    "define command with direct forward",
+    "define command with break query and forward",
+    "define command with FEC encoding",
+    "start session for command",
+    "verify responder receives unsolicited response",
+    "verify requester does not receive response",
+    "verify responder does not receive unsolicited response"
+  ]
+}

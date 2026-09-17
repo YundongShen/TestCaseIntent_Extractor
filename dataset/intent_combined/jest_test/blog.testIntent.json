@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_blog_test",
+  "source_file": "dataset/raw/jest_test/blog.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:50:11.785785",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "blog controller"
+  ],
+  "goals": [
+    "verify server side and client side rendering functionality"
+  ],
+  "activities": [
+    "initialize test environment and application",
+    "send http get request to root path",
+    "verify response status and text content",
+    "verify server side rendering",
+    "verify development javascript resource",
+    "send http get request to about route",
+    "verify response status",
+    "verify server side rendering",
+    "verify development javascript resource",
+    "send http get request to csr route",
+    "verify response status",
+    "verify client side rendering",
+    "verify development javascript resource"
+  ]
+}

@@ -1,0 +1,10 @@
+**Test Object**
+Homepage `/` and random page endpoint of the web service.
+
+**Test Goal**
+Verify that the homepage returns the correct response within the expected time, and that random pages can be accessed normally under concurrent load.
+
+**Test Activities**
+1. Each user waits 1 to 2.5 seconds between tasks.
+2. Access the homepage `/`; verify the response text is "Hello, World!" and the response time is under 0.5 seconds; mark as failure if either check fails.
+3. Randomly select a page using `choose_random_page()` and send a GET request with a browser User-Agent header.

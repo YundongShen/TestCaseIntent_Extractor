@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_POPULATE_test_",
+  "source_file": "dataset/raw/pytest_unit/POPULATE_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:08:16.357030",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "POPULATE.POPULATE"
+  ],
+  "goals": [
+    "Verify POPULATE.POPULATE preserves input vector values in the output x-axis",
+    "Verify POPULATE.POPULATE generates output y-values statistically consistent with the specified distribution parameters"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

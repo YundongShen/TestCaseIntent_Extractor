@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_cli_spec",
+  "source_file": "dataset/raw/jest_spec/cli.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:30.531696",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "parseCozyURL",
+    "toto",
+    "toto-drive.mycozy.cloud",
+    "https://toto.mycozy.cloud"
+  ],
+  "goals": [
+    "testobjectshouldreturncorrectvalueforthefirstparseCozyURLtestcase",
+    "testobjectshouldreturncorrectvalueforthesecondparseCozyURLtestcasenotincludingtrailingslash"
+  ],
+  "activities": []
+}

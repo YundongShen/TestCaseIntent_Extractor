@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_StubHandlerTest",
+  "source_file": "dataset/raw/junit_unit/StubHandlerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:59:50.378784",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "{{pojo_name}}"
+  ],
+  "goals": [
+    "test the functionality of the {{operation}} by creating it in the cloudformation"
+  ],
+  "activities": [
+    "extract_actions_from_code",
+    "simplify_implementation_statements",
+    "test_handle_request_simple_success"
+  ]
+}

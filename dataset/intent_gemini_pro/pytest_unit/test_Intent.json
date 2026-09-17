@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_test_",
+  "source_file": "dataset/raw/pytest_unit/test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:04:30.967743",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "client",
+    "response",
+    "req"
+  ],
+  "goals": [
+    "Verify that the client correctly routes and forwards HTTP requests, including paths and target services, to the underlying call client.",
+    "Verify that custom HTTP headers are properly passed through the client to the underlying request and reflected in the response."
+  ],
+  "activities": [
+    "Verify that the client's request list is initially empty",
+    "Send a GET request to '/foo'",
+    "Verify that the client's request list is not empty",
+    "Retrieve the last request from the client",
+    "Verify that the last request's service is 'localhost:8080'",
+    "Verify that the response content is 'mock'",
+    "Record the current number of requests in the client",
+    "Send a GET request to '/adminer/foo'",
+    "Verify that the number of requests increased by 1",
+    "Retrieve the last request from the client",
+    "Verify that the last request's path is '/adminer/foo'",
+    "Verify that the last request's service is 'localhost:8080'",
+    "Send a GET request to '/foo' with custom headers",
+    "Retrieve the last request from the client",
+    "Verify that the custom headers are present and correct in the last request",
+    "Verify that the custom headers are present and correct in the response"
+  ]
+}

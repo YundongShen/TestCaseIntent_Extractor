@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_unit_test_",
+  "source_file": "dataset/raw/pytest_api/unit_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T08:00:20.810533",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "obtainUserNameEmail"
+  ],
+  "goals": [
+    "Verify that the /obtainUserNameEmail endpoint successfully retrieves the correct user details (first name, last name, and email) when provided with a valid authentication token."
+  ],
+  "activities": [
+    "Define test data including user credentials and expected output",
+    "Send a POST request to the login endpoint with the user's email and password",
+    "Extract the session token from the login response JSON",
+    "Send a POST request to the obtainUserNameEmail endpoint with the session token in the Authorization header",
+    "Assert that the response status code is 200",
+    "Assert that the response JSON matches the expected output"
+  ]
+}

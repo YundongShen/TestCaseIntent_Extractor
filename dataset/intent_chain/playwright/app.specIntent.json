@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/playwright/app.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:35:12.836283",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "copy-button",
+    "editor-input",
+    "preview-content",
+    "preview-inner-scroll"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Set mobile viewport, navigate, switch to preview tab, and verify copy-button visibility and position",
+    "Navigate, fill editor-input with markdown, and verify preview-content renders bold text correctly",
+    "Set desktop viewport, navigate, fill editor-input with long markdown, and select device view",
+    "Wait for editor-input and preview-inner-scroll to become scrollable",
+    "Scroll editor-input and verify synchronization with preview-inner-scroll",
+    "Scroll preview-inner-scroll and verify synchronization with editor-input"
+  ]
+}

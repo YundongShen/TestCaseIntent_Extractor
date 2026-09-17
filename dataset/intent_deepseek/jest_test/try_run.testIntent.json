@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_try_run_test",
+  "source_file": "dataset/raw/jest_test/try_run.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:51:12.069570",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "tryRun",
+    "0",
+    "innerErr"
+  ],
+  "goals": [
+    "test the provided function is called once"
+  ],
+  "activities": [
+    "call_tryRun_once",
+    "call_tryRun_with_configured_retry",
+    "wait_for_retry"
+  ]
+}

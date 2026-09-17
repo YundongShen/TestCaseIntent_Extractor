@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_SwotJobTest",
+  "source_file": "dataset/raw/junit_spring/SwotJobTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:48:13.524280",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "JobExecution",
+    "StepExecution"
+  ],
+  "goals": [
+    "Verify that the SWOT ingestion job completes successfully and processes the expected number of records",
+    "Verify that the processed records are correctly written to both Solr and Cassandra databases"
+  ],
+  "activities": [
+    "Delete all records from the Solr collection",
+    "Truncate the Cassandra table",
+    "Create job parameters with the granule file path",
+    "Launch the job using the created parameters",
+    "Assert that the job execution exit status is 'COMPLETED'",
+    "Retrieve the first step execution from the job execution",
+    "Assert that the step execution read count is 43",
+    "Assert that the step execution write count is 43",
+    "Assert that the step execution filter count is 0",
+    "Assert eventually that the Solr collection record count for the dataset is 43",
+    "Count the records in the Cassandra table",
+    "Assert that the Cassandra record count is 43"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_Circle_spec",
+  "source_file": "dataset/raw/jest_spec/Circle.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:59:21.405662",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "Test whether the 'for...of' loop correctly iterates over the source array and the 'next()' method returns the expected values",
+    "Verify that the 'destruct' method returns the first element of the source array"
+  ],
+  "activities": [
+    "TestActivities: Test purposes, execution flow realization",
+    "Extraction Steps: Simplified implementation, original execution order",
+    "Simplified extraction, clear and concise language",
+    "Optional: Aggregate adjacent actions of the same type when necessary"
+  ]
+}

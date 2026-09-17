@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_dog_test",
+  "source_file": "dataset/raw/supertest/dog.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T07:56:55.431828",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verifythatusercanloginsuccessfullywithcorrectemailandpassword",
+    "verifythatusercanloginsuccessfullywithcorrectemailonly"
+  ],
+  "activities": [
+    "BeforeAll: CreateMongoMemoryServer",
+    "BeforeAll: Importappandmodels",
+    "BeforeEach: Createuser",
+    "POST/users/connection: Loginwithcorrectcredentials",
+    "POST/users/connection: Loginwithmissingemail",
+    "POST/users/connection: Loginwithincorrectpassword",
+    "POST/users/connection: Loginwithnon-existinguser"
+  ]
+}

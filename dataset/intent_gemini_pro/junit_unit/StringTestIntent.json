@@ -1,0 +1,43 @@
+{
+  "test_case_id": "tc_StringTest",
+  "source_file": "dataset/raw/junit_unit/StringTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:51:07.736518",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "jniVoidMethodTakesString",
+    "jniVoidMethodTakesTwoStrings",
+    "jniVoidMethodTakesFiveStrings",
+    "jniStringMethodTakesString",
+    "jniStringMethodTakesTwoStrings",
+    "jniStringMethodTakesFiveStrings"
+  ],
+  "goals": [
+    "Verify that JNI native methods correctly receive, forward, and return Java String arguments."
+  ],
+  "activities": [
+    "Call native void method taking a single string with a simple string",
+    "Call native void method taking a single string with a string containing punctuation",
+    "Call native void method taking two strings",
+    "Call native void method taking five strings",
+    "Verify the mock helper's void method taking a single string was called with the simple string",
+    "Verify the mock helper's void method taking a single string was called with the punctuation string",
+    "Verify the mock helper's void method taking two strings was called with the correct arguments",
+    "Verify the mock helper's void method taking five strings was called with the correct arguments",
+    "Call native string method taking a single string with a simple string",
+    "Call native string method taking a single string with a string containing punctuation",
+    "Call native string method taking two strings",
+    "Call native string method taking five strings",
+    "Verify the mock helper's string method taking a single string was called with the simple string",
+    "Verify the mock helper's string method taking a single string was called with the punctuation string",
+    "Verify the mock helper's string method taking two strings was called with the correct arguments",
+    "Verify the mock helper's string method taking five strings was called with the correct arguments",
+    "Initialize a new StringTestHelper instance",
+    "Call native string method taking a single string with a simple string and assert the result equals the input string",
+    "Call native string method taking a single string with an empty string",
+    "Call native string method taking a single string with a punctuation string and assert the result equals the input string",
+    "Call native string method taking two strings, pass the result to the native string method taking a single string, and assert the final result equals the concatenated strings",
+    "Call native string method taking five strings and assert the result equals the concatenated strings"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_Amazon_cy",
+  "source_file": "dataset/raw/cypress/Amazon.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:31:59.806734",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Amazon Website"
+  ],
+  "goals": [
+    "Verify login and shopping checkout flow"
+  ],
+  "activities": [
+    "visit Amazon homepage",
+    "hover over account link",
+    "click account link",
+    "type email",
+    "click continue button",
+    "type password",
+    "click sign in button",
+    "visit Amazon homepage",
+    "type T-shirt in search box",
+    "click search button",
+    "click product link",
+    "click add to cart button",
+    "click proceed to checkout button"
+  ]
+}

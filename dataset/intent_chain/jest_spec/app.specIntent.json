@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/jest_spec/app.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T17:30:12.378085",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the functionality of administrative endpoints for creating, updating, and deleting student records",
+    "Verify correct HTTP status code responses for success and error scenarios in student management"
+  ],
+  "activities": [
+    "Authenticate user to obtain session cookie for administrative access",
+    "Create new student record and verify HTTP 201 success response",
+    "Attempt to create duplicate student record and verify HTTP 409 conflict response",
+    "Attempt to create student with missing data and verify HTTP 500 error response",
+    "Update existing student record and verify HTTP 200 success response",
+    "Delete existing student record and verify HTTP 302 redirect response",
+    "Attempt to delete non-existent student record and verify HTTP 500 error response"
+  ]
+}

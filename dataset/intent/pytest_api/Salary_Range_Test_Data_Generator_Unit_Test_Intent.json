@@ -1,0 +1,40 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T01:54:19.492466",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "hourlyRateRange",
+    "testMin",
+    "testMax"
+  ],
+  "goals": [
+    "Verify hourly rate salary range filter options count is 11",
+    "Verify annual salary range filter options count is 11"
+  ],
+  "activities": [
+    "Fetch hourly rate jobs page via HTTP GET",
+    "Verify HTTP response is valid",
+    "Parse HTML response content",
+    "Locate minimum salary filter element",
+    "Parse minimum filter element HTML",
+    "Extract non-empty minimum salary values",
+    "Verify minimum salary values count equals 11",
+    "Locate maximum salary filter element",
+    "Parse maximum filter element HTML",
+    "Extract non-empty maximum salary values",
+    "Verify maximum salary values count equals 11",
+    "Fetch annual salary jobs page via HTTP GET",
+    "Parse HTML response content",
+    "Locate minimum salary filter element",
+    "Parse minimum filter element HTML",
+    "Extract non-empty minimum salary values",
+    "Verify minimum salary values count equals 11",
+    "Locate maximum salary filter element",
+    "Parse maximum filter element HTML",
+    "Extract non-empty maximum salary values",
+    "Verify maximum salary values count equals 11"
+  ]
+}

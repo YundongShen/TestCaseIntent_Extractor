@@ -1,0 +1,52 @@
+{
+  "test_case_id": "tc_app",
+  "source_file": "dataset/raw/cucumber/app.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:44.474055",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "image registration page",
+    "title field",
+    "URL field",
+    "submit button",
+    "form",
+    "list of registered images",
+    "localStorage"
+  ],
+  "goals": [
+    "Verify the image registration form's input validation for invalid data.",
+    "Verify successful image registration, including list update and data persistence across page refreshes."
+  ],
+  "activities": [
+    "Navigate to the image registration page",
+    "Enter an empty string in the title field",
+    "Enter an empty string in the URL field",
+    "Click the submit button",
+    "Verify 'Please type a title for the image' message is displayed above the title field",
+    "Verify 'Please type a valid URL' message is displayed above the imageUrl field",
+    "Verify an exclamation icon is displayed in the title and URL fields",
+    "Navigate to the image registration page",
+    "Enter 'Alien BR' in the title field",
+    "Verify a check icon is displayed in the title field",
+    "Enter a valid URL in the URL field",
+    "Verify a check icon is displayed in the imageUrl field",
+    "Submit the form by pressing Enter",
+    "Verify the list of registered images is updated with the new item",
+    "Verify the new item is stored in localStorage",
+    "Verify the input fields are cleared",
+    "Navigate to the image registration page",
+    "Enter 'BR Alien' in the title field",
+    "Enter a valid URL in the URL field",
+    "Click the submit button",
+    "Verify the list of registered images is updated with the new item",
+    "Verify the new item is stored in localStorage",
+    "Verify the input fields are cleared",
+    "Navigate to the image registration page",
+    "Enter valid data in the title field",
+    "Enter valid data in the URL field",
+    "Click the submit button",
+    "Refresh the page",
+    "Verify the submitted image is still displayed in the list of registered images"
+  ]
+}

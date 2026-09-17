@@ -1,0 +1,22 @@
+**Test Object**
+`PUT /comment/:id` Updates the comment interface.
+
+**Test Goal**
+Verify that sending the correct update content with a valid token results in the comment being successfully updated in the database.
+
+**Test Activities**
+1. Before testing, insert a test user into the database, then create a test comment using the `/comment` interface, recording the comment's `_id`.
+2. Send a PUT request to `/comment/{testCommentID}`, including the Authorization header and the new `content` field.
+3. Check that the response status code is 200 and the Content-Type is `application/json`.
+4. Retrieve the comment from the database and verify that `content` has changed to `"music is my life"`.
+
+**Test Object**
+`PUT /comment/:id` Update comment API
+
+**Test Goal**
+Verify that updating a comment without the required `content` field returns an error.
+
+**Test Activities**
+1. Use the same comment ID as the previous test case.
+2. Send a PUT request to `/comment/{testCommentID}`, only passing `commentId`, not `content`.
+3. Check that the response status code is 404.

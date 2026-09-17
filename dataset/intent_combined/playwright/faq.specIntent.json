@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_faq_spec",
+  "source_file": "dataset/raw/playwright/faq.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T15:22:17.459990",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "FAQ page"
+  ],
+  "goals": [
+    "Verify FAQ category filtering and search functionality"
+  ],
+  "activities": [
+    "navigate to FAQ page",
+    "wait for category combobox to load",
+    "select category from combobox",
+    "verify URL contains category parameter",
+    "verify category badge is visible",
+    "fill search textbox with keyword",
+    "press Enter key",
+    "verify search result text is visible",
+    "verify search URL contains query parameter",
+    "fill search textbox with specific question",
+    "press Enter key",
+    "verify specific answer text is visible",
+    "fill search textbox with invalid keyword",
+    "press Enter key",
+    "verify not found message is visible",
+    "verify search URL contains invalid query parameter"
+  ]
+}

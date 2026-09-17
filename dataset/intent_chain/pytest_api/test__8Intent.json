@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_test__8",
+  "source_file": "dataset/raw/pytest_api/test__8.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:54:37.892431",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the GetAllWorkshop API returns expected status code and response structure for default retrieval",
+    "Verify the GetAllWorkshop API correctly filters workshop data based on query parameters"
+  ],
+  "activities": [
+    "Clean test environment and insert default workshop data",
+    "Call GetAllWorkshop API without parameters",
+    "Verify API response status, structure, and data content for default retrieval",
+    "Clean test environment and insert workshop data with category attributes",
+    "Call GetAllWorkshop API with category filter parameter",
+    "Verify API response status, structure, and data filtering for category parameter",
+    "Clean test environment and insert workshop data with name, description, and category attributes",
+    "Call GetAllWorkshop API with multiple query parameters",
+    "Verify API response status, structure, and data filtering for multiple parameters"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_spec_cy",
+  "source_file": "dataset/raw/cypress/spec.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:51:32.803465",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "#username",
+    "#password",
+    "button[type=\"submit\"]"
+  ],
+  "goals": [
+    "Verify successful user login with valid credentials.",
+    "Verify login failure and error message display with incorrect credentials.",
+    "Verify mandatory field validation on the login form when submitting empty fields."
+  ],
+  "activities": [
+    "Visit the login page.",
+    "Type 'tomsmith' into the username field.",
+    "Type 'SuperSecretPassword!' into the password field.",
+    "Click the submit button.",
+    "Verify a success message is displayed.",
+    "Visit the login page.",
+    "Type 'invalidUser' into the username field.",
+    "Type 'invalidPassword' into the password field.",
+    "Click the submit button.",
+    "Verify an error message indicating invalid username is displayed.",
+    "Visit the login page.",
+    "Click the submit button.",
+    "Verify an error message indicating invalid username is displayed."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_delete",
+  "source_file": "dataset/raw/k6/delete.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T19:14:39.923187",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "lookup",
+    "res"
+  ],
+  "goals": [
+    "Verify book deletion endpoint returns valid status codes (200 or 404)",
+    "Validate concurrent execution of book lookup and deletion workflow"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

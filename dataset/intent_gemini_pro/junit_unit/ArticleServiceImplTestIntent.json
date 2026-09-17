@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_ArticleServiceImplTest",
+  "source_file": "dataset/raw/junit_unit/ArticleServiceImplTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:48:45.215636",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "ArticleServiceImpl"
+  ],
+  "goals": [
+    "Verify basic test execution with a placeholder assertion"
+  ],
+  "activities": [
+    "Initialize Mockito mocks",
+    "Create an article with ID 1, title 'ENGLISH BOOK A', and status '1'",
+    "Create an article with ID 2, title 'ENGLISH BOOK B', and status '1'",
+    "Add the created articles to the articles list",
+    "Assert that true is true"
+  ]
+}

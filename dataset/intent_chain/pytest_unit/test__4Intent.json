@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_test__4",
+  "source_file": "dataset/raw/pytest_unit/test__4.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:09:57.598246",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "model.base64_decode_image",
+    "model.base64_decode",
+    "model.ModelService.lambda_handler"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Read base64 encoded image input from file",
+    "Invoke base64_decode_image function to decode input",
+    "Load expected image file for validation",
+    "Assert decoded image equals expected image",
+    "Read base64 encoded result input from file",
+    "Invoke base64_decode function to decode input",
+    "Assert decoded result equals expected dictionary",
+    "Initialize ModelMock and ModelService instance",
+    "Read base64 encoded request input from file",
+    "Construct Lambda event payload with input data",
+    "Invoke lambda_handler function with event",
+    "Assert handler output equals expected predictions"
+  ]
+}

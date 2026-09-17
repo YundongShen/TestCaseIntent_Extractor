@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_Drawer_test",
+  "source_file": "dataset/raw/rtl/Drawer.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-02T02:28:20.058280",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Drawer"
+  ],
+  "goals": [
+    "Verify that the Drawer component hides and shows correctly when the external toggle button is clicked"
+  ],
+  "activities": [
+    "Setup user event simulator",
+    "Render DrawerTest component",
+    "Query first button element",
+    "Query dialog element",
+    "Assert drawer has class -translate-x-full",
+    "Click toggle button",
+    "Assert drawer has class transform-none",
+    "Click toggle button",
+    "Assert drawer has class -translate-x-full"
+  ]
+}

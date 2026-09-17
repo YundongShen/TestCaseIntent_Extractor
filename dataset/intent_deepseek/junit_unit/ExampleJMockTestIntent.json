@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_ExampleJMockTest",
+  "source_file": "dataset/raw/junit_unit/ExampleJMockTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:26.537217",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "UserManagerImpl",
+    "UserDao",
+    "Logger"
+  ],
+  "goals": [
+    "verifythatUserManagerImplclassloadstheuserwithID500andreturnsit"
+  ],
+  "activities": [
+    "set up UserManagerImpl object with mocked Dao and Logger",
+    "call new UserManagerImpl(dao, log)",
+    "create User object emptyUser",
+    "setUp method call for load method on dao with argument 500",
+    "expect return value of load method to be emptyUser",
+    "call getUser method on UserManagerImpl object with argument 500",
+    "assertSame value of returned User is emptyUser"
+  ]
+}

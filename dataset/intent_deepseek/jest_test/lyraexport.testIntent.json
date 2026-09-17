@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_lyraexport_test",
+  "source_file": "dataset/raw/jest_test/lyraexport.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:39.319191",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "polestar",
+    "lyraExport"
+  ],
+  "goals": [
+    "testobjectshouldbehiddenelement",
+    "testobject.textpropertyshouldbereturnedtoexpectedvalue"
+  ],
+  "activities": [
+    "initialize jasmine context",
+    "before each suite",
+    "before each test",
+    "inject $compile",
+    "compile element",
+    "attach element to DOM",
+    "expect element text",
+    "test execution complete"
+  ]
+}

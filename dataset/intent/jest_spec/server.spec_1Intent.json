@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_server_spec_1",
+  "source_file": "dataset/raw/jest_spec/server.spec_1.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:33:14.832087",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "Verify the server index route returns a 200 status code",
+    "Verify the server index route returns the expected response body and content type"
+  ],
+  "activities": [
+    "Send GET request to root path",
+    "Verify response status code equals 200",
+    "Send GET request to root path",
+    "Verify response content type equals text/html",
+    "Send GET request to root path",
+    "Verify response text matches Hello City"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_xhr_cy",
+  "source_file": "dataset/raw/cypress/xhr.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:37:35.745828",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify that cy.request correctly fetches data from an API endpoint and returns the expected response status, body length, and headers."
+  ],
+  "activities": [
+    "Send a GET request to 'https://jsonplaceholder.cypress.io/comments'",
+    "Verify the response status is 200",
+    "Verify the response body length is 500",
+    "Verify the response has a 'headers' property",
+    "Verify the response header 'content-type' is 'application/json; charset=utf-8'",
+    "Send a GET request to 'https://jsonplaceholder.cypress.io/comments' using a configuration object",
+    "Verify the response status is 200",
+    "Verify the response body length is 500",
+    "Verify the response has a 'headers' property",
+    "Verify the response header 'content-type' is 'application/json; charset=utf-8'",
+    "Send a GET request to 'https://jsonplaceholder.cypress.io/comments'",
+    "Verify the response header 'content-type' includes 'application/json'",
+    "Send another GET request to 'https://jsonplaceholder.cypress.io/comments'",
+    "Verify the response status is 200"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_faq_spec",
+  "source_file": "dataset/raw/playwright/faq.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:35:39.713802",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Kategori Pertanyaan combobox",
+    "FAQ category badge",
+    "Cari pertanyaan textbox",
+    "FAQ search result text",
+    "Specific FAQ answer text",
+    "Pertanyaan tidak ditemukan message"
+  ],
+  "goals": [
+    "Verify the FAQ page's category filtering functionality.",
+    "Verify the FAQ page's search functionality with various inputs."
+  ],
+  "activities": [
+    "For each category in \"Isoman\", \"Kontak Erat\", \"PCR\", \"Pasca Isoman\", \"Tanda Bahaya\", \"Tatalaksana Isoman\", \"Terapi\", \"Umum\", \"Vaksinasi\":",
+    "  Navigate to the \"/faq\" page.",
+    "  Wait for the \"Kategori Pertanyaan\" combobox to be visible.",
+    "  Select the current category name from the \"Kategori Pertanyaan\" combobox.",
+    "  Assert that the page URL contains the category's URL parameter.",
+    "  Assert that a badge with the current category name is visible.",
+    "Navigate to the \"/faq\" page.",
+    "Fill the search textbox with \"Isoman\".",
+    "Press \"Enter\" in the search textbox.",
+    "Assert that text containing \"isoman\" is visible.",
+    "Assert that the page URL contains \"/faq?q=Isoman\".",
+    "Navigate to the \"/faq\" page.",
+    "Fill the search textbox with \"Dok apakah saya bisa tertular lagi setelah selesai isoman?\".",
+    "Press \"Enter\" in the search textbox.",
+    "Assert that the text \"YA. Anda masih bisa tertular apabila tidak menerapkan 5M\" is visible.",
+    "Navigate to the \"/faq\" page.",
+    "Fill the search textbox with \"qwerty\".",
+    "Press \"Enter\" in the search textbox.",
+    "Assert that the text \"Pertanyaan tidak ditemukan\" is visible.",
+    "Assert that the page URL contains \"/faq?q=qwerty\"."
+  ]
+}

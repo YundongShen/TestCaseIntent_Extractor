@@ -1,0 +1,49 @@
+**Test Object**
+The `getMeunMatcheys` function
+
+**Test Goal**
+Verify that an exact simple path is correctly matched.
+
+**Test Activities**
+1. Call `getMeunMatcheys(meun, '/dashboard')`.
+2. Assert the return value as `['/dashboard']`.
+
+**Test Object**
+The `getMeunMatcheys` function
+
+**Test Goal**
+Verify that a non-matching path returns an empty result.
+
+**Test Activities**
+1. Call `getMeunMatcheys(meun, '/dashboardname')`.
+2. Assert the return value as `[]`.
+
+**Test Object**
+The `getMeunMatcheys` function
+
+**Test Goal**
+Verify that a second-level path is correctly matched.
+
+**Test Activities**
+1. Call `getMeunMatcheys(meun, '/dashboard/name')`.
+2. Assert the return value as `['/dashboard/name']`.
+
+**Test Object**
+The `getMeunMatcheys` function
+
+**Test Goal**
+Verify that a parameterized path is correctly matched against the route pattern.
+
+**Test Activities**
+1. Call `getMeunMatcheys(meun, '/userinfo/2144')`.
+2. Assert the return value as `['/userinfo/:id']`.
+
+**Test Object**
+The `getMeunMatcheys` function
+
+**Test Goal**
+Verify that a nested parameterized path is correctly matched against the route pattern.
+
+**Test Activities**
+1. Call `getMeunMatcheys(meun, '/userinfo/2144/info')`.
+2. Assert the return value as `['/userinfo/:id/info']`.

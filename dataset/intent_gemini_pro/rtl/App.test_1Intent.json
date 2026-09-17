@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_App_test_1",
+  "source_file": "dataset/raw/rtl/App.test_1.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-11T08:04:55.552859",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify the application's internationalization (i18n) functionality by successfully changing the language via the UI",
+    "Verify the complete Spotify OAuth authentication lifecycle, including login redirection with correct parameters, authorization code exchange using PKCE, authenticated state rendering, and user logout"
+  ],
+  "activities": [
+    "Render the App component",
+    "Verify that the 'Get Started' link contains the text 'Get Started'",
+    "Click the 'Change language' button",
+    "Verify that the 'Français' language option is displayed",
+    "Click the 'Français' language option",
+    "Verify that the text 'Commencer' is displayed in the document",
+    "Verify that the link element contains the text 'Commencer'",
+    "Render the App component",
+    "Verify that the 'Get Started' link is displayed",
+    "Click the 'Get Started' link",
+    "Verify that the window location URL redirects to Spotify authorization with the correct parameters",
+    "Render the App component",
+    "Wait for the access token to be saved to local storage",
+    "Verify that the token request body contains the correct PKCE parameters",
+    "Verify that the window history state is replaced with the correct URL",
+    "Verify that the playlist table spinner is displayed",
+    "Render the App component",
+    "Verify that the playlist table spinner is displayed",
+    "Render the App component",
+    "Verify that the 'Change user' element is displayed",
+    "Click the 'Change user' element",
+    "Verify that the logout function is called with true"
+  ]
+}

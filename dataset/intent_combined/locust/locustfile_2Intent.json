@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_locustfile_2",
+  "source_file": "dataset/raw/locust/locustfile_2.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T15:15:52.762226",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Website"
+  ],
+  "goals": [
+    "Verify website response correctness and latency"
+  ],
+  "activities": [
+    "Send GET request to root endpoint",
+    "Print response status code",
+    "Print response text",
+    "Verify response text matches expected content",
+    "Verify response time is within limit",
+    "Select random page path",
+    "Send GET request to random page with headers"
+  ]
+}

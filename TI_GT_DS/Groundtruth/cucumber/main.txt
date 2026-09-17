@@ -1,0 +1,48 @@
+**Test Object**
+Power-on Function of the Wood Processing Machine
+
+**Test Goal**
+Confirm that the machine starts normally after pressing the power button from the off position, and the indicator light turns green.
+
+**Test Activities**
+1. Confirm that the machine is off.
+2. Press the power button.
+3. Check if the machine is on.
+4. Check if the indicator light turns green.
+
+**Test Object**
+Cutting Thickness Adjustment Function
+
+**Test Goal**
+Verify that the cutting thickness setting is correctly applied and displayed.
+
+**Test Activities**
+1. Ensure the machine is on and the screen displays the default thickness.
+2. Set the cutting thickness to 2 inches.
+3. Check if the screen displays "2 inches".
+4. Check if the blade is adjusted to 2 inches.
+
+**Test Object**
+Wood Loading and Detection Function
+
+**Test Goal**
+Verify that the machine correctly detects wood loaded into the feed inlet.
+
+**Test Activities**
+1. Ensure the machine is powered on and ready.
+2. Select a processing mode.
+3. Place a piece of wood into the machine's feed inlet.
+4. Check if the machine detects the wood.
+5. Check if the screen displays "Wood detected".
+
+**Test Object**
+Complete Wood Processing Flow
+
+**Test Goal**
+Verify that when the wood is loaded and the thickness is set, pressing the "Start Processing" button allows the machine to complete the processing and achieve the specified wood thickness.
+
+**Test Activities**
+1. Confirm that the wood is loaded onto the machine.
+2. Confirm that the cutting thickness has been set.
+3. Press the "Start Processing" button.
+4. Check if the machine has executed the processing procedure. 5. Check whether the thickness of the processed wood matches the set value.

@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_basic_test",
+  "source_file": "dataset/raw/rtl/basic.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-13T20:26:52.688226",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify the App component initializes with an empty list and displays the no-items message",
+    "Verify the App component correctly adds an item to the list and updates the UI when the add button is clicked"
+  ],
+  "activities": [
+    "Render the App component",
+    "Verify the list is empty and the no-items message is visible",
+    "Click the add item button",
+    "Verify the list contains one item with text 'Item 1' and the no-items message is hidden"
+  ]
+}

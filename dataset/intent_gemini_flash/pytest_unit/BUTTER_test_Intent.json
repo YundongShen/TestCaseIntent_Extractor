@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_BUTTER_test_",
+  "source_file": "dataset/raw/pytest_unit/BUTTER_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:39:43.963448",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "BUTTER.BUTTER",
+    "res"
+  ],
+  "goals": [
+    "Verify the BUTTER function correctly implements high-pass filtering by removing the DC component from the input signal."
+  ],
+  "activities": [
+    "Import the BUTTER module.",
+    "Generate a linearly spaced array 'x' representing time.",
+    "Generate a sine wave array 'y' based on 'x', offset by 1.",
+    "Assert that the mean of the original 'y' array is approximately 1.",
+    "Create an OrderedPair object from the 'x' and 'y' arrays.",
+    "Apply a high-pass Butterworth filter to the OrderedPair data with specified parameters.",
+    "Assert that the mean of the filtered 'y' data is approximately 0."
+  ]
+}

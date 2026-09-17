@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_simian",
+  "source_file": "dataset/raw/k6/simian.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T15:14:10.985740",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Simian API DNA endpoint"
+  ],
+  "goals": [
+    "verify API accepts DNA requests and returns 200 status"
+  ],
+  "activities": [
+    "construct JSON payload with DNA sequences",
+    "set content type header to application/json",
+    "send POST request to DNA endpoint",
+    "sleep for 1 second",
+    "check response status is 200"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_Drawer_test",
+  "source_file": "dataset/raw/rtl/Drawer.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T13:43:31.388585",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Drawer"
+  ],
+  "goals": [
+    "Verify that the Drawer component correctly toggles its visibility (hide/show) when an external element is clicked."
+  ],
+  "activities": [
+    "Set up user event simulation.",
+    "Render the DrawerTest component.",
+    "Find the toggle button.",
+    "Find the drawer dialog.",
+    "Assert that the drawer is initially hidden.",
+    "Click the toggle button.",
+    "Assert that the drawer is now visible.",
+    "Click the toggle button again.",
+    "Assert that the drawer is hidden again."
+  ]
+}

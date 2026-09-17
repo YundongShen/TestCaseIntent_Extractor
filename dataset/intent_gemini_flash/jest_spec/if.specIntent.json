@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_if_spec",
+  "source_file": "dataset/raw/jest_spec/if.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:53:41.463649",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "executeIf"
+  ],
+  "goals": [
+    "Verify that the 'executeIf' function correctly accesses, types, and evaluates conditions based on the special 'NODE_MAJOR_VERSION' variable, including its protection from overriding.",
+    "Verify that the 'executeIf' function correctly accesses and returns values from general environment variables."
+  ],
+  "activities": [
+    "Execute the 'if' condition to get the value of NODE_MAJOR_VERSION.",
+    "Verify that the type of the returned value is 'number'.",
+    "Execute the 'if' condition 'NODE_MAJOR_VERSION > 0'.",
+    "Verify that the result of the condition is 'true'.",
+    "Execute the 'if' condition 'NODE_MAJOR_VERSION > 1000'.",
+    "Verify that the result of the condition is 'false'.",
+    "Set the environment variable 'ENV_VAR' to 'value'.",
+    "Set the environment variable 'NODE_MAJOR_VERSION' to 'any'.",
+    "Execute the 'if' condition to get the value of 'ENV_VAR'.",
+    "Verify that the returned value is 'value'.",
+    "Execute the 'if' condition to get the value of 'NODE_MAJOR_VERSION'.",
+    "Verify that the returned value is not 'any'."
+  ]
+}

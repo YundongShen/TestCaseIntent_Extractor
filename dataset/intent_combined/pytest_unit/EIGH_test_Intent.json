@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_EIGH_test_",
+  "source_file": "dataset/raw/pytest_unit/EIGH_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:28:09.169196",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "EIGH.EIGH function"
+  ],
+  "goals": [
+    "verify return type is Scalar OrderedPair or Matrix"
+  ],
+  "activities": [
+    "import EIGH module",
+    "create 5x5 identity matrix",
+    "create 9x9 identity matrix and reshape to 4D",
+    "wrap first matrix into Matrix object",
+    "execute EIGH.EIGH function with first matrix",
+    "catch LinAlgError exception",
+    "wrap second matrix into Matrix object",
+    "execute EIGH.EIGH function with second matrix",
+    "assert result type is Scalar OrderedPair or Matrix"
+  ]
+}

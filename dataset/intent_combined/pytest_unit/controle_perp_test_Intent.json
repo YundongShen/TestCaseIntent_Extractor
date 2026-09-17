@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_controle_perp_test_",
+  "source_file": "dataset/raw/pytest_unit/controle_perp_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:25:36.020768",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "controle"
+  ],
+  "goals": [
+    "Verify output shape and numerical accuracy of controle function"
+  ],
+  "activities": [
+    "Call controle function with time, state, and arguments",
+    "Verify torque array shape is 4 by 1",
+    "Verify flag value is 0",
+    "Verify torque values match expected array"
+  ]
+}

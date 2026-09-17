@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:54:43.816484",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "recordVoteRequest",
+    "HomeController",
+    "WebTestClient",
+    "HomeService",
+    "HomeRepository",
+    "Skill"
+  ],
+  "goals": [
+    "test the ability of users to vote on a skill by sending a POST request to /skill-vote with the skill UUID and voting 'like'",
+    "verify that the rating of the skill is incremented by 1 after receiving a 'like' vote"
+  ],
+  "activities": []
+}

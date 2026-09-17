@@ -1,0 +1,86 @@
+**Test Object**
+`GET /api/books` Interface
+
+**Test Goal**
+Verify that calling this interface returns the expected status code and the response body is an array.
+
+**Test Activities**
+1. Send a GET request to `/api/books`.
+2. Check that the status code is 200.
+
+3. Check that the response body is an array.
+
+**Test Object**
+`GET /api/books/:id` Interface
+
+**Test Goal**
+Verify that requesting an existing resource returns a success status code with the correct data.
+
+**Test Activities**
+1. Send a GET request to `/api/books/1`.
+2. Check that the status code is 200.
+3. Check that the `id` field in the returned body is 1.
+
+---
+**Test Object**
+`GET /api/books/:id` API
+
+**Test Goal**
+Verify that requesting a non-existent resource returns an error status code.
+
+**Test Activities**
+1. Send a GET request to `/api/books/999`.
+2. Check that the status code is 404.
+
+**Test Object**
+`POST /api/books` API
+
+**Test Goal**
+Verify that creating a new book with valid data returns a success response with the correct book information.
+
+**Test Activities**
+1. Construct new book data (title: "Dune", author: "Frank Herbert", genre: "Sci-Fi", copiesAvailable: 4).
+2. Send a POST request to `/api/books`, carrying the above JSON data.
+3. Check that the status code is 201.
+4. Check that the `title` in the returned body is "Dune".
+
+**Test Object**
+`PUT /api/books/:id` API
+
+**Test Goal**
+Verify that updating an existing book returns a success status code and the book data is updated.
+
+**Test Activities**
+1. Send a PUT request to `/api/books/1`, with the body containing `{ title: "Updated Title" }`.
+2. Check that the status code is 200.
+3. Check that the `title` in the returned body is "Updated Title".
+
+**Test Object**
+`PUT /api/books/:id` API
+
+**Test Goal**
+Verify that updating a non-existent book returns an error.
+
+**Test Activities**
+1. Send a PUT request to `/api/books/999`, with the body containing `{ title: "No Book" }`.
+2. Check that the status code is 404.
+
+**Test Object**
+`DELETE /api/books/:id` Interface
+
+**Test Goal**
+Verify that deleting an existing book returns a success status code.
+
+**Test Activities**
+1. Send a DELETE request to `/api/books/1`.
+2. Check that the status code is 200.
+
+**Test Object**
+`DELETE /api/books/:id` Interface
+
+**Test Goal**
+Verify that deleting a non-existent book returns an error.
+
+**Test Activities**
+1. Send a DELETE request to `/api/books/999`.
+2. The status code is 404.

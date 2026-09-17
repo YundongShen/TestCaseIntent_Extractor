@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_spec_cy",
+  "source_file": "dataset/raw/cypress/spec.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:51.491990",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "cy",
+    "cy.visit",
+    "cy.get",
+    "cy.type",
+    "cy.click",
+    "cy.should"
+  ],
+  "goals": [
+    "testtheloginfunctionalitywithvalidusernamandpassword",
+    "testtheloginfunctionalitywithinvalidusernamandpassword"
+  ],
+  "activities": [
+    "visithttps://the-internet.herokuapp.com/login",
+    "typeusername'tomsmith'into#usernamefield",
+    "typepassword'SuperSecretPassword!'into#passwordfield",
+    "clickbutton[type='submit']",
+    "type'Youloggedintoasecurearea!'into.flash.success",
+    "type'Yourusernameisinvalid!'into.flash.error",
+    "clickbutton[type='submit']",
+    "type'Yourusernameisinvalid!'into.flash.error"
+  ]
+}

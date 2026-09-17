@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_sample_test_4",
+  "source_file": "dataset/raw/jest_test/sample.test_4.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:58:09.595321",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "server application and configuration"
+  ],
+  "goals": [
+    "Verify MSAL configuration validity and server page serving"
+  ],
+  "activities": [
+    "Read index.html file content",
+    "Set global document HTML content",
+    "Retrieve load-msal element attribute",
+    "Verify CDN link source",
+    "Import authentication configuration",
+    "Verify configuration object definition",
+    "Validate client ID format",
+    "Validate authority URI format",
+    "Set environment variable to test",
+    "Send GET request to server root",
+    "Read expected index page content",
+    "Verify response status code",
+    "Verify response content matches file"
+  ]
+}

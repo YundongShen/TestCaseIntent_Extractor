@@ -1,0 +1,10 @@
+**Test Object**
+`https://dummyjson.com/auth/login` Login API
+
+**Test Goal**
+Verify the correctness of the API response when called with the correct username and password.
+
+**Test Activities**
+1. Construct a JSON request body containing the username `kminchelle` and password `0lelplR`.
+2. Send a POST request to the login API, including the JSON Content-Type header.
+3. Check that the response status code is 200, then wait 1 second.

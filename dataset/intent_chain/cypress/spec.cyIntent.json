@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_spec_cy",
+  "source_file": "dataset/raw/cypress/spec.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T17:19:50.625933",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "#username",
+    "#password",
+    "button[type=\"submit\"]",
+    ".flash.success",
+    ".flash.error"
+  ],
+  "goals": [
+    "Verify successful login with valid credentials",
+    "Verify error handling for invalid or missing login credentials"
+  ],
+  "activities": [
+    "Navigate to login page",
+    "Enter valid username and password",
+    "Click submit button",
+    "Verify successful login message",
+    "Navigate to login page",
+    "Enter invalid username and password",
+    "Click submit button",
+    "Verify error message for invalid credentials",
+    "Navigate to login page",
+    "Click submit button without credentials",
+    "Verify error message for missing credentials"
+  ]
+}

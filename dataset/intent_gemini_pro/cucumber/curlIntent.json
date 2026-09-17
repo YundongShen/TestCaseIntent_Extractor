@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_curl",
+  "source_file": "dataset/raw/cucumber/curl.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-11T07:33:32.438876",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "gauntlt"
+  ],
+  "goals": [
+    "Verify that Gauntlt successfully executes curl-based HTTP attacks including simple requests, cookies, and HTTP method verbs."
+  ],
+  "activities": [
+    "Ensure the 'curl' attack exists",
+    "Copy the attack files from the 'examples/curl' folder",
+    "Verify the existence of the simple.attack, cookies.attack, and verbs.attack files",
+    "Run the 'gauntlt simple.attack' command",
+    "Verify the simple attack execution passes with output '4 steps (4 passed)'",
+    "Run the 'gauntlt cookies.attack' command",
+    "Verify the cookies attack execution passes with output '4 steps (4 passed)'",
+    "Run the 'gauntlt verbs.attack' command",
+    "Verify the verbs attack execution passes with output '5 scenarios (5 passed)'"
+  ]
+}

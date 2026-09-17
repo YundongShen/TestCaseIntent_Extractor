@@ -1,0 +1,27 @@
+**Test Object**
+Blog Pages (Homepage, Article Details Page, Blog List Page)
+
+**Test Goal** 
+Verify that users can access the article details page from the homepage, see the complete content including title, date, text, and author avatar, and be able to access the blog list page via navigation links.
+
+**Test Activities**
+1. Open the homepage `http://localhost:3000/` and verify that the page title is `"simple-remix-blog"`.
+2. Confirm that the article title `"Acheronta altoque"` is visible on the homepage.
+3. Click the first `"Read more"` link.
+4. Check that you are redirected to `http://localhost:3000/posts/example-post-2`.
+5. On the details page, confirm that you can see the author avatar, publication date `"August 30, 2022"`, article summary `"Sine aequum praeferret mihi"`, and two paragraphs of text.
+6. Click the "Blog" link in the navigation bar and check that you are redirected to the "/blog" page.
+7. Confirm that the blog list page displays the title "All posts".
+
+**Test Object**
+Blog List Page ("/blog")
+
+**Test Goal**
+Verify that after navigating to the blog list page, all articles are displayed and the expected number of links is present.
+
+**Test Activities**
+1. Open the homepage "http://localhost:3000/" and confirm that the title is "simple-remix-blog".
+2. Click the "Blog" navigation link.
+3. Check that the URL changes to "/blog".
+4. Check that the title "All posts" is visible on the page.
+5. Count the number of "Read more" links on the page and confirm that there are 4.

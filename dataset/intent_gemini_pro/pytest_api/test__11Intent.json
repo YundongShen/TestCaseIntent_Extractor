@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_test__11",
+  "source_file": "dataset/raw/pytest_api/test__11.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T07:58:51.718242",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "requests.put",
+    "response",
+    "response_body",
+    "tc_workshop"
+  ],
+  "goals": [
+    "Verify that the update workshop API successfully updates an existing workshop and returns a 200 status code with the updated data."
+  ],
+  "activities": [
+    "Clean the workshop test environment",
+    "Insert a new workshop test record and retrieve its ID",
+    "Prepare the update request body with modified workshop details",
+    "Send a PUT request to the update workshop API with the workshop ID and request body",
+    "Calculate the expected updated workshop state from the request body",
+    "Parse the API response body",
+    "Assert the HTTP status code is 200",
+    "Assert the response Content-Type header is application/json",
+    "Assert the response body status is 200",
+    "Assert the response body message indicates success",
+    "Assert the response body data matches the expected updated workshop state",
+    "Assert 'detail' is not present in the response body",
+    "Verify the updated workshop data in the database by ID",
+    "Clean the workshop test environment during teardown"
+  ]
+}

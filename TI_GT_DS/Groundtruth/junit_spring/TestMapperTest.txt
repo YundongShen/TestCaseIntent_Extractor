@@ -1,0 +1,10 @@
+**Test Object**
+The `version` method of `TestMapper`
+
+**Test Goal**
+Verify that the database version number is correct.
+
+**Test Activities**
+1. Inject TestMapper.
+2. Call `testMapper.version()` to get the version number.
+3. Assert that the obtained version number equals `"5.7.21"`.

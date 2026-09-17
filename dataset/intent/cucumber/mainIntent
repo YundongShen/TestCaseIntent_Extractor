@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_main",
+  "source_file": "dataset/raw/cucumber/main.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:16:25.159634",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "wood processing machine",
+    "power button",
+    "indicator light",
+    "machine display",
+    "blade",
+    "machine feeder",
+    "Start Processing button"
+  ],
+  "goals": [
+    "Verify the wood processing machine powers on and accepts configuration settings correctly",
+    "Verify the wood processing machine detects wood and processes it to the specified thickness"
+  ],
+  "activities": [
+    "Verify machine is turned off",
+    "Press the power button",
+    "Verify machine turns on",
+    "Verify indicator light is green",
+    "Verify machine is on",
+    "Verify display shows default thickness",
+    "Set cutting thickness to 2 inches",
+    "Verify machine displays \"2 inches\"",
+    "Verify blade adjusts to 2 inches",
+    "Verify machine is on and ready",
+    "Verify processing mode is selected",
+    "Load wood piece onto machine feeder",
+    "Verify machine detects wood",
+    "Verify display shows \"Wood detected\"",
+    "Verify wood is loaded",
+    "Verify desired thickness is set",
+    "Press \"Start Processing\" button",
+    "Verify machine processes wood",
+    "Verify wood comes out at specified thickness"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_CountryResourceTest",
+  "source_file": "dataset/raw/junit_spring/CountryResourceTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T14:58:14.149852",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "CountryResource"
+  ],
+  "goals": [
+    "Verify the countries endpoint returns expected country names"
+  ],
+  "activities": [
+    "Send GET request to /countries endpoint",
+    "Assert response contains Brasil",
+    "Assert response contains Brazil"
+  ]
+}

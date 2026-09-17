@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_nextload",
+  "source_file": "dataset/raw/k6/nextload.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-11T07:52:36.844234",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "res1",
+    "res2"
+  ],
+  "goals": [
+    "Verify the availability and performance (status 200 and response time < 500ms) of the root URL and '/api/hello' endpoint under a simulated load of up to 10 concurrent users."
+  ],
+  "activities": [
+    "Send a GET request to 'https://lol.com/'",
+    "Verify the response status is 200 and response time is less than 500ms for the first endpoint",
+    "Send a GET request to 'https://lol.com/api/hello'",
+    "Verify the response status is 200 and response time is less than 500ms for the second endpoint",
+    "Pause execution for 1 second to simulate user wait time"
+  ]
+}

@@ -1,0 +1,36 @@
+**Test Object**
+Login Page Form Submission Functionality
+
+**Test Goal**
+Confirming successful login with the correct account will display a login success message.
+
+**Test Activities**
+1. Open the login page.
+2. Enter `tomsmith` in the username input box.
+3. Enter `SuperSecretPassword!` in the password input box.
+4. Click the login button.
+5. Check that the flash success message includes `You logged into a secure area!`.
+
+**Test Object**
+Login Page Form Submission Functionality
+
+**Test Goal**
+Confirming invalid username and password login will display an invalid username error message.
+
+**Test Activities**
+1. Open the login page.
+2. Enter `invalidUser` in the username input box.
+3. Enter `invalidPassword` in the password input box.
+4. Click the login button.
+5. Check that the flash error message includes `Your username is invalid!`.
+
+**Test Object**
+Login page form submission functionality
+
+**Test Goal**
+If you submit the form without entering any information, the page will display an invalid username error message.
+
+**Test Activities**
+1. Open the login page.
+2. Click the login button directly (without entering any username or password).
+3. Check if the Flash error message contains `Your username is invalid!`.

@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_AbstractIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/AbstractIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-11T07:46:13.420431",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [],
+  "goals": [
+    "Set up the base integration test environment, including Spring context, database initialization, and RabbitMQ container.",
+    "Provide common utility methods for MockMvc testing, OAuth authentication, JSON API serialization, and API error validation for derived test classes."
+  ],
+  "activities": [
+    "Start the RabbitMQ container with network configurations and admin credentials",
+    "Configure RabbitMQ connection properties dynamically",
+    "Build MockMvc with the web application context and Spring Security",
+    "Configure the ObjectMapper to exclude empty values during serialization",
+    "Initialize the ResourceConverter with the ObjectMapper and supported entity classes"
+  ]
+}

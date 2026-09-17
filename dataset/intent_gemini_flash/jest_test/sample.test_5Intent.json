@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_sample_test_5",
+  "source_file": "dataset/raw/jest_test/sample.test_5.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:00.905770",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "config"
+  ],
+  "goals": [
+    "Verify the integrity and format of the authentication configuration object.",
+    "Verify that application endpoints are protected."
+  ],
+  "activities": [
+    "Import the 'supertest' library.",
+    "Import the application module.",
+    "Define a test suite named 'Sanitize configuration object'.",
+    "Load the authentication configuration into a global variable before all tests in the suite.",
+    "Define a test case named 'should define the config object'.",
+    "Assert that the global configuration object is defined.",
+    "Define a test case named 'should contain client Id'.",
+    "Define a regular expression for GUID format.",
+    "Assert that the client ID in the configuration matches the GUID format.",
+    "Define a test suite named 'Ensure routes served'.",
+    "Set the Node environment variable 'NODE_ENV' to 'test' before all tests in the suite.",
+    "Define a test case named 'should protect todolist endpoint'.",
+    "Send a GET request to the '/api' endpoint of the application.",
+    "Assert that the response status code is 401."
+  ]
+}

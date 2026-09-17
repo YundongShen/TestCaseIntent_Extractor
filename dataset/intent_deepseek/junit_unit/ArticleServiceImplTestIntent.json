@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_ArticleServiceImplTest",
+  "source_file": "dataset/raw/junit_unit/ArticleServiceImplTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:51:58.076624",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "ArticleServiceImpl",
+    "articleRepository",
+    "ArticleServiceImplTest"
+  ],
+  "goals": [
+    "testthetruthoftheassertions"
+  ],
+  "activities": [
+    "initialize_article_repository",
+    "create_article_1",
+    "create_article_2",
+    "verify_article_status"
+  ]
+}

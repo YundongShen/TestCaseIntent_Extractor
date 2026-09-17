@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_basic_test",
+  "source_file": "dataset/raw/rtl/basic.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-02T02:27:36.854816",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify the initial empty state of the item list and no-items message",
+    "Verify the correct addition of items and corresponding UI state updates"
+  ],
+  "activities": [
+    "Setup user event utility",
+    "Render the App component",
+    "Verify the item list is initially empty",
+    "Verify the no items message is visible",
+    "Locate the add item button",
+    "Click the add item button",
+    "Verify the item list contains one item",
+    "Verify the first item text is Item 1",
+    "Verify the no items message is not in the document"
+  ]
+}

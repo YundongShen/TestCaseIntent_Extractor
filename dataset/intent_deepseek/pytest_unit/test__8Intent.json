@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_test__8",
+  "source_file": "dataset/raw/pytest_unit/test__8.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T08:00:22.738906",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "drawMake",
+    "validateCPFTest"
+  ],
+  "goals": [
+    "test_drawMake_winner_found",
+    "validateCPFTest"
+  ],
+  "activities": [
+    "Simplifyoverlydetailedimplementationstatementsintoconcisenaturallanguage,andarrangeallextractedactionsstrictlyintheiroriginalexecutionorder.Writeclear,readabledescriptionsforeachactivity.",
+    "Aggregateadjacentactionsofthesametypeoroperationsservingthesamepurposewhennecessary.Forthisextraction,outputthesequencewithoutaggregationunlessitsignificantlyimprovesclarity(Becarefulnottoover-aggregate).",
+    "Extracteveryactionexecutedduringthetestexecutionfromthecode."
+  ]
+}

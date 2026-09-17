@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_props_test",
+  "source_file": "dataset/raw/jest_test/props.test.jsx",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:00:30.373664",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

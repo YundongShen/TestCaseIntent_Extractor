@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_all",
+  "source_file": "dataset/raw/cucumber/all.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:11.541819",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "singledayrange",
+    "lastrange",
+    "newrayrange",
+    "lasthourrange",
+    "firstrange"
+  ],
+  "goals": [
+    "Test whether the system can manage rental plans by adding, removing, and unallowing rental ranges based on specific scenarios.",
+    "Verify that when updating the endpoint of the last range, a new range is created.",
+    "Verify that when removing the last day range, only one day range is left and the endpoint of the last day range displays '--'.",
+    "Verify that when updating the endpoint of the last range, a new hour range is created.",
+    "Verify that when removing the last hour range, only one hour range is left and the endpoint of the last hour range displays '24'."
+  ],
+  "activities": []
+}

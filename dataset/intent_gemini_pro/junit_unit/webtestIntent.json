@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:51:46.611341",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "HomeController",
+    "HomeService"
+  ],
+  "goals": [
+    "Verify that the /skill-vote endpoint successfully processes a vote by incrementing the skill's rating and saving the updated skill to the repository",
+    "Verify the functionality of saving a new skill"
+  ],
+  "activities": [
+    "Initialize a skill UUID string",
+    "Create and populate form data with vote and skill UUID values",
+    "Send a POST request to '/skill-vote' with the form data and verify that the response status is OK",
+    "Verify that the repository's findFirstBySkilluuid method was called exactly once with the skill UUID",
+    "Verify that the repository's save method was called exactly once with any Skill object",
+    "Retrieve the updated skill from the repository using the skill UUID",
+    "Assert that the retrieved updated skill is not null",
+    "Assert that the updated skill's rating is incremented to 4",
+    "Assert that true is true in the testSavingNewSkill method"
+  ]
+}

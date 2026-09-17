@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_locustfile_1",
+  "source_file": "dataset/raw/locust/locustfile_1.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:02.781913",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "WebsiteUser",
+    "index",
+    "translate"
+  ],
+  "goals": [
+    "testthattheindexfunctionreturnsthecorrectpage"
+  ],
+  "activities": [
+    "self.client.get",
+    "self.client.post"
+  ]
+}

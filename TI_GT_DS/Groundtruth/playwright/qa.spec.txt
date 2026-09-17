@@ -1,0 +1,43 @@
+**Test Object**
+QA View Page
+
+**Test Goal**
+Verify that the QA page loads and displays correctly, the URL is correct, and the page body is visible.
+
+**Test Activities**
+1. Simulate API routing, navigate to `/qa`, and wait for the application to finish loading.
+2. Assert that the current URL is `/qa`.
+3. Assert that the `body` element is visible.
+
+**Test Object**
+Metric Cards/Components in the QA Page
+
+**Test Goal**
+Verify that the QA page renders at least zero QA-related metric elements.
+
+**Test Activities**
+1. Locate all elements whose class contains `qa`, `metric`, `card`, or `quality`.
+2. Get the number of elements.
+3. Assert that the number is greater than or equal to 0.
+
+**Test Object**
+Test results/status components on the QA page
+
+**Test Goal**
+Verifies the presence of elements related to test results or quality gates on the page.
+
+**Test Activities**
+1. Locate all elements whose class contains `test`, `result`, `status`, or `gate`.
+2. Get the number of elements.
+3. Assert that the number is greater than or equal to 0.
+
+**Test Object**
+Coverage/chart elements on the QA page
+
+**Test Goal**
+Verifies the presence of elements related to coverage or charts on the page.
+
+**Test Activities**
+1. Locate all SVG, canvas, or class elements containing `chart`, `coverage`, or `progress`.
+2. Get the number of elements.
+3. Assert that the number is greater than or equal to 0.

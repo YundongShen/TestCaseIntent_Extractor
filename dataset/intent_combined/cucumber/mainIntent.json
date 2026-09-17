@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_main",
+  "source_file": "dataset/raw/cucumber/main.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:23:27.856827",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "wood processing machine"
+  ],
+  "goals": [
+    "verify wood processing machine functionality and state responses"
+  ],
+  "activities": [
+    "press the power button",
+    "set the cutting thickness to 2 inches",
+    "load a wood piece onto the machine feeder",
+    "press the start processing button"
+  ]
+}

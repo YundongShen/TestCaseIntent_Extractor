@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_delete",
+  "source_file": "dataset/raw/k6/delete.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T08:00:00.820008",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "k6/http",
+    "check",
+    "sleep",
+    "http",
+    "JSON",
+    "open",
+    "const",
+    "export",
+    "import",
+    "Math",
+    "Math.random",
+    "Math.floor",
+    "encodeURIComponent",
+    "http.get",
+    "body",
+    "json",
+    "http",
+    "del",
+    "check",
+    "r",
+    "200",
+    "404",
+    "0.5"
+  ],
+  "goals": [
+    "testobjecthas10vusand60iterations",
+    "testobjectverifysthatalbetitleisberetainedunder200",
+    "testobjectdeletesalbetitlewhenissuitable"
+  ],
+  "activities": [
+    "import necessary libraries",
+    "initialize base titles and titles array",
+    "define K6 options",
+    "generate random item",
+    "retrieve book information using K6's HTTP library",
+    "check if ISBN exists and delete the book if it does"
+  ]
+}

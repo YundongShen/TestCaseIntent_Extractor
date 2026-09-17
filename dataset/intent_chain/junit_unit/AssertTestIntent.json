@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_AssertTest",
+  "source_file": "dataset/raw/junit_unit/AssertTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T18:55:11.059206",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "mockList"
+  ],
+  "goals": [
+    "Verify mockList.size() returns the stubbed value 999"
+  ],
+  "activities": [
+    "Stub mockList.size() to return 999",
+    "Verify mockList.size() returns 999"
+  ]
+}

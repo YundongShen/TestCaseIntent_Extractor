@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_api/test__7.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:56:00.245415",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verifythatthescore_scorefunctioncanclassifyspamtextastrueandnon-spamtextasfalse"
+  ],
+  "activities": [
+    "test_score",
+    "score.score",
+    "subprocess.Popen",
+    "requests.post"
+  ]
+}

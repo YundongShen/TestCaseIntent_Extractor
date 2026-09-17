@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_exercaula_cy",
+  "source_file": "dataset/raw/cypress/exercaula.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:36:35.849621",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Login page"
+  ],
+  "goals": [
+    "Verify login success and credential validation errors"
+  ],
+  "activities": [
+    "Visit login page URL",
+    "Type username into input field",
+    "Type password into input field",
+    "Click submit button",
+    "Verify success message content",
+    "Type invalid username into input field",
+    "Type invalid password into input field",
+    "Click submit button",
+    "Verify error message content",
+    "Click submit button on empty form",
+    "Verify error message existence"
+  ]
+}

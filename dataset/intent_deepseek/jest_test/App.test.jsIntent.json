@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_App_test_js",
+  "source_file": "dataset/raw/jest_test/App.test.js.txt",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:11.514383",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "testingtheadditionofawheelrepair"
+  ],
+  "activities": [
+    "Extract test activities from the provided code",
+    "Simplify implementation statements and arrange extracted activities in their original execution order",
+    "Aggregate adjacent action types when necessary to improve clarity",
+    "Ensure that the final output improves readability without over-aggregating"
+  ]
+}

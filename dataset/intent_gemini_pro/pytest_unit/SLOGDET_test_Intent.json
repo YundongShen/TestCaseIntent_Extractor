@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_SLOGDET_test_",
+  "source_file": "dataset/raw/pytest_unit/SLOGDET_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:02:43.291053",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "SLOGDET.SLOGDET"
+  ],
+  "goals": [
+    "Verify that the SLOGDET function returns a result of type Scalar, OrderedPair, or Matrix when provided with a valid matrix input"
+  ],
+  "activities": [
+    "Initialize a 5x5 identity matrix",
+    "Initialize a 9x9 identity matrix and reshape it to a (3, 3, 3, 3) array",
+    "Attempt to create a Matrix object from the 5x5 matrix and pass it to the SLOGDET function",
+    "Catch LinAlgError if raised, and instead pass a Matrix object created from the reshaped array to the SLOGDET function",
+    "Assert that the result is an instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

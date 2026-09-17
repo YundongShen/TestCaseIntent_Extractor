@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_getDedupedArticleReplies_test",
+  "source_file": "dataset/raw/jest_test/getDedupedArticleReplies.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:57:07.329139",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "getDedupedArticleReplies"
+  ],
+  "goals": [
+    "Verify that getDedupedArticleReplies returns an empty array when searchResults are not loaded (undefined).",
+    "Verify that getDedupedArticleReplies correctly extracts, formats, and deduplicates article replies while removing those with existing reply IDs."
+  ],
+  "activities": [
+    "Describe the test suite for 'getDedupedArticleReplies'.",
+    "Define a test case for handling scenarios where searchResults are not loaded.",
+    "Call the 'getDedupedArticleReplies' function with 'undefined' search results and an empty array for existing reply IDs.",
+    "Assert that the function returns an empty array.",
+    "Define a test case for correctly formatting article replies and removing existing reply IDs.",
+    "Create a 'searchResult' object containing a list of edges, each with nodes containing 'articleReplies'.",
+    "Populate 'articleReplies' with specific 'articleId' and 'replyId' values, including duplicates and entries to be filtered.",
+    "Create an 'existingReplyIds' array containing 'r2'.",
+    "Call the 'getDedupedArticleReplies' function with the prepared 'searchResult' and 'existingReplyIds'.",
+    "Assert that the function returns an array containing a single object: '{ articleId: \"a1\", replyId: \"r1\" }'."
+  ]
+}

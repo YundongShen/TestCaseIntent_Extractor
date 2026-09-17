@@ -1,0 +1,41 @@
+{
+  "test_case_id": "tc_sample_test_2",
+  "source_file": "dataset/raw/jest_test/sample.test_2.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:58:45.132260",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "document.getElementById(\"load-msal\")",
+    "msalConfig",
+    "app"
+  ],
+  "goals": [
+    "Verify the client-side application setup, including the MSAL CDN link in `index.html` and the integrity of the MSAL configuration object.",
+    "Ensure the server correctly serves the `index.html` page."
+  ],
+  "activities": [
+    "Import the 'supertest' library for HTTP assertions.",
+    "Import the 'path' library for handling file paths.",
+    "Import the 'fs' library for file system operations.",
+    "Import the application server module.",
+    "Configure Jest to not mock the 'fs' module.",
+    "Read the content of 'index.html' file into a variable.",
+    "Set the global document's HTML content to the loaded 'index.html' string.",
+    "Get the 'src' attribute of the HTML element with ID 'load-msal'.",
+    "Verify that the 'src' attribute contains the expected CDN link 'https://alcdn.msauth.net/browser'.",
+    "Load the MSAL configuration object from 'authConfig.js'.",
+    "Verify that the 'msalConfig' object is defined.",
+    "Define a regular expression to match GUID format.",
+    "Test if the 'clientId' within 'msalConfig.auth' matches the GUID regular expression.",
+    "Verify that the 'clientId' does NOT match the GUID regular expression, ensuring it's not a credential.",
+    "Define a regular expression to match URI format.",
+    "Test if the 'authority' within 'msalConfig.auth' matches the URI regular expression.",
+    "Verify that the 'authority' matches the URI regular expression.",
+    "Set the Node.js environment variable 'NODE_ENV' to 'test'.",
+    "Send an HTTP GET request to the root path ('/') of the application.",
+    "Read the content of 'index.html' from the file system asynchronously.",
+    "Verify that the HTTP response status code is 200 (OK).",
+    "Verify that the HTTP response body text matches the content of the 'index.html' file."
+  ]
+}

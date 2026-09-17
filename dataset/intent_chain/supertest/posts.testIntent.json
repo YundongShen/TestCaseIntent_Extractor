@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_posts_test",
+  "source_file": "dataset/raw/supertest/posts.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:27:10.037095",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "router"
+  ],
+  "goals": [
+    "Verify the router returns a 200 status code and an empty array for the GET /posts endpoint when no posts exist"
+  ],
+  "activities": [
+    "Mock Prisma database to return empty post list",
+    "Initialize Express application with router middleware",
+    "Send GET request to /posts endpoint",
+    "Assert response status code equals 200",
+    "Assert response body equals empty array"
+  ]
+}

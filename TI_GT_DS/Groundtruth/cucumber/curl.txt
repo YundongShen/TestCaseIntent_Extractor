@@ -1,0 +1,32 @@
+**Test Object**
+`simple.attack` attack file
+
+**Test Goal**
+Verify that the simple attack script executes successfully and all steps pass.
+
+**Test Activities**
+1. Ensure the attack file `simple.attack` is copied to the `examples/curl` directory and exists.
+2. Execute the command `gauntlt simple.attack`.
+3. Check if the output contains `4 steps (4 passed)`.
+
+**Test Object**
+`cookies.attack` attack file
+
+**Test Goal**
+Verify that the cookies attack script executes successfully and all steps pass.
+
+**Test Activities**
+1. Ensure the `cookies.attack` file exists.
+2. Execute the command `gauntlt cookies.attack`.
+3. Check if the output contains `4 steps (4 passed)`.
+
+**Test Object**
+`verbs.attack` attack file
+
+- **Test Goal**
+Verify that the verbs attack script executes successfully and all scenarios pass.
+
+- **Test Activities**
+1. Ensure the `verbs.attack` file exists.
+2. Execute the command `gauntlt verbs.attack`.
+3. Check if the output contains `5 scenarios (5 passed)`.

@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_test__5",
+  "source_file": "dataset/raw/pytest_unit/test__5.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:56:12.695521",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "CustomerManager",
+    "Customer",
+    "name",
+    "email",
+    "age",
+    "country"
+  ],
+  "goals": [
+    "test_add_customer verifies that the Customer Manager adds a new customer with valid information and returns the customer info"
+  ],
+  "activities": [
+    "test_add_customer"
+  ]
+}

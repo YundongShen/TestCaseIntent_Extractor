@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_locustfile_8",
+  "source_file": "dataset/raw/locust/locustfile_8.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T19:27:05.826327",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify system performance and stability under simulated concurrent user load",
+    "Evaluate response times and availability of key web endpoints including home, login, and profile pages"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

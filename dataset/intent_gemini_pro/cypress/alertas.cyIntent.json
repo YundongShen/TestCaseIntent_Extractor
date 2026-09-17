@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_alertas_cy",
+  "source_file": "dataset/raw/cypress/alertas.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:35:05.766454",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "window",
+    ":nth-child(7) > .btn",
+    "#result",
+    ".btn",
+    "url"
+  ],
+  "goals": [
+    "Verify that simulating user input in a JavaScript prompt correctly updates the result on the page",
+    "Verify that clicking the new window button successfully navigates to the child window and displays the expected content"
+  ],
+  "activities": [
+    "Navigate to the alert page",
+    "Stub the JavaScript prompt to return 'teste-prompt-digitado'",
+    "Click the button to trigger the prompt",
+    "Verify the result contains 'teste-prompt-digitado'",
+    "Navigate to the child window page",
+    "Remove the 'target' attribute from the button and click it",
+    "Verify the URL includes the new window path",
+    "Verify the page contains the text 'Você Abriu uma nova janela!!'",
+    "Navigate back to the previous page"
+  ]
+}

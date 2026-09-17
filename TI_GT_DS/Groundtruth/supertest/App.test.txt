@@ -1,0 +1,19 @@
+**Test Object**
+`POST /send-message` Interface
+
+**Test Goal**
+Verify that sending a message with missing required fields returns an error response.
+
+**Test Activities**
+1. Send a POST request to `/send-message`, with the body containing only `{name: 'john'}`.
+2. Check that the response Content-Type is JSON and the status code is 400.
+
+**Test Object**
+`POST /send-message` Interface
+
+**Test Goal**
+Verify that sending a valid push message returns a success response.
+
+**Test Activities**
+1. Send a POST request to `/send-message`, carrying the complete push message JSON.
+2. Check that the response Content-Type is JSON and the status code is 200.

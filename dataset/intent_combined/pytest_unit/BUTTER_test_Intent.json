@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_BUTTER_test_",
+  "source_file": "dataset/raw/pytest_unit/BUTTER_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:22:02.111991",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "BUTTER.BUTTER"
+  ],
+  "goals": [
+    "verify highpass filter removes DC offset from input signal"
+  ],
+  "activities": [
+    "generate time array x",
+    "generate sine wave signal y with offset",
+    "verify input signal mean is near 1",
+    "create OrderedPair element with x and y",
+    "apply BUTTER highpass filter to element",
+    "verify output signal mean is near 0"
+  ]
+}

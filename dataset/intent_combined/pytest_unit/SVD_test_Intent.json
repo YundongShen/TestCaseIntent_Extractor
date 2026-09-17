@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_SVD_test_",
+  "source_file": "dataset/raw/pytest_unit/SVD_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:33:47.666244",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "SVD"
+  ],
+  "goals": [
+    "verify SVD function returns valid output types"
+  ],
+  "activities": [
+    "import SVD module",
+    "create 5x5 identity matrix",
+    "create 9x9 identity matrix",
+    "reshape second matrix to 4D",
+    "wrap first matrix into Matrix object",
+    "call SVD function with first matrix",
+    "catch linear algebra error exception",
+    "wrap second matrix into Matrix object",
+    "call SVD function with second matrix",
+    "verify result type is Scalar or OrderedPair or Matrix"
+  ]
+}

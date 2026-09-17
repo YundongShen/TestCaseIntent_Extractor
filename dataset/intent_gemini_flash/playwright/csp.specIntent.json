@@ -1,0 +1,49 @@
+{
+  "test_case_id": "tc_csp_spec",
+  "source_file": "dataset/raw/playwright/csp.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:35:34.008628",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "headers",
+    "page",
+    "html"
+  ],
+  "goals": [
+    "Verify the server's Content Security Policy (CSP) and other security headers are correctly configured.",
+    "Verify the application loads securely without CSP violations or insecure client-side practices like inline styles."
+  ],
+  "activities": [
+    "Navigate to the root URL.",
+    "Assert that the response is not null.",
+    "Extract the response headers.",
+    "Extract the 'content-security-policy' header.",
+    "Assert that the CSP header is defined.",
+    "Assert that the CSP header contains \"default-src 'none'\".",
+    "Assert that the CSP header contains \"script-src 'self'\".",
+    "Assert that the CSP header contains \"style-src 'self'\".",
+    "Assert that the CSP header contains \"img-src 'self' data:\".",
+    "Assert that the CSP header contains \"frame-src blob:\".",
+    "Assert that the CSP header contains \"object-src blob:\".",
+    "Assert that the CSP header contains \"form-action 'none'\".",
+    "Navigate to the root URL.",
+    "Assert that the response is not null.",
+    "Extract the response headers.",
+    "Assert that 'x-content-type-options' header is 'nosniff'.",
+    "Assert that 'x-frame-options' header is 'DENY'.",
+    "Assert that 'referrer-policy' header is 'strict-origin-when-cross-origin'.",
+    "Assert that 'permissions-policy' header contains 'camera=()'.",
+    "Set up an event listener to capture console messages for CSP violations.",
+    "Set up an event listener to capture page errors.",
+    "Navigate to the root URL.",
+    "Wait for the element with data-testid=\"items-container\" to be visible.",
+    "Wait for 500 milliseconds.",
+    "Assert that no CSP violations or page errors were recorded.",
+    "Send an HTTP GET request to the root URL.",
+    "Get the HTML content from the response.",
+    "Extract the body content from the HTML.",
+    "Search for inline style attributes within the body content.",
+    "Assert that no inline style attributes were found."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_test__2",
+  "source_file": "dataset/raw/pytest_api/test__2.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T01:58:45.224782",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify Docker Compose integration successfully starts the web service",
+    "Verify the web service returns expected responses and maintains state across requests"
+  ],
+  "activities": [
+    "Configure Docker Compose test options",
+    "Initialize Docker Compose project from options",
+    "Initialize TopLevelCommand with project",
+    "Start Docker Compose services in detached mode",
+    "Wait for server to be ready",
+    "Send HTTP GET request to webservice endpoint",
+    "Log project state attributes",
+    "Verify response text indicates first visit count",
+    "Wait for timer delay",
+    "Send HTTP GET request to webservice endpoint",
+    "Verify response text indicates second visit count",
+    "Stop Docker Compose services"
+  ]
+}

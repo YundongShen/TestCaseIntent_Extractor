@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_helpers_test",
+  "source_file": "dataset/raw/rtl/helpers.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-05-02T02:34:07.001723",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify test rendering includes React Query context",
+    "Verify user interaction utilities are available"
+  ],
+  "activities": [
+    "Click element by test ID",
+    "Type text into element by test ID",
+    "Render UI component with QueryClientProvider wrapper"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_StrangeGameTest",
+  "source_file": "dataset/raw/junit_unit/StrangeGameTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:50:47.791371",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "strangeGame"
+  ],
+  "goals": [
+    "Verify the behavior of StrangeGame when a player enters the game under different time conditions, specifically regarding imprisonment logic",
+    "Verify the functionality of StrangeGame for retrieving player scores from the database and processing donations via a payment service"
+  ],
+  "activities": [
+    "Mock the hour to return 10",
+    "Inject the mock hour and mock prison into the game",
+    "Assert that the mock hour returns 10",
+    "Enter the game with a player",
+    "Verify that the player is never imprisoned by the mock prison",
+    "Mock the hour to return 22",
+    "Inject the mock hour and spy prison into the game",
+    "Stub the spy prison to do nothing when imprisoning any player",
+    "Enter the game with a player and record the result",
+    "Enter the game with the player a second time",
+    "Assert that the recorded result matches the expected exit message",
+    "Initialize three players with specific IDs",
+    "Mock the hour to return 22",
+    "Inject the mock hour and spy prison into the game",
+    "Stub the spy prison to do nothing when imprisoning any player",
+    "Enter the game sequentially with the three players",
+    "Retrieve the prison log from the spy prison",
+    "Print the first three entries of the prison log",
+    "Assert that the first three prison log entries match the IDs of the three players",
+    "Create a mock game database",
+    "Stub the mock database to return a specific score for a given student ID",
+    "Inject the mock database into the game",
+    "Assert that retrieving the score from the game matches the expected score",
+    "Create a fake PayPal service instance",
+    "Assert that donating through the game using the fake PayPal service returns the expected success message"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_CharManagerTest",
+  "source_file": "dataset/raw/junit_unit/CharManagerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T18:53:00.085596",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "CharManager"
+  ],
+  "goals": [
+    "Verify CharManager returns cached results without invoking calculator on cache hits",
+    "Verify CharManager invokes calculator and updates cache on cache misses"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

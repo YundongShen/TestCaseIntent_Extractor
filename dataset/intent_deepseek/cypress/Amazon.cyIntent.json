@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_Amazon_cy",
+  "source_file": "dataset/raw/cypress/Amazon.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:56.729644",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "cypress-xpath",
+    "Amazon",
+    "describe",
+    "it",
+    "visit",
+    "get",
+    "type",
+    "click",
+    "invoke",
+    "removeAttr",
+    "//div",
+    "//a",
+    "#nav-link-accountList",
+    "#nav-search-submit-button",
+    "#add-to-cart-button",
+    "#ap_password",
+    "#signInSubmit"
+  ],
+  "goals": [
+    "verifycorrectnavigationtomanageaccount",
+    "verifyabilitytosearchandaddproducttothecartbeforecheckout"
+  ],
+  "activities": [
+    "visit_amazon_url",
+    "hover_and_click_account_link",
+    "click_account_link",
+    "type_email",
+    "click_continue_button",
+    "type_password",
+    "click_sign_in_button",
+    "type_search_query",
+    "click_result_link",
+    "click_add_to_cart_button",
+    "click_proceed_to_checkout_button"
+  ]
+}

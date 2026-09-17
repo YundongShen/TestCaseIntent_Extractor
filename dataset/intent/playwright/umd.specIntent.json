@@ -1,0 +1,52 @@
+{
+  "test_case_id": "tc_umd_spec",
+  "source_file": "dataset/raw/playwright/umd.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-02T01:44:07.381920",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "window.globus",
+    "window.globus.logger",
+    "window.globus.authorization",
+    "window.globus.auth",
+    "window.globus.transfer",
+    "window.globus.search",
+    "window.globus.flows",
+    "window.globus.gcs",
+    "window.globus.timers",
+    "window.globus.compute",
+    "window.globus.webapp",
+    "Sign In button",
+    "OAuth URL"
+  ],
+  "goals": [
+    "Verify the SDK is correctly exported as a global 'globus' object with all expected sub-modules defined",
+    "Verify the authorization flow initiates correctly with valid OAuth URL parameters"
+  ],
+  "activities": [
+    "Navigate to umd page",
+    "Verify page title is @globus/sdk",
+    "Verify window.globus.logger is defined",
+    "Verify window.globus.authorization is defined",
+    "Verify window.globus is defined",
+    "Verify window.globus.auth is defined",
+    "Verify window.globus.transfer is defined",
+    "Verify window.globus.search is defined",
+    "Verify window.globus.flows is defined",
+    "Verify window.globus.gcs is defined",
+    "Verify window.globus.timers is defined",
+    "Verify window.globus.compute is defined",
+    "Verify window.globus.webapp is defined",
+    "Navigate to umd-authorization page",
+    "Verify page title is @globus/sdk",
+    "Verify button text is Sign In",
+    "Click the Sign In button",
+    "Wait for URL to match auth.globus.org login pattern",
+    "Retrieve current page URL",
+    "Verify URL contains response_type parameter",
+    "Verify URL contains client_id parameter",
+    "Verify URL contains scope parameter",
+    "Verify URL contains redirect_uri parameter"
+  ]
+}

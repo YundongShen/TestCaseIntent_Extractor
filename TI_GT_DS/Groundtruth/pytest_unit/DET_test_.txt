@@ -1,0 +1,10 @@
+**Test Object**
+`DET.DET` Function
+
+**Test Goal**
+Verify that the function returns the correct output type regardless of the input matrix shape.
+
+**Test Activities**
+1. First, create a 5×5 identity matrix, wrap it as a Matrix, and feed it to `DET.DET` for calculation.
+2. If the previous step triggers a LinAlgError, take a 9×9 matrix, reshape it to (3,3,3,3), wrap it as a Matrix, and calculate it again.
+3. Receive the return value and check if it is an instance of Scalar, OrderedPair, or Matrix.

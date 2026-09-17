@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_INV_test_",
+  "source_file": "dataset/raw/pytest_unit/INV_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:05:48.508272",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "INV.INV"
+  ],
+  "goals": [
+    "Verify that the INV function returns a valid data type (Scalar, OrderedPair, or Matrix)"
+  ],
+  "activities": [
+    "Initialize array1 as a 5x5 identity matrix",
+    "Initialize array2 as a 9x9 identity matrix",
+    "Reshape array2 to dimensions (3, 3, 3, 3)",
+    "Create Matrix object from array1",
+    "Invoke INV.INV function with the Matrix object",
+    "Catch LinAlgError exception",
+    "Create Matrix object from array2",
+    "Invoke INV.INV function with the Matrix object",
+    "Assert result is instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_api_test",
+  "source_file": "dataset/raw/supertest/api.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T07:57:07.169291",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verify that the hero can sign up, login, upgrade the base, start a mission, and attack territory",
+    "verify that the hero can recruit sidekicks and minions",
+    "verify that the villain can recruit minions",
+    "verify that the hero and villain can create and defend events",
+    "verify that the hero and villain can invest money and buy items in the market",
+    "verify that the hero and villain can get the map, players nearby, and influence",
+    "verify that the leaderboard functionality is working correctly"
+  ],
+  "activities": []
+}

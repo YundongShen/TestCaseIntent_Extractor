@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_index_spec",
+  "source_file": "dataset/raw/jest_spec/index.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:41:41.327222",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "sut"
+  ],
+  "goals": [
+    "verify arrow function return value and object creation inheritance behavior"
+  ],
+  "activities": [
+    "call sut arrows function",
+    "assert result equals 17.2",
+    "create car object with properties",
+    "define car getNumber method",
+    "create bmw object from car prototype",
+    "set bmw color property",
+    "set bmw carType property",
+    "assert bmw is an object",
+    "assert car carType equals sedan",
+    "assert bmw carType equals saloon",
+    "log bmw getNumber output",
+    "create animal object with describe method",
+    "create bird object using object assign and create",
+    "log bird describe output"
+  ]
+}

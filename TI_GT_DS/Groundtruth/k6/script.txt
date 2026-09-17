@@ -1,0 +1,11 @@
+**Test Object**
+The HTTP and HTTPS entry points for the target service.
+
+**Test Goal**
+Verify that accessing the HTTP address will automatically redirect to HTTPS, and that the API returns the correct information.
+
+**Test Activities**
+1. Obtain the TARGET address configured in the environment variables.
+2. Request `http://${target}/`, check that the response code is 301 or 308, and that the Location header begins with `https://${target}`.
+3. Then request `https://${target}/books?page=1`, confirming a 200 response and that the Link header contains `https://${target}/docs.jsonld`.
+4. Pause for 1 second after each iteration.

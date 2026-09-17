@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_vgSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vgSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:52.556910",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "element"
+  ],
+  "goals": [
+    "Verify that the vgSpecEditor directive correctly displays an empty JSON object as its initial source code."
+  ],
+  "activities": [
+    "Load the 'polestar' Angular module.",
+    "Load the 'polestar' Angular module.",
+    "Provide the global 'vl' object as an Angular constant.",
+    "Mock the 'uiZeroclipDirective' factory.",
+    "Load the 'polestar' Angular module.",
+    "Provide a mock 'Spec' service with an empty `vgSpec` object.",
+    "Create a new isolated scope for the test.",
+    "Create an Angular element for the `vg-spec-editor` directive.",
+    "Compile the `vg-spec-editor` element using the test scope.",
+    "Trigger an Angular digest cycle to update bindings.",
+    "Assert that the value of the input field with class 'vgspec' within the directive is an empty JSON object string."
+  ]
+}

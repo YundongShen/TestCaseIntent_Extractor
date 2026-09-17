@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_8_job_test_js",
+  "source_file": "dataset/raw/jest_test/8-job.test.js.1",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:41:25.304229",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "createPushNotificationsJobs"
+  ],
+  "goals": [
+    "Verify that createPushNotificationsJobs throws an error if the jobs argument is not an array",
+    "Verify that createPushNotificationsJobs adds jobs to the queue with the correct type and data",
+    "Verify that createPushNotificationsJobs registers complete, progress, and failed event handlers for created jobs"
+  ],
+  "activities": [
+    "Initialize a sinon sandbox, create a test queue, and enter test mode in the setup hook",
+    "Restore the sandbox, clear the queue, and exit test mode in the teardown hook",
+    "Define an invalid non-array jobs object",
+    "Verify that calling createPushNotificationsJobs with the invalid jobs object throws a 'Jobs is not an array' error",
+    "Define an array of valid job information objects",
+    "Call createPushNotificationsJobs with the job information array and the test queue",
+    "Verify that two jobs are added to the queue in test mode",
+    "Verify that the first job in the queue has the correct data and type",
+    "Define an array with a single job information object",
+    "Create a mock job object with stubbed 'on' and 'save' methods",
+    "Stub the queue's 'create' method to return the mock job object",
+    "Call createPushNotificationsJobs with the single job information array and the test queue",
+    "Verify that the queue's 'create' method was called exactly once with the correct job type and data",
+    "Verify that the mock job's 'save' method was called exactly once",
+    "Verify that the mock job's 'on' method was called exactly three times for 'complete', 'progress', and 'failed' events"
+  ]
+}

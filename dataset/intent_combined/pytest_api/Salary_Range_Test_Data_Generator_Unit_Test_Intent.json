@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T15:30:42.103969",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Gumtree job search salary filter dropdowns"
+  ],
+  "goals": [
+    "Verify salary filter dropdowns contain 11 options"
+  ],
+  "activities": [
+    "fetch hourly rate job search page",
+    "verify hourly rate page request success",
+    "parse hourly rate page HTML",
+    "locate minimum salary filter element",
+    "extract minimum salary option values",
+    "verify minimum salary options count is 11",
+    "locate maximum salary filter element",
+    "extract maximum salary option values",
+    "verify maximum salary options count is 11",
+    "fetch annual salary job search page",
+    "parse annual salary page HTML",
+    "locate minimum salary filter element",
+    "extract minimum salary option values",
+    "verify minimum salary options count is 11",
+    "locate maximum salary filter element",
+    "extract maximum salary option values",
+    "verify maximum salary options count is 11"
+  ]
+}

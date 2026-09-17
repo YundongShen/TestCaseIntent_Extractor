@@ -1,0 +1,40 @@
+{
+  "test_case_id": "tc_all",
+  "source_file": "dataset/raw/cucumber/all.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-11T07:32:41.434786",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "rental plan",
+    "day range",
+    "hour range",
+    "endpoint",
+    "button"
+  ],
+  "goals": [
+    "Verify the ability to add, update, and remove day and hour ranges for rental plans",
+    "Verify the restriction preventing the removal of the first day or hour range"
+  ],
+  "activities": [
+    "Set up a single day range",
+    "Update the endpoint of the last range",
+    "Verify that a new day range is created",
+    "Set up two day ranges",
+    "Remove the last day range",
+    "Verify that only one day range remains",
+    "Verify that '--' is displayed in the endpoint of the last day range",
+    "Set up a single day range",
+    "Update the endpoint of the last range",
+    "Verify that a new hour range is created",
+    "Set up a single day range",
+    "Set up two hour ranges",
+    "Remove the last hour range",
+    "Verify that only one hour range remains",
+    "Verify that '24' is displayed in the endpoint of the last hour range",
+    "Set up a single day range",
+    "Set up a single hour range",
+    "Verify that the button to remove the day range is not visible",
+    "Verify that the button to remove the hour range is not visible"
+  ]
+}

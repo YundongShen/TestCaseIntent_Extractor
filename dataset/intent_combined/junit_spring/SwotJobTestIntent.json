@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_SwotJobTest",
+  "source_file": "dataset/raw/junit_spring/SwotJobTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T15:02:29.833538",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "SwotJob"
+  ],
+  "goals": [
+    "verify job completion and data persistence accuracy"
+  ],
+  "activities": [
+    "clear Solr collection and Cassandra table",
+    "create job parameters with granule file",
+    "launch the job",
+    "verify job exit status is completed",
+    "verify step execution read count",
+    "verify step execution write count",
+    "verify step execution filter count",
+    "verify Solr document count",
+    "verify Cassandra record count"
+  ]
+}

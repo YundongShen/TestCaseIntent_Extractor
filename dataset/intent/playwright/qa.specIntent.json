@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_qa_spec",
+  "source_file": "dataset/raw/playwright/qa.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-02T01:39:31.864450",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "page",
+    "body",
+    "metrics",
+    "results",
+    "charts"
+  ],
+  "goals": [
+    "Verify QA View page navigation and rendering",
+    "Verify presence of QA metrics, results, and coverage elements"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

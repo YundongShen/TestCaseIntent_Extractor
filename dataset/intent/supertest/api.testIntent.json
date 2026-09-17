@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_api_test",
+  "source_file": "dataset/raw/supertest/api.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-02T02:32:25.476641",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the functional correctness of the game API endpoints for user authentication, base management, combat, and economy operations.",
+    "Ensure API responses return expected HTTP status codes and valid data structures for both Hero and Villain roles."
+  ],
+  "activities": [
+    "Register hero user and save token",
+    "Register villain user and save token",
+    "Login hero user and update token",
+    "Login villain user and update token",
+    "Retrieve hero base details",
+    "Upgrade hero base security",
+    "Start hero mission",
+    "Battle villain as hero",
+    "Get nearby players",
+    "Recruit sidekick for hero",
+    "Recruit minion for villain",
+    "Get game map",
+    "Attack territory as hero",
+    "Get hero influence",
+    "Invest money and check outcome",
+    "Get market items",
+    "Fetch market items and purchase first item",
+    "Create event as villain and save ID",
+    "Defend event as hero",
+    "Get leaderboard"
+  ]
+}

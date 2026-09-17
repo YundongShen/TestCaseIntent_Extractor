@@ -1,0 +1,43 @@
+{
+  "test_case_id": "tc_integration_test",
+  "source_file": "dataset/raw/jest_test/integration.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:43:24.773562",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "AsyncComponentProvider",
+    "createAsyncContext",
+    "asyncComponent"
+  ],
+  "goals": [
+    "Verify the integration of server rendering and client rehydration for asynchronous components",
+    "Verify the rendering behavior of asynchronous components in browser and server environments, including loading states, error handling, and resolution caching"
+  ],
+  "activities": [
+    "Remove global.window to simulate a server environment",
+    "Create a server async context and a server app",
+    "Bootstrap the server app asynchronously",
+    "Render the server app to static markup and verify it matches the snapshot",
+    "Extract the client state from the server context and verify it matches the snapshot",
+    "Restore global.window to simulate a client environment",
+    "Create a client async context and a client app using the extracted client state",
+    "Bootstrap the client app asynchronously",
+    "Mount the client app and verify it matches the snapshot",
+    "Temporarily remove global.window, verify the client app's static markup matches the server HTML, and restore global.window",
+    "Wait for 100 milliseconds, update the mounted client app, and verify it matches the snapshot",
+    "Create an async component that throws an error on resolve and an app containing it",
+    "Bootstrap the app asynchronously, mount it, and wait briefly",
+    "Verify the mounted app's HTML contains the error message",
+    "Create an async component that increments a counter on resolve and an app containing it",
+    "Bootstrap the app asynchronously and mount it",
+    "Verify that the resolve counter equals 1",
+    "Mount the app a second time and verify that the resolve counter remains 1",
+    "Create an async component that resolves after a delay with a loading component and an app containing it",
+    "Bootstrap the app asynchronously and mount it",
+    "Verify the mounted app's HTML contains the loading text",
+    "Create an async component that rejects with an error for the server environment and an app containing it",
+    "Bootstrap the app asynchronously",
+    "Render the app to static markup and verify it contains the error message"
+  ]
+}

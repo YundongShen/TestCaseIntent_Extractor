@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_nav_cy",
+  "source_file": "dataset/raw/cypress/nav.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:34:54.180302",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Nav"
+  ],
+  "goals": [
+    "verify navigation link clicks update URL correctly"
+  ],
+  "activities": [
+    "mount Nav component inside Router",
+    "click Reading List link",
+    "verify URL contains /list",
+    "click Finished Books link",
+    "verify URL contains /finished",
+    "click Discover link",
+    "verify URL contains /discover"
+  ]
+}

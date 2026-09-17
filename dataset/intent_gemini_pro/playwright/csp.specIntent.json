@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_csp_spec",
+  "source_file": "dataset/raw/playwright/csp.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:56:02.074852",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "response",
+    "headers",
+    "csp",
+    "page",
+    "res",
+    "html",
+    "body",
+    "inlineStyles"
+  ],
+  "goals": [
+    "Verify that the server returns strict Content Security Policy (CSP) and additional security headers",
+    "Ensure the page loads successfully without triggering CSP violations and does not contain inline styles"
+  ],
+  "activities": [
+    "Navigate to the root URL",
+    "Verify the response is not null and retrieve response headers",
+    "Verify the Content-Security-Policy header is defined and contains strict directives",
+    "Navigate to the root URL",
+    "Verify the response is not null and retrieve response headers",
+    "Verify additional security headers are set correctly (x-content-type-options, x-frame-options, referrer-policy, permissions-policy)",
+    "Set up event listeners for console messages and page errors to monitor CSP violations",
+    "Navigate to the root URL",
+    "Wait for the items container element to be visible",
+    "Wait for 500 milliseconds",
+    "Verify that no CSP violations were recorded",
+    "Send a GET request to the root URL",
+    "Retrieve the HTML response text",
+    "Extract the body content from the HTML",
+    "Verify that no inline style attributes exist in the HTML body"
+  ]
+}

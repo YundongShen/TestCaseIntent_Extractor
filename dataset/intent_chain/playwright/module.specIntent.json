@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_module_spec",
+  "source_file": "dataset/raw/playwright/module.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:36:41.052545",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "body",
+    "alert",
+    "modal",
+    "button"
+  ],
+  "goals": [
+    "Verify page content visibility transitions during initialization",
+    "Verify Bootstrap component styling and modal interaction functionality"
+  ],
+  "activities": [
+    "string1",
+    "string2"
+  ]
+}

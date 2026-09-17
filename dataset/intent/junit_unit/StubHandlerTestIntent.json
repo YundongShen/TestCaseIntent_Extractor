@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_StubHandlerTest",
+  "source_file": "dataset/raw/junit_unit/StubHandlerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:34:47.757507",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "{{ operation }}Handler"
+  ],
+  "goals": [
+    "Verify that the handler returns OperationStatus.SUCCESS and the expected resource model for a valid request"
+  ],
+  "activities": [
+    "Mock AmazonWebServicesClientProxy instance",
+    "Mock Logger instance",
+    "Instantiate {{ operation }}Handler",
+    "Build {{ pojo_name }} model",
+    "Build ResourceHandlerRequest with desired resource state",
+    "Invoke handleRequest method with proxy, request, null, and logger",
+    "Assert response is not null",
+    "Assert response status equals OperationStatus.SUCCESS",
+    "Assert response callback context is null",
+    "Assert response callback delay seconds equals 0",
+    "Assert response resource model equals request desired resource state",
+    "Assert response resource models is null",
+    "Assert response message is null",
+    "Assert response error code is null"
+  ]
+}

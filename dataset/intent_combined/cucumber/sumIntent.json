@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_sum",
+  "source_file": "dataset/raw/cucumber/sum.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T14:24:31.852400",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "calculator"
+  ],
+  "goals": [
+    "verify correct sum calculation for positive and negative numbers"
+  ],
+  "activities": [
+    "initialize calculator",
+    "enter first number into calculator",
+    "enter second number into calculator",
+    "press add button",
+    "verify result on screen"
+  ]
+}

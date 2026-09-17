@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_blog_test",
+  "source_file": "dataset/raw/jest_test/blog.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T17:51:26.338630",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify Server-Side Rendering (SSR) and Client-Side Rendering (CSR) functionality for blog routes",
+    "Verify correct development JavaScript resource loading for specific routes"
+  ],
+  "activities": [
+    "Set environment to local",
+    "Initialize mock application",
+    "Wait for application ready",
+    "Wait for webpack ready",
+    "Send GET request to '/'",
+    "Expect status code 200",
+    "Assert text content '<h1>Egg Vue</h1>'",
+    "Assert SSR rendering",
+    "Assert dev JS resource 'blog/home'",
+    "Restore mocks",
+    "Send GET request to '/blog/about'",
+    "Expect status code 200",
+    "Assert SSR rendering",
+    "Assert dev JS resource 'blog/about'",
+    "Restore mocks",
+    "Send GET request to '/blog/csr'",
+    "Expect status code 200",
+    "Assert CSR rendering",
+    "Assert dev JS resource 'blog/home'",
+    "Restore mocks",
+    "Close application"
+  ]
+}

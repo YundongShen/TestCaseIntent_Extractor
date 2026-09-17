@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_utils_spec",
+  "source_file": "dataset/raw/jest_spec/utils.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:54:47.929446",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "levenstein"
+  ],
+  "goals": [
+    "Verify the correct calculation of Levenshtein distance between strings."
+  ],
+  "activities": [
+    "Calculate the Levenstein distance between two identical strings 'aaa' and 'aaa' and assert the distance is 0.",
+    "Calculate the Levenstein distance between two different strings 'abc' and 'def' and assert the distance is 3.",
+    "Calculate the Levenstein distance between two similar strings 'gmail.com' and 'gnail.com' and assert the distance is 1.",
+    "Calculate the Levenstein distance between 'gmail.com' and 'gnaul.com' and assert the distance is 2.",
+    "Calculate the Levenstein distance between 'mail.com' and 'gnaul.com' and assert the distance is 3."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_vlSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vlSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:53:37.133204",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

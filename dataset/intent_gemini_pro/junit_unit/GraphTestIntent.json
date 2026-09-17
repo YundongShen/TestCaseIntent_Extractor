@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_GraphTest",
+  "source_file": "dataset/raw/junit_unit/GraphTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:50:22.405557",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "NumberOfIslands",
+    "o1"
+  ],
+  "goals": [
+    "Verify that the numIslands method correctly calculates the number of islands in a given 2D grid"
+  ],
+  "activities": [
+    "Initialize a 2D character array representing the grid",
+    "Define the expected number of islands",
+    "Instantiate the NumberOfIslands object",
+    "Invoke the numIslands method with the grid",
+    "Assert that the returned result matches the expected number of islands"
+  ]
+}

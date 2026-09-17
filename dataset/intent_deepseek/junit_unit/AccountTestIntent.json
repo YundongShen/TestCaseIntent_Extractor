@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_AccountTest",
+  "source_file": "dataset/raw/junit_unit/AccountTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:59:50.713445",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "test whether the addFriendShip method adds a friend to the friend list correctly when the friend is before the target friend in the list"
+  ],
+  "activities": [
+    "initMocks",
+    "testContainsFriend",
+    "testAddFriendShipFriendIsFirst",
+    "testAddFriendShipFriendIsNotFirst"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_quiz3_cy_js",
+  "source_file": "dataset/raw/cypress/quiz3.cy.js.txt",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:36:19.932277",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "OrangeHRM Login Page"
+  ],
+  "goals": [
+    "Verify login page UI elements visibility and login functionality with valid and invalid credentials"
+  ],
+  "activities": [
+    "Visit login page URL",
+    "Verify company logo visibility",
+    "Verify login title visibility and content",
+    "Verify username field visibility",
+    "Verify password field visibility",
+    "Enter valid username",
+    "Enter valid password",
+    "Click submit button",
+    "Verify dashboard URL",
+    "Enter invalid username",
+    "Enter invalid password",
+    "Click submit button",
+    "Verify invalid credentials error message",
+    "Verify forgot password link visibility",
+    "Click forgot password link",
+    "Verify password reset URL",
+    "Verify demo credentials visibility and content"
+  ]
+}

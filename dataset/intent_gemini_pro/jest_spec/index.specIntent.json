@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_index_spec",
+  "source_file": "dataset/raw/jest_spec/index.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:39:15.528927",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "sut.arrows",
+    "Object.create",
+    "Object.assign"
+  ],
+  "goals": [
+    "Verify that the arrow function returns the expected numeric value.",
+    "Verify object creation, property overriding, and prototypical inheritance using Object.create and Object.assign."
+  ],
+  "activities": [
+    "Call sut.arrows() and store the result",
+    "Assert that the result equals 17.2",
+    "Create a car object with carType and wheels properties",
+    "Add a getNumber method to the car object",
+    "Create a bmw object inheriting from the car object",
+    "Set the color property of the bmw object to 'black'",
+    "Set the carType property of the bmw object to 'saloon'",
+    "Assert that the bmw object is of type 'object'",
+    "Assert that the carType property of the car object equals 'sedan'",
+    "Assert that the carType property of the bmw object equals 'saloon'",
+    "Log the result of calling bmw.getNumber(20)",
+    "Create an animal object with an animalType property and a describe method",
+    "Create a bird object inheriting from the animal object and assign it specific properties",
+    "Log the result of calling bird.describe()"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_ArticleServiceImplTest",
+  "source_file": "dataset/raw/junit_unit/ArticleServiceImplTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:06:32.764154",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "ArticleServiceImpl"
+  ],
+  "goals": [
+    "Verify ArticleServiceImpl basic functionality"
+  ],
+  "activities": [
+    "Initialize mock annotations",
+    "Create first Article object with ID, title, and status",
+    "Create second Article object with ID, title, and status",
+    "Add Article objects to the list",
+    "Assert true condition"
+  ]
+}

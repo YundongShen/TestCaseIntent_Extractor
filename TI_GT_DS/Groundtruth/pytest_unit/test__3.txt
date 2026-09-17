@@ -1,0 +1,22 @@
+**Test Object**
+The `find_data` function
+
+**Test Goal**
+Confirms that when using mock Google Sheets data, the function finds and returns a matching record based on the name.
+
+**Test Activities**
+1. Prepare mock worksheet data containing two records using the `mock_google_sheets` fixture.
+2. Call `find_data(mock_sheet, search_value)` with `'Иванов Иван Иванович'` as the search value.
+3. Assert that the returned result is not `None`.
+4. Assert that the `'name'` field in the returned result matches the search value.
+
+**Test Object**
+The `find_data` function
+
+**Test Goal**
+Confirms that `find_data` returns `None` when searching for a non-existent name.
+
+**Test Activities**
+1. Use the same mock worksheet data.
+2. Call `find_data(mock_sheet, search_value_not_found)` with a non-existent name `'Николай Николаев'`.
+3. Assert that the returned result is `None`.

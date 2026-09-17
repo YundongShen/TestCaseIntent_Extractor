@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_api_test",
+  "source_file": "dataset/raw/supertest/api.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-13T05:25:29.000380",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_server_spec_1",
+  "source_file": "dataset/raw/jest_spec/server.spec_1.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:40:31.795146",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "Verify that the server's index route returns a 200 status code",
+    "Verify that the server's index route returns a text/html response containing the expected content"
+  ],
+  "activities": [
+    "Send a GET request to the root route '/'",
+    "Assert that the response status code is 200",
+    "Send a GET request to the root route '/'",
+    "Assert that the response content type is 'text/html'",
+    "Define the expected response string as 'Hello City'",
+    "Send a GET request to the root route '/'",
+    "Assert that the response text matches the expected string"
+  ]
+}

@@ -1,0 +1,24 @@
+**Test Object**
+**Expense Entry Interface and Total Investment Update Logic**
+
+**Test Goal**
+Verify that after registering an expense for a specified crop, this expense is associated with that crop, and the total investment amount for the crop is updated synchronously.
+
+**Test Activities**
+1. Prepare a crop.
+2. Enter an expense of S/150, assigned to Potato.
+3. Check if the expense has been saved to the database and associated with Potato.
+4. Check if the total investment amount for Potato has increased by 150.
+
+**Test Object**
+**Report Functionality for Viewing Cumulative Expenses by Crop**
+
+**Test Goal**
+Verify that after a user selects a crop and enters the financial panel, they can see a summary table listing the date, concept, amount, and total investment amount for all expenses related to that crop.
+
+**Test Activities**
+1. Select a crop.
+2. (Optional) Set the query time range.
+3. Enter the financial panel for that crop.
+4. Check if the report table displayed on the page includes "Concepto de gasto" and "Monto" for each expense.
+5. Check if "Inversión total" and the correct cumulative total are displayed at the bottom of the table.

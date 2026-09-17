@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_US06",
+  "source_file": "dataset/raw/cucumber/US06.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-11T07:34:20.962350",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "sistema",
+    "alerta",
+    "notificación"
+  ],
+  "goals": [
+    "Verify that the system sends an automated alert to the user's mobile phone when a potential crop disease is detected and the risk level exceeds the threshold.",
+    "Verify that the system sends a preventive notification to the user when an extreme weather event is forecasted and approaching."
+  ],
+  "activities": [
+    "Detectar una enfermedad potencial en el sistema",
+    "Superar el umbral del nivel de riesgo",
+    "Verificar el envío de una alerta al celular del usuario",
+    "Pronosticar una helada",
+    "Simular la proximidad del evento climático",
+    "Verificar el envío de una notificación para prevenir daños"
+  ]
+}

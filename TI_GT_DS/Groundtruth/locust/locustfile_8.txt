@@ -1,0 +1,13 @@
+**Test Object** 
+The entire web application (including the homepage, login page, about us page, note details page, and user homepage).
+
+**Test Goal** 
+Verify that the system handles concurrent user navigation across multiple pages and each page responds normally.
+
+**Test Activities** 
+1. Simulate users performing an action at random intervals of 1 to 3 seconds.
+2. Frequently access the homepage `/`.
+3. Access the login page `/login/`.
+4. Occasionally access the about us page `/nosotros/`.
+5. Randomly select a note ID (1~10) and access `/apunte/{id}/`.
+6. Occasionally select a user ID (1~10) and access `/perfil/{id}/`.

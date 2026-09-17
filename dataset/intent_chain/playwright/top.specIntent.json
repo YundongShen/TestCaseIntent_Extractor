@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_top_spec",
+  "source_file": "dataset/raw/playwright/top.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:39:51.301320",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "page",
+    "page.getByRole(\"navigation\")",
+    "page.getByRole(\"link\", { name: \"Login\" })",
+    "items",
+    "input[type=search]"
+  ],
+  "goals": [
+    "Verify homepage navigation elements and login link are visible and functional",
+    "Verify search functionality filters list items correctly based on input"
+  ],
+  "activities": [
+    "Navigate to homepage and verify navigation text and Login link visibility",
+    "Navigate to homepage and click Login link",
+    "Verify URL changes to login page",
+    "Navigate to homepage and verify list items count and visibility",
+    "Extract identifier from first list item",
+    "Fill search input with identifier",
+    "Verify search results filter to single item"
+  ]
+}

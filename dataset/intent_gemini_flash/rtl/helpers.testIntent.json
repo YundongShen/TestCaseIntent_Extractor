@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_helpers_test",
+  "source_file": "dataset/raw/rtl/helpers.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T13:44:09.761832",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "ui",
+    "element identified by testId"
+  ],
+  "goals": [
+    "Provide helper functions for simulating user interactions with DOM elements using data-testid attributes.",
+    "Provide a custom render function that sets up a React Query client provider with specific configurations for testing purposes."
+  ],
+  "activities": [
+    "Click an element located by its test ID.",
+    "Type specified text into a text field located by its test ID.",
+    "Render a React component within a QueryClientProvider context, initializing a QueryClient with retry disabled."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_locustfile_2",
+  "source_file": "dataset/raw/locust/locustfile_2.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:08.222217",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "WebsiteUser",
+    "client",
+    "get",
+    "response",
+    "text",
+    "elapsed",
+    "total_seconds"
+  ],
+  "goals": [
+    "verifythattheclientcangettherightresponsewhengettingthehomepage",
+    "verifythattherequesttoremoveaddoesnotexceed0.5seconds"
+  ],
+  "activities": []
+}

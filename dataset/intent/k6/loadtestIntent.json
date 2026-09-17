@@ -1,0 +1,41 @@
+{
+  "test_case_id": "tc_loadtest",
+  "source_file": "dataset/raw/k6/loadtest.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-01T21:06:35.500026",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "GET /posts",
+    "POST /posts",
+    "POST /comments",
+    "PUT /posts/{id}/views",
+    "PUT /posts/{id}/likes"
+  ],
+  "goals": [
+    "Verify API performance and stability under concurrent load",
+    "Validate functional correctness of the user interaction flow during load testing"
+  ],
+  "activities": [
+    "Send GET request to retrieve posts",
+    "Validate response status for get posts",
+    "Record duration for get posts request",
+    "Pause execution for sleep duration",
+    "Send POST request to create a post",
+    "Validate response status for create post",
+    "Record duration for create post request",
+    "Extract created post ID from response",
+    "Pause execution for sleep duration",
+    "Send POST request to create a comment",
+    "Validate response status for create comment",
+    "Record duration for create comment request",
+    "Pause execution for sleep duration",
+    "Send PUT request to update post views",
+    "Validate response status for view post",
+    "Record duration for view post request",
+    "Pause execution for sleep duration",
+    "Send PUT request to update post likes",
+    "Validate response status for like post",
+    "Record duration for like post request"
+  ]
+}

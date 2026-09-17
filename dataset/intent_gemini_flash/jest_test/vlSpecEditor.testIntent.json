@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_vlSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vlSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:46.167415",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "vlSpecEditor"
+  ],
+  "goals": [
+    "Verify that the vl-spec-editor directive correctly displays the initial spec source code and shorthand."
+  ],
+  "activities": [
+    "Load the 'polestar' Angular module.",
+    "Configure the 'polestar' module to provide the 'vl' constant.",
+    "Configure the 'polestar' module to provide a mock 'uiZeroclipDirective' factory.",
+    "Configure the 'polestar' module to provide a mock 'Spec' value for a chart.",
+    "Inject the '$rootScope' service.",
+    "Create a new child scope from the root scope.",
+    "Inject the '$compile' service.",
+    "Create an Angular element for the 'vl-spec-editor' directive.",
+    "Compile the 'vl-spec-editor' element using the created scope.",
+    "Trigger an Angular digest cycle on the scope.",
+    "Assert that the value of the '.vlspec' element is an empty object string.",
+    "Assert that the value of the '.shorthand' element is 'point.'"
+  ]
+}

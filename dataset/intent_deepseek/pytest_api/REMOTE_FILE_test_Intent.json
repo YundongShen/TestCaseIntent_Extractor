@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_REMOTE_FILE_test_",
+  "source_file": "dataset/raw/pytest_api/REMOTE_FILE_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:45.276342",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Image",
+    "Grayscale",
+    "DataFrame",
+    "JSON"
+  ],
+  "goals": [
+    "test_valid_usage: valid usage of REMOTE_FILE with local file system assets"
+  ],
+  "activities": [
+    "test_REMOTE_FILE_not_valid",
+    "test_REMOTE_FILE_valid_usage",
+    "test_REMOTE_FILE",
+    "test_Image",
+    "test_Grayscale",
+    "test_CSV",
+    "test_XML",
+    "test_parametrize",
+    "test_parametrize_2",
+    "test_parametrize_3"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_sample_test_6",
+  "source_file": "dataset/raw/jest_test/sample.test_6.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T18:24:20.527626",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "document",
+    "msalConfig",
+    "app"
+  ],
+  "goals": [
+    "Verify MSAL configuration security and validity",
+    "Verify authentication static pages are served correctly"
+  ],
+  "activities": [
+    "Read App/index.html file content",
+    "Set global document innerHTML to loaded HTML",
+    "Verify load-msal element src attribute contains CDN URL",
+    "Load msalConfig object from authConfig.js",
+    "Assert msalConfig object is defined",
+    "Assert clientId does not match GUID pattern",
+    "Assert authority matches URI pattern",
+    "Set NODE_ENV environment variable to test",
+    "Send GET request to root path",
+    "Read App/index.html file content",
+    "Assert response status is 200 and text matches index.html content",
+    "Send GET request to signout path",
+    "Read App/signout.html file content",
+    "Assert response status is 200 and text matches signout.html content"
+  ]
+}

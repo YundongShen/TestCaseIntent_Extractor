@@ -1,0 +1,48 @@
+{
+  "test_case_id": "tc_bench_spec",
+  "source_file": "dataset/raw/playwright/bench.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-01T21:30:02.628482",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "embedderResults",
+    "rerankerResults",
+    "results"
+  ],
+  "goals": [
+    "Verify the successful execution and completion of edge model benchmarks for embedders and rerankers",
+    "Validate the correctness and sanity of benchmark results including model dimensions and score ordering"
+  ],
+  "activities": [
+    "Set test timeout to 5 minutes",
+    "Configure console message listener for browser logs",
+    "Navigate to benchmark page",
+    "Verify page header text contains benchmark title",
+    "Log benchmark start message",
+    "Execute runAllBenchmarks function in browser context",
+    "Poll for benchmark completion flag until true",
+    "Retrieve embedder results from browser context",
+    "Retrieve reranker results from browser context",
+    "Log embedder results summary table",
+    "Log reranker results summary table",
+    "Assert embedder results list is not empty",
+    "Assert reranker results list is not empty",
+    "Validate embedder model dimensions and output vectors",
+    "Validate reranker model scores and ranking order",
+    "Navigate to benchmark page",
+    "Log embedder comparison start message",
+    "Execute runEmbedderBenchmarks function in browser context",
+    "Poll for embedder results count until three models complete",
+    "Retrieve embedder results from browser context",
+    "Log embedder comparison details",
+    "Assert specific embedder model dimensions match expected values",
+    "Navigate to benchmark page",
+    "Log reranker sanity check start message",
+    "Execute runRerankerBenchmarks function in browser context",
+    "Poll for reranker results count until three models complete",
+    "Retrieve reranker results from browser context",
+    "Log reranker score sanity details",
+    "Validate reranker score relationships for relevance ranking"
+  ]
+}

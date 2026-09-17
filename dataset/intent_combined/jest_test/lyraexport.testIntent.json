@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_lyraexport_test",
+  "source_file": "dataset/raw/jest_test/lyraexport.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:51:28.320403",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

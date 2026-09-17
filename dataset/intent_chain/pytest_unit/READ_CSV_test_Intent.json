@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_READ_CSV_test_",
+  "source_file": "dataset/raw/pytest_unit/READ_CSV_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:09:06.001005",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "READ_CSV.READ_CSV"
+  ],
+  "goals": [
+    "Verify that READ_CSV correctly parses the CSV file into a DataFrame with expected structure and content"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

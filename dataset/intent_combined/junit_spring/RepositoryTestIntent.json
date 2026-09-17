@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_RepositoryTest",
+  "source_file": "dataset/raw/junit_spring/RepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T15:07:55.361642",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "XxxRepository"
+  ],
+  "goals": [
+    "verify CRUD operations for Xxx entity"
+  ],
+  "activities": [
+    "initialize new Xxx instance",
+    "save new Xxx instance",
+    "find Xxx instance by UUID",
+    "verify instance existence and equality",
+    "find and save instance for update",
+    "verify updated instance existence and equality",
+    "delete instance by UUID",
+    "verify instance deletion"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_bdd",
+  "source_file": "dataset/raw/cucumber/bdd.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:18:52.216853",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Page Navigation",
+    "Cucumber Belly"
+  ],
+  "goals": [
+    "Verify that page navigation steps work correctly using generic and parameterized step definitions",
+    "Verify that the remaining cucumber count is correctly calculated after eating a specified number"
+  ],
+  "activities": [
+    "Create background: global administrator \"Greg\", blog \"Greg's anti-tax rants\", customer \"Dr. Bill\", blog \"Expensive Therapy\" owned by \"Dr. Bill\"",
+    "Navigate to the home page; check the about page of the website; get contact details",
+    "Navigate to a parameterized page using a generic step definition",
+    "Set cucumber count in belly/stomach to a specified integer",
+    "Set initial cucumber count to 12; eat 5 cucumbers; verify 7 remain",
+    "Set initial cucumber count to 20; eat 5 cucumbers; verify 15 remain"
+  ]
+}

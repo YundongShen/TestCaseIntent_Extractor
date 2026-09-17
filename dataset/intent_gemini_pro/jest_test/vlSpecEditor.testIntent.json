@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_vlSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vlSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:46:16.760837",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "vl-spec-editor",
+    "element"
+  ],
+  "goals": [
+    "Verify that the vlSpecEditor directive correctly displays the source code"
+  ],
+  "activities": [
+    "Load the polestar module",
+    "Mock the vl constant and uiZeroclipDirective factory",
+    "Mock the Spec service with a predefined chart object",
+    "Create a new scope",
+    "Create a DOM element for the vl-spec-editor directive",
+    "Compile the directive element with the scope",
+    "Trigger a scope digest cycle",
+    "Assert that the .vlspec element's value is '{}'",
+    "Assert that the .shorthand element's value is 'point.'"
+  ]
+}

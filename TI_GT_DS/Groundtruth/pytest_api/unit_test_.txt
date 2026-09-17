@@ -1,0 +1,12 @@
+**Test Object**
+`/obtainUserNameEmail` API and its functions
+
+**Test Goal**
+Confirm that after a user logs in, calling this API should return a normal response, and the JSON received should contain the correct field information.
+
+**Test Activities**
+1. Prepare a user.
+2. Send a POST request to `/login` using this email address and password. Upon successful login, obtain the session token.
+3. Place the token in the Authorization header and request `/obtainUserNameEmail`.
+4. Check that the response status code is 200.
+5. Check that the first_name, last_name, and email fields in the returned JSON match.

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_locustfile_4",
+  "source_file": "dataset/raw/locust/locustfile_4.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:53:13.234153",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "WebUser",
+    "FlashCrowdShape"
+  ],
+  "goals": [
+    "testthestabilityofthesystemunderasimulatedFlashCrowdscenario"
+  ],
+  "activities": [
+    "hit_frontend",
+    "run_time"
+  ]
+}

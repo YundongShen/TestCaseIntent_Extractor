@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_delete",
+  "source_file": "dataset/raw/k6/delete.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T13:30:52.095571",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Book"
+  ],
+  "goals": [
+    "Verify that the book deletion API endpoint returns a 200 status for successful deletions or a 404 status if the book is not found."
+  ],
+  "activities": [
+    "Select a random book title.",
+    "Send an HTTP GET request to search for the book by title.",
+    "Check if the book search request was successful (status 200).",
+    "Parse the JSON response body from the successful search request.",
+    "Extract the ISBN from the parsed response.",
+    "Send an HTTP DELETE request to remove the book using the extracted ISBN (if available).",
+    "Verify the DELETE request's response status is either 200 or 404.",
+    "Pause the test execution for 0.5 seconds."
+  ]
+}

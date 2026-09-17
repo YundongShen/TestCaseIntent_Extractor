@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T19:07:45.642935",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "obj1",
+    "obj2"
+  ],
+  "goals": [
+    "string",
+    "string"
+  ],
+  "activities": [
+    "Initialize mocks and configure repository behavior for skill operations",
+    "Prepare form data with vote and skill UUID",
+    "Send POST request to skill vote endpoint",
+    "Verify HTTP response status is OK",
+    "Verify repository find and save methods were invoked",
+    "Retrieve updated skill entity from repository",
+    "Assert skill rating was incremented",
+    "Clean up repository data after test"
+  ]
+}

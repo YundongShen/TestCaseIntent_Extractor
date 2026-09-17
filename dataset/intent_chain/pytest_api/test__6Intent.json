@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_api/test__6.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:51:20.727490",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "WorkshopTest",
+    "DeleteWorkshop",
+    "DeleteWorkshopRepBody"
+  ],
+  "goals": [
+    "Verify successful deletion of a workshop via API returns correct status and response body",
+    "Verify the workshop record is permanently removed from the database while preserving other records"
+  ],
+  "activities": [
+    "Clean test environment",
+    "Insert two workshop records",
+    "Execute DELETE API request for the first workshop",
+    "Validate API response status, headers, and body content",
+    "Verify deleted workshop record is removed from database",
+    "Verify remaining workshop record persists in database"
+  ]
+}

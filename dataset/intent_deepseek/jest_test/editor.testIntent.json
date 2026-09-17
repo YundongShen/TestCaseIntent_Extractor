@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_editor_test",
+  "source_file": "dataset/raw/jest_test/editor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:28.694745",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "element"
+  ],
+  "goals": [
+    "test the Liststylemodule:addListStyle function correctly",
+    "verify the correct value and position with cursor at the end when selected a bulleted list style",
+    "verify the correct value and position with cursor at the end when selected a numbered list style",
+    "verify the correct value and position with cursor at the middle when selected a bulleted list style",
+    "verify the correct value and position with cursor at the middle when selected a numbered list style",
+    "verify the correct value and position with cursor at the middle when previous line has a number"
+  ],
+  "activities": []
+}

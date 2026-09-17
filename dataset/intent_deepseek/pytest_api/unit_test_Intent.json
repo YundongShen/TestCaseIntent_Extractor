@@ -1,0 +1,13 @@
+{
+  "test_case_id": "tc_unit_test_",
+  "source_file": "dataset/raw/pytest_api/unit_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T08:00:25.549768",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "test_obtainUserNameEmail_verify_user_creation_successful"
+  ],
+  "activities": []
+}

@@ -1,0 +1,43 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_unit/test__7.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:26:49.452619",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "AutonomousAgent",
+    "crypto_filter_handler",
+    "get_erc20_balance_behaviour"
+  ],
+  "goals": [
+    "Verify the AutonomousAgent correctly handles and logs 'hello' and 'crypto' message types",
+    "Verify ERC-20 token balance retrieval and transfer logic functions correctly with expected logging"
+  ],
+  "activities": [
+    "Initialize inbox and outbox queues and start agent processing task",
+    "Create hello message payload",
+    "Put message into agent inbox",
+    "Wait for message processing",
+    "Assert logger info call for filtered message",
+    "Cancel agent processing task and await cancellation",
+    "Initialize inbox and outbox queues and start agent processing task",
+    "Mock ERC20 token transfer return value",
+    "Configure mock agent wallet and balance",
+    "Configure mock token contract properties",
+    "Create crypto transfer message payload",
+    "Put message into agent inbox",
+    "Execute crypto filter handler",
+    "Assert logger info calls for transfer and transaction hash",
+    "Cancel agent processing task and await cancellation",
+    "Patch ETH settings configuration",
+    "Mock Web3 connection and contract",
+    "Configure mock token contract balance and decimals",
+    "Create mock agent with token contract",
+    "Patch asyncio sleep to raise cancellation error",
+    "Execute get_erc20_balance_behaviour function",
+    "Handle cancellation error during execution",
+    "Verify balanceOf function call with mocked address",
+    "Verify logger info call with token balance"
+  ]
+}

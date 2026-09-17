@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_Game_cy",
+  "source_file": "dataset/raw/cypress/Game.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T14:33:20.882678",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Game"
+  ],
+  "goals": [
+    "verify game solving functionality and win state display"
+  ],
+  "activities": [
+    "mount Game component with providers",
+    "check initial empty cell count",
+    "intercept times API request",
+    "click first empty cell",
+    "click number 1 button",
+    "click second empty cell",
+    "click number 4 button",
+    "click third empty cell",
+    "click number 5 button",
+    "verify win message is visible",
+    "wait for API request"
+  ]
+}

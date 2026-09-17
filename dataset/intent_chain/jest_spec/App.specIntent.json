@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_App_spec",
+  "source_file": "dataset/raw/jest_spec/App.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T17:34:35.037616",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "App"
+  ],
+  "goals": [
+    "Verify App component renders correctly with expected initial text",
+    "Verify counter increment functionality updates state correctly"
+  ],
+  "activities": [
+    "Render the App component and verify initial text",
+    "Render the App component and locate the count button",
+    "Verify initial count state is zero",
+    "Click the count button",
+    "Verify count state updates to one"
+  ]
+}

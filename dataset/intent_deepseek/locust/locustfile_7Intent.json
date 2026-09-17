@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_locustfile_7",
+  "source_file": "dataset/raw/locust/locustfile_7.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T07:59:55.382699",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "UserBehavior"
+  ],
+  "goals": [],
+  "activities": [
+    "on_start",
+    "index",
+    "addToCart",
+    "checkout"
+  ]
+}

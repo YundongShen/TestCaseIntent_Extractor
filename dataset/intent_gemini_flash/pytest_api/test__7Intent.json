@@ -1,0 +1,41 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_api/test__7.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:38:55.576280",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "LogisticRegression",
+    "score.score",
+    "flask_app"
+  ],
+  "goals": [
+    "Verify the `score.score` function correctly classifies text as spam/non-spam, ensuring correct output types, ranges, and threshold-based predictions.",
+    "Verify the Flask API's `/score` endpoint correctly processes text and returns accurate spam predictions and propensities."
+  ],
+  "activities": [
+    "Load the pre-trained Logistic Regression model.",
+    "Generate a random text string.",
+    "Generate a random classification threshold.",
+    "Score the random text using the loaded model and random threshold.",
+    "Assert the type of the prediction is boolean.",
+    "Assert the type of the propensity is a float.",
+    "Assert the prediction is either True or False.",
+    "Assert the propensity is between 0 and 1.",
+    "Score the random text with a threshold of 0 and assert it's classified as spam.",
+    "Score the random text with a threshold of 1 and assert it's classified as non-spam.",
+    "Define a known spam text.",
+    "Score the known spam text with a threshold of 0.5 and assert it's classified as spam.",
+    "Define a known non-spam text.",
+    "Score the known non-spam text with a threshold of 0.5 and assert it's classified as non-spam.",
+    "Start the Flask application as a subprocess.",
+    "Wait for the Flask application to initialize.",
+    "Define a known spam text.",
+    "Send a POST request to the Flask application's '/score' endpoint with the spam text.",
+    "Parse the JSON response from the Flask application.",
+    "Assert the prediction from the Flask application is True.",
+    "Assert the propensity from the Flask application is greater than 0.5.",
+    "Terminate the Flask application subprocess."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_opts_spec",
+  "source_file": "dataset/raw/jest_spec/opts.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:40.389757",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "themer-wallpaper-trianglifyoptions"
+  ],
+  "goals": [
+    "testthecorrectbehaviorofthegetSizesfunctionwhenverifyingthecorrectdefaultvaluesarereturnedforsnapshotandtestthecorrectbehaviorofthegetVariancesfunctionwhenverifyingthecorrectdefaultvaluesarereturnedforsnapshot"
+  ],
+  "activities": [
+    "getSizes",
+    "expect(getSizes()).toMatchSnapshot();",
+    "expect(getSizes('200x200')).toEqual([{h:200,w:200}]);",
+    "expect(getSizes(['100x200','300x400'])).toEqual([{w:100,h:200},{w:300,h:400}]);",
+    "expect(getSizes('100xFoo')).toThrow();",
+    "getVariances",
+    "expect(getVariances()).toEqual([{}]);",
+    "expect(getVariances('0.61')).toEqual([0.61]);",
+    "expect(getVariances(['0.333','0.1','1'])).toEqual([0.333,0.1,1]);",
+    "expect(getVariances('1.1')).toThrow();",
+    "expect(getVariances('-1')).toThrow();",
+    "expect(getVariances('foo')).toThrow();",
+    "it('shouldthrowwhenamalformedresolutionoptionisgiven',)",
+    "it('shouldthrowwhenaninvalidvarianceoptionisgiven',)"
+  ]
+}

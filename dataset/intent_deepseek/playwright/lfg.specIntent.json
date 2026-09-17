@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_lfg_spec",
+  "source_file": "dataset/raw/playwright/lfg.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T07:53:42.955574",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verifythattheadd-filter-buttonisshowedafteraddingalanguagetoafirstpost",
+    "verifythattheposttextandfiltertextcanbeseenaftereditingit",
+    "verifythatthecorrectfilterisshowedafterselectingit"
+  ],
+  "activities": [
+    "extract_and_simplify_test_code",
+    "execute_test_code_and_extract_actions",
+    "aggregate_adjacent_actions_if_necessary",
+    "test_add_san_lfg_post",
+    "test_creates_post_with_custom_languages",
+    "test_edit_post_languages",
+    "test_filter_posts_by_language"
+  ]
+}

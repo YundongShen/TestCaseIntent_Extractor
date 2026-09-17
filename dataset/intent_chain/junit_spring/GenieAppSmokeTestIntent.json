@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_GenieAppSmokeTest",
+  "source_file": "dataset/raw/junit_spring/GenieAppSmokeTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T18:31:10.484480",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "GenieApp"
+  ],
+  "goals": [
+    "Verify GenieApp application starts successfully",
+    "Verify GenieApp health endpoint returns OK status"
+  ],
+  "activities": [
+    "Start GenieApp application context",
+    "Send HTTP GET request to /admin/health endpoint",
+    "Verify response status code equals OK"
+  ]
+}

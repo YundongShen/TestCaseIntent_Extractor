@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_Login",
+  "source_file": "dataset/raw/cucumber/Login.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:08.546531",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "/login",
+    "Username",
+    "admin",
+    "Password",
+    "admin123",
+    "/profile",
+    "Welcome,admin",
+    "wrongpassword",
+    "/profile",
+    "Pleaselogintoaccessyourprofile"
+  ],
+  "goals": [
+    "verifythatIcanlogintothesystemwithcorrectcredentials",
+    "verifythatIcannotlogintothesystemwithincorrectcredentials",
+    "verifythatIamnotabletoaccesstheprofilepagewithoutbeingloggedin"
+  ],
+  "activities": [
+    "Given I am on /login",
+    "When I fill in \"Username\" with \"admin\"",
+    "When I fill in \"Password\" with \"admin123\"",
+    "And I press \"Login\"",
+    "Then I should be redirected to /profile",
+    "And I should see \"Welcome, admin\"",
+    "Given I am not logged in",
+    "When I am on /profile",
+    "Then I should see \"Pleaselogintoaccessyourprofile.\""
+  ]
+}

@@ -1,0 +1,48 @@
+**Test Object**
+Server's Content-Security-Policy response header
+
+**Test Goal**
+Verify that the CSP header returned by the homepage contains all necessary security directives.
+
+**Test Activities**
+1. Access the homepage `/` and retrieve the response object.
+2. Extract the value of `content-security-policy` from the response header.
+3. Assert that this header exists and contains, in order: `default-src 'none'`, `script-src 'self'`, `style-src 'self'`, `img-src 'self' data:`, `frame-src blob:`, `object-src blob:`, `form-action 'none'`.
+
+**Test Object**
+Other security response headers from the server
+
+**Test Goal**
+Confirm that the response contains the correct fields.
+
+**Test Activities**
+1. Access `/` and retrieve the response header.
+2. Assert `x-content-type-options` as `nosniff`.
+3. Assert `x-frame-options` as `DENY`.
+4. Assert `referrer-policy` as `strict-origin-when-cross-origin`.
+5. Assert `permissions-policy` as containing `camera=()`.
+
+**Test Object**
+Browser console and error events during page load.
+
+**Test Goal**
+Verify that no CSP violations or related errors occur after the page has fully loaded.
+
+**Test Activities**
+1. Listen for page console messages; if `Content-Security-Policy` or `CSP` is present, add it to the violations array.
+2. Listen for uncaught errors on the page and add them to the violations list.
+3. Access `/` and wait for the `[data-testid="items-container"]` element to appear. 
+4. Wait an additional 500ms to allow asynchronous violations a chance to trigger.
+5. Assert the length of violations to 0.
+
+**Test Object**
+The HTML page returned by the server
+
+- **Test Goal**
+Confirm that the `style=` inline style attribute does not exist in the HTML.
+
+- **Test Activities**
+1. Retrieve the homepage HTML text using an API request.
+2. Extract the content of the `<body>` section.
+3. Search for matches of `style="` in the body content.
+4. Assert the result as null (not found).

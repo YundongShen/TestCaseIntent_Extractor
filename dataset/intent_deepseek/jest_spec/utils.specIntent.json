@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_utils_spec",
+  "source_file": "dataset/raw/jest_spec/utils.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:59:22.438747",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "Test the 'levenstein' function by calculating the distance between two identical strings, two different strings, two similar strings, and two strings with combined words"
+  ],
+  "activities": [
+    "call_levenstein_with_identical_strings",
+    "call_levenstein_with_different_strings",
+    "call_levenstein_with_similar_strings",
+    "call_levenstein_with_similar_strings_with_concatenation",
+    "call_levenstein_with_similar_strings_with_concatenation_with_wrong_order"
+  ]
+}

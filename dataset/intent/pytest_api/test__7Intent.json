@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_test__7",
+  "source_file": "dataset/raw/pytest_api/test__7.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T02:08:44.902634",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the score.score function returns correct data types, valid probability ranges, and accurate spam classifications",
+    "Verify the Flask API endpoint correctly processes text requests and returns expected prediction responses"
+  ],
+  "activities": [
+    "Load LogisticRegression model from MLflow artifacts",
+    "Generate random input text string",
+    "Generate random threshold value",
+    "Execute score function with random inputs",
+    "Verify output types are boolean and float64",
+    "Verify output values are within expected ranges",
+    "Execute score function with threshold 0",
+    "Verify prediction result is True",
+    "Execute score function with threshold 1",
+    "Verify prediction result is False",
+    "Execute score function with predefined spam text",
+    "Verify prediction result is True",
+    "Execute score function with predefined non-spam text",
+    "Verify prediction result is False",
+    "Start Flask application subprocess",
+    "Wait for application startup",
+    "Send POST request to local API with spam text",
+    "Parse JSON response from API",
+    "Verify response prediction is True",
+    "Verify response propensity is greater than 0.5",
+    "Terminate Flask application subprocess"
+  ]
+}

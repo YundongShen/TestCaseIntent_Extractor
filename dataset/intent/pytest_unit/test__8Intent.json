@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_test__8",
+  "source_file": "dataset/raw/pytest_unit/test__8.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:25:31.477489",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "drawMake",
+    "validateCPFTest"
+  ],
+  "goals": [
+    "Verify the drawMake function correctly updates winner status in the database and returns the expected draw results",
+    "Verify the validateCPFTest function correctly validates CPF numbers based on length and check digit rules"
+  ],
+  "activities": [
+    "Initialize mock cursor and database objects for winner test",
+    "Configure mock fetchall return value with single user data",
+    "Initialize numsDraw list with 10 numbers",
+    "Invoke drawMake function with mocks and input list",
+    "Verify cursor execute called with winner update SQL",
+    "Verify database commit called once",
+    "Verify function result matches input numsDraw list",
+    "Initialize mock cursor and database objects for max draws test",
+    "Configure mock fetchall return value with multiple user data",
+    "Initialize numsDraw list with 30 numbers",
+    "Invoke drawMake function with mocks and input list",
+    "Verify result length equals 30",
+    "Validate CPF 12345678909 and assert result is True",
+    "Validate CPF 52998224725 and assert result is True",
+    "Validate CPF 123 and assert result is False",
+    "Validate CPF 52998224726 and assert result is False"
+  ]
+}

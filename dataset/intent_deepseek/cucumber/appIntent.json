@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_app",
+  "source_file": "dataset/raw/cucumber/app.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:03.738721",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "AlienBR",
+    "BRAlien"
+  ],
+  "goals": [
+    "test the submission of an image with invalid inputs",
+    "test the submission of an image using enter key",
+    "test submitting an image and updating the list",
+    "verify that the page is refreshed after submitting an image"
+  ],
+  "activities": [
+    "extractinvalidinputs_step1",
+    "extractinvalidinputs_step2",
+    "extractvalidinputsusingenterkey_step1",
+    "extractvalidinputsusingenterkey_step2",
+    "extractvalidinputsandupdate_step1",
+    "extractvalidinputsandupdate_step2"
+  ]
+}

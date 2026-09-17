@@ -1,0 +1,39 @@
+**Test Object**
+`treeviewString` function
+
+**Test Goal**
+Verify that this function can construct the correct tree path based on `owner` and `repo`.
+
+**Test Activities**
+1. Call `treeviewString({ owner: 'foo', repo: 'bar' })`.
+2. Assert that the return value is `'foo/bar/tree'`.
+
+**Test Object**
+`fileviewString` function
+
+**Test Goal**
+Verify that this function can construct the correct blob path based on `owner` and `repo`.
+
+**Test Activities**
+1. Call `fileviewString({ owner: 'foo', repo: 'bar' })`.
+2. Assert that the return value is `'foo/bar/blob'`.
+
+**Test Object**
+The `pullTreeviewString` function
+
+**Test Goal**
+Verify that this function can construct the correct pull tree path based on owner, repo, and pullId.
+
+**Test Activities**
+1. Call `pullTreeviewString({ owner: 'foo', repo: 'bar', pullId: '123' })`.
+2. Assert that the return value is `'foo/bar/pull/123/tree'`.
+
+**Test Object**
+The `pullFileviewString` function
+
+**Test Goal**
+Verify that this function can construct the correct pull blob path based on owner, repo, and pullId.
+
+**Test Activities**
+1. Call `pullFileviewString({ owner: 'foo', repo: 'bar', pullId: '123' })`.
+2. The assertion returns `'foo/bar/pull/123/blob'`.

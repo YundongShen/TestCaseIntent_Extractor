@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_App_test",
+  "source_file": "dataset/raw/supertest/App.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:44:49.355142",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "/send-message"
+  ],
+  "goals": [
+    "Verify the POST /send-message endpoint returns a 400 status for invalid or incomplete request bodies.",
+    "Verify the POST /send-message endpoint successfully processes valid message requests with a 200 status."
+  ],
+  "activities": [
+    "Initialize an HTTP request to the application.",
+    "Set the request method to POST and the path to '/send-message'.",
+    "Send a JSON payload `{\"name\": \"john\"}` in the request body.",
+    "Set the 'Accept' header to 'application/json'.",
+    "Expect the response 'Content-Type' header to be JSON.",
+    "Expect the HTTP status code to be 400.",
+    "Initialize an HTTP request to the application.",
+    "Set the request method to POST and the path to '/send-message'.",
+    "Send a complex JSON payload including 'sender', 'registrationIds', and 'data' in the request body.",
+    "Set the 'Accept' header to 'application/json'.",
+    "Expect the response 'Content-Type' header to be JSON.",
+    "Expect the HTTP status code to be 200."
+  ]
+}

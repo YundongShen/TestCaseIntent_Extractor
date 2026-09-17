@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_test__4",
+  "source_file": "dataset/raw/pytest_unit/test__4.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:24:01.818048",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "model.base64_decode_image",
+    "model.base64_decode",
+    "model.ModelService"
+  ],
+  "goals": [
+    "Verify that base64 encoded image and text data are correctly decoded",
+    "Verify that the Lambda handler processes events and returns expected prediction structures"
+  ],
+  "activities": [
+    "Read base64 encoded image data from file",
+    "Decode base64 image using model function",
+    "Load expected image from file",
+    "Assert actual result equals expected image",
+    "Read base64 encoded result data from file",
+    "Decode base64 string using model function",
+    "Define expected result dictionary",
+    "Assert actual result equals expected result",
+    "Initialize mock model object",
+    "Define model version string",
+    "Initialize model service instance",
+    "Read base64 encoded request data from file",
+    "Construct event dictionary with Kinesis data",
+    "Invoke lambda handler with event",
+    "Define expected predictions dictionary",
+    "Assert actual predictions equal expected predictions"
+  ]
+}

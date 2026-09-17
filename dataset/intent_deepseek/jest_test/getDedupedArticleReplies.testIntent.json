@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_getDedupedArticleReplies_test",
+  "source_file": "dataset/raw/jest_test/getDedupedArticleReplies.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:31.400922",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "getDedupedArticleReplies"
+  ],
+  "goals": [],
+  "activities": [
+    "getDedupedArticleReplies",
+    "handleswhensearchResultsarenotloadedyet",
+    "correctlyformatsarticleRepliesandremovesexistingreplyid"
+  ]
+}

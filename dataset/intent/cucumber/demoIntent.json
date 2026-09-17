@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_demo",
+  "source_file": "dataset/raw/cucumber/demo.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:17:41.637307",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Calculator"
+  ],
+  "goals": [
+    "Verify that the calculator correctly performs addition (2+3=5) and subtraction (10-4=6, 9-1=8)"
+  ],
+  "activities": [
+    "Set calculator to calc mode; verify service is healthy",
+    "Enter numbers 2 and 3; add them; verify result is 5",
+    "Enter numbers 10 and 4; subtract; verify result is 6",
+    "Enter numbers 9 and 1; subtract; verify result is 8"
+  ]
+}

@@ -1,0 +1,13 @@
+**Test Object**
+Virtual Machine Startup Process (Bootloader, Kernel, systemd, Login Prompt)
+
+**Test Goal**
+Confirm that the Fedora virtual machine starts normally from the specified image, each startup stage completes within the expected time limit, and finally a login prompt appears.
+
+**Test Activities**
+1. Download the Fedora virtual machine image from the URL given in the example.
+2. Start the virtual machine.
+3. Detect the bootloader prompt within 30 seconds.
+4. Confirm kernel loading complete within 60 seconds.
+5. Confirm systemd is running.
+6. Detect a login prompt within 480 seconds.

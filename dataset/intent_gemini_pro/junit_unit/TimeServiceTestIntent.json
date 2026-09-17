@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_TimeServiceTest",
+  "source_file": "dataset/raw/junit_unit/TimeServiceTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-11T07:51:27.061166",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "timeService"
+  ],
+  "goals": [
+    "Verify the execution order of getTime, getDate, and getDateTime method calls on the TimeService"
+  ],
+  "activities": [
+    "Initialize local time, date, and date-time values",
+    "Stub getTime to return the initialized time value",
+    "Stub getDate to return the initialized date value",
+    "Stub getDateTime to return the initialized date-time value",
+    "Assert that getTime returns the expected time value",
+    "Assert that getDate returns the expected date value",
+    "Assert that getDateTime returns the expected date-time value",
+    "Create an InOrder verifier for the time service",
+    "Verify in order that getTime was called",
+    "Verify in order that getDate was called",
+    "Verify in order that getDateTime was called"
+  ]
+}

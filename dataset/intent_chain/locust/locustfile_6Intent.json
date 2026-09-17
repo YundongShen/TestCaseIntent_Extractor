@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_locustfile_6",
+  "source_file": "dataset/raw/locust/locustfile_6.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T19:28:26.627909",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the homepage and wallet dashboard endpoints return HTTP 200 status codes",
+    "Validate system stability under simulated concurrent user load"
+  ],
+  "activities": [
+    "Initialize wallet reader and load miner addresses",
+    "Simulate wait time between tasks",
+    "Request homepage endpoint",
+    "Request specific wallet dashboard endpoint",
+    "Retrieve wallet data metrics",
+    "Verify response status code is 200"
+  ]
+}

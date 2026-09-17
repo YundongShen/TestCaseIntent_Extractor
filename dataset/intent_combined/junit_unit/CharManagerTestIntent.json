@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_CharManagerTest",
+  "source_file": "dataset/raw/junit_unit/CharManagerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:08:58.523836",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "CharManager"
+  ],
+  "goals": [
+    "verify char manager count unique chars method caching and calculation logic"
+  ],
+  "activities": [
+    "initialize char manager with mocked dependencies",
+    "define test input string and expected output",
+    "stub cache mock get method",
+    "stub calculator mock count unique chars method",
+    "execute char manager count unique chars method",
+    "verify mock method calls",
+    "assert actual result equals expected result"
+  ]
+}

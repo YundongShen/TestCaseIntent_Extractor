@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_unit_test_",
+  "source_file": "dataset/raw/pytest_api/unit_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:59:23.410793",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the obtainUserNameEmail endpoint returns HTTP 200 status upon successful authentication",
+    "Verify the obtainUserNameEmail endpoint returns the correct user details in the response body"
+  ],
+  "activities": [
+    "Initialize test credentials and expected output data",
+    "Authenticate user and prepare authorization headers",
+    "Send POST request to obtainUserNameEmail endpoint",
+    "Verify response status code is 200",
+    "Verify response body matches expected user details"
+  ]
+}

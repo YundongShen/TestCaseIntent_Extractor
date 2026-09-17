@@ -1,0 +1,11 @@
+**Test Object**
+The `player.bet_request` function
+
+**Test Goal**
+Verify that the player returns the correct response when choosing not to bet.
+
+**Test Activities**
+1. Prepare a game state dataset `state`.
+2. Construct a mock response object `responseMock` whose `send` method captures the returned message.
+3. Call `player.bet_request(state, responseMock)`.
+4. Assert that the captured message is "0".

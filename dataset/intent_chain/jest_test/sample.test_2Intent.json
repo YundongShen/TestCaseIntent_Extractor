@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_sample_test_2",
+  "source_file": "dataset/raw/jest_test/sample.test_2.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:25:46.926339",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app",
+    "document",
+    "msalConfig"
+  ],
+  "goals": [
+    "Verify MSAL configuration security and validity",
+    "Verify server serves index page correctly"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

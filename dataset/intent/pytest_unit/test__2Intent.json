@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_test__2",
+  "source_file": "dataset/raw/pytest_unit/test__2.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:33:37.203691",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "...",
+    "..."
+  ],
+  "goals": [
+    "Verify the correctness of wikitext parsing helper functions, specifically prefix matching and section level filtering",
+    "Verify the consistency of the query fetching and caching mechanism against direct API query results"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

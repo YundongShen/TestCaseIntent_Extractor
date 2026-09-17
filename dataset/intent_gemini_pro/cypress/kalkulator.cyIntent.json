@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_kalkulator_cy",
+  "source_file": "dataset/raw/cypress/kalkulator.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:36:45.878305",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "[data-key=\"2\"]",
+    "[data-key=\"+\"]",
+    "[data-key=\"3\"]",
+    "[data-key=\"=\"]",
+    ".display .output",
+    "[data-key=\"6\"]",
+    "[data-key=\"*\"]",
+    "[data-key=\"7\"]",
+    "[data-key=\"9\"]",
+    "[data-key=\"clear\"]",
+    ".display .input"
+  ],
+  "goals": [
+    "Verify that the calculator correctly performs basic arithmetic operations such as addition and multiplication",
+    "Verify that the clear button successfully clears the calculator's input and output display"
+  ],
+  "activities": [
+    "Visit the application URL at http://127.0.0.1:8080",
+    "Click the '2' button",
+    "Click the '+' button",
+    "Click the '3' button",
+    "Click the '=' button",
+    "Verify that the output display shows '5'",
+    "Visit the application URL at http://127.0.0.1:8080",
+    "Click the '6' button",
+    "Click the '*' button",
+    "Click the '7' button",
+    "Click the '=' button",
+    "Verify that the output display shows '42'",
+    "Visit the application URL at http://127.0.0.1:8080",
+    "Click the '9' button",
+    "Click the 'clear' button",
+    "Verify that the input display is empty",
+    "Verify that the output display is empty"
+  ]
+}

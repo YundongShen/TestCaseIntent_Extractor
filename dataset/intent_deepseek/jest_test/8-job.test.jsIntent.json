@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_8_job_test_js",
+  "source_file": "dataset/raw/jest_test/8-job.test.js.1",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:49:59.655895",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "createPushNotificationsJobs"
+  ],
+  "goals": [],
+  "activities": [
+    "extract_and_simplify_implementation_statements",
+    "extract_test_actions_from_code",
+    "aggregate_adjacent_actions_of_same_type",
+    "describe_test_activities"
+  ]
+}

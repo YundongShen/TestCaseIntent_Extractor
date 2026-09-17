@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_alertas_cy",
+  "source_file": "dataset/raw/cypress/alertas.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:50:11.771135",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "Alerts Page",
+    "JavaScript Prompt Dialog",
+    "Prompt Trigger Button",
+    "Prompt Result Display",
+    "Window Page",
+    "New Window Button",
+    "New Window Page",
+    "Browser Back Navigation"
+  ],
+  "goals": [
+    "Verify that user input into a JavaScript prompt is correctly processed and displayed.",
+    "Verify the ability to open a new browser window/tab and display its content."
+  ],
+  "activities": [
+    "Visit the alert page",
+    "Access the browser window object",
+    "Stub the JavaScript prompt to return 'teste-prompt-digitado'",
+    "Click the prompt button",
+    "Verify the result displays 'teste-prompt-digitado'",
+    "Visit the new window page",
+    "Remove the 'target' attribute from the button and click it",
+    "Verify the URL includes 'newwindow'",
+    "Verify the page displays 'Você Abriu uma nova janela!!'",
+    "Navigate back to the previous page"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_misc_spec",
+  "source_file": "dataset/raw/jest_spec/misc.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:26:54.130782",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "panic",
+    "generatePropsFromAttributes",
+    "memoize"
+  ],
+  "goals": [
+    "Verify generatePropsFromAttributes correctly converts attribute definitions to props objects including REF types",
+    "Verify memoize function correctly caches function execution results to prevent redundant calls"
+  ],
+  "activities": [
+    "Call panic function with 'err'",
+    "Assert panic function throws an error",
+    "Call generatePropsFromAttributes with class attribute and text scope",
+    "Assert generatePropsFromAttributes result is deep equal to { class: 'hello' }",
+    "Call generatePropsFromAttributes with REF attribute and ref scope",
+    "Assert generatePropsFromAttributes result is deep equal to { ref: 'ref' }",
+    "Initialize count variable to 0",
+    "Define memoized increment function",
+    "Call increment function with argument 1",
+    "Call increment function with argument 1 again",
+    "Assert count variable equals 1"
+  ]
+}

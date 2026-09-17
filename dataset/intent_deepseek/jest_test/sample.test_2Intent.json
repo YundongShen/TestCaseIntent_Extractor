@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_sample_test_2",
+  "source_file": "dataset/raw/jest_test/sample.test_2.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:30.498008",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "TestObjects",
+    "html",
+    "msalConfig"
+  ],
+  "goals": [
+    "testSanitizeindexpage",
+    "testSanitizeconfigurationobject",
+    "testEnsurepagesserved"
+  ],
+  "activities": [
+    "beforeAll",
+    "beforeEach",
+    "it",
+    "afterEach",
+    "afterAll"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_vgSpecEditor_test",
+  "source_file": "dataset/raw/jest_test/vgSpecEditor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T18:31:57.102425",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify that the vgSpecEditor directive correctly displays the specification source code in the editor input field"
+  ],
+  "activities": [
+    "Load module 'polestar'",
+    "Provide constant 'vl' in 'polestar' module",
+    "Mock factory 'uiZeroclipDirective' in 'polestar' module",
+    "Provide value 'Spec' in 'polestar' module",
+    "Inject '$rootScope' service",
+    "Create new scope instance",
+    "Inject '$compile' service",
+    "Create angular element from '<vg-spec-editor>' HTML string",
+    "Compile element with scope",
+    "Trigger digest cycle on scope",
+    "Find element with class 'vgspec'",
+    "Get value of found element",
+    "Assert value equals '{}'"
+  ]
+}

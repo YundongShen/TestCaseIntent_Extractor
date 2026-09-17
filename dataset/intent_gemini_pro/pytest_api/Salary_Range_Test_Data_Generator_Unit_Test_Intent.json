@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_Salary_Range_Test_Data_Generator_Unit_Test_",
+  "source_file": "dataset/raw/pytest_api/Salary_Range_Test_Data_Generator_Unit_Test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T07:58:14.050790",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "requests.get",
+    "BeautifulSoup"
+  ],
+  "goals": [
+    "Verify that the hourly rate job search page contains exactly 11 minimum and 11 maximum salary filter options.",
+    "Verify that the annual salary job search page contains exactly 11 minimum and 11 maximum salary filter options."
+  ],
+  "activities": [
+    "Send a GET request to the Gumtree hourly rate jobs page",
+    "Verify the hourly rate page response is valid",
+    "Parse the HTML response to extract all non-empty minimum hourly rate options",
+    "Verify that exactly 11 minimum hourly rate options are extracted",
+    "Parse the HTML response to extract all non-empty maximum hourly rate options",
+    "Verify that exactly 11 maximum hourly rate options are extracted",
+    "Send a GET request to the Gumtree annual salary jobs page",
+    "Parse the HTML response to extract all non-empty minimum annual salary options",
+    "Verify that exactly 11 minimum annual salary options are extracted",
+    "Parse the HTML response to extract all non-empty maximum annual salary options",
+    "Verify that exactly 11 maximum annual salary options are extracted"
+  ]
+}

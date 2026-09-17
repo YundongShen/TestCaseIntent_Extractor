@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_AbstractIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/AbstractIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:51:24.204215",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Player",
+    "Tutorial",
+    "Avatar",
+    "AvatarAssignment",
+    "ModerationReport",
+    "DomainBlacklist",
+    "AbstractEntity"
+  ],
+  "goals": [
+    "verifythatthemoderatorcanbanavatarsassignmentwiththecorrectscope"
+  ],
+  "activities": [
+    "extractBanInfoFromDatabase",
+    "extractModerationReportFromDatabase",
+    "extractPlayerFromDatabase",
+    "extractTutorialFromDatabase",
+    "createModerationReport",
+    "createPlayer",
+    "createTutorial",
+    "executeModerationAction",
+    "executePlayerAction",
+    "executeTutorialAction",
+    "sendBanInfoToRabbitMQ",
+    "sendModerationReportToRabbitMQ",
+    "sendPlayerToRabbitMQ",
+    "sendTutorialToRabbitMQ"
+  ]
+}

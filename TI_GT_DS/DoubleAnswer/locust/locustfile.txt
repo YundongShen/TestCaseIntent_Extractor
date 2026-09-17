@@ -1,0 +1,10 @@
+**Test Object** 
+Backend APIs related to users, groups, and revenue sharing.
+
+**Test Goal** 
+Verify that these APIs can stably handle registration, login, information viewing, group operations, and revenue sharing requests under concurrent scenarios.
+
+**Test Activities** 
+1. Simulate a batch of users. Each user registers three accounts, and the token and ID of the last registered account are used for subsequent operations.
+2. Create a group using the obtained token, add the three newly registered users to the group, and record the group ID.
+3. During continuous execution, randomly perform the following actions: view profile, view group list, view specific group details, and initiate a revenue sharing request.

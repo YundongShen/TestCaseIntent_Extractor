@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_nextload",
+  "source_file": "dataset/raw/k6/nextload.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T07:53:01.767137",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "test the performance of k6 by simulating 10 users accessing the website and its API within a duration of 1 minute"
+  ],
+  "activities": [
+    "import",
+    "export",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "import",
+    "export",
+    "sleep",
+    "check",
+    "http.get",
+    "check",
+    "sleep",
+    "textSummary",
+    "htmlReport",
+    "handleSummary"
+  ]
+}

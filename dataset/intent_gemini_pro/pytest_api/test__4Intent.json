@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_test__4",
+  "source_file": "dataset/raw/pytest_api/test__4.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T07:59:38.527255",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "ApiRequest",
+    "Api"
+  ],
+  "goals": [
+    "Verify the URL parsing, parameter handling, and HTTP request execution capabilities of ApiRequest.",
+    "Verify that the Api class correctly processes GET requests, maps URL arguments, and deserializes the response into the specified object schema."
+  ],
+  "activities": [
+    "Create an ApiRequest object with a GET method, a URL containing query parameters, and an additional params dictionary",
+    "Verify that the parsed URL parameters dictionary matches the expected combined parameters",
+    "Define a target URL for the Facebook Graph API",
+    "Create an ApiRequest object with a GET method and the target URL",
+    "Execute the API request to retrieve the response",
+    "Verify that the response is an instance of requests.Response",
+    "Verify that the response status code is 200",
+    "Define a parameterized target URL for the Facebook Graph API",
+    "Create an Api object with a GET method, the parameterized URL, a schema class, and an object class",
+    "Verify that the API arguments list correctly identifies the URL parameter",
+    "Call the API object with a specific parameter value to retrieve the data object",
+    "Verify that the returned object is an instance of the target object class",
+    "Verify that the ID of the returned object matches the expected integer value"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_api_test_1",
+  "source_file": "dataset/raw/supertest/api.test_1.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:44:25.885166",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the CRUD (Create, Read, Update, Delete) functionalities of the Books API.",
+    "Ensure the Books API correctly handles requests for existing and non-existing book resources."
+  ],
+  "activities": [
+    "Send a GET request to the /api/books endpoint.",
+    "Assert the response status code is 200.",
+    "Assert the response body is an array.",
+    "Send a GET request to the /api/books/1 endpoint.",
+    "Assert the response status code is 200.",
+    "Assert the response body's ID is 1.",
+    "Send a GET request to the /api/books/999 endpoint.",
+    "Assert the response status code is 404.",
+    "Define a new book object with title, author, genre, and copies available.",
+    "Send a POST request to the /api/books endpoint with the new book data.",
+    "Assert the response status code is 201.",
+    "Assert the response body's title is 'Dune'.",
+    "Send a PUT request to the /api/books/1 endpoint with updated title data.",
+    "Assert the response status code is 200.",
+    "Assert the response body's title is 'Updated Title'.",
+    "Send a PUT request to the /api/books/999 endpoint with update data.",
+    "Assert the response status code is 404.",
+    "Send a DELETE request to the /api/books/1 endpoint.",
+    "Assert the response status code is 200.",
+    "Send a DELETE request to the /api/books/999 endpoint.",
+    "Assert the response status code is 404."
+  ]
+}

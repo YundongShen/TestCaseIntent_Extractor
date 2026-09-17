@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_TestMapperTest",
+  "source_file": "dataset/raw/junit_spring/TestMapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:51:57.131201",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "TestMapper",
+    "Test"
+  ],
+  "goals": [
+    "test whether the version method in the TestMapper class returns the correct version string '5.7.21'"
+  ],
+  "activities": []
+}

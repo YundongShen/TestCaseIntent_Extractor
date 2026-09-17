@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_index_test",
+  "source_file": "dataset/raw/supertest/index.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-13T03:56:55.468209",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "index route"
+  ],
+  "goals": [
+    "verify HTTP response status, content type, and body data for routes"
+  ],
+  "activities": [
+    "send GET request to root path",
+    "verify content type is json",
+    "verify response body name is frodo",
+    "verify status code is 200",
+    "send POST request to test path with form data",
+    "send GET request to test path",
+    "verify response body array contains hey"
+  ]
+}

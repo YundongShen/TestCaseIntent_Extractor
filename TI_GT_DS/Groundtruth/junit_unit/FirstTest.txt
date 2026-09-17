@@ -1,0 +1,19 @@
+**Test Object**
+`TaskDaoImpl.create` Method
+
+**Test Goal**
+Verify that the mock's `create` method returns the preset value for any argument.
+
+**Test Activities**
+1. Call `mockDao.create("hi", 12)`.
+2. Assert that the returned key is equal to `"a_key"`.
+
+**Test Object**
+`TaskDaoImpl.get` Method
+
+**Test Goal**
+Verify that the mock's `get` method returns the preset task object for the given key.
+
+**Test Activities**
+1. Call `mockDao.get("a_key")`.
+2. Assert that the returned Task object is the same as the preset `task`.

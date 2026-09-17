@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_EIGH_test_",
+  "source_file": "dataset/raw/pytest_unit/EIGH_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:40:38.234320",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "EIGH",
+    "element_a",
+    "res"
+  ],
+  "goals": [
+    "Verify that the EIGH function returns an output of type Scalar, OrderedPair, or Matrix."
+  ],
+  "activities": [
+    "Import the EIGH module.",
+    "Initialize a 5x5 identity NumPy array.",
+    "Initialize a 9x9 identity NumPy array.",
+    "Reshape the second NumPy array to (3,3,3,3).",
+    "Attempt to create a Flojoy Matrix from the 5x5 identity array and execute the EIGH function.",
+    "If a linear algebra error occurs during the attempt, create a Flojoy Matrix from the reshaped 9x9 identity array and execute the EIGH function.",
+    "Verify that the final result is an instance of Scalar, OrderedPair, or Matrix."
+  ]
+}

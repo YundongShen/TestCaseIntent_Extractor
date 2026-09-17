@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_ABS_test_",
+  "source_file": "dataset/raw/pytest_unit/ABS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:13.397837",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "mock_flojoy",
+    "Scalar",
+    "Vector",
+    "OrderedPair"
+  ],
+  "goals": [
+    "verify the correctness of the ABS function for scalar inputs",
+    "verify the correctness of the ABS function for vector inputs",
+    "verify the correctness of the ABS function for ordered pairs inputs"
+  ],
+  "activities": [
+    "import_ABS_from_ABS",
+    "import_ABS_from_ABS",
+    "import_ABS_Scalar",
+    "import_ABS_vector",
+    "import_ABS_OrderedPair",
+    "assert_ABS_Scalar",
+    "assert_ABS_vector",
+    "assert_ABS_OrderedPair"
+  ]
+}

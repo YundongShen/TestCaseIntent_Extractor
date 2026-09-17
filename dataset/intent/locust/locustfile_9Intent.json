@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_locustfile_9",
+  "source_file": "dataset/raw/locust/locustfile_9.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:28:14.480789",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the /simple endpoint returns the expected HTTP 200 response and body under simulated user load"
+  ],
+  "activities": [
+    "Send PUT request to /mockserver/expectation to configure mock response",
+    "Send GET request to /simple endpoint"
+  ]
+}

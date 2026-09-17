@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_opts_spec",
+  "source_file": "dataset/raw/jest_spec/opts.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:39:59.477246",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "getSizes",
+    "getVariances"
+  ],
+  "goals": [
+    "Verify that getSizes correctly parses single and multiple resolution options, handles defaults, and throws errors for malformed inputs.",
+    "Verify that getVariances correctly parses single and multiple variance options, handles defaults, and throws errors for invalid inputs."
+  ],
+  "activities": [
+    "Call getSizes with no arguments and verify the result matches the snapshot",
+    "Call getVariances with no arguments and verify the result matches the snapshot",
+    "Call getSizes with a single resolution string and verify it returns the correct dimension object",
+    "Call getSizes with multiple resolution strings and verify it returns the correct array of dimension objects",
+    "Call getSizes with a malformed resolution string and verify it throws an error",
+    "Call getVariances with a single variance string and verify it returns the correct numeric array",
+    "Call getVariances with multiple variance strings and verify it returns the correct array of numbers",
+    "Call getVariances with a variance string greater than 1 and verify it throws an error",
+    "Call getVariances with a negative variance string and verify it throws an error",
+    "Call getVariances with a non-numeric variance string and verify it throws an error"
+  ]
+}

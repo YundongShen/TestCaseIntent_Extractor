@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_POPULATE_test_",
+  "source_file": "dataset/raw/pytest_unit/POPULATE_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:21:49.867240",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "POPULATE.POPULATE"
+  ],
+  "goals": [
+    "Verify the POPULATE function generates output values adhering to specified statistical distributions (uniform, normal, poisson)",
+    "Verify the output x-vector matches the input default vector"
+  ],
+  "activities": [
+    "Import POPULATE module",
+    "Initialize input vector x with range 0 to 99 step 2",
+    "Execute POPULATE function with uniform distribution",
+    "Verify result x matches input vector values",
+    "Verify result y values are less than 1",
+    "Verify result y values are greater than 0",
+    "Import POPULATE module",
+    "Initialize input vector x with range 0 to 100000 step 1",
+    "Execute POPULATE function with normal distribution",
+    "Verify result x matches input vector values",
+    "Verify result y shape matches input vector shape",
+    "Verify mean of result y is approximately 0",
+    "Verify standard deviation of result y is approximately 1",
+    "Import POPULATE module",
+    "Initialize input vector x with range 0 to 100000 step 1",
+    "Execute POPULATE function with poisson distribution",
+    "Verify result x matches input vector values",
+    "Verify result y shape matches input vector shape",
+    "Verify mean of result y is approximately 1"
+  ]
+}

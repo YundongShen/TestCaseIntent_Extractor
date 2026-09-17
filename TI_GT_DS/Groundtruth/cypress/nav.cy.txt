@@ -1,0 +1,11 @@
+**Test Object**
+Nav Navigation Component
+
+**Test Goal**
+Confirm that clicking the three links in the navigation bar should navigate to the corresponding page routes.
+
+**Test Activities**
+1. Render the Nav component in the route.
+2. Click "Reading List" and check if the URL contains `/list`.
+3. Click "Finished Books" and check if the URL contains `/finished`.
+4. Click "Discover" and check if the URL contains `/discover`.

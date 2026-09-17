@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_CartServiceTest",
+  "source_file": "dataset/raw/junit_spring/CartServiceTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T14:54:14.755079",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_test__10",
+  "source_file": "dataset/raw/pytest_api/test__10.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:22.079731",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "WorkshopTest",
+    "File"
+  ],
+  "goals": [
+    "delete two files"
+  ],
+  "activities": []
+}

@@ -1,0 +1,11 @@
+**Test Object**
+`SimpleMdeReact` component
+
+**Test Goal**
+Verify that the editor renders correctly and that user-entered text is immediately displayed in the content area.
+
+**Test Activities**
+1. Simulate `Document.createRange` to allow the editor to initialize correctly.
+2. Wrap the `SimpleMdeReact` component with `useState` and render it.
+3. Enter "hello" in the text box.
+4. Confirm that the text "hello" appears on the page.

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_index_test",
+  "source_file": "dataset/raw/supertest/index.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-02T02:44:14.889273",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "index"
+  ],
+  "goals": [
+    "Verify the root route returns expected JSON response and status 200",
+    "Verify the test route processes POST data submission and retrieves it via GET"
+  ],
+  "activities": [
+    "Send GET request to root path",
+    "Verify Content-Type is JSON",
+    "Verify response body matches { name: \"frodo\" }",
+    "Verify HTTP status code is 200",
+    "Send POST request to /test with form data",
+    "Send GET request to /test",
+    "Verify response body matches { array: [\"hey\"] }"
+  ]
+}

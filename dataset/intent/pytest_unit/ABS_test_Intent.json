@@ -1,0 +1,34 @@
+{
+  "test_case_id": "tc_ABS_test_",
+  "source_file": "dataset/raw/pytest_unit/ABS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:12:38.961337",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "ABS.ABS"
+  ],
+  "goals": [
+    "Verify the ABS function correctly computes absolute values for Scalar, Vector, and OrderedPair inputs",
+    "Verify the ABS function output structure preserves original input in x and absolute value in y"
+  ],
+  "activities": [
+    "Import ABS module",
+    "Instantiate Scalar object with value -1.0",
+    "Invoke ABS function with Scalar default parameter",
+    "Verify result x attribute equals -1.0",
+    "Verify result y attribute equals 1.0",
+    "Import ABS module",
+    "Instantiate Vector object with range -10 to 10",
+    "Invoke ABS function with Vector default parameter",
+    "Verify result x attribute matches input vector values",
+    "Verify result y attribute matches absolute values of input vector",
+    "Import ABS module",
+    "Create numpy array x with range -10 to 10",
+    "Create numpy array y with range -20 to 20",
+    "Instantiate OrderedPair object with x and y arrays",
+    "Invoke ABS function with OrderedPair default parameter",
+    "Verify result x attribute matches input x array",
+    "Verify result y attribute matches absolute values of input y array"
+  ]
+}

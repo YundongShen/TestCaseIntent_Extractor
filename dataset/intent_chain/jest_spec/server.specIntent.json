@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_server_spec",
+  "source_file": "dataset/raw/jest_spec/server.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T18:01:32.918509",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "Verify the server handles valid user and medical professional registration and login requests correctly",
+    "Verify the server returns appropriate error status codes for incomplete or invalid authentication requests"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

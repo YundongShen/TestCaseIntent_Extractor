@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_App_spec",
+  "source_file": "dataset/raw/jest_spec/App.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:52:53.586708",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "App",
+    "initialCountButton"
+  ],
+  "goals": [
+    "Verify the App component renders its initial UI elements and static content.",
+    "Verify the App component's counter functionality increments correctly upon user interaction."
+  ],
+  "activities": [
+    "Render the App component.",
+    "Find the text 'Click on the Vite and Vue logos to learn more'.",
+    "Assert that the text is present.",
+    "Render the App component.",
+    "Find the first button element.",
+    "Assert that the button is present.",
+    "Assert that the button's text is 'count is 0'.",
+    "Click the button.",
+    "Assert that the button's text is 'count is 1'."
+  ]
+}

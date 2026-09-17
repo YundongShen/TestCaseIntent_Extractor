@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_point_spec",
+  "source_file": "dataset/raw/jest_spec/point.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:35:29.216483",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Point"
+  ],
+  "goals": [
+    "Verify the correctness of arithmetic operations (addition, multiplication, subtraction, division) on Point objects"
+  ],
+  "activities": [
+    "Create new Point instance p",
+    "Perform addition on Point(1, 2), Point(3, 4), and Point(5, 6)",
+    "Verify result equals Point(9, 12)",
+    "Perform addition on Point(\"a\", \"b\"), Point(\"c\", \"d\"), and Point(\"e\", \"f\")",
+    "Verify result equals Point(\"ace\", \"bdf\")",
+    "Create new Point instance p",
+    "Perform multiplication on Point(1, 2), Point(3, 4), and Point(5, 6)",
+    "Verify result equals Point(15, 48)",
+    "Create new Point instance p",
+    "Perform subtraction on Point(9, 8) and Point(3, 4)",
+    "Verify result equals Point(6, 4)",
+    "Create new Point instance p",
+    "Perform division on Point(9, 8) and Point(3, 4)",
+    "Verify result equals Point(3, 2)"
+  ]
+}

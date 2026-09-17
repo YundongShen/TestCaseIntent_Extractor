@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_INV_test_",
+  "source_file": "dataset/raw/pytest_unit/INV_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T19:59:32.289193",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "INV.INV"
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "Prepare test input matrices by creating identity arrays and reshaping one to 4D",
+    "Wrap the first identity array into a Matrix object",
+    "Execute INV.INV function with the first Matrix object",
+    "Handle LinAlgError by wrapping the reshaped array into a Matrix and executing INV.INV again",
+    "Verify the return value type is Scalar, OrderedPair, or Matrix"
+  ]
+}

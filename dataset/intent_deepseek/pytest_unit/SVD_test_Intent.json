@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_SVD_test_",
+  "source_file": "dataset/raw/pytest_unit/SVD_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:55.000653",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "mock_flojoy_decorator",
+    "SVD"
+  ],
+  "goals": [
+    "test the SVD decomposition of a 5x5 matrix",
+    "verify the correct number of singular values and singular vectors are returned"
+  ],
+  "activities": [
+    "importnumpyasnpfromflojoy",
+    "importOrderedPair,Matrix,Scalardeftest_SVD",
+    "try",
+    "element_a=Matrix(m=array1)",
+    "res=SVD.SVD(default=element_a)",
+    "exceptnp.linalg.LinAlgError:",
+    "element_a=Matrix(m=array2)",
+    "res=SVD.SVD(default=element_a)",
+    "assert",
+    "instance",
+    "isinstance",
+    "res,Scalar,OrderedPair,Matrix"
+  ]
+}

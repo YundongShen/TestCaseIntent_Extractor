@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_try_run_test",
+  "source_file": "dataset/raw/jest_test/try_run.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:45:42.736423",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "tryRun"
+  ],
+  "goals": [
+    "Verify that tryRun executes the provided function once when no retries are configured or when execution succeeds",
+    "Verify that tryRun retries execution up to the configured limit and respects the timeout delay when the function returns an error"
+  ],
+  "activities": [
+    "Define a mock inner error",
+    "Initialize an inner call counter to 0",
+    "Execute tryRun without retry configuration, providing an inner function that increments the counter and returns the mock error",
+    "Verify that the inner call counter equals 1",
+    "Verify that the returned error matches the mock inner error",
+    "Define retry options with a specific number of retries and timeout",
+    "Initialize an inner call counter to 0",
+    "Execute tryRun with retry options, providing an inner function that increments the counter and returns no error",
+    "Verify that the returned error is falsy",
+    "Verify that the inner call counter equals 1",
+    "Initialize an inner call counter to 0",
+    "Execute tryRun with retry options, providing an inner function that increments the counter and returns the mock error",
+    "Verify that the returned error matches the mock inner error",
+    "Verify that the inner call counter equals 3",
+    "Record the start time",
+    "Execute tryRun with retry options, providing an inner function that returns the mock error",
+    "Record the end time upon completion",
+    "Verify that the elapsed time is greater than 19 milliseconds"
+  ]
+}

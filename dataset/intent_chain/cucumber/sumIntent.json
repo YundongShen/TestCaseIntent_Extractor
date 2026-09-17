@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_sum",
+  "source_file": "dataset/raw/cucumber/sum.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T16:53:35.301673",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "calculator"
+  ],
+  "goals": [
+    "goal1",
+    "goal2"
+  ],
+  "activities": [
+    "Initialize calculator",
+    "Enter first number into calculator",
+    "Enter second number into calculator",
+    "Press add button",
+    "Verify result on screen"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_locustfile_1",
+  "source_file": "dataset/raw/locust/locustfile_1.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T19:25:41.546750",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "string1",
+    "string2"
+  ],
+  "activities": [
+    "Retrieve content from the website homepage",
+    "Post translation request with randomized target language"
+  ]
+}

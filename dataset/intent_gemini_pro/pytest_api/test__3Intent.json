@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_test__3",
+  "source_file": "dataset/raw/pytest_api/test__3.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-11T07:59:07.745227",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "requests.get",
+    "response",
+    "response_body"
+  ],
+  "goals": [
+    "Verify the successful retrieval of a workshop's details by its ID via the Get Workshop API."
+  ],
+  "activities": [
+    "Clean up existing workshop data",
+    "Insert a test workshop named 'qaRHR_name1' and retrieve its ID",
+    "Insert a second test workshop named 'qaRHR_name2'",
+    "Send a GET request to the workshop API endpoint using the retrieved ID",
+    "Parse the JSON response into a response body object",
+    "Verify the HTTP status code is 200",
+    "Verify the Content-Type header is 'application/json'",
+    "Verify the response body status is 200",
+    "Verify the response body message is the expected success message",
+    "Verify the response body data matches the expected data for the first workshop",
+    "Verify 'detail' is not present in the response body",
+    "Clean up workshop data in teardown"
+  ]
+}

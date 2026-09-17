@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_test__9",
+  "source_file": "dataset/raw/pytest_api/test__9.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:55:31.193460",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "WorkshopTest",
+    "File"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Clean workshop environment",
+    "Create workshop instance",
+    "Prepare file objects for upload",
+    "Execute API call to upload files",
+    "Verify API response status and content",
+    "Verify workshop data and file storage consistency",
+    "Clean up test resources"
+  ]
+}

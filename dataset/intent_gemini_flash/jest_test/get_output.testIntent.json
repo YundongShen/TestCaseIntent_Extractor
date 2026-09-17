@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_get_output_test",
+  "source_file": "dataset/raw/jest_test/get_output.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:57:41.976680",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "getOutput",
+    "this.task",
+    "{}",
+    "groups",
+    "{ name : 'jshint' }"
+  ],
+  "goals": [
+    "Verify getOutput correctly adds a task to the output array with its name when no groups are present.",
+    "Verify getOutput correctly assigns a task to its designated group when groups are provided."
+  ],
+  "activities": [
+    "Initialize the 'output' array for the first test case.",
+    "Initialize the 'task' object with name 'mocha' for the first test case.",
+    "Call the 'getOutput' function with the 'output' array, an empty groups object, and the 'task' object.",
+    "Assert that the 'output' array contains one item.",
+    "Assert that the name of the first item in the 'output' array is 'mocha'.",
+    "Initialize the 'output' array for the second test case.",
+    "Initialize the 'task' object with name 'mocha' for the second test case.",
+    "Define a 'groups' object mapping 'Lint tools' to ['jshint', 'mocha'].",
+    "Call the 'getOutput' function with the 'output' array, the 'groups' object, and the 'task' object (name 'mocha').",
+    "Call the 'getOutput' function with the 'output' array, the 'groups' object, and a task object with name 'jshint'.",
+    "Assert that the 'output' array contains two items.",
+    "Assert that the group of the second item in the 'output' array is 'Lint tools'."
+  ]
+}

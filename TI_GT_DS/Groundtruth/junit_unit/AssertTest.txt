@@ -1,0 +1,11 @@
+**Test Object**
+`mockList`
+
+**Test Goal**
+Verify that mockito can correctly simulate an object method returning a specified value.
+
+**Test Activities**
+1. Import framwork and objects. Set the mock behavior using `when(mockList.size()).thenReturn(999)`.
+2. Call `mockList.size()`, and use Hamcrest's `assertThat` assertion to determine the result as 999.
+3. Call it again, and use AssertJ's `assertThat` assertion to determine the result as 999.
+4. Call it again, and use JUnit5's `assertEquals` assertion to determine the result as 999.

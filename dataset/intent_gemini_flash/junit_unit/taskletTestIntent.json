@@ -1,0 +1,43 @@
+{
+  "test_case_id": "tc_taskletTest",
+  "source_file": "dataset/raw/junit_unit/taskletTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:29:32.013887",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "LoadDataTasklet",
+    "BatchConfig",
+    "Job",
+    "Step",
+    "JobExecution",
+    "JobRunner"
+  ],
+  "goals": [
+    "To verify the correct functionality and behavior of the LoadDataTasklet's data loading logic.",
+    "To ensure the Spring Batch job, including its configuration and end-to-end execution, is correctly set up and completes successfully."
+  ],
+  "activities": [
+    "Initialize mock objects for LoadDataTaskletTest.",
+    "Define a SQL query string.",
+    "Create mock data representing database query results.",
+    "Configure the mock JdbcTemplate to return specific mock data when a specific SQL query is executed.",
+    "Execute the LoadDataTasklet.",
+    "Assert that the LoadDataTasklet execution status is FINISHED.",
+    "Verify that JdbcTemplate.queryForList was called exactly once with the specified SQL query.",
+    "Configure the mock JdbcTemplate to return an empty list for any SQL query.",
+    "Execute the LoadDataTasklet.",
+    "Assert that the LoadDataTasklet execution status is FINISHED.",
+    "Assert that the 'loadDataJob' object is not null.",
+    "Assert that the 'loadDataStep' object is not null.",
+    "Assert that the name of 'loadDataJob' is 'loadDataJob'.",
+    "Assert that the name of 'loadDataStep' is 'loadDataStep'.",
+    "Launch the 'loadDataJob' with empty job parameters.",
+    "Assert that the job execution status is not unsuccessful.",
+    "Assert that the job exit code is 'COMPLETED'.",
+    "Initialize mock objects for JobRunnerTest.",
+    "Configure the mock JobLauncher to return null when any job is launched with any parameters.",
+    "Execute the JobRunner.",
+    "Verify that JobLauncher.run was called exactly once with 'loadDataJob' and any job parameters."
+  ]
+}

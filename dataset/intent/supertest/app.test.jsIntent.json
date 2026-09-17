@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_app_test_js",
+  "source_file": "dataset/raw/supertest/app.test.js.old",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-02T02:43:17.048653",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the people service API GET endpoints return valid JSON responses with correct person details",
+    "Verify the people service API POST endpoint enforces authentication and prevents duplicate user creation"
+  ],
+  "activities": [
+    "Send GET request to /people endpoint",
+    "Verify response status code is 200",
+    "Send GET request to /people endpoint",
+    "Verify response Content-Type header is JSON",
+    "Send GET request to /people endpoint",
+    "Verify response body contains 'doctorwhocomposer'",
+    "Send GET request to /people/doctorwhocomposer endpoint",
+    "Verify response status code is 200",
+    "Send GET request to /people/doctorwhocomposer endpoint",
+    "Verify response Content-Type header is JSON",
+    "Send GET request to /people/doctorwhocomposer endpoint",
+    "Verify response body structure and name details for Delia Derbyshire",
+    "Send POST request to /people with user details",
+    "Verify response status code is 403",
+    "Send POST request to /people with access token and user details",
+    "Verify response status code is 400"
+  ]
+}

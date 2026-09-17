@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:17:33.657119",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "HomeController"
+  ],
+  "goals": [
+    "verify skill voting endpoint functionality and rating update"
+  ],
+  "activities": [
+    "initialize test mocks and object mapper",
+    "configure repository mock behavior for skill operations",
+    "create form data with vote and skill uuid",
+    "send post request to skill vote endpoint",
+    "verify http response status is ok",
+    "verify repository find method was called",
+    "verify repository save method was called",
+    "retrieve updated skill from repository",
+    "assert skill rating is incremented to four",
+    "cleanup repository data"
+  ]
+}

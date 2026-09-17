@@ -1,0 +1,11 @@
+**Test Object**
+The API `http://localhost:5249/urls/test`
+
+**Test Goal**
+Verify that this address can still return stable results under high concurrency.
+
+**Test Activities**
+1. Increase the number of concurrent users to 5000 within 5 seconds, maintain this number for 1 minute, and then have all users exit within the last 5 seconds.
+2. Each virtual user immediately sends a GET request to this URL.
+3. Ensure the returned HTTP status code is 301.
+4. Pause for 1 second after each request before continuing.

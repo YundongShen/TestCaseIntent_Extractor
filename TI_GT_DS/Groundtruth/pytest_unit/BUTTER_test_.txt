@@ -1,0 +1,10 @@
+**Test Object**
+`BUTTER.BUTTER` Function
+
+**Test Goal**
+Verify that the high-pass filter can correctly process a sinusoidal signal with a DC offset, and that the signal mean returns to near zero after filtering out low-frequency components.
+
+**Test Activities**
+1. Generate a sinusoidal signal with a +1 DC offset (1000 sampling points), and confirm that the signal mean before filtering is around 1.
+2. Encapsulate the signal into an `OrderedPair`, pass it to `BUTTER.BUTTER`, set it to a 1st-order high-pass filter, a critical frequency of 12, and a sampling rate of 25.
+3. Check that the mean of the output signal after filtering is close to 0 (tolerance 0.01).

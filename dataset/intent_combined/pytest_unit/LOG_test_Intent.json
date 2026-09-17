@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_LOG_test_",
+  "source_file": "dataset/raw/pytest_unit/LOG_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:29:12.172750",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "..."
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "...",
+    "...",
+    "...",
+    "..."
+  ]
+}

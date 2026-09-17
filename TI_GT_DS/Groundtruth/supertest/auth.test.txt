@@ -1,0 +1,11 @@
+**Test Object**
+Registration API: `POST /api/auth/register`
+
+**Test Goal**
+Verify that registering a new user returns a success response with a token.
+
+**Test Activities**
+1. Connect to the MongoDB test database.
+2. Send a POST request to `/api/auth/register`, including the username, email address, and password.
+3. Verify that the status code is 201 and the response body contains a `token` field.
+4. Close the database connection after the test.

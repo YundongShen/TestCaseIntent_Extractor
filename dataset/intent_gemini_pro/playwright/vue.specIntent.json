@@ -1,0 +1,41 @@
+{
+  "test_case_id": "tc_vue_spec",
+  "source_file": "dataset/raw/playwright/vue.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:57:58.725067",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "canvas",
+    "areas",
+    "addButton",
+    "editForm",
+    "textarea",
+    "okButton",
+    "editableArea",
+    "deleteButton"
+  ],
+  "goals": [
+    "Verify the image annotation component renders correctly with its initial annotations and controls",
+    "Verify users can successfully add, save, and delete annotations within the component"
+  ],
+  "activities": [
+    "Navigate to the Vue demo page",
+    "Wait for the annotation canvas to attach",
+    "Verify the annotation canvas is visible",
+    "Verify the count of annotation areas is 4",
+    "Verify the Add Note button is visible",
+    "Verify the count of annotation areas is 4",
+    "Click the Add Note button",
+    "Verify the edit form is visible",
+    "Input 'E2E test annotation' into the textarea",
+    "Click the OK button",
+    "Verify the count of annotation areas is 5",
+    "Verify the count of annotation areas is 4",
+    "Hover over the annotation canvas",
+    "Click the first editable annotation area",
+    "Verify the delete button is visible",
+    "Click the delete button",
+    "Verify the count of annotation areas is 3"
+  ]
+}

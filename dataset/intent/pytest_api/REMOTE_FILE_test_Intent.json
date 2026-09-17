@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_REMOTE_FILE_test_",
+  "source_file": "dataset/raw/pytest_api/REMOTE_FILE_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T01:45:08.225194",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "REMOTE_FILE.REMOTE_FILE"
+  ],
+  "goals": [
+    "Verify that REMOTE_FILE correctly loads supported file types from valid remote URLs and returns expected output types",
+    "Verify that REMOTE_FILE raises appropriate exceptions for invalid URLs and unsupported protocols"
+  ],
+  "activities": [
+    "Import REMOTE_FILE module",
+    "Execute REMOTE_FILE function with valid file URL and type",
+    "Verify output is instance of expected type",
+    "Import REMOTE_FILE module",
+    "Execute REMOTE_FILE function with invalid file URL",
+    "Verify ValueError exception is raised",
+    "Import REMOTE_FILE module",
+    "Set expected error message for unsupported schema",
+    "Execute REMOTE_FILE function with unsupported schema URL",
+    "Verify InvalidSchema exception is raised with expected message"
+  ]
+}

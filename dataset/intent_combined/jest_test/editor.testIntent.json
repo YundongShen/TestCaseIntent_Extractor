@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_editor_test",
+  "source_file": "dataset/raw/jest_test/editor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:49:56.883414",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "addListStyle"
+  ],
+  "goals": [
+    "verify addListStyle correctly applies list styles and updates cursor positions"
+  ],
+  "activities": [
+    "create element object with value and selection indices",
+    "call addListStyle with null style argument",
+    "verify element value and selection remain unchanged",
+    "call addListStyle with bulleted style argument",
+    "verify result value matches expected string",
+    "verify result selection start matches expected position",
+    "call addListStyle with numbered style argument",
+    "verify result value matches expected string",
+    "verify result selection start matches expected position",
+    "verify numbered list increments previous line number"
+  ]
+}

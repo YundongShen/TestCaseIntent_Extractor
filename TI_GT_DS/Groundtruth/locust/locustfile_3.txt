@@ -1,0 +1,10 @@
+**Test Object**
+The homepage `/` and the prediction API `/predict` of the web service.
+
+**Test Goal**
+Verify that both APIs can handle requests correctly under concurrent access, the homepage can return a page, and the prediction API can accept form data and provide a response.
+
+**Test Activities**
+1. Each user visits the homepage and the prediction API alternately at random intervals of 1 to 5 seconds.
+2. When visiting the homepage, use a direct GET request to `/`.
+3. When visiting the prediction API, POST data to `/predict`, including booking characteristics such as hotel type, market segment, deposit type, advance booking days, waiting days, and historical cancellation count.

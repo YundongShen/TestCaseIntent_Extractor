@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_locustfile_1",
+  "source_file": "dataset/raw/locust/locustfile_1.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-11T07:53:40.233791",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "self.client"
+  ],
+  "goals": [
+    "Simulate user load to evaluate the performance of the index page and the translation API endpoint"
+  ],
+  "activities": [
+    "Send a GET request to the root endpoint ('/')",
+    "Define a text string for translation and set the source language to 'en'",
+    "Select a random target language from a predefined list",
+    "Create a JSON payload containing the text format, content, source language, and target language",
+    "Send a POST request to the '/api/translate' endpoint with the JSON payload"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_ESClientTest",
+  "source_file": "dataset/raw/junit_spring/ESClientTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T19:00:03.648443",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "dao"
+  ],
+  "goals": [
+    "Verify the Elasticsearch QueryDAO indexing and search functionality",
+    "Verify the Elasticsearch QueryDAO deletion and refresh functionality"
+  ],
+  "activities": [
+    "Index the test document using QueryDAO",
+    "Verify the index request result is not null",
+    "Execute a match all query",
+    "Verify the query result is not empty",
+    "Execute a wildcard query with pattern \"akd\"",
+    "Verify the wildcard query result is not empty",
+    "Retrieve all documents via match all query",
+    "Delete all retrieved documents by their IDs",
+    "Refresh the index",
+    "Execute a match all query",
+    "Verify the query result is empty"
+  ]
+}

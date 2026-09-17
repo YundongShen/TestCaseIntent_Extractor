@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_bench_spec",
+  "source_file": "dataset/raw/playwright/bench.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T15:15:45.007855",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

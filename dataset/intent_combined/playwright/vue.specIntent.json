@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_vue_spec",
+  "source_file": "dataset/raw/playwright/vue.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T15:25:32.382940",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "image annotation canvas"
+  ],
+  "goals": [
+    "verify rendering and annotation management functionality"
+  ],
+  "activities": [
+    "navigate to vue demo page",
+    "wait for annotation canvas element",
+    "verify annotation canvas visibility",
+    "verify initial annotation areas count",
+    "verify add note button visibility",
+    "click add note button",
+    "verify edit form visibility",
+    "fill annotation text input",
+    "click confirm button",
+    "verify annotation count increases",
+    "hover annotation canvas",
+    "click editable annotation area",
+    "verify delete button visibility",
+    "click delete button",
+    "verify annotation count decreases"
+  ]
+}

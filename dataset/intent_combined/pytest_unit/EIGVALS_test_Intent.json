@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_EIGVALS_test_",
+  "source_file": "dataset/raw/pytest_unit/EIGVALS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:28:24.125526",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "EIGVALS.EIGVALS"
+  ],
+  "goals": [
+    "verify return type is Scalar OrderedPair or Matrix"
+  ],
+  "activities": [
+    "create 5x5 identity matrix array1",
+    "create and reshape 9-element identity matrix array2",
+    "initialize Matrix object with array1",
+    "call EIGVALS function with array1",
+    "catch LinAlgError exception",
+    "initialize Matrix object with array2 if exception occurs",
+    "call EIGVALS function with array2 if exception occurs",
+    "assert result is instance of Scalar OrderedPair or Matrix"
+  ]
+}

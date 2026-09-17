@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_cli_spec",
+  "source_file": "dataset/raw/jest_spec/cli.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:40:46.018621",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "cli.parseCozyURL"
+  ],
+  "goals": [
+    "verify correct parsing and validation of Cozy URLs"
+  ],
+  "activities": [
+    "define input URL without trailing slash",
+    "invoke parseCozyURL with input URL",
+    "verify output matches input URL",
+    "define input URL with trailing slash",
+    "invoke parseCozyURL with input URL",
+    "verify output removes trailing slash",
+    "define input URL with app suffix",
+    "invoke parseCozyURL with input URL",
+    "verify output removes app suffix",
+    "define input URL without http protocol",
+    "invoke parseCozyURL with input URL",
+    "catch thrown error",
+    "verify error message content"
+  ]
+}

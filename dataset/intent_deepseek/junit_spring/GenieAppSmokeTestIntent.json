@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_GenieAppSmokeTest",
+  "source_file": "dataset/raw/junit_spring/GenieAppSmokeTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:59:22.885475",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "TestRestTemplate",
+    "GenieApp",
+    "org.springframework.boot.test.web.client.TestRestTemplate",
+    "org.assertj.core.api.Assertions",
+    "org.junit.jupiter.api.Test",
+    "org.springframework.beans.factory.annotation.Autowired",
+    "org.springframework.boot.autoconfigure.EnableAutoConfiguration",
+    "org.springframework.boot.test.context.SpringBootTest",
+    "org.springframework.boot.test.web.server.LocalServerPort",
+    "org.springframework.http.HttpStatus",
+    "HttpStatus",
+    "RecursiveComparison",
+    "Equals",
+    "Port"
+  ],
+  "goals": [
+    "testtheapplicationstartsupsuccessfullywithalldefaults"
+  ],
+  "activities": [
+    "extract_test_code",
+    "simplify_implementation_statements",
+    "extract_actions",
+    "aggregate_adjacent_actions"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_A_test",
+  "source_file": "dataset/raw/rtl/A.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T07:56:27.289554",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "A",
+    "A",
+    "click",
+    "link"
+  ],
+  "goals": [
+    "testobjectshouldrenderalinkwithcorrecthtmlcontent",
+    "testobjectshouldtriggerclickwithcorrectbehavior"
+  ],
+  "activities": []
+}

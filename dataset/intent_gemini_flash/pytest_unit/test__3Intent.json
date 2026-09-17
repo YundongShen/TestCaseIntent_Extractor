@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_test__3",
+  "source_file": "dataset/raw/pytest_unit/test__3.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:41:56.294507",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "find_data"
+  ],
+  "goals": [
+    "Verify that the 'find_data' function correctly retrieves data when a matching record exists.",
+    "Verify that the 'find_data' function returns None when no matching record is found."
+  ],
+  "activities": [
+    "Create a mock Google Sheets client.",
+    "Configure the mock client to return a mock sheet object.",
+    "Configure the mock sheet to return predefined data records when queried.",
+    "Define a search value corresponding to an existing record.",
+    "Invoke the 'find_data' function with the mock sheet and the existing search value.",
+    "Assert that the 'find_data' function returned a non-null result.",
+    "Assert that the 'name' field of the returned result matches the existing search value.",
+    "Create a mock Google Sheets client.",
+    "Configure the mock client to return a mock sheet object.",
+    "Configure the mock sheet to return predefined data records when queried.",
+    "Define a search value corresponding to a non-existent record.",
+    "Invoke the 'find_data' function with the mock sheet and the non-existent search value.",
+    "Assert that the 'find_data' function returned a null result."
+  ]
+}

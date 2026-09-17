@@ -1,0 +1,48 @@
+{
+  "test_case_id": "tc_200_spec",
+  "source_file": "dataset/raw/playwright/200.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:35:00.069998",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "nav a elements",
+    "footer a elements",
+    "/sitemap.xml resource",
+    "/articles.rss resource",
+    "Web resources linked from nav a elements",
+    "Web resources linked from footer a elements",
+    "Web resources listed in /sitemap.xml"
+  ],
+  "goals": [
+    "Verify that all navigation links on the page are accessible.",
+    "Verify that all footer links on the page are accessible.",
+    "Verify that the /sitemap.xml endpoint is accessible.",
+    "Verify that the /articles.rss endpoint is accessible.",
+    "Verify that all URLs listed in the sitemap XML file are accessible."
+  ],
+  "activities": [
+    "Navigate to the base URL.",
+    "Find all navigation links.",
+    "Extract the 'href' attribute from each navigation link.",
+    "For each extracted navigation link URL, navigate to it.",
+    "Assert that the response status code for each navigation link URL is 200 or 304.",
+    "Navigate to the base URL.",
+    "Find all footer links.",
+    "Extract the 'href' attribute from each footer link, filtering out invalid URLs.",
+    "For each extracted valid footer link URL, navigate to it.",
+    "Assert that the response status code for each footer link URL is 200 or 304.",
+    "Navigate to the '/sitemap.xml' URL.",
+    "Assert that the response status code is 200.",
+    "Navigate to the '/articles.rss' URL.",
+    "Assert that the response status code is 200.",
+    "Send a GET request to '/sitemap.xml'.",
+    "Assert that the response status code is 200.",
+    "Extract all URLs from the sitemap XML content.",
+    "For each extracted sitemap URL, send a GET request.",
+    "Record the response status code for each sitemap URL.",
+    "If a sitemap URL returns a 404 status, mark it as flaky.",
+    "Attach a JSON file containing all sitemap link statuses to the test report.",
+    "Assert that all sitemap links returned a 200 or 304 status code."
+  ]
+}

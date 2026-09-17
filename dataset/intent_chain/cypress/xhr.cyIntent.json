@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_xhr_cy",
+  "source_file": "dataset/raw/cypress/xhr.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T17:35:11.574553",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_api_test",
+  "source_file": "dataset/raw/supertest/api.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:44:42.540655",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "User",
+    "Player",
+    "Base",
+    "Mission",
+    "Battle",
+    "Territory",
+    "Investment",
+    "Market",
+    "Inventory",
+    "Event",
+    "Leaderboard"
+  ],
+  "goals": [
+    "Verify the comprehensive functionality of the superhero game API, including user authentication, character progression, in-game actions, and interactions between hero and villain roles."
+  ],
+  "activities": [
+    "Sign up a new hero user with credentials.",
+    "Sign up a new villain user with credentials.",
+    "Log in the hero user.",
+    "Log in the villain user.",
+    "Get the hero's base information.",
+    "Upgrade the hero's base security defenses.",
+    "Start a mission for the hero, 'Stop Bank Robbery'.",
+    "Hero initiates a battle against a villain.",
+    "Get a list of nearby players for the hero.",
+    "Hero recruits a sidekick.",
+    "Villain recruits a minion.",
+    "Get the game map, including players and events, as the hero.",
+    "Hero attacks a territory.",
+    "Get the hero's influence score.",
+    "Hero invests money.",
+    "Get a list of available items from the market for the hero.",
+    "Get market items, then buy the first available item as the hero.",
+    "Villain creates a 'Cyber Attack' event in Downtown.",
+    "Hero defends against the created event.",
+    "Get the global leaderboard as the hero."
+  ]
+}

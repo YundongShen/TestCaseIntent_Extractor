@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_GraphTest",
+  "source_file": "dataset/raw/junit_unit/GraphTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:06:23.680422",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "NumberOfIslands"
+  ],
+  "goals": [
+    "verify the numIslands method correctly counts islands in a grid"
+  ],
+  "activities": [
+    "initialize test grid data",
+    "define expected island count",
+    "instantiate NumberOfIslands object",
+    "call numIslands method with grid",
+    "assert result equals expected count"
+  ]
+}

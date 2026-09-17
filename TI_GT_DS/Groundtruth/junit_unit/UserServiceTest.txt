@@ -1,0 +1,19 @@
+**Test Object**
+`UserService.validateAge` method
+
+**Test Goal**
+Verify that the validation method returns true for a valid age.
+
+**Test Activities**
+1. Call `userService.validateAge(18)`.
+2. Assert that the return value is true.
+
+**Test Object**
+`UserService.createUser` method
+
+- **Test Goal**
+Validate that calling `createUser` triggers `request.execute` and correctly passes in the user object and the service itself.
+
+- **Test Activities**
+1. Call `userService.createUser(user)`.
+2. Use Mockito.verify to check if `request.execute(user, userService)` was called.

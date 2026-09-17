@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_AccountTest",
+  "source_file": "dataset/raw/junit_unit/AccountTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:08:12.173346",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Account"
+  ],
+  "goals": [
+    "Verify account friend management and data consistency"
+  ],
+  "activities": [
+    "Initialize mock objects and data structures",
+    "Stub account containsFriend method",
+    "Invoke account containsFriend method",
+    "Assert account containsFriend result",
+    "Invoke database addFriendShip method",
+    "Retrieve friend list from map",
+    "Check friend existence in list",
+    "Add friend to list",
+    "Assert friend list contains friend",
+    "Update map with friend list",
+    "Assert map consistency",
+    "Invoke database addFriendShip method",
+    "Add friend to list",
+    "Update map with friend list",
+    "Assert map consistency"
+  ]
+}

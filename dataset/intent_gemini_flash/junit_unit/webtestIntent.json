@@ -1,0 +1,42 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:30:23.360547",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "HomeRepository",
+    "HomeService",
+    "HomeController",
+    "Skill"
+  ],
+  "goals": [
+    "Verify that the POST /skill-vote endpoint successfully processes a skill vote and increments the skill's rating."
+  ],
+  "activities": [
+    "Initialize Mockito mocks for the test class.",
+    "Initialize an ObjectMapper instance.",
+    "Create a Skill object with name 'Spring boot', UUID 'spboot-3.3', and rating 3.",
+    "Configure the mock service to return a mock HomeRepository.",
+    "Stub the mock repository's findFirstBySkilluuid method to return the created skill for 'spboot-3.3'.",
+    "Stub the mock repository's save method to increment the skill's rating by 1 when called.",
+    "Stub the mock repository's deleteAll method to return an empty completion signal.",
+    "Define a variable 'skillUuid' with value 'spboot-3.3'.",
+    "Create form data for a POST request.",
+    "Add 'vote' with value 'like' to the form data.",
+    "Add 'skilluuid' with value 'spboot-3.3' to the form data.",
+    "Send a POST request to '/skill-vote' with the form data.",
+    "Assert that the HTTP response status is OK (200).",
+    "Verify that findFirstBySkilluuid was called exactly once on the mock repository with 'spboot-3.3'.",
+    "Verify that save was called exactly once on the mock repository with any Skill object.",
+    "Retrieve the skill by UUID from the mock repository.",
+    "Assert that the retrieved skill object is not null.",
+    "Assert that the retrieved skill's rating is 4.",
+    "Call deleteAll on the mock repository to clean up.",
+    "Initialize Mockito mocks for the test class.",
+    "Print a message indicating the start of the testing phase.",
+    "Call deleteAll on the mock repository.",
+    "Assert that the boolean value 'true' is true."
+  ]
+}

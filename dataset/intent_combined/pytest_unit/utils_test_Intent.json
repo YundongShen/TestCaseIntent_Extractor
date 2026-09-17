@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_utils_test_",
+  "source_file": "dataset/raw/pytest_unit/utils_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:46:02.040743",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "temp_cache_dir"
+  ],
+  "goals": [
+    "verify temporary cache directory lifecycle management"
+  ],
+  "activities": [
+    "define recursive file search function",
+    "construct temporary directory path",
+    "remove existing directory",
+    "create new directory",
+    "yield directory path",
+    "cleanup directory after test"
+  ]
+}

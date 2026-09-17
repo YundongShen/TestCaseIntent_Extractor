@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_server_spec_1",
+  "source_file": "dataset/raw/jest_spec/server.spec_1.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:54:37.168675",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "Verify the server's root endpoint (`/`) returns a 200 status code and the expected 'Hello City' content in text/html format."
+  ],
+  "activities": [
+    "Send a GET request to the server's root path.",
+    "Verify the response status code is 200.",
+    "Send a GET request to the server's root path.",
+    "Verify the response content type is 'text/html'.",
+    "Define the expected response content as 'Hello City'.",
+    "Send a GET request to the server's root path.",
+    "Verify the response body text matches 'Hello City'."
+  ]
+}

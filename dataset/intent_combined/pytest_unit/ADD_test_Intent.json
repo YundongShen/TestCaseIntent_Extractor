@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_ADD_test_",
+  "source_file": "dataset/raw/pytest_unit/ADD_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-13T04:21:40.001415",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "ADD.ADD function"
+  ],
+  "goals": [
+    "Verify correct arithmetic addition behavior for Vector, Scalar, and OrderedPair inputs"
+  ],
+  "activities": [
+    "import ADD module",
+    "create Vector objects with numpy range data",
+    "execute ADD.ADD function with Vector inputs",
+    "assert output matches vector sum",
+    "create Vector and Scalar objects",
+    "execute ADD.ADD function with Vector and Scalar inputs",
+    "assert output matches vector and scalar sum",
+    "create numpy arrays and OrderedPair object",
+    "execute ADD.ADD function with OrderedPair and Vector inputs",
+    "assert output coordinates match expected sums"
+  ]
+}

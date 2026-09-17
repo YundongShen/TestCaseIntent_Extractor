@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_TimeServiceTest",
+  "source_file": "dataset/raw/junit_unit/TimeServiceTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T13:29:22.479206",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "timeService"
+  ],
+  "goals": [
+    "Verify the order of method calls on the TimeService mock object."
+  ],
+  "activities": [
+    "Initialize `timeVal` with the current local time.",
+    "Initialize `dateVal` with the current local date.",
+    "Initialize `dateTimeVal` with the current local date and time.",
+    "Configure `timeService.getTime()` to return the predefined time value.",
+    "Configure `timeService.getDate()` to return the predefined date value.",
+    "Configure `timeService.getDateTime()` to return the predefined date-time value.",
+    "Call `timeService.getTime()` and assert it returns the expected time value.",
+    "Call `timeService.getDate()` and assert it returns the expected date value.",
+    "Call `timeService.getDateTime()` and assert it returns the expected date-time value.",
+    "Create an `InOrder` verifier for the `timeService` mock.",
+    "Verify that `timeService.getTime()` was called in the correct order.",
+    "Verify that `timeService.getDate()` was called in the correct order.",
+    "Verify that `timeService.getDateTime()` was called in the correct order."
+  ]
+}

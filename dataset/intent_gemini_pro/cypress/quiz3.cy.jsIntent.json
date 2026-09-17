@@ -1,0 +1,41 @@
+{
+  "test_case_id": "tc_quiz3_cy_js",
+  "source_file": "dataset/raw/cypress/quiz3.cy.js.txt",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:37:22.783222",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "img[alt=\"company-branding\"]",
+    ".orangehrm-login-title",
+    "input[name=\"username\"]",
+    "input[name=\"password\"]",
+    "button[type=\"submit\"]",
+    "url",
+    "Invalid credentials",
+    ".orangehrm-login-forgot-header",
+    ".orangehrm-demo-credentials"
+  ],
+  "goals": [
+    "Verify the UI elements and layout of the OrangeHRM login page",
+    "Verify the authentication functionality, including valid login, invalid login, and forgot password redirection"
+  ],
+  "activities": [
+    "Visit the OrangeHRM login page",
+    "Verify the company branding logo is visible",
+    "Verify the login title is visible and contains 'Login'",
+    "Verify the username field is visible",
+    "Verify the password field is visible",
+    "Type 'Admin' into the username field",
+    "Type 'admin123' into the password field",
+    "Click the submit button",
+    "Verify the URL includes '/dashboard'",
+    "Type 'wrongUser' into the username field",
+    "Type 'wrongPass' into the password field",
+    "Click the submit button",
+    "Verify the 'Invalid credentials' message is visible",
+    "Verify the forgot password link is visible and click it",
+    "Verify the URL includes 'requestPasswordResetCode'",
+    "Verify the demo credentials section is visible and contains 'Admin'"
+  ]
+}

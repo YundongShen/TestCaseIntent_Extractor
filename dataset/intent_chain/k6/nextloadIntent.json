@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_nextload",
+  "source_file": "dataset/raw/k6/nextload.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T19:10:30.159738",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "res1",
+    "res2"
+  ],
+  "goals": [
+    "Verify HTTP response status is 200 for endpoints",
+    "Verify HTTP response time is less than 500ms for endpoints"
+  ],
+  "activities": [
+    "Send HTTP GET request to https://lol.com/ and verify response status is 200 and time is less than 500ms",
+    "Send HTTP GET request to https://lol.com/api/hello and verify response status is 200 and time is less than 500ms"
+  ]
+}

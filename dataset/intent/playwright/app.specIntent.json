@@ -1,0 +1,40 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/playwright/app.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-01T21:31:30.394646",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify synchronization of scrolling between editor and preview areas",
+    "Verify markdown content renders correctly without leaking syntax markers"
+  ],
+  "activities": [
+    "Set viewport size to 390x844",
+    "Navigate to application root URL",
+    "Click preview tab button",
+    "Assert copy button is visible",
+    "Retrieve copy button bounding box",
+    "Validate copy button bounding box dimensions and position",
+    "Navigate to application root URL",
+    "Fill editor input with markdown text containing bold punctuation",
+    "Assert preview renders bold text correctly without markdown markers",
+    "Set viewport size to 1440x900",
+    "Navigate to application root URL",
+    "Fill editor input with generated long markdown content",
+    "Click mobile device view selector",
+    "Wait for editor input area to be scrollable",
+    "Wait for preview scroll area to be scrollable",
+    "Scroll editor to 72% ratio and verify preview sync",
+    "Scroll preview to 28% ratio and verify editor sync",
+    "Set viewport size to 1440x900",
+    "Navigate to application root URL",
+    "Fill editor input with generated long markdown content",
+    "Click tablet device view selector",
+    "Wait for editor input area to be scrollable",
+    "Wait for preview scroll area to be scrollable",
+    "Scroll editor to 72% ratio and verify preview sync",
+    "Scroll preview to 28% ratio and verify editor sync"
+  ]
+}

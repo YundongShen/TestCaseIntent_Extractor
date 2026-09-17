@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_dog_test",
+  "source_file": "dataset/raw/supertest/dog.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-11T08:07:28.789520",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the user login functionality of the POST /users/connection endpoint, ensuring successful authentication with valid credentials and proper error handling for missing or incorrect credentials."
+  ],
+  "activities": [
+    "Initialize and connect to an in-memory MongoDB server",
+    "Create a test user with a hashed password in the database",
+    "Send a POST request to '/users/connection' with valid email and password",
+    "Verify the response indicates success and returns the correct user token and username",
+    "Send a POST request to '/users/connection' with a missing email field",
+    "Verify the response indicates failure with a 'Missing or empty fields' error",
+    "Send a POST request to '/users/connection' with an incorrect password",
+    "Verify the response indicates failure with a 'User not found or wrong password' error",
+    "Send a POST request to '/users/connection' with a nonexistent email address",
+    "Verify the response indicates failure with a 'User not found or wrong password' error",
+    "Close the database connection and stop the in-memory server"
+  ]
+}

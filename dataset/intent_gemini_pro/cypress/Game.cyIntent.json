@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_Game_cy",
+  "source_file": "dataset/raw/cypress/Game.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:36:25.250545",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "Game",
+    "SudokuProvider",
+    "WinProvider"
+  ],
+  "goals": [
+    "Verify that the user can successfully complete the Sudoku game by filling in the remaining empty cells and that the win message is displayed upon completion."
+  ],
+  "activities": [
+    "Mount the Game component with context providers and initial arrays",
+    "Verify that there are exactly 3 unfilled game cells",
+    "Intercept the GET request to '/times/*' with a fixture and alias it as 'load'",
+    "Click the first game cell",
+    "Click the status number '1'",
+    "Click the second game cell",
+    "Click the status number '4'",
+    "Click the third game cell",
+    "Click the status number '5'",
+    "Verify that the 'You solved it' message is visible",
+    "Wait for the intercepted 'load' request to complete"
+  ]
+}

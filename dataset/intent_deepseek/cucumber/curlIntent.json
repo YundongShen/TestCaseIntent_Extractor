@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_curl",
+  "source_file": "dataset/raw/cucumber/curl.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:01.585513",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "gauntlt",
+    "curl",
+    "examples/curl",
+    "simple.attack",
+    "cookies.attack",
+    "verbs.attack"
+  ],
+  "goals": [],
+  "activities": []
+}

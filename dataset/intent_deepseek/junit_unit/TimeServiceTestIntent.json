@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_TimeServiceTest",
+  "source_file": "dataset/raw/junit_unit/TimeServiceTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:37.984998",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "TimeService",
+    "LocalTime",
+    "LocalDate",
+    "LocalDateTime"
+  ],
+  "goals": [
+    "test the order method calls",
+    "verify the correct retrieval of time, date, and date time"
+  ],
+  "activities": [
+    "call_getTime",
+    "call_getDate",
+    "call_getDateTime",
+    "verify_getTime",
+    "verify_getDate",
+    "verify_getDateTime"
+  ]
+}

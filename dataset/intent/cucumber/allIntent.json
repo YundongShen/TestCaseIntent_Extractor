@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_all",
+  "source_file": "dataset/raw/cucumber/all.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:17:01.589582",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Day Range",
+    "Hour Range"
+  ],
+  "goals": [
+    "Verify that day ranges and hour ranges can be added and removed correctly within a rental plan",
+    "Verify that the first day range and first hour range cannot be removed"
+  ],
+  "activities": [
+    "Set up a single day range; update endpoint of last range; verify new day range is created",
+    "Set up two day ranges; remove last day range; verify only one remains and endpoint shows \"--\"",
+    "Set up a single day range; update endpoint of last range; verify new hour range is created",
+    "Set up a single day range and two hour ranges; remove last hour range; verify only one remains and endpoint shows \"24\"",
+    "Set up a single day range and single hour range; verify remove button is not visible for either range"
+  ]
+}

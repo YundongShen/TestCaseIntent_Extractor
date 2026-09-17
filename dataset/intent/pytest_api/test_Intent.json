@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_test_",
+  "source_file": "dataset/raw/pytest_api/test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T02:08:07.546905",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "response"
+  ],
+  "goals": [
+    "Verify the functionality of movie API CRUD operations (get, add, update, delete)",
+    "Validate the HTTP response status codes and JSON schema compliance"
+  ],
+  "activities": [
+    "Send GET request to list movies API endpoint",
+    "Verify response status code is 200",
+    "Verify response Content-Type header is application/json",
+    "Send POST request to add movie API endpoint with test data",
+    "Verify response status code is 200",
+    "Send PUT request to update movie API endpoint with updated test data",
+    "Verify response status code is 200",
+    "Send GET request to retrieve specific movie API endpoint",
+    "Verify response status code is 200",
+    "Verify response Content-Type header is application/json",
+    "Parse response body as JSON",
+    "Validate response body against defined schema",
+    "Send DELETE request to delete movie API endpoint",
+    "Verify response status code is 200"
+  ]
+}

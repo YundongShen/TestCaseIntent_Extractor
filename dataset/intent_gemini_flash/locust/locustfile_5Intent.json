@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_locustfile_5",
+  "source_file": "dataset/raw/locust/locustfile_5.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T13:33:41.196462",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "/thredds/catalog/catalog.html",
+    "/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/Amon/tas/gn/v20190710/tas_Amon_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_185001-186912.nc",
+    "/thredds/fileServer/cmip6/ScenarioMIP/DWD/MPI-ESM1-2-HR/ssp126/r2i1p1f1/Amon/hfss/gn/v20190710/hfss_Amon_MPI-ESM1-2-HR_ssp126_r2i1p1f1_gn_209501-209912.nc",
+    "/thredds/fileServer/cmip5/cmip5/output1/MPI-M/MPI-ESM-LR/decadal1990/fx/land/fx/r0i0p0/v20111122/sftgif/sftgif_fx_MPI-ESM-LR_decadal1990_r0i0p0.nc",
+    "/thredds/fileServer/cmip5/cmip5/output1/MPI-M/MPI-ESM-LR/decadal1990/mon/ocean/Omon/r3i1p1/v20120529/tauvo/tauvo_Omon_MPI-ESM-LR_decadal1990_r3i1p1_199101-200012.nc"
+  ],
+  "goals": [
+    "Verify the accessibility and expected content of the ESGF Thredds catalog.",
+    "Verify the ESGF Thredds File Server correctly serves CMIP5 and CMIP6 NetCDF files with appropriate content types."
+  ],
+  "activities": [
+    "Send a GET request to the THREDDS catalog and verify the presence of 'Earth System Root catalog' in the response.",
+    "Send a HEAD request to a specific CMIP6 NetCDF file and verify its 'Content-Type' header.",
+    "Send a GET request to a specific CMIP6 historical NetCDF file and verify its 'Content-Type' header.",
+    "Send a GET request to a specific CMIP6 ScenarioMIP NetCDF file and verify its 'Content-Type' header.",
+    "Send a GET request to a specific CMIP5 land data NetCDF file and verify the response status.",
+    "Send a GET request to a specific CMIP5 ocean data NetCDF file and verify the response status."
+  ]
+}

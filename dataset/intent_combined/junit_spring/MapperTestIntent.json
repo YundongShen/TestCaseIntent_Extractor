@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_MapperTest",
+  "source_file": "dataset/raw/junit_spring/MapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T15:02:39.468425",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "TestModelMapper"
+  ],
+  "goals": [
+    "Verify TestModelMapper insertion and pagination retrieval functionality"
+  ],
+  "activities": [
+    "Create TestModel instance",
+    "Set TestModel properties",
+    "Insert TestModel via mapper",
+    "Loop to create and insert 100 TestModel instances",
+    "Query TestModel with pagination using service",
+    "Verify page size is at least 5",
+    "Verify total size is 20"
+  ]
+}

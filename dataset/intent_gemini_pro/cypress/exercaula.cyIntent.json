@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_exercaula_cy",
+  "source_file": "dataset/raw/cypress/exercaula.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:36:02.027465",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "input[name=\"username\"]",
+    "input[name=\"password\"]",
+    "button[type=\"submit\"]",
+    ".flash.success",
+    ".flash.error"
+  ],
+  "goals": [
+    "Verify successful login with valid credentials",
+    "Verify error handling and validation for invalid, incorrect, or missing login credentials"
+  ],
+  "activities": [
+    "Visit the login page",
+    "Type 'tomsmith' into the username field",
+    "Type 'SuperSecretPassword!' into the password field",
+    "Click the submit button",
+    "Verify the success message contains 'You logged into a secure area!'",
+    "Visit the login page",
+    "Type 'usuario_invalido' into the username field",
+    "Type 'senha_invalida' into the password field",
+    "Click the submit button",
+    "Verify the error message contains 'Your username is invalid!'",
+    "Visit the login page",
+    "Type 'tomsmith' into the username field",
+    "Type 'senha_invalida' into the password field",
+    "Click the submit button",
+    "Verify the error message contains 'Your password is invalid!'",
+    "Visit the login page",
+    "Type 'usuario_invalido' into the username field",
+    "Type 'SuperSecretPassword!' into the password field",
+    "Click the submit button",
+    "Verify the error message contains 'Your username is invalid!'",
+    "Visit the login page",
+    "Click the submit button",
+    "Verify the error message exists"
+  ]
+}

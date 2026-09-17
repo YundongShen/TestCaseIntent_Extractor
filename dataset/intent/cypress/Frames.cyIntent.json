@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_Frames_cy",
+  "source_file": "dataset/raw/cypress/Frames.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T16:52:03.074246",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "iframe #mce_0_ifr",
+    "button [aria-label='Bold']"
+  ],
+  "goals": [
+    "Verify interaction with iframe content elements",
+    "Validate text input and button click actions within the iframe"
+  ],
+  "activities": [
+    "Visit the iframe test page",
+    "Locate the iframe element by ID",
+    "Access the iframe body document",
+    "Verify the iframe body is visible",
+    "Wrap the iframe body for interaction",
+    "Type text and select all content",
+    "Click the Bold button",
+    "Visit the iframe test page",
+    "Use custom command to locate iframe and type text",
+    "Click the Bold button",
+    "Visit the iframe test page",
+    "Wait for the iframe to load",
+    "Use iframe plugin to locate and type text",
+    "Click the Bold button"
+  ]
+}

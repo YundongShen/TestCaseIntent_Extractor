@@ -1,0 +1,17 @@
+{
+  "test_case_id": "tc_ConcurrencyTest",
+  "source_file": "dataset/raw/junit_unit/ConcurrencyTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-08-10T07:52:24.096764",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Concurrency",
+    "Runnable",
+    "mockRunnable"
+  ],
+  "goals": [
+    "test/whether/Concurrency.newDaemonThreadsetsdaemonpropertytoupdate"
+  ],
+  "activities": []
+}

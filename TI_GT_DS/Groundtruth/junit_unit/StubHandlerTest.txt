@@ -1,0 +1,10 @@
+**Test Object**
+The `handleRequest` method of `{{ operation }}Handler`
+
+**Test Goal**
+Verify the correctness of the content and status returned by the handler in a simple success scenario.
+
+**Test Activities**
+1. Create an instance of `{{ operation }}Handler`, constructing an empty resource model and a corresponding `ResourceHandlerRequest`.
+2. Call `handler.handleRequest(proxy, request, null, logger)`.
+3. Assert that the response is not null, the status is `OperationStatus.SUCCESS`, `callbackContext` is null, `callbackDelaySeconds` is 0, `resourceModel` equals `desiredResourceState` in the request, `resourceModels` is null, `message` is null, and `errorCode` is null.

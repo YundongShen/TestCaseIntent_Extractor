@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_locustfile",
+  "source_file": "dataset/raw/locust/locustfile.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:26:41.338122",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "..."
+  ],
+  "goals": [
+    "Verify the performance and stability of the profile, group, and split API endpoints under simulated concurrent user load"
+  ],
+  "activities": [
+    "Register two initial users",
+    "Register main user and extract authentication token",
+    "Create group and extract group ID",
+    "Select random test action",
+    "Retrieve user profile",
+    "Retrieve groups list",
+    "Retrieve specific group details",
+    "Submit split transaction"
+  ]
+}

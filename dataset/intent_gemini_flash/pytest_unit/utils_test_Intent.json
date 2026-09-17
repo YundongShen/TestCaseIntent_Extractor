@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_utils_test_",
+  "source_file": "dataset/raw/pytest_unit/utils_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:42:55.185130",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "_search_for_file_recursively"
+  ],
+  "goals": [
+    "Verify that a temporary directory for the hub cache is created.",
+    "Verify that the temporary directory for the hub cache is cleaned up after use."
+  ],
+  "activities": [
+    "Construct the full path for a temporary cache directory.",
+    "Remove the temporary cache directory if it exists, ignoring any errors.",
+    "Create the temporary cache directory.",
+    "Provide the path of the temporary cache directory to the test.",
+    "Remove the temporary cache directory after the test finishes."
+  ]
+}

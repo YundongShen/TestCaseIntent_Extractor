@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_test__4",
+  "source_file": "dataset/raw/pytest_unit/test__4.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:56:04.532396",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "test_base64_decode_image",
+    "test_base64_decode",
+    "test_lambda_handler",
+    "model.base64_decode_image",
+    "model.base64_decode",
+    "model.ModelService",
+    "model.predict"
+  ],
+  "goals": [],
+  "activities": [
+    "read_text",
+    "read_image",
+    "base64_decode_image",
+    "base64_decode",
+    "ModelMock.__init__",
+    "ModelMock.value",
+    "predict",
+    "lambda_handler"
+  ]
+}

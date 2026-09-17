@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_delete",
+  "source_file": "dataset/raw/k6/delete.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-11T07:52:15.515195",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "${BASE_URL}/books/title?title=${encodeURIComponent(item.title)}",
+    "${BASE_URL}/books/${isbn}"
+  ],
+  "goals": [
+    "Verify the performance and reliability of the book deletion API under concurrent load, ensuring it returns expected status codes (200 or 404) when attempting to delete books by ISBN."
+  ],
+  "activities": [
+    "Select a random book title from the loaded dataset",
+    "Send an HTTP GET request to look up the book by title",
+    "Check if the lookup response status is 200",
+    "Parse the response body as JSON and extract the ISBN",
+    "Send an HTTP DELETE request to remove the book by ISBN if an ISBN was found",
+    "Verify the delete response status is either 200 or 404",
+    "Pause execution for 0.5 seconds"
+  ]
+}

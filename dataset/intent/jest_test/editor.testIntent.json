@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_editor_test",
+  "source_file": "dataset/raw/jest_test/editor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-01T18:01:07.235407",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "addListStyle"
+  ],
+  "goals": [
+    "Verify correct text content modification with list formatting and numbering logic",
+    "Verify correct cursor selection position updates after applying styles"
+  ],
+  "activities": [
+    "Initialize element object with value 'test' and selection positions 0",
+    "Invoke addListStyle function with element and null style",
+    "Verify element value and selection positions remain unchanged",
+    "Initialize element object with value 'test\\n' and selection at 5",
+    "Invoke addListStyle function with element and bulleted style",
+    "Verify result value and selection position match expected bulleted format",
+    "Initialize element object with value 'test\\ntest' and selection at 5",
+    "Invoke addListStyle function with element and bulleted style",
+    "Verify result value and selection position match expected bulleted format",
+    "Initialize element object with value 'test\\n' and selection at 5",
+    "Invoke addListStyle function with element and numbered style",
+    "Verify result value and selection position match expected numbered format",
+    "Initialize element object with value 'test\\n1. \\n' and selection at 9",
+    "Invoke addListStyle function with element and numbered style",
+    "Verify result value increments previous number and selection position",
+    "Initialize element object with value 'test\\n\\ntest' and selection at 5",
+    "Invoke addListStyle function with element and numbered style",
+    "Verify result value inserts number and selection position",
+    "Initialize element object with value 'test\\n23. \\n\\ntest' and selection at 10",
+    "Invoke addListStyle function with element and numbered style",
+    "Verify result value increments previous number and selection position"
+  ]
+}

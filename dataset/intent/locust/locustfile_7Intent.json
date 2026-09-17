@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_locustfile_7",
+  "source_file": "dataset/raw/locust/locustfile_7.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-01T21:27:20.926005",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "/shop",
+    "/?wc-ajax=add_to_cart",
+    "/checkout/",
+    "/?wc-ajax=checkout"
+  ],
+  "goals": [
+    "Verify the performance and stability of the shopping cart and checkout workflow under simulated user load",
+    "Validate the functional integrity of the browsing, add-to-cart, and checkout process"
+  ],
+  "activities": [
+    "Send GET request to /shop",
+    "Generate random product ID and quantity",
+    "Send POST request to add item to cart",
+    "Send GET request to /checkout/",
+    "Extract checkout nonce from response text",
+    "Prepare billing and shipping personal data",
+    "Send POST request to process checkout"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_test__9",
+  "source_file": "dataset/raw/pytest_api/test__9.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:39:05.828363",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "tc_workshop",
+    "tc_file1",
+    "tc_file2"
+  ],
+  "goals": [
+    "Verify the successful addition of multiple files to a workshop via the API, ensuring correct API response, database updates, and file persistence."
+  ],
+  "activities": [
+    "Clean the workshop test environment.",
+    "Create a new workshop and obtain its ID.",
+    "Prepare a file object for a text file to be uploaded.",
+    "Prepare a file object for an image file to be uploaded.",
+    "Prepare file handles for uploading the two files.",
+    "Construct the API endpoint URL for uploading workshop files.",
+    "Send a POST request to the API with the two files.",
+    "Parse the JSON response from the API.",
+    "Update the internal workshop object with the newly added files.",
+    "Assert that the HTTP response status code is 201 (Created).",
+    "Assert that the response Content-Type header is 'application/json'.",
+    "Assert that the 'status' field in the response body is 201.",
+    "Assert that the 'msg' field in the response body indicates success.",
+    "Assert that the 'data' field in the response body matches the expected workshop data.",
+    "Assert that the 'detail' field in the response body matches the expected success details, including the workshop ID and files.",
+    "Verify the workshop data in the database by its ID.",
+    "Verify that the text file exists in storage.",
+    "Verify that the image file exists in storage."
+  ]
+}

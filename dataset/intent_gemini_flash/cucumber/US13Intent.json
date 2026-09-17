@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_US13",
+  "source_file": "dataset/raw/cucumber/US13.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:49:56.050278",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "navegador de cultivos",
+    "lista de plantas",
+    "Planta",
+    "página detallada"
+  ],
+  "goals": [
+    "Verify the functionality of searching and filtering plants in the crop browser.",
+    "Verify that selecting a plant displays its detailed information correctly."
+  ],
+  "activities": [
+    "The user wants to see specific plant details",
+    "The user enters the crop browser and types the plant name",
+    "A list of matching plants appears",
+    "The user finds the desired plant in the browser",
+    "The user clicks on the desired plant",
+    "A detailed page about the plant's needs and properties opens"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "test_case_id": "tc_player_spec",
+  "source_file": "dataset/raw/jest_spec/player.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:45.745586",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "player",
+    "state"
+  ],
+  "goals": [
+    "testthestabilityoftheplayerbycheckingifitrespondscorrectlytostaterequest"
+  ],
+  "activities": [
+    "require",
+    "var",
+    "chai",
+    "describe",
+    "it",
+    "expect",
+    "var",
+    "require",
+    "describe",
+    "function",
+    "var",
+    "player",
+    "var",
+    "state",
+    "describe",
+    "Playerstability",
+    "it",
+    "is",
+    "stable",
+    "var",
+    "responseMessage",
+    "var",
+    "responseMock",
+    "function",
+    "send",
+    "expect",
+    "eql",
+    "to"
+  ]
+}

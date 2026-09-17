@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_api/test__6.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T07:54:54.096963",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "tc_workshop1",
+    "tc_workshop2"
+  ],
+  "goals": [
+    "Return200-WorkshopDeleted",
+    "ReturnokstatuscodeandcorrectContent-Typeheader,andresponsebodywithstatus200,msg_success,anddatafortc_workshop1"
+  ],
+  "activities": [
+    "callapi",
+    "env",
+    "test_api_ok",
+    "checkbdd"
+  ]
+}

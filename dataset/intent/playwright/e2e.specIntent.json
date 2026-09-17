@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_e2e_spec",
+  "source_file": "dataset/raw/playwright/e2e.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-01T21:33:12.720017",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "page"
+  ],
+  "goals": [
+    "Verify navigation to post detail page and visibility of post content elements",
+    "Verify navigation to blog list page and validation of post list count"
+  ],
+  "activities": [
+    "Navigate to http://localhost:3000/",
+    "Verify page title is simple-remix-blog",
+    "Verify post title Acheronta altoque is visible",
+    "Click the first Read more link",
+    "Verify URL is http://localhost:3000/posts/example-post-2",
+    "Verify author's avatar is visible",
+    "Verify date August 30, 2022 is visible",
+    "Verify text Sine aequum praeferret mihi is visible",
+    "Verify text Lorem markdownum figuris arcum, vestes, traharis reperire quia. is visible",
+    "Verify text Magno adspexit Phorbas velles in qua terras, nec cuique plus tenet. is visible",
+    "Click the Blog link",
+    "Verify URL is http://localhost:3000/blog",
+    "Verify text All posts is visible",
+    "Navigate to http://localhost:3000/",
+    "Verify page title is simple-remix-blog",
+    "Click the Blog link",
+    "Verify URL is http://localhost:3000/blog",
+    "Verify text All posts is visible",
+    "Verify count of Read more links is 4"
+  ]
+}

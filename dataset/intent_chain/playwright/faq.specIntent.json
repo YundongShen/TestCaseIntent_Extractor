@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_faq_spec",
+  "source_file": "dataset/raw/playwright/faq.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:32:45.379884",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Category Filter Combobox",
+    "Search Input Textbox",
+    "Result Badges",
+    "Search Result Text",
+    "Page URL"
+  ],
+  "goals": [
+    "Verify FAQ category filtering correctly updates page URL and displays category badges",
+    "Verify FAQ search functionality returns accurate results or not found messages and updates page URL"
+  ],
+  "activities": []
+}

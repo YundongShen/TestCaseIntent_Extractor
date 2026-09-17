@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_exercaula_cy",
+  "source_file": "dataset/raw/cypress/exercaula.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-13T17:13:29.833905",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "string1",
+    "string2"
+  ],
+  "activities": [
+    "Navigate to the login page",
+    "Enter valid credentials and submit the form",
+    "Verify successful login message",
+    "Enter invalid credentials and submit the form",
+    "Verify invalid credentials error message",
+    "Enter valid username and invalid password and submit the form",
+    "Verify invalid password error message",
+    "Enter invalid username and valid password and submit the form",
+    "Verify invalid username error message",
+    "Submit the form without filling fields",
+    "Verify error message existence"
+  ]
+}

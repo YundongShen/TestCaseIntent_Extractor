@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_EIGVALS_test_",
+  "source_file": "dataset/raw/pytest_unit/EIGVALS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:07:21.518033",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "EIGVALS.EIGVALS"
+  ],
+  "goals": [
+    "Verify EIGVALS.EIGVALS returns a valid output type (Scalar, OrderedPair, or Matrix)",
+    "Verify EIGVALS.EIGVALS executes successfully with matrix inputs"
+  ],
+  "activities": [
+    "Prepare test input matrices",
+    "Execute EIGVALS.EIGVALS with matrix input",
+    "Verify output type validity"
+  ]
+}

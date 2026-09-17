@@ -1,0 +1,47 @@
+{
+  "test_case_id": "tc_props_test",
+  "source_file": "dataset/raw/jest_test/props.test.jsx",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:58:08.024314",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "NumericInput",
+    "app.refsInput",
+    "app.refsWrapper"
+  ],
+  "goals": [
+    "Verify that the NumericInput component correctly processes and applies various HTML input properties (e.g., name, disabled, required, maxLength, className, readOnly, noValidate, pattern, title, size, value, defaultValue), including their default behaviors when not explicitly set.",
+    "Verify that the NumericInput component correctly disables all inline styles when the 'style' prop is set to 'false'."
+  ],
+  "activities": [
+    "Test the 'name' prop by rendering the NumericInput with various string, null, undefined, and numeric values, then asserting that the extracted 'name' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'name' prop and assert that the 'name' attribute is not present in the input's outer HTML.",
+    "Test the 'disabled' prop by rendering the NumericInput with null, undefined, true, and false values, then asserting that the extracted 'disabled' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'disabled' prop and assert that the 'disabled' attribute is not present in the input's outer HTML.",
+    "Test the 'required' prop by rendering the NumericInput with null, undefined, true, and false values, then asserting that the extracted 'required' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'required' prop and assert that the 'required' attribute is not present in the input's outer HTML.",
+    "Test the 'maxLength' prop by rendering the NumericInput with numeric values (1, 2), then asserting that the extracted 'maxLength' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'maxLength' prop and assert that the 'maxlength' attribute is not present in the input's outer HTML.",
+    "Test the 'className' prop by rendering the NumericInput with various string, null, and undefined values, then asserting that the extracted 'className' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'className' prop and assert that the 'class' attribute is not present in the input's outer HTML.",
+    "Test the 'readOnly' prop by rendering the NumericInput with null, undefined, true, and false values, then asserting that the extracted 'readOnly' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'readOnly' prop and assert that the 'readonly' attribute is not present in the input's outer HTML.",
+    "Test the 'noValidate' prop by rendering the NumericInput with various string, null, undefined, true, and false values, then asserting that the extracted 'noValidate' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'noValidate' prop and assert that the 'novalidate' attribute is not present in the input's outer HTML.",
+    "Test the 'pattern' prop by rendering the NumericInput with various string, null, and undefined values, then asserting that the extracted 'pattern' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'pattern' prop and assert that the 'pattern' attribute is set to \".*\" in the input's outer HTML.",
+    "Test the 'title' prop by rendering the NumericInput with various string, null, undefined, and numeric values, then asserting that the extracted 'title' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'title' prop and assert that the 'title' attribute is not present in the input's outer HTML.",
+    "Test the 'size' prop by rendering the NumericInput with numeric values (1, 2), then asserting that the extracted 'size' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'size' prop and assert that the 'size' attribute is not present in the input's outer HTML.",
+    "Test the 'value' prop by rendering the NumericInput with various string, null, undefined, and numeric values, considering the 'strict' prop, then asserting that the extracted 'value' prop matches the expected output for each.",
+    "Render the NumericInput component without the 'value' prop and assert that the 'value' attribute is set to \"\" in the input's outer HTML.",
+    "Test the 'defaultValue' prop by rendering the NumericInput with various string, null, undefined, and numeric values, considering the 'strict' prop, then asserting that the extracted input element's 'value' attribute matches the expected output for each.",
+    "Render the NumericInput component without the 'defaultValue' prop and assert that the input element's 'value' attribute is set to \"\" in its outer HTML.",
+    "Render the NumericInput component with `style={false}`.",
+    "Traverse the rendered component's DOM and assert that no element has an inline `style` attribute.",
+    "Render the NumericInput component with `style={false}` and `mobile` props.",
+    "Traverse the rendered component's DOM and assert that no element has an inline `style` attribute."
+  ]
+}

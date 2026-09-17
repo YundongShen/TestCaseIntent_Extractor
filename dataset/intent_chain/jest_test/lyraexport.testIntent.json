@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_lyraexport_test",
+  "source_file": "dataset/raw/jest_test/lyraexport.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:20:48.720363",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify that the lyraExport directive renders the expected text content 'Export to lyra'"
+  ],
+  "activities": [
+    "Configure test module and mock services",
+    "Initialize test scope",
+    "Create and compile the lyra-export element",
+    "Verify element text content equals \"Export to lyra\""
+  ]
+}

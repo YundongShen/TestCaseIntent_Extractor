@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_server_spec",
+  "source_file": "dataset/raw/jest_spec/server.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:40:41.582456",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "Verify the user authentication API, including successful registration, login with token generation, and error handling for incomplete credentials.",
+    "Verify the medical professional registration API, ensuring successful registration and proper error handling for incomplete data."
+  ],
+  "activities": [
+    "Verify that the Node environment is set to testing",
+    "Truncate the users database table",
+    "Send a POST request to /api/auth/user-register with new user details",
+    "Verify the user registration response status is 201",
+    "Send a POST request to /api/auth/user-login with valid user credentials",
+    "Verify the user login response status is 200",
+    "Verify the user login response text contains a token",
+    "Verify the user login response text contains a message",
+    "Send a POST request to /api/auth/user-login with incomplete user credentials",
+    "Verify the incomplete user login response status is 401",
+    "Send a POST request to /api/auth/med-register with incomplete medical professional details",
+    "Verify the incomplete medical registration response status is 404",
+    "Truncate the medicalProfessionals database table",
+    "Send a POST request to /api/auth/med-register with complete medical professional details",
+    "Verify the medical registration response status is 200"
+  ]
+}

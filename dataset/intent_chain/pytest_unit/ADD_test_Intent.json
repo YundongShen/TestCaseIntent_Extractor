@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_ADD_test_",
+  "source_file": "dataset/raw/pytest_unit/ADD_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:02:30.266491",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the correctness of the ADD function's arithmetic operations for Vector and Scalar inputs",
+    "Verify the ADD function correctly handles OrderedPair data structures during addition operations"
+  ],
+  "activities": [
+    "Initialize Vector objects for Vector-Vector addition test",
+    "Execute ADD function with Vector inputs",
+    "Assert result Vector matches expected sum",
+    "Initialize Vector object for Vector-Scalar addition test",
+    "Execute ADD function with Vector and Scalar inputs",
+    "Assert result Vector matches expected sum with scalars",
+    "Initialize numpy arrays and OrderedPair object for OrderedPair test",
+    "Execute ADD function with OrderedPair and Vector inputs",
+    "Assert result OrderedPair x component matches input",
+    "Assert result OrderedPair y component matches expected sum"
+  ]
+}

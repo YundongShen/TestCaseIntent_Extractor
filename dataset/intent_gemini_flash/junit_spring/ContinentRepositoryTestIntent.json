@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_ContinentRepositoryTest",
+  "source_file": "dataset/raw/junit_spring/ContinentRepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T08:00:27.648717",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "ContinentRepository",
+    "Continent"
+  ],
+  "goals": [
+    "Verify that the ContinentRepository correctly retrieves and calculates aggregated population statistics (total, city, rural, and their percentages) for continents."
+  ],
+  "activities": [
+    "Load test data from 'test-data.sql' into the database.",
+    "Call the 'findPopulationInContinentFiltered' method to retrieve continent population data.",
+    "Verify that the returned list of continents is not null.",
+    "Verify that the returned list contains exactly 3 continents.",
+    "Verify the details of the first continent (Asia), including its total, city, and rural populations and percentages.",
+    "Verify the details of the second continent (Europe), including its total, city, and rural populations and percentages."
+  ]
+}

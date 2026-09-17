@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_app_test",
+  "source_file": "dataset/raw/supertest/app.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T13:44:42.926763",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the root endpoint ('/') returns status 200 and body 'Helllooooo'.",
+    "Verify the '/watermelon' endpoint returns status 200 and body 'watermelon 🐓'."
+  ],
+  "activities": [
+    "Initialize a Supertest request with the application.",
+    "Send a GET request to the \"/\" path.",
+    "Assert that the response body is \"Helllooooo\".",
+    "Assert that the response status code is 200.",
+    "Initialize a Supertest request with the application.",
+    "Send a GET request to the \"/watermelon\" path.",
+    "Assert that the response body is \"watermelon 🐓\".",
+    "Assert that the response status code is 200.",
+    "Initialize a Supertest request with the application.",
+    "Send a GET request to the \"/watermelon\" path.",
+    "Assert that the response status code is 200.",
+    "Assert that the response body is \"watermelon 🐓\"."
+  ]
+}

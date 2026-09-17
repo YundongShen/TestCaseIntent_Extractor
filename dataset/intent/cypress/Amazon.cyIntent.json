@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_Amazon_cy",
+  "source_file": "dataset/raw/cypress/Amazon.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T16:39:03.645876",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "#nav-link-accountList",
+    "[type=email",
+    ".a-button-input",
+    "#ap_password",
+    "#signInSubmit",
+    "#twotabsearchtextbox",
+    "#nav-search-submit-button",
+    "//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal']",
+    "#add-to-cart-button",
+    "//span[@class='a-button-inner']//input[@value='Proceed to checkout']"
+  ],
+  "goals": [
+    "Verify the email login functionality on the Amazon website",
+    "Verify the product search, add to cart, and checkout initiation process on the Amazon website"
+  ],
+  "activities": [
+    "Visit Amazon India homepage",
+    "Hover over account list link",
+    "Click account list link",
+    "Enter email address",
+    "Click continue button",
+    "Enter password",
+    "Click sign-in button",
+    "Visit Amazon India homepage",
+    "Enter T-shirt in search box",
+    "Click search button",
+    "Click first search result product link",
+    "Click add to cart button",
+    "Click proceed to checkout button"
+  ]
+}

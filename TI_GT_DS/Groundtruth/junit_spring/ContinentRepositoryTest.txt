@@ -1,0 +1,12 @@
+**Test Object**
+The `findPopulationInContinentFiltered` query method of `ContinentRepository`
+
+**Test Goal**
+Verify that the method correctly returns filtered population statistics for each continent.
+
+**Test Activities**
+1. Load test data using a `@Sql` script.
+2. Call `continentRepository.findPopulationInContinentFiltered()` to retrieve the results.
+3. Check that the results are not empty and contain all three continents.
+4. Verify the Asian data: Total population, Urban population, Urban population percentage, Rural population, Rural population percentage.
+5. Verify the European data: Total population, Urban population, Urban population percentage, Rural population, Rural population percentage.

@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_locustfile_5",
+  "source_file": "dataset/raw/locust/locustfile_5.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-11T07:54:08.357425",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "self.client"
+  ],
+  "goals": [
+    "Verify the availability and correct response content of the ESGF THREDDS root catalog",
+    "Verify the successful retrieval and correct content type of CMIP5 and CMIP6 NetCDF files from the THREDDS file server"
+  ],
+  "activities": [
+    "Send a GET request to the catalog endpoint and verify the response text contains 'Earth System Root catalog'",
+    "Send a HEAD request to a CMIP6 file endpoint and verify the 'Content-Type' header is 'application/x-netcdf'",
+    "Send a GET request to a CMIP6 file endpoint and verify the 'Content-Type' header is 'application/x-netcdf'",
+    "Send a GET request to a second CMIP6 file endpoint and verify the 'Content-Type' header is 'application/x-netcdf'",
+    "Send a GET request to a CMIP5 file endpoint and verify the response is successful",
+    "Send a GET request to a second CMIP5 file endpoint and verify the response is successful"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_app_test_js",
+  "source_file": "dataset/raw/supertest/app.test.js.old",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-13T20:33:20.920389",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app"
+  ],
+  "goals": [
+    "Verify the people service GET endpoints return correct status codes and data content",
+    "Verify the people service POST endpoint enforces access control and input validation"
+  ],
+  "activities": []
+}

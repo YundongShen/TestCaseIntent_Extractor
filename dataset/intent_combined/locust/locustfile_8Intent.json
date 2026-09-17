@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_locustfile_8",
+  "source_file": "dataset/raw/locust/locustfile_8.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T15:18:55.024044",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "web application"
+  ],
+  "goals": [
+    "verify system performance under simulated user load"
+  ],
+  "activities": [
+    "wait between 1 and 3 seconds",
+    "send GET request to home page",
+    "send GET request to login page",
+    "send GET request to about us page",
+    "generate random apunte ID",
+    "send GET request to apunte page",
+    "generate random user ID",
+    "send GET request to profile page"
+  ]
+}

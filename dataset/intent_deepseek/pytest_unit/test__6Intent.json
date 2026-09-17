@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_unit/test__6.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:56:11.354836",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "app",
+    "get_average_last_hour",
+    "test_get_average_last_hour",
+    "test_home_page",
+    "test_refresh_average"
+  ],
+  "goals": [
+    "test_get_average_last_hour"
+  ],
+  "activities": [
+    "get_average_last_hour",
+    "test_home_page",
+    "test_refresh_average"
+  ]
+}

@@ -1,0 +1,19 @@
+**Test Object**
+`Concurrency.newDaemonThread` Method
+
+**Test Goal**
+Verifies that the thread created using this method is a daemon thread.
+
+**Test Activities**
+1. Call the method to create a thread.
+2. Assert that `t.isDaemon()` returns true.
+
+**Test Object**
+`Concurrency.newThread` Method
+
+**Test Goal**
+Verify that the created thread name conforms to the expected naming format.
+
+**Test Activities**
+1. Call the method to create a thread.
+2. Assert that `t1.getName()` equals `"test-0"`.

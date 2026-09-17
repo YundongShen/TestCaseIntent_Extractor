@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_exercaula_cy",
+  "source_file": "dataset/raw/cypress/exercaula.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-05-01T16:43:36.961765",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Username Input Field",
+    "Password Input Field",
+    "Submit Button",
+    "Success Flash Message",
+    "Error Flash Message"
+  ],
+  "goals": [
+    "Verify successful login authentication with valid credentials",
+    "Verify error handling for invalid credentials and mandatory field validation"
+  ],
+  "activities": [
+    "Navigate to the login page",
+    "Enter username 'tomsmith'",
+    "Enter password 'SuperSecretPassword!'",
+    "Click the submit button",
+    "Verify success message contains 'You logged into a secure area!'",
+    "Navigate to the login page",
+    "Enter username 'usuario_invalido'",
+    "Enter password 'senha_invalida'",
+    "Click the submit button",
+    "Verify error message contains 'Your username is invalid!'",
+    "Navigate to the login page",
+    "Enter username 'tomsmith'",
+    "Enter password 'senha_invalida'",
+    "Click the submit button",
+    "Verify error message contains 'Your password is invalid!'",
+    "Navigate to the login page",
+    "Enter username 'usuario_invalido'",
+    "Enter password 'SuperSecretPassword!'",
+    "Click the submit button",
+    "Verify error message contains 'Your username is invalid!'",
+    "Navigate to the login page",
+    "Click the submit button",
+    "Verify error message exists"
+  ]
+}

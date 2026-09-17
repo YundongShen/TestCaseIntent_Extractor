@@ -1,0 +1,35 @@
+**Test Object**
+The `ADD.ADD` function
+
+**Test Goal**
+Verify that when given two vectors, the function correctly calculates the sum of their corresponding elements.
+
+**Test Activities**
+1. Construct a vector `x` with values ​​from -10 to 9.
+2. Construct a vector `y` with values ​​from -20 to 18, with a step size of 2.
+3. Call `ADD.ADD(a=x, b=[y])`.
+4. Use NumPy to assert that the returned vector `res.v` is equal to `x.v + y.v`.
+
+**Test Object**
+The `ADD.ADD` function
+
+**Test Goal**
+Verify that when given a vector and multiple scalars, the function correctly adds the scalars to each element of the vector.
+
+**Test Activities**
+1. Construct a vector `x` with values ​​from -10 to 9.
+2. Create a list of scalars `[Scalar(c=2), Scalar(c=3)]` as the `b` parameter.
+3. Call `ADD.ADD(a=x, b=[Scalar(c=2), Scalar(c=3)])`.
+4. Use NumPy assertions to show that the returned vector is equal to `x.v + 2 + 3`.
+
+**Test Object**
+`ADD.ADD` function
+
+**Test Goal**
+Verify that when given an `OrderedPair` and a vector, the output of the `OrderedPair` is: `x` remains unchanged, and `y` is equal to the original `y` plus the value at the corresponding position in the vector.
+
+**Test Activities**
+1. Construct an array of `x` (-10~9), an array of `y` (-20~18), and an array of `z` (-30~27).
+2. Create `OrderedPair(x=x, y=y)` as `a` and `Vector(v=z)` as `b`.
+3. Call `ADD.ADD(a=OrderedPair(x=x, y=y), b=[Vector(v=z)])`.
+4. Assert that the returned `res.x` is the same as the original `x`, and `res.y` is equal to `y + z`.

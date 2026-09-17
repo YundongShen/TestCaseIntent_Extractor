@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_ContinentRepositoryTest",
+  "source_file": "dataset/raw/junit_spring/ContinentRepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T18:39:59.166812",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "ContinentRepository",
+    "Continent"
+  ],
+  "goals": [
+    "Verify that ContinentRepository.findPopulationInContinentFiltered returns the expected list of continents",
+    "Verify that the population statistics (total, city, rural, percentages) are correctly calculated for each continent"
+  ],
+  "activities": [
+    "Load test data from SQL script /test-data.sql",
+    "Invoke findPopulationInContinentFiltered method on ContinentRepository",
+    "Assert result list is not null",
+    "Assert result list size equals 3",
+    "Retrieve first continent object from result list",
+    "Assert first continent name is Asia",
+    "Assert first continent total population is 5400000000",
+    "Assert first continent city population is 93000000",
+    "Assert first continent city percentage is 66.67%",
+    "Assert first continent rural population is 900000000",
+    "Assert first continent rural percentage is 33.33%",
+    "Retrieve second continent object from result list",
+    "Assert second continent name is Europe",
+    "Assert second continent total population is 800000000",
+    "Assert second continent city population is 500000000",
+    "Assert second continent city percentage is 62.50%",
+    "Assert second continent rural population is 300000000",
+    "Assert second continent rural percentage is 37.50%"
+  ]
+}

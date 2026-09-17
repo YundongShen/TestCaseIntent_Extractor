@@ -1,0 +1,11 @@
+{
+  "test_case_id": "tc_App_test_1",
+  "source_file": "dataset/raw/rtl/App.test_1.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T05:25:24.010644",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [],
+  "activities": []
+}

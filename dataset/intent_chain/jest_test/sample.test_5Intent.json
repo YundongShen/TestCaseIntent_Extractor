@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_sample_test_5",
+  "source_file": "dataset/raw/jest_test/sample.test_5.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:25:38.086982",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "app",
+    "config"
+  ],
+  "goals": [
+    "Verify that the configuration object is defined and contains valid client ID credentials",
+    "Verify that the API endpoint returns a 401 unauthorized status to ensure route protection"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

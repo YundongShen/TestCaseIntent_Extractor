@@ -1,0 +1,13 @@
+{
+  "test_case_id": "tc_App_test",
+  "source_file": "dataset/raw/rtl/App.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T07:57:48.228229",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "testtheappwithnewlocationandsearchinput"
+  ],
+  "activities": []
+}

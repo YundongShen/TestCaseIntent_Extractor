@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_EIGVALS_test_",
+  "source_file": "dataset/raw/pytest_unit/EIGVALS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T08:01:48.240866",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "EIGVALS.EIGVALS"
+  ],
+  "goals": [
+    "Verify that the EIGVALS function returns an object of type Scalar, OrderedPair, or Matrix when processing matrix inputs."
+  ],
+  "activities": [
+    "Create a 5x5 identity matrix",
+    "Create a 9x9 identity matrix and reshape it to a 4D array of shape (3, 3, 3, 3)",
+    "Attempt to wrap the 5x5 matrix in a Matrix object and process it with the EIGVALS function",
+    "Catch potential LinAlgError exceptions by wrapping the reshaped 4D array in a Matrix object and processing it with the EIGVALS function instead",
+    "Assert that the returned result is an instance of Scalar, OrderedPair, or Matrix"
+  ]
+}

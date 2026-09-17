@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_test__11",
+  "source_file": "dataset/raw/pytest_api/test__11.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T15:28:49.438195",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Workshop Update API"
+  ],
+  "goals": [
+    "Verify successful workshop update API response and data consistency"
+  ],
+  "activities": [
+    "clean test environment",
+    "insert initial workshop data",
+    "prepare update request body",
+    "construct API URL",
+    "send PUT request to update workshop",
+    "parse API response body",
+    "verify HTTP status code is 200",
+    "verify Content-Type header",
+    "verify response status field",
+    "verify response success message",
+    "verify response data matches expected update",
+    "verify response excludes detail field",
+    "verify workshop data in database"
+  ]
+}

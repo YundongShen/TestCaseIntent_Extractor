@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_lfg_spec",
+  "source_file": "dataset/raw/playwright/lfg.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:40:17.463525",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "anything-adder-menu-button",
+    "menu-item-lfgPost",
+    "Text",
+    "add-filter-button",
+    "Edit",
+    "Spoken language",
+    "",
+    "",
+    "Dansk",
+    "Espaol"
+  ],
+  "goals": [
+    "Verify the creation and editing of LFG posts with text and language configuration",
+    "Verify the filtering and visibility of LFG posts based on spoken language selection"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

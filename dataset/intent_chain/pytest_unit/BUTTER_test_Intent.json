@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_BUTTER_test_",
+  "source_file": "dataset/raw/pytest_unit/BUTTER_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T19:59:38.644720",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "BUTTER.BUTTER"
+  ],
+  "goals": [
+    "Verify that BUTTER.BUTTER correctly removes the DC offset from the input signal when configured as a highpass filter"
+  ],
+  "activities": [
+    "Generate input signal with DC offset",
+    "Verify input signal mean confirms DC offset presence",
+    "Apply highpass filter using BUTTER.BUTTER",
+    "Verify output signal mean confirms DC offset removal"
+  ]
+}

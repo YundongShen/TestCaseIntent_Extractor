@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_locustfile_6",
+  "source_file": "dataset/raw/locust/locustfile_6.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-05-13T15:26:05.763106",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Website endpoints"
+  ],
+  "goals": [
+    "Verify homepage and wallet dashboard accessibility and status codes"
+  ],
+  "activities": [
+    "Fetch miner list addresses",
+    "Send GET request to homepage",
+    "Select random wallet address",
+    "Send GET request to wallet dashboard",
+    "Verify response status code is 200"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_Drawer_test",
+  "source_file": "dataset/raw/rtl/Drawer.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T08:00:35.757747",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Drawer",
+    "DrawerItems",
+    "DrawerHeader",
+    "userEvent"
+  ],
+  "goals": [
+    "testthetogglefunctionalityoftheexternaltogglebuttonontheDrawercomponent"
+  ],
+  "activities": []
+}

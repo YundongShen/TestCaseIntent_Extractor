@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_Auth",
+  "source_file": "dataset/raw/k6/Auth.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T15:12:11.731921",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "login API endpoint"
+  ],
+  "goals": [
+    "verify successful login status code"
+  ],
+  "activities": [
+    "set login endpoint URL",
+    "create authentication payload",
+    "define request headers",
+    "execute HTTP POST request",
+    "log response body",
+    "assert response status equals 200",
+    "wait for one second"
+  ]
+}

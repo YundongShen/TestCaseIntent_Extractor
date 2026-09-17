@@ -1,0 +1,42 @@
+**Test Object**
+`QueryDAO.indexRequest` Method
+
+**Test Goal**
+Verify that the Elasticsearch indexing operation is successful.
+
+**Test Activities**
+1. Construct a test document.
+2. Call `dao.indexRequest(doc)`.
+3. Assert that the return value is not null.
+
+**Test Object**
+`QueryDAO.matchAllQuery` Method
+
+**Test Goal**
+Verify that a full query returns data and the result list is not empty.
+
+**Test Activities**
+1. Call `dao.matchAllQuery()`.
+2. Assert that the returned list is not empty.
+
+**Test Object**
+`QueryDAO.wildcardQuery` Method
+
+**Test Goal**
+Verify that a wildcard query returns matching results.
+
+**Test Activities**
+1. Call `dao.wildcardQuery("akd")`.
+2. Assert that the returned list is not empty.
+
+**Test Object**
+Combination of the `matchAllQuery`, `deleteDocument`, and `refreshRequest` methods of `QueryDAO`
+
+**Test Goal**
+Verify that after retrieving all documents, deleting them one by one and refreshing the index, the final full query result is empty, meaning all data has been cleared.
+
+**Test Activities**
+1. Call `dao.matchAllQuery()` to retrieve the list of all documents.
+2. Iterate through the list, calling `dao.deleteDocument(doc.getId())` to delete each document.
+3. Call `dao.refreshRequest()` to refresh the index.
+4. Call `dao.matchAllQuery()` again and assert that the returned list is empty.

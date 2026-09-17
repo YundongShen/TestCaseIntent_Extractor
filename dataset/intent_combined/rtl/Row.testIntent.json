@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_Row_test",
+  "source_file": "dataset/raw/rtl/Row.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T04:55:21.038499",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Row"
+  ],
+  "goals": [
+    "verify correct conversion calculation and display based on input, unit, ingredient, and scale"
+  ],
+  "activities": [
+    "render the Row component with scale prop",
+    "locate the input field by role",
+    "type values into the input field",
+    "verify the calculated result text exists",
+    "locate the unit selection dropdown",
+    "click the unit selection dropdown",
+    "click a specific unit option",
+    "locate the ingredient selection dropdown",
+    "click the ingredient selection dropdown",
+    "click a specific ingredient option"
+  ]
+}

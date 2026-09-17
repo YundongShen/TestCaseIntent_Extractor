@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_soak",
+  "source_file": "dataset/raw/k6/soak.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T13:32:06.310239",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "http://localhost:5249/urls/test"
+  ],
+  "goals": [
+    "Verify that the HTTP GET request to '/urls/test' returns a 301 redirect status."
+  ],
+  "activities": [
+    "Perform an HTTP GET request to the specified URL.",
+    "Check if the response status is 301 (redirect).",
+    "Pause the execution for 1 second."
+  ]
+}

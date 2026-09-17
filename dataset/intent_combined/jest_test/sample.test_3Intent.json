@@ -1,0 +1,13 @@
+{
+  "test_case_id": "tc_sample_test_3",
+  "source_file": "dataset/raw/jest_test/sample.test_3.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:55:44.485961",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "primary_object_name"
+  ],
+  "goals": [],
+  "activities": []
+}

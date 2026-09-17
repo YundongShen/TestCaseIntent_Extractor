@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_spec_cy",
+  "source_file": "dataset/raw/cypress/spec.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-11T07:37:13.251207",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "#username",
+    "#password",
+    "button[type=\"submit\"]",
+    ".flash.success",
+    ".flash.error"
+  ],
+  "goals": [
+    "Verify successful login with valid credentials",
+    "Verify login failure and error message with incorrect credentials",
+    "Verify mandatory fields validation when submitting the login form without credentials"
+  ],
+  "activities": [
+    "Navigate to the login page",
+    "Type 'tomsmith' into the username field",
+    "Type 'SuperSecretPassword!' into the password field",
+    "Click the submit button",
+    "Verify the success flash message contains 'You logged into a secure area!'",
+    "Navigate to the login page",
+    "Type 'invalidUser' into the username field",
+    "Type 'invalidPassword' into the password field",
+    "Click the submit button",
+    "Verify the error flash message contains 'Your username is invalid!'",
+    "Navigate to the login page",
+    "Click the submit button",
+    "Verify the error flash message contains 'Your username is invalid!'"
+  ]
+}

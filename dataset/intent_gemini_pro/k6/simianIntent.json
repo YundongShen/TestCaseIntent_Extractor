@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_simian",
+  "source_file": "dataset/raw/k6/simian.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-11T07:53:19.276411",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "http://simian-api.us-east-1.elasticbeanstalk.com/dna/simian"
+  ],
+  "goals": [
+    "Verify that the /dna/simian API endpoint successfully returns a 200 status code when processing POST requests with DNA payloads under a variable load profile.",
+    "Ensure the total number of HTTP requests executed during the load test remains below the threshold of 1200."
+  ],
+  "activities": [
+    "Initialize the HTTP request payload with a DNA sequence",
+    "Set the Content-Type header to application/json",
+    "Send an HTTP POST request to the simian API endpoint",
+    "Pause execution for 1 second",
+    "Check if the HTTP response status code is 200"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_LoadingOverlay_test",
+  "source_file": "dataset/raw/jest_test/LoadingOverlay.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:38.896894",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "DelayedInactive",
+    "LoadingOverlay"
+  ],
+  "goals": [
+    "test the initial state of the LoadingOverlay component",
+    "verify the active state change upon componentDidMount lifecycle method",
+    "verify the click event handling on the LoadingOverlay component",
+    "verify the removal of the overlay from the DOM when not active",
+    "verify the presence of the overlay in the DOM when inactive and timers are pending",
+    "verify the presence of the overlay in the DOM when inactive and all timers are run"
+  ],
+  "activities": [
+    "extract_initial_dom_state",
+    "extract_active_dom_state",
+    "support_click_events_on_overlay",
+    "remove_self_from_dom_when_not_active",
+    "remains_in_dom_when_inactive_if_animate_is_true"
+  ]
+}

@@ -1,0 +1,11 @@
+**Test Object**
+`/dna/simian` Interface
+
+**Test Goal**
+Verify that the interface handles concurrent requests normally and the total request count stays within the defined limit.
+
+**Test Activities**
+1. Adjust the number of concurrent users according to the set load model: increase to 40 within 1 minute, decrease to 20 within another minute, and finally decrease to 0 within the last minute.
+2. Each virtual user continuously sends POST requests to `/dna/simian`, carrying a fixed array of DNA as the JSON request body.
+3. After each request, check if the response status code is 200.
+4. Sleep for 1 second after each iteration.

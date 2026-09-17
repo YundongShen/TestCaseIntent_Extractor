@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_taskletTest",
+  "source_file": "dataset/raw/junit_unit/taskletTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:13:35.505511",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "LoadDataTasklet and JobRunner"
+  ],
+  "goals": [
+    "Verify Spring Batch job execution, configuration, and tasklet behavior"
+  ],
+  "activities": [
+    "mock JdbcTemplate and StepContribution",
+    "inject LoadDataTasklet instance",
+    "configure mock data for database query",
+    "execute LoadDataTasklet tasklet",
+    "assert tasklet returns FINISHED status",
+    "verify database query method invocation",
+    "configure empty result for database query",
+    "execute LoadDataTasklet with empty data",
+    "assert tasklet returns FINISHED status",
+    "load Spring Boot application context",
+    "autowire Job and Step beans",
+    "assert Job and Step are not null",
+    "verify Job and Step names",
+    "autowire JobLauncher and Job",
+    "launch Job with JobParameters",
+    "assert JobExecution status is successful",
+    "assert JobExecution exit code is COMPLETED",
+    "mock JobLauncher and Job",
+    "inject JobRunner instance",
+    "configure mock for JobLauncher run method",
+    "execute JobRunner run method",
+    "verify JobLauncher run method invocation"
+  ]
+}

@@ -1,0 +1,35 @@
+**Test Object**
+`LOG.LOG` function
+
+**Test Goal**
+This function verifies that when the input consists of two vectors, it can correctly calculate the logarithm of `a` to the base `b`, and the returned vector is consistent with the result calculated directly by NumPy.
+
+**Test Activities**
+1. Construct vectors `x` (10-19) and `y` (20-29).
+2. Call `LOG.LOG(a=x, b=[y], log_base="input")`.
+3. Calculate `log(x) / log(y)` using NumPy as the expected value.
+4. Assert that the returned vector `res.v` is exactly the same as the expected value.
+
+**Test Object**
+`LOG.LOG` Function
+
+**Test Goal**
+Verifies that when the input is a Vector and a Scalar, it can correctly calculate the logarithm with the base of the Scalar, and the result is consistent with the direct calculation by NumPy.
+
+**Test Activities**
+1. Construct a vector `x` with a range of 1 to 10 and a base Scalar `c=2`.
+2. Call `LOG.LOG(a=x, b=[Scalar(c=2)], log_base="input")`.
+3. Calculate `log(x) / log(2)` using NumPy as the expected value.
+4. Assert that the returned vector `res.v` is completely consistent with the expected value.
+
+**Test Object**
+`LOG.LOG` Function
+
+**Test Goal**
+Verifies that when the input is an OrderedPair and a Vector, it can correctly calculate the logarithm with the base of the corresponding position in the base vector, and the output x remains unchanged while y is the calculated result.
+
+**Test Activities**
+1. Construct arrays `x` (10-19), `y` (20-29), and `z` (30-39).
+2. Create `OrderedPair(x=x, y=y)` as `a`, `Vector(v=z)` as `b`, and call `LOG.LOG`.
+3. Calculate `log(y) / log(z)` using NumPy as the expected value of `y`.
+4. Assert that `res.x` is consistent with the original `x`, and `res.y` is exactly consistent with the expected value.

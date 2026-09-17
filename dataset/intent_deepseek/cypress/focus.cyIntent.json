@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_focus_cy",
+  "source_file": "dataset/raw/cypress/focus.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:49:00.903448",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "describe('haveselectnode')",
+    "it('shouldtogglehidenodes')",
+    "it('shouldtoggleindex')",
+    "it('shoulddisplaymorenodesifrangeinscrease')",
+    "describe('haveactivefocus')",
+    "it('shouldtoggleindex')",
+    "it('shoulddisplaymorenodesifrangeinscrease')",
+    "it('shouldtoggleindex')",
+    "it('shouldtoggleindex')",
+    "describe('haveselectnode')",
+    "beforeEach",
+    "cy.visit",
+    "beforeEach"
+  ],
+  "goals": [],
+  "activities": [
+    "describe_focus",
+    "beforeEach_haveselectnode",
+    "it_haveselectnode",
+    "describe_haveactivefocus",
+    "beforeEach_haveactivefocus",
+    "it_haveactivefocus_toggle_hide_nodes",
+    "it_haveactivefocus_toggle_index",
+    "it_haveactivefocus_scroll_to_bottom",
+    "it_haveactivefocus_display_more_nodes",
+    "it_haveselectnode_aggregate",
+    "describe_haveactivefocus_aggregate",
+    "it_haveactivefocus_scroll_to_top"
+  ]
+}

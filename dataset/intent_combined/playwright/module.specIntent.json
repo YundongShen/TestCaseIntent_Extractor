@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_module_spec",
+  "source_file": "dataset/raw/playwright/module.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T15:26:55.262737",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Bootstrap 4 web page"
+  ],
+  "goals": [
+    "Verify visibility, styling, and interaction of Bootstrap 4 components"
+  ],
+  "activities": [
+    "navigate to home page",
+    "verify body is hidden",
+    "verify body is visible",
+    "locate alert element",
+    "get initial alert background color",
+    "wait for CSS resource load",
+    "get styled alert background color",
+    "verify alert color changed",
+    "locate modal element",
+    "verify modal count is one",
+    "verify modal is hidden",
+    "locate launch modal button",
+    "verify button exists",
+    "click launch modal button",
+    "verify modal is visible"
+  ]
+}

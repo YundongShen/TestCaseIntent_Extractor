@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_ContinentRepositoryTest",
+  "source_file": "dataset/raw/junit_spring/ContinentRepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:51:31.926483",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "test the ability of the application to find the population in continent filtered by provided data"
+  ],
+  "activities": [
+    "callAutowiredprivateContinentRepositorycontinentRepository",
+    "callsetUpvoid",
+    "call@TestvoidtestFindPopulationInContinentFiltered()",
+    "callassertEquals(3,result.size())",
+    "callassertNotNull(result)",
+    "callassertEquals(5400000000L,firstContinent.getTotalPopulation().longValue())",
+    "callassertEquals(93000000L,firstContinent.getCityPopulation().longValue())",
+    "callassertEquals(66.67%,firstContinent.getCityPercentage())",
+    "callassertEquals(900000000L,firstContinent.getRuralPopulation().longValue())",
+    "callassertEquals(33.33%,firstContinent.getRuralPercentage())",
+    "callContinentsecondContinent=result.get(1)",
+    "callassertEquals(Europe,secondContinent.getContinent())",
+    "callassertEquals(800000000L,secondContinent.getTotalPopulation().longValue())",
+    "callassertEquals(500000000L,secondContinent.getCityPopulation().longValue())",
+    "callassertEquals(62.50%,secondContinent.getCityPercentage())",
+    "callassertEquals(300000000L,secondContinent.getRuralPopulation().longValue())",
+    "callassertEquals(37.50%,secondContinent.getRuralPercentage())"
+  ]
+}

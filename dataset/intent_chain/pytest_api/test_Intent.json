@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_test_",
+  "source_file": "dataset/raw/pytest_api/test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:56:35.690486",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the functional correctness of Movie API CRUD operations (GET, POST, PUT, DELETE)",
+    "Validate API response status codes and JSON data schema compliance"
+  ],
+  "activities": [
+    "Send GET request to list movies and verify status code 200 and Content-Type header",
+    "Send POST request to add movie with payload and verify status code 200",
+    "Send PUT request to update movie with payload and verify status code 200",
+    "Send GET request to get specific movie, verify status code 200, Content-Type header, and validate JSON schema",
+    "Send DELETE request to delete movie and verify status code 200"
+  ]
+}

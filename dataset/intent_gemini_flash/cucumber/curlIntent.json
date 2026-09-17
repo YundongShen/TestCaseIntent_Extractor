@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_curl",
+  "source_file": "dataset/raw/cucumber/curl.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:37.795287",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "simple.attack",
+    "cookies.attack",
+    "verbs.attack"
+  ],
+  "goals": [
+    "Verify gauntlt's successful execution of various HTTP attack scenarios."
+  ],
+  "activities": [
+    "Ensure the 'curl' attack tool is available.",
+    "Copy attack files from 'examples/curl' folder.",
+    "Verify attack files 'simple.attack', 'cookies.attack', and 'verbs.attack' exist.",
+    "Execute 'gauntlt simple.attack' command.",
+    "Assert command passes with '4 steps (4 passed)' output.",
+    "Ensure the 'curl' attack tool is available.",
+    "Copy attack files from 'examples/curl' folder.",
+    "Verify attack files 'simple.attack', 'cookies.attack', and 'verbs.attack' exist.",
+    "Execute 'gauntlt cookies.attack' command.",
+    "Assert command passes with '4 steps (4 passed)' output.",
+    "Ensure the 'curl' attack tool is available.",
+    "Copy attack files from 'examples/curl' folder.",
+    "Verify attack files 'simple.attack', 'cookies.attack', and 'verbs.attack' exist.",
+    "Execute 'gauntlt verbs.attack' command.",
+    "Assert command passes with '5 scenarios (5 passed)' output."
+  ]
+}

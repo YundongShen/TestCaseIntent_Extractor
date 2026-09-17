@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_top_spec",
+  "source_file": "dataset/raw/playwright/top.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T15:27:34.897211",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "SPARQList application homepage"
+  ],
+  "goals": [
+    "Verify navigation, login access, and search functionality"
+  ],
+  "activities": [
+    "navigate to homepage",
+    "verify navigation text contains SPARQList",
+    "verify login link is visible",
+    "navigate to homepage",
+    "click login link",
+    "verify URL is login page",
+    "navigate to homepage",
+    "locate list items",
+    "verify list item count is greater than one",
+    "verify first list item is visible",
+    "extract first item href attribute",
+    "verify href is not empty",
+    "fill search input with extracted ID",
+    "verify list item count is one",
+    "verify first item href matches ID"
+  ]
+}

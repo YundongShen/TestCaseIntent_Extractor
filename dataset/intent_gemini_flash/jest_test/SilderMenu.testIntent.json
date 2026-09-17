@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_SilderMenu_test",
+  "source_file": "dataset/raw/jest_test/SilderMenu.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:59:10.155589",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "getMeunMatcheys"
+  ],
+  "goals": [
+    "Verify that the 'getMeunMatcheys' function correctly identifies and returns matching menu paths for various input path patterns, including simple, sub-paths, and parameterized paths."
+  ],
+  "activities": [
+    "Define a test suite named 'test meun match'.",
+    "Define a test case named 'simple path'.",
+    "Execute getMeunMatcheys with the menu array and path '/dashboard'.",
+    "Assert the returned value is ['/dashboard'].",
+    "Define a test case named 'error path'.",
+    "Execute getMeunMatcheys with the menu array and path '/dashboardname'.",
+    "Assert the returned value is [].",
+    "Define a test case named 'Secondary path'.",
+    "Execute getMeunMatcheys with the menu array and path '/dashboard/name'.",
+    "Assert the returned value is ['/dashboard/name'].",
+    "Define a test case named 'Parameter path'.",
+    "Execute getMeunMatcheys with the menu array and path '/userinfo/2144'.",
+    "Assert the returned value is ['/userinfo/:id'].",
+    "Define a test case named 'three parameter path'.",
+    "Execute getMeunMatcheys with the menu array and path '/userinfo/2144/info'.",
+    "Assert the returned value is ['/userinfo/:id/info']."
+  ]
+}

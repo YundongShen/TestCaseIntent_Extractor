@@ -1,0 +1,49 @@
+**Test Object**
+The `levenstein` function
+
+**Test Goal**
+Verify that the edit distance between two same strings is calculated correctly.
+
+**Test Activities**
+1. Call `levenstein('aaa', 'aaa')`.
+2. Assert the return value to 0.
+
+**Test Object**
+The `levenstein` function
+
+**Test Goal**
+Verify that the edit distance between two different strings is calculated correctly.
+
+**Test Activities**
+1. Call `levenstein('abc', 'def')`.
+2. Assert the return value to 3.
+
+**Test Object**
+The `levenstein` function
+
+**Test Goal**
+Verify that the edit distance between two same email strings is calculated correctly.
+
+**Test Activities**
+1. Call `levenstein('gmail.com', 'gnail.com')`.
+2. Assert the return value to be 1.
+
+**Test Object**
+`levenstein` function
+
+**Test Goal**
+Verify that the edit distance between two different email strings is calculated correctly.
+
+**Test Activities**
+1. Call `levenstein('gmail.com', 'gnaul.com')`.
+2. Assert the return value to be 2.
+
+**Test Object**
+`levenstein` function
+
+**Test Goal**
+Verify that the edit distance between two strings is calculated correctly.
+
+**Test Activities**
+1. Call `levenstein('mail.com', 'gnaul.com')`.
+2. Assert the return value to be 3.

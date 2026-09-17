@@ -1,0 +1,53 @@
+{
+  "test_case_id": "tc_api_test",
+  "source_file": "dataset/raw/supertest/api.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-11T08:06:42.700334",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "/signup",
+    "/login",
+    "/base",
+    "/upgrade",
+    "/mission/start",
+    "/battle",
+    "/players/nearby",
+    "/recruit",
+    "/map",
+    "/attack/territory",
+    "/influence",
+    "/invest",
+    "/market",
+    "/buy",
+    "/create/event",
+    "/defend",
+    "/leaderboard"
+  ],
+  "goals": [
+    "Verify the end-to-end API functionality for the hero/villain game, covering authentication, base management, combat, economy, and role-specific actions.",
+    "Verify the interaction between hero and villain roles through dynamic events, battles, and territory control."
+  ],
+  "activities": [
+    "Sign up a hero and save the token",
+    "Sign up a villain and save the token",
+    "Log in as the hero and update the token",
+    "Log in as the villain and update the token",
+    "Fetch the hero's base details",
+    "Upgrade the hero's base defenses",
+    "Start a hero mission",
+    "Initiate a battle against the villain",
+    "Fetch nearby players for the hero",
+    "Recruit a sidekick for the hero",
+    "Recruit a minion for the villain",
+    "Fetch the game map",
+    "Attack a territory as the hero",
+    "Fetch the hero's influence",
+    "Invest money as the hero",
+    "Fetch available market items",
+    "Fetch market items and purchase the first item as the hero",
+    "Create a new event as the villain and save the event ID",
+    "Defend the created event as the hero",
+    "Fetch the leaderboard"
+  ]
+}

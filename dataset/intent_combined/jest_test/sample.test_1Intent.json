@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_sample_test_1",
+  "source_file": "dataset/raw/jest_test/sample.test_1.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:54:40.967071",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "application server and configuration files"
+  ],
+  "goals": [
+    "verify server page serving and authentication configuration validity"
+  ],
+  "activities": [
+    "read index html file content",
+    "set global document inner html",
+    "get load msal element source attribute",
+    "verify source attribute contains cdn link",
+    "load authentication configuration object",
+    "verify configuration object is defined",
+    "verify client id matches guid format",
+    "verify authority matches uri format",
+    "set node environment to test",
+    "send get request to root path",
+    "read expected index html content",
+    "verify response status code is 200",
+    "verify response text matches expected content",
+    "send get request to signout path",
+    "read expected signout html content",
+    "verify response status code is 200",
+    "verify response text matches expected content"
+  ]
+}

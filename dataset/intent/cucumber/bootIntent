@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_boot",
+  "source_file": "dataset/raw/cucumber/boot.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-01T16:16:13.376189",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "VM",
+    "bootloader prompt",
+    "kernel",
+    "systemd",
+    "login prompt"
+  ],
+  "goals": [
+    "Verify the basic boot process of the Fedora virtual machine and ensure a login prompt is displayed"
+  ],
+  "activities": [
+    "Download virtual machine image from specified URL",
+    "Power on the virtual machine",
+    "Verify bootloader prompt appears within 30 seconds",
+    "Verify kernel is loaded within 60 seconds",
+    "Verify systemd is running",
+    "Verify login prompt appears within 480 seconds"
+  ]
+}

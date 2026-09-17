@@ -1,0 +1,35 @@
+{
+  "test_case_id": "tc_sample_test_1",
+  "source_file": "dataset/raw/jest_test/sample.test_1.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:44:37.053847",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "document",
+    "msalConfig",
+    "app"
+  ],
+  "goals": [
+    "Verify that the application server correctly serves the index and signout HTML pages",
+    "Verify that the MSAL authentication configuration is properly defined with valid credentials and the index page contains the correct MSAL CDN link"
+  ],
+  "activities": [
+    "Read the 'index.html' file content",
+    "Set the global document HTML to the 'index.html' content",
+    "Verify the 'src' attribute of the 'load-msal' element contains the MSAL CDN link",
+    "Load the MSAL configuration object into the global scope",
+    "Verify the MSAL configuration object is defined",
+    "Verify the client ID in the configuration matches a valid GUID format",
+    "Verify the authority URI in the configuration matches a valid URI format",
+    "Set the Node environment variable to 'test'",
+    "Send a GET request to the root ('/') endpoint",
+    "Read the 'index.html' file content",
+    "Verify the root endpoint response status code is 200",
+    "Verify the root endpoint response text matches the 'index.html' content",
+    "Send a GET request to the '/signout' endpoint",
+    "Read the 'signout.html' file content",
+    "Verify the '/signout' endpoint response status code is 200",
+    "Verify the '/signout' endpoint response text matches the 'signout.html' content"
+  ]
+}

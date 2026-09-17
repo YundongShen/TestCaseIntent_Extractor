@@ -1,0 +1,52 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/jest_spec/app.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:52:53.957017",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "/login",
+    "/administrativo/alumno",
+    "/administrativo/alumno/update/:id",
+    "/administrativo/alumno/delete/:id"
+  ],
+  "goals": [
+    "Verify the administrative API's functionality for creating new student records, including handling valid, duplicate, and invalid input.",
+    "Verify the administrative API's functionality for updating and deleting existing student records, including handling non-existent records for deletion."
+  ],
+  "activities": [
+    "Perform a POST request to '/login' with form data 'usuario=sparoj&contrasena=123'.",
+    "Verify the response Content-Type header is 'text/plain; charset=utf-8'.",
+    "Verify the response status code is 302.",
+    "Extract and store the 'set-cookie' header from the login response.",
+    "Perform a POST request to '/administrativo/alumno'.",
+    "Attach the stored session cookie to the request.",
+    "Send new student data including 'nombrePrueba', 'apellidoPrueba', 'usuarioPruebaNuevo', and 'clavePruebe'.",
+    "Verify the response Content-Type header is 'text/html; charset=utf-8'.",
+    "Verify the response status code is 201.",
+    "Perform a POST request to '/administrativo/alumno'.",
+    "Attach the stored session cookie to the request.",
+    "Send student data for an already existing user 'biondania'.",
+    "Verify the response Content-Type header is 'text/html; charset=utf-8'.",
+    "Verify the response status code is 409.",
+    "Perform a POST request to '/administrativo/alumno'.",
+    "Attach the stored session cookie to the request.",
+    "Send student data with empty values for required fields.",
+    "Verify the response Content-Type header is 'text/html; charset=utf-8'.",
+    "Verify the response status code is 500.",
+    "Perform a POST request to '/administrativo/alumno/update/2000001'.",
+    "Attach the stored session cookie to the request.",
+    "Send updated student data for ID '2000001'.",
+    "Verify the response Content-Type header is 'text/html; charset=utf-8'.",
+    "Verify the response status code is 200.",
+    "Perform a GET request to '/administrativo/alumno/delete/2000001'.",
+    "Attach the stored session cookie to the request.",
+    "Verify the response status code is 302.",
+    "Perform a GET request to '/administrativo/alumno/delete/999999999'.",
+    "Attach the stored session cookie to the request.",
+    "Verify the response status code is 500.",
+    "Disconnect from the Mongoose database."
+  ]
+}

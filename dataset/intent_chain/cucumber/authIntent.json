@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_auth",
+  "source_file": "dataset/raw/cucumber/auth.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T16:18:54.138577",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "user",
+    "JWT"
+  ],
+  "goals": [
+    "Verify user authentication and JWT token lifecycle management",
+    "Verify user profile data update and rights retrieval"
+  ],
+  "activities": [
+    "string1",
+    "string2"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_cssCode_directive_spec",
+  "source_file": "dataset/raw/jest_spec/cssCode.directive.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:11:59.776947",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "element"
+  ],
+  "goals": [
+    "Verify the cssCode directive renders the expected text content"
+  ],
+  "activities": [
+    "Load module googleWebfontsHelperApp",
+    "Load module app/cssCode/cssCode.html",
+    "Inject $rootScope",
+    "Create new scope",
+    "Inject $compile",
+    "Create angular element with css-code tag",
+    "Compile element with scope",
+    "Apply scope changes",
+    "Assert element text content matches expected string"
+  ]
+}

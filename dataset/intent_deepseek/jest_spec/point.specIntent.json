@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_point_spec",
+  "source_file": "dataset/raw/jest_spec/point.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:59:27.462232",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Point"
+  ],
+  "goals": [
+    "verifyadditionandmultiplicationofpoints",
+    "verifysubtractionanddivisionofpoints"
+  ],
+  "activities": []
+}

@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_lyraexport_test",
+  "source_file": "dataset/raw/jest_test/lyraexport.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:57:41.342668",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "lyraExport"
+  ],
+  "goals": [
+    "Verify that the lyraExport directive renders with the text 'Export to lyra'."
+  ],
+  "activities": [
+    "Load the 'polestar' module.",
+    "Load the 'polestar' module, overriding the 'Spec' service with a mock object.",
+    "Create a new child scope for the test.",
+    "Instantiate the `lyra-export` directive element.",
+    "Compile the `lyra-export` element using the test scope.",
+    "Verify the compiled element's text content is 'Export to lyra'."
+  ]
+}

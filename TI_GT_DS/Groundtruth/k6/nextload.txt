@@ -1,0 +1,12 @@
+**Test Object**
+The homepage `https://lol.com/` and the `/api/hello` API.
+
+**Test Goal**
+Verify the performance of the two APIs under progressively increasing load.
+
+**Test Activities**
+1. Configure a three-stage load balancing: increase concurrency from 0 to 10 over 30 seconds, maintain this for 1 minute, and then decrease it back to 0 over the last 10 seconds.
+2. Each virtual user first requests the homepage, checking for a 200 status code and a response time of less than 500ms.
+3. Then, request `/api/hello`, similarly checking for a 200 status code and a response time of less than 500ms.
+4. Wait 1 second after each iteration to simulate real user intervals.
+5. Generate an HTML report and terminal summary at the end of the test.

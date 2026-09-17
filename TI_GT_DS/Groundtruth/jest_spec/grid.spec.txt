@@ -1,0 +1,25 @@
+**Test Object**
+`Grid.create` Method
+
+**Test Goal**
+Verifies that `Grid.create` throws an error when a seed of mismatched length is passed to it.
+
+**Test Activities**
+1. Call `Grid.create(3, 3, "1 0 0 1 1 0")` (a 3x3 grid requires 9 values, but only 6 are given).
+2. The assertion function throws an error (matching snapshot).
+
+**Test Object**
+`grid.neighbors` Method 
+
+**Test Goal**
+Verify that `neighbors` returns correct neighbor indices for various cell positions.
+
+**Test Activities**
+1. Create a 3x3 grid using the seed `"1 0 0 1 1 0 0 1 0"`.
+2. Call `neighbors(7)` on the out-of-bounds index 7, and check if the result matches the snapshot.
+3. Call `neighbors(-1)` on the out-of-bounds index -1, and check if the result matches the snapshot.
+4. Call `neighbors(4)` on the center index 4, and check if the result matches the snapshot.
+5. Call `neighbors(0)` on the corner index 0, and check if the result matches the snapshot.
+6. Call `neighbors(2)` on the corner index 2, and check if the result matches the snapshot.
+7. Call `neighbors(6)` on the corner index 6, and check if the result matches the snapshot.
+8. Call `neighbors(8)` on the corner index 8, and check if the result matches the snapshot.

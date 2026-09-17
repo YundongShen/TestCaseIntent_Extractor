@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_misc_spec",
+  "source_file": "dataset/raw/jest_spec/misc.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T17:39:56.222813",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "panic",
+    "generatePropsFromAttributes",
+    "memoize"
+  ],
+  "goals": [
+    "string",
+    "string"
+  ],
+  "activities": [
+    "Call panic function and verify it throws an exception",
+    "Call generatePropsFromAttributes with class attribute and verify result",
+    "Call generatePropsFromAttributes with ref attribute and verify result",
+    "Wrap function with memoize, call it twice, and verify execution count"
+  ]
+}

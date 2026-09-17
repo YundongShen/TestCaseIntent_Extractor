@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_player_spec",
+  "source_file": "dataset/raw/jest_spec/player.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:40:00.120434",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "player"
+  ],
+  "goals": [
+    "Verify that the player's bet_request method is stable and returns a bet of '0' for a given state."
+  ],
+  "activities": [
+    "Create a mock response object to capture the response message",
+    "Send a bet request to the player using the state and the mock response",
+    "Verify that the captured response message is equal to '0'"
+  ]
+}

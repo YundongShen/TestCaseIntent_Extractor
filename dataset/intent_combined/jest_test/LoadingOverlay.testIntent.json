@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_LoadingOverlay_test",
+  "source_file": "dataset/raw/jest_test/LoadingOverlay.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:55:39.893953",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "..."
+  ],
+  "goals": [
+    "..."
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

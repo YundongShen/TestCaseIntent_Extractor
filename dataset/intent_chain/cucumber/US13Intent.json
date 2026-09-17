@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_US13",
+  "source_file": "dataset/raw/cucumber/US13.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-05-13T16:45:21.513673",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "navegador de cultivos",
+    "lista de plantas",
+    "planta",
+    "pgina detallada"
+  ],
+  "goals": [
+    "...",
+    "..."
+  ],
+  "activities": [
+    "Acceder al navegador de cultivos",
+    "Ingresar el nombre de la planta para buscar",
+    "Verificar la aparicin de la lista de plantas coincidentes",
+    "Seleccionar la planta deseada de la lista",
+    "Verificar la apertura de la pgina detallada con informacin de la planta"
+  ]
+}

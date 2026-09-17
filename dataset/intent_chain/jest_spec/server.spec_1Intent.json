@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_server_spec_1",
+  "source_file": "dataset/raw/jest_spec/server.spec_1.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T17:56:00.930478",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "server"
+  ],
+  "goals": [
+    "string",
+    "string"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

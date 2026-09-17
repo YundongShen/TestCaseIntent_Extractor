@@ -1,0 +1,44 @@
+{
+  "test_case_id": "tc_sample_test_1",
+  "source_file": "dataset/raw/jest_test/sample.test_1.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:58:11.742862",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "app",
+    "msalConfig",
+    "document"
+  ],
+  "goals": [
+    "Verify the client-side application's initial setup, including HTML structure and authentication configuration.",
+    "Verify the server correctly serves the main application pages."
+  ],
+  "activities": [
+    "Load the 'supertest' module.",
+    "Load the 'path' module.",
+    "Load the 'fs' module.",
+    "Load the application from 'server.js'.",
+    "Disable Jest's mocking for the 'fs' module.",
+    "Read the 'App/index.html' file content.",
+    "Set the global document's HTML content using the read 'index.html'.",
+    "Locate the HTML element with ID 'load-msal'.",
+    "Get the 'src' attribute value of the 'load-msal' element.",
+    "Assert that the 'src' attribute contains 'https://alcdn.msauth.net/browser'.",
+    "Load the MSAL configuration object from 'authConfig.js'.",
+    "Assert that the MSAL configuration object is defined.",
+    "Define a regular expression for a GUID format.",
+    "Assert that the MSAL client ID matches the GUID format.",
+    "Define a regular expression for a URI format.",
+    "Assert that the MSAL authority URI matches the URI format.",
+    "Set the Node.js environment variable 'NODE_ENV' to 'test'.",
+    "Send a GET request to the application's root path ('/').",
+    "Read the 'App/index.html' file content from the file system for comparison.",
+    "Assert that the HTTP response status code for the root path request is 200.",
+    "Assert that the HTTP response body for the root path request matches the 'index.html' file content.",
+    "Send a GET request to the application's '/signout' path.",
+    "Read the 'App/signout.html' file content from the file system for comparison.",
+    "Assert that the HTTP response status code for the '/signout' request is 200.",
+    "Assert that the HTTP response body for the '/signout' request matches the 'signout.html' file content."
+  ]
+}

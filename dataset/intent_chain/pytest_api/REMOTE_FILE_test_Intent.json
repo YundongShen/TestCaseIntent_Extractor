@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_REMOTE_FILE_test_",
+  "source_file": "dataset/raw/pytest_api/REMOTE_FILE_test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-13T19:40:04.023396",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "REMOTE_FILE.REMOTE_FILE"
+  ],
+  "goals": [
+    "Verify that REMOTE_FILE.REMOTE_FILE correctly returns expected output types for valid remote file URLs",
+    "Verify that REMOTE_FILE.REMOTE_FILE raises appropriate exceptions for invalid or unsupported remote file URLs"
+  ],
+  "activities": [
+    "...",
+    "..."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_kalkulator_cy",
+  "source_file": "dataset/raw/cypress/kalkulator.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:57.986925",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "testkalkulatora",
+    "verifythatadding2+3=5",
+    "verifythatmultiplication6*7=42",
+    "verifyclearingthescreen"
+  ],
+  "activities": []
+}

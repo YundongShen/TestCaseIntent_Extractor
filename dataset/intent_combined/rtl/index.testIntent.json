@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_index_test",
+  "source_file": "dataset/raw/rtl/index.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-13T04:53:34.332653",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "SimpleMdeReact"
+  ],
+  "goals": [
+    "verify successful rendering and text input handling"
+  ],
+  "activities": [
+    "render the Editor component",
+    "find the textbox element",
+    "type text into the editor",
+    "verify the text is displayed"
+  ]
+}

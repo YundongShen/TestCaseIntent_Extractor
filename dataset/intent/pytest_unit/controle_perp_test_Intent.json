@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_controle_perp_test_",
+  "source_file": "dataset/raw/pytest_unit/controle_perp_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:13:33.794065",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "controle"
+  ],
+  "goals": [
+    "Verify the numerical accuracy of the control torque values computed by the controle function",
+    "Verify the output shape and status flag of the controle function"
+  ],
+  "activities": [
+    "Initialize test arguments dictionary with physical parameters",
+    "Calculate initial leg position matrix XL and final position Xf",
+    "Compute moments of inertia J1, J2, and J3",
+    "Compute initial joint angles q using inverse kinematics",
+    "Initialize joint velocities and construct initial state vector ivp",
+    "Assign state vector to x and initialize time t",
+    "Recalculate final position Xf and joint length vector lj",
+    "Update leg position matrix XL and validate configuration",
+    "Compute target position and recompute joint angles q using inverse kinematics",
+    "Print test execution status message",
+    "Execute controle function to obtain torque Tau and force F",
+    "Assert torque Tau shape equals (4, 1)",
+    "Assert force F equals 0",
+    "Define expected torque values array",
+    "Assert calculated torque Tau matches expected values"
+  ]
+}

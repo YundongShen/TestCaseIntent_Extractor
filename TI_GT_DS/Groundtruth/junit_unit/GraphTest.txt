@@ -1,0 +1,11 @@
+**Test Object**
+`NumberOfIslands` Inner Class and Methods
+
+**Test Goal**
+Verify that the number of islands in a given grid is correctly calculated.
+
+**Test Activities**
+1. Prepare a character grid containing '1' and '0'.
+2. Create a `NumberOfIslands` object using an instance (mock) of `Graph`.
+3. Call `numIslands(grid)`.
+4. Assert that the returned result is 3.

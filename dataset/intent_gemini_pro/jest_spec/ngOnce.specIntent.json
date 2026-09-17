@@ -1,0 +1,39 @@
+{
+  "test_case_id": "tc_ngOnce_spec",
+  "source_file": "dataset/raw/jest_spec/ngOnce.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-11T07:39:44.125003",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "$rootScope",
+    "child"
+  ],
+  "goals": [
+    "Verify that the $once method is correctly added to AngularJS scopes and registers an event handler that is invoked exactly once when the specified event is broadcast.",
+    "Verify that the $once method works properly with child scopes and returns a valid deregistration function."
+  ],
+  "activities": [
+    "Load the 'ngOnce' module",
+    "Inject and assign the $rootScope service",
+    "Verify that $rootScope.$once is a function",
+    "Register a $once event listener for 'ngOnce.sound' on $rootScope",
+    "Broadcast 'ngOnce.sound' event with data 'boop' on $rootScope",
+    "Verify that the captured event name is 'ngOnce.sound'",
+    "Verify that the captured sound data is 'boop'",
+    "Register a $once event listener for 'ngOnce.sound' on $rootScope",
+    "Broadcast 'ngOnce.sound' event with data 'boop' on $rootScope",
+    "Broadcast 'ngOnce.sound' event with data 'bang' on $rootScope",
+    "Broadcast 'ngOnce.sound' event with data 'pow' on $rootScope",
+    "Verify that the captured event name is 'ngOnce.sound'",
+    "Verify that the captured sound data is 'boop'",
+    "Create a new child scope from $rootScope",
+    "Verify that the child scope has a $once function",
+    "Register a $once event listener for 'ngOnce.sound' on the child scope",
+    "Broadcast 'ngOnce.sound' event with data 'boop' on $rootScope",
+    "Verify that the captured event name is 'ngOnce.sound'",
+    "Verify that the captured sound data is 'boop'",
+    "Register a $once event listener on $rootScope and store the returned deregistration value",
+    "Verify that the returned deregistration value is a function"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "test_case_id": "tc_test__10",
+  "source_file": "dataset/raw/pytest_api/test__10.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-05-02T01:54:25.203151",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "File",
+    "WorkshopTest",
+    "DeleteWorkshopFilesRepBody"
+  ],
+  "goals": [
+    "Verify the API successfully deletes specified workshop files and returns the correct success response",
+    "Verify files are removed from storage and database records are updated correctly after deletion"
+  ],
+  "activities": [
+    "Clean workshop test environment",
+    "Insert workshop test data",
+    "Create text file in workshop",
+    "Create image file in workshop",
+    "Add files to workshop mongo database",
+    "Construct API delete URL with single file parameter",
+    "Send HTTP DELETE request to API",
+    "Parse API response JSON body",
+    "Remove file record from workshop mongo database",
+    "Verify API response status code, headers, and body content",
+    "Verify workshop data consistency by ID",
+    "Verify text file does not exist in storage",
+    "Verify image file exists in storage",
+    "Clean workshop test environment",
+    "Insert workshop test data",
+    "Create text file in workshop",
+    "Create image file in workshop",
+    "Add files to workshop mongo database",
+    "Construct API delete URL with multiple file parameters",
+    "Send HTTP DELETE request to API",
+    "Parse API response JSON body",
+    "Remove file records from workshop mongo database",
+    "Verify API response status code, headers, and body content",
+    "Verify workshop data consistency by ID",
+    "Verify text file does not exist in storage",
+    "Verify image file does not exist in storage",
+    "Clean workshop test environment",
+    "Clean test files on server"
+  ]
+}

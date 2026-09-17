@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_ExampleJMockTest",
+  "source_file": "dataset/raw/junit_unit/ExampleJMockTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T18:54:05.471403",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "manager"
+  ],
+  "goals": [
+    "Verify that UserManagerImpl.getUser correctly delegates to UserDao.load and returns the expected User instance."
+  ],
+  "activities": [
+    "Initialize UserManagerImpl with mocked dependencies",
+    "Set expectation for UserDao.load to return emptyUser when called with ID 500",
+    "Invoke manager.getUser with ID 500",
+    "Assert the returned user equals the expected emptyUser"
+  ]
+}

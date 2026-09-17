@@ -1,0 +1,11 @@
+**Test Object**
+Sudoku Game Component
+
+**Test Goal**
+After confirming that all empty cells have been filled with the correct numbers, the game will display a correct answer, indicating a victory.
+
+**Test Activities**
+1. Render the game component using the initial board and solved board data.
+2. Check that there are three empty spaces on the board.
+3. Click on the three empty spaces one by one and fill in the correct answers.
+4. A victory message will appear; wait for the relevant requests to complete.

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "tc_8_job_test_js",
+  "source_file": "dataset/raw/jest_test/8-job.test.js.1",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:01:08.199371",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify that createPushNotificationsJobs throws an error when the jobs parameter is not an array",
+    "Verify that createPushNotificationsJobs correctly creates queue jobs with the specified data, type, and event handlers"
+  ],
+  "activities": []
+}

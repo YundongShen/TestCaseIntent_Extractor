@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_test_",
+  "source_file": "dataset/raw/pytest_api/test_.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-13T04:14:47.497747",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Movie API"
+  ],
+  "goals": [
+    "Verify Movie API endpoints functionality and response correctness"
+  ],
+  "activities": [
+    "send GET request to list movies endpoint",
+    "assert response status code equals 200",
+    "assert response content type header equals application/json",
+    "send POST request to add movie endpoint with payload",
+    "assert response status code equals 200",
+    "send PUT request to update movie endpoint with payload",
+    "assert response status code equals 200",
+    "send GET request to get specific movie endpoint",
+    "assert response status code equals 200",
+    "assert response content type header equals application/json",
+    "parse response body as JSON",
+    "validate response body against defined schema",
+    "send DELETE request to delete movie endpoint",
+    "assert response status code equals 200"
+  ]
+}

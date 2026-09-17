@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_StubHandlerTest",
+  "source_file": "dataset/raw/junit_unit/StubHandlerTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T19:03:37.080450",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "{{ operation }}Handler"
+  ],
+  "goals": [
+    "Verify that {{ operation }}Handler.handleRequest returns OperationStatus.SUCCESS for a valid request",
+    "Ensure the response ProgressEvent contains null error codes and callbacks for a simple success scenario"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

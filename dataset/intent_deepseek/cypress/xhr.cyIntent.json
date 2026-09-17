@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_xhr_cy",
+  "source_file": "dataset/raw/cypress/xhr.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:49:22.547711",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [],
+  "activities": [
+    "cy.request('https://jsonplaceholder.cypress.io/comments').should((response) => { expect(response.status).to.eq(200); expect(response.body).to.have.length(500); expect(response).to.have.property('headers'); expect(response.headers['content-type']).to.eq('application/json;charset=utf-8'); }),",
+    "cy.request({url: \"https://jsonplaceholder.cypress.io/comments\", method: \"GET\"}).then((response) => { expect(response.status).to.eq(200); expect(response.body).to.have.length(500); expect(response).to.have.property('headers'); expect(response.headers['content-type']).to.eq('application/json;charset=utf-8'); })",
+    "cy.request(\"https://jsonplaceholder.cypress.io/comments\").its(\"headers\").its(\"content-type\").should(\"include\",\"application/json\")",
+    "cy.request(\"https://jsonplaceholder.cypress.io/comments\").its(\"status\").should(\"eq\",200)"
+  ]
+}

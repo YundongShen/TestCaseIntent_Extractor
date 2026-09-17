@@ -1,0 +1,20 @@
+**Test Object**
+Heroic Games Launcher Main Window/First Screen
+
+**Test Goal**
+Verify that the application window title is correctly displayed after startup.
+
+*Test Activities**
+1. Launch the application.
+2. Check if the page title is `'Heroic Games Launcher'`.
+
+**Test Object**
+Application Version Query API
+
+**Test Goal**
+Confirm the correctness of the Heroic, Legendary, and Gogdl versions.
+
+**Test Activities**
+1. Call `window.api.getHeroicVersion()` to get the Heroic version, and use semver to confirm it is ≥ 2.6.3.
+2. Call `window.api.getLegendaryVersion()` to get the version string, extract the version number, and confirm it is ≥ 0.20.32.
+3. Call `window.api.getGogdlVersion()` to get the Gogdl version and confirm that it is ≥ 0.7.1.

@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_test__8",
+  "source_file": "dataset/raw/pytest_unit/test__8.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:17:49.678238",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "drawMake",
+    "validateCPFTest"
+  ],
+  "goals": [
+    "Verify `drawMake` correctly processes a winning draw, including database updates and returning the drawn numbers.",
+    "Verify `drawMake` returns the expected number of drawn items.",
+    "Verify `validateCPFTest` accurately validates CPF numbers for various cases."
+  ],
+  "activities": [
+    "Create a mock object for the database cursor.",
+    "Create a mock object for the database connection.",
+    "Configure the mock cursor to return a specific list of user data when fetchall is called.",
+    "Define a list of numbers for the draw.",
+    "Call the drawMake function with the mock cursor, mock database, and draw numbers.",
+    "Assert that the mock cursor's execute method was called with a specific SQL UPDATE statement to mark a winner.",
+    "Assert that the mock database's commit method was called exactly once.",
+    "Assert that the result returned by drawMake matches the initial list of draw numbers.",
+    "Create a mock object for the database cursor.",
+    "Create a mock object for the database connection.",
+    "Configure the mock cursor to return a specific list of user data when fetchall is called.",
+    "Define a list of numbers for the draw, including many negative numbers.",
+    "Call the drawMake function with the mock cursor, mock database, and draw numbers.",
+    "Assert that the length of the result list returned by drawMake is 30.",
+    "Call the validateCPFTest function with CPF '12345678909' and assert the result is True.",
+    "Call the validateCPFTest function with CPF '52998224725' and assert the result is True.",
+    "Call the validateCPFTest function with CPF '123' and assert the result is False.",
+    "Call the validateCPFTest function with CPF '52998224726' and assert the result is False."
+  ]
+}

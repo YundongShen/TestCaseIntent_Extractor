@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_api_spec",
+  "source_file": "dataset/raw/playwright/api.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-11T07:55:16.301353",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "page",
+    "window.api.getHeroicVersion",
+    "window.api.getLegendaryVersion",
+    "window.api.getGogdlVersion"
+  ],
+  "goals": [
+    "Verify the first page renders correctly with the expected application title",
+    "Verify the application successfully retrieves valid version numbers for Heroic, Legendary, and GOG components"
+  ],
+  "activities": [
+    "Verify the page title is 'Heroic Games Launcher'",
+    "Retrieve the Heroic version from the window API",
+    "Verify the Heroic version is greater than or equal to '2.6.3'",
+    "Retrieve the Legendary version from the window API",
+    "Extract the base version number from the Legendary version string",
+    "Verify the Legendary version is greater than or equal to '0.20.32'",
+    "Retrieve the GOGDL version from the window API",
+    "Verify the GOGDL version is greater than or equal to '0.7.1'"
+  ]
+}

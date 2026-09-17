@@ -1,0 +1,30 @@
+{
+  "test_case_id": "tc_pytest_",
+  "source_file": "dataset/raw/pytest_unit/pytest_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-11T07:40:52.163043",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "invocations.pytest test and coverage functions"
+  ],
+  "goals": [
+    "verify command line argument construction and execution behavior for pytest test and coverage tasks"
+  ],
+  "activities": [
+    "call test task function with default parameters",
+    "call test task function with custom flags",
+    "call test task function with passthrough options",
+    "call test task function with warnings disabled",
+    "call coverage function with default arguments",
+    "call coverage function with xml report type",
+    "call coverage function with extra options",
+    "call coverage function with custom tester",
+    "call coverage function with additional test tasks",
+    "call coverage function with html report",
+    "call coverage function with codecov disabled",
+    "call coverage function with codecov enabled",
+    "verify pytest command arguments match expectations",
+    "verify codecov command execution matches expectations"
+  ]
+}

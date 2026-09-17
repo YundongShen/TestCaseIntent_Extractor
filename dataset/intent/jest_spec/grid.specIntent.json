@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_grid_spec",
+  "source_file": "dataset/raw/jest_spec/grid.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-01T17:23:27.662912",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Grid",
+    "grid"
+  ],
+  "goals": [
+    "Verify Grid.create throws an error when seed length is invalid",
+    "Verify Grid.neighbors returns correct neighbor indices for various cell positions"
+  ],
+  "activities": [
+    "Verify Grid creation with invalid seed length throws error matching snapshot",
+    "Create Grid instance with valid seed",
+    "Verify neighbors for cell index 7 match snapshot",
+    "Verify neighbors for cell index -1 match snapshot",
+    "Verify neighbors for cell index 4 match snapshot",
+    "Verify neighbors for cell index 0 match snapshot",
+    "Verify neighbors for cell index 2 match snapshot",
+    "Verify neighbors for cell index 6 match snapshot",
+    "Verify neighbors for cell index 8 match snapshot"
+  ]
+}

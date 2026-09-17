@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_soak",
+  "source_file": "dataset/raw/k6/soak.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T07:53:03.074641",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "http",
+    "k6/http",
+    "check",
+    "sleep",
+    "k6",
+    "url",
+    "localhost:5249",
+    "test"
+  ],
+  "goals": [],
+  "activities": [
+    "const url = 'http://localhost:5249/urls/test';",
+    "let response = http.get(url);",
+    "check(response, {'statusisredirect': (r) => r.status === 301});",
+    "sleep(1);",
+    "let response = http.get(url);",
+    "check(response, {'statusisredirect': (r) => r.status === 301});"
+  ]
+}

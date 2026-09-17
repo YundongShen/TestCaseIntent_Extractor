@@ -1,0 +1,43 @@
+**Test Object**
+The `cli.parseCozyURL` function
+
+**Test Goal**
+Verify that the function returns the URL as is when the input cozy URL does not end with a trailing forward slash.
+
+**Test Activities**
+1. Prepare a URL without a trailing forward slash: `'https://toto.mycozy.cloud'`.
+2. Call `cli.parseCozyURL(urlIn)`.
+3. Assert that the return value equals `'https://toto.mycozy.cloud'`.
+
+**Test Object**
+The `cli.parseCozyURL` function
+
+**Test Goal**
+Verify that the function correctly removes the trailing forward slash when the URL has one at the end.
+
+**Test Activities**
+1. Prepare a URL with a trailing forward slash: `'https://toto.mycozy.cloud/'`.
+2. Call `cli.parseCozyURL(urlIn)`.
+3. Assert the return value to `'https://toto.mycozy.cloud'` without the forward slashes.
+
+**Test Object**
+`cli.parseCozyURL` function
+
+**Test Goal**
+Verify that when the URL contains an `app` subdomain prefix, the function can remove the prefix, restoring a clean Cozy instance address.
+
+**Test Activities**
+1. Prepare a URL with an `app` prefix.
+2. Call `cli.parseCozyURL(urlIn)`.
+3. Assert the return value.
+
+**Test Object**
+`cli.parseCozyURL` function
+
+**Test Goal**
+Verify that when the passed URL does not start with `http`, the function throws an error message containing the corresponding content.
+
+**Test Activities**
+1. Prepare a URL that does not start with `http`: `'toto.mycozy.cloud'`.
+2. Call `cli.parseCozyURL(cozyUrl)` and catch any exceptions.
+3. Assert that the exception message matches `'Cozy url must start with \`http\`'.

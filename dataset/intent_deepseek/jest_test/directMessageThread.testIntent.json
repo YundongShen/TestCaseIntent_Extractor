@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_directMessageThread_test",
+  "source_file": "dataset/raw/jest_test/directMessageThread.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:50:09.425210",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "user",
+    "directMessageThread"
+  ],
+  "goals": [],
+  "activities": [
+    "it('shouldfetchadirectMessageThread', async() => { ... }),",
+    "it('shouldfetchthelastmessagefirst', async() => { ... }),",
+    "it('shouldfetchthesecondtolastmessagenext', async() => { ... })"
+  ]
+}

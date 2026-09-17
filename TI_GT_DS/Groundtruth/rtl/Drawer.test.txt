@@ -1,0 +1,11 @@
+**Test Object**
+`Drawer` Component
+
+**Test Goal**
+Verifies that the Drawer's display and hiding can be controlled via an external toggle button, and the corresponding CSS style classes will switch correctly.
+
+**Test Activities**
+1. Render a test component containing a Toggle button and a Drawer.
+2. Initially, check that the Drawer element has the `-translate-x-full` class, indicating a hidden state.
+3. Click the Toggle button, and check that the Drawer changes to the `transform-none` class, indicating a displayed state.
+4. Click the Toggle button again, and check that the Drawer changes back to `-translate-x-full`, returning to a hidden state.

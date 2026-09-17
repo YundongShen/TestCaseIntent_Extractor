@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_ExampleJMockTest",
+  "source_file": "dataset/raw/junit_unit/ExampleJMockTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:22:36.532677",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "UserManagerImpl"
+  ],
+  "goals": [
+    "Verify that UserManagerImpl.getUser() returns the expected user object when delegating to UserDao.load()"
+  ],
+  "activities": [
+    "Instantiate UserManagerImpl with dao and log",
+    "Instantiate User object assigned to emptyUser",
+    "Configure JMock expectation for dao.load to return emptyUser with argument 500",
+    "Invoke manager.getUser with argument 500",
+    "Assert returned user is same instance as emptyUser"
+  ]
+}

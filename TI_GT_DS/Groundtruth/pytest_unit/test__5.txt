@@ -1,0 +1,10 @@
+**Test Object**
+The `CustomerManager.add_customer` method
+
+**Test Goal**
+Verify that adding a customer returns a result containing all expected fields.
+
+**Test Activities**
+1. Initialize CustomerManager using a test TinyDB instance.
+2. Call `add_customer` and pass in the name, email, age, and country.
+3. Check that the returned dictionary contains all fields: name, email, age, country, and id.

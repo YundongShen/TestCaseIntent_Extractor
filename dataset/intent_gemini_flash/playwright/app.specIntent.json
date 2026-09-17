@@ -1,0 +1,50 @@
+{
+  "test_case_id": "tc_app_spec",
+  "source_file": "dataset/raw/playwright/app.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T13:34:50.728282",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "copy-button",
+    "editor-input",
+    "preview-content",
+    "strong element within preview-content",
+    "preview-inner-scroll",
+    "device-mobile",
+    "device-tablet"
+  ],
+  "goals": [
+    "Verify that the copy button remains visible and within the viewport on a mobile device.",
+    "Verify that bold text with punctuation is rendered correctly in the preview without leaking markdown markers.",
+    "Verify bidirectional scroll synchronization between the editor and device-specific previews (mobile/tablet)."
+  ],
+  "activities": [
+    "Set the viewport size to mobile dimensions (width: 390, height: 844).",
+    "Navigate to the root URL.",
+    "Click on the 'Preview' tab.",
+    "Assert that the copy button is visible.",
+    "Assert that the copy button's bounding box is valid and within the viewport.",
+    "Navigate to the root URL.",
+    "Fill the editor input with markdown text containing bold punctuation ('2025年初，伦敦黄金市场的一个月拆借利率一度升至**5%**。').",
+    "Assert that the preview renders '5%' as strong text.",
+    "Assert that the preview does not contain markdown markers ('**5%**').",
+    "Assert that the preview contains the full rendered text.",
+    "Set the viewport size to desktop dimensions (width: 1440, height: 900).",
+    "Navigate to the root URL.",
+    "Fill the editor input with a long markdown content.",
+    "Click on the 'mobile' device tab.",
+    "Wait for the editor input area to become scrollable.",
+    "Wait for the preview inner scroll area to become scrollable.",
+    "Scroll the editor input to 72% of its height and wait for the preview to sync its scroll position.",
+    "Scroll the preview inner scroll area to 28% of its height and wait for the editor to sync its scroll position.",
+    "Set the viewport size to desktop dimensions (width: 1440, height: 900).",
+    "Navigate to the root URL.",
+    "Fill the editor input with a long markdown content.",
+    "Click on the 'tablet' device tab.",
+    "Wait for the editor input area to become scrollable.",
+    "Wait for the preview inner scroll area to become scrollable.",
+    "Scroll the editor input to 72% of its height and wait for the preview to sync its scroll position.",
+    "Scroll the preview inner scroll area to 28% of its height and wait for the editor to sync its scroll position."
+  ]
+}

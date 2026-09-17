@@ -1,0 +1,22 @@
+{
+  "test_case_id": "tc_server_spec_1",
+  "source_file": "dataset/raw/jest_spec/server.spec_1.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-05-13T14:46:59.788885",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "server.js index route"
+  ],
+  "goals": [
+    "verify index route returns 200 status, HTML format, and correct content"
+  ],
+  "activities": [
+    "send GET request to root path",
+    "verify response status code is 200",
+    "send GET request to root path",
+    "verify response content type is text/html",
+    "send GET request to root path",
+    "verify response text matches expected content"
+  ]
+}

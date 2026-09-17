@@ -1,0 +1,31 @@
+**Test Object**
+`ABS.ABS` function
+
+**Test Goal**
+Verify that the absolute value of a scalar input is correctly calculated.
+
+**Test Activities**
+1. Call `ABS.ABS(default=Scalar(c=-1.0))`.
+2. Assert that `res.x` equals `-1.0` and `res.y` equals `1.0`.
+
+**Test Object**
+`ABS.ABS` function
+
+**Test Goal**
+Verify that the absolute value of each element in a vector is correctly calculated.
+
+**Test Activities**
+1. Construct a vector `x` with values from -10 to 9.
+2. Call `ABS.ABS(default=x)`.
+3. Assert that `res.x` matches the input `x.v` and `res.y` matches `np.abs(x.v)`.
+
+**Test Object**
+`ABS.ABS` function
+
+**Test Goal**
+Verify that for an `OrderedPair` input, `x` is unchanged and `y` is the absolute value of the original `y`.
+
+**Test Activities**
+1. Construct arrays `x` (-10~9) and `y` (-20~19).
+2. Call `ABS.ABS(default=OrderedPair(x=x, y=y))`.
+3. Assert that `res.x` matches `x` and `res.y` matches `np.abs(y)`.

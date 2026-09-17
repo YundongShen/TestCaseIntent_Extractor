@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_Game_cy",
+  "source_file": "dataset/raw/cypress/Game.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:48:54.435435",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "Game",
+    "SudokuProvider",
+    "WinProvider"
+  ],
+  "goals": [
+    "verifythatthegameisfirstplayedwiththecorrectinitialvalues",
+    "verifythatthegameissolvethenarrowdownthegrid"
+  ],
+  "activities": []
+}

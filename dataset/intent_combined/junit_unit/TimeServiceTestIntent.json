@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_TimeServiceTest",
+  "source_file": "dataset/raw/junit_unit/TimeServiceTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:08:38.289640",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "TimeService"
+  ],
+  "goals": [
+    "verify method return values and execution order of TimeService methods"
+  ],
+  "activities": [
+    "initialize time, date, and datetime values",
+    "configure mock behavior for getTime, getDate, and getDateTime methods",
+    "assert getTime returns expected time value",
+    "assert getDate returns expected date value",
+    "assert getDateTime returns expected datetime value",
+    "create in-order verifier for time service mock",
+    "verify getTime method call order",
+    "verify getDate method call order",
+    "verify getDateTime method call order"
+  ]
+}

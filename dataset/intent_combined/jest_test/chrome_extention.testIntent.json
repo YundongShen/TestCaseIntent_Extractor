@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_chrome_extention_test",
+  "source_file": "dataset/raw/jest_test/chrome_extention.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T14:48:43.232348",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Chrome extension"
+  ],
+  "goals": [
+    "Verify header modification and request proxying functionality in default, off, and on states"
+  ],
+  "activities": [
+    "wait for service worker target",
+    "extract extension id from url",
+    "wait for extension initialization",
+    "navigate to header test url",
+    "verify page content matches header pattern",
+    "execute xhr request to proxy url",
+    "verify xhr response matches expected content",
+    "open extension popup page",
+    "click off button in popup",
+    "wait for extension state change",
+    "navigate to header test url",
+    "verify page content does not match header pattern",
+    "execute xhr request to proxy url",
+    "verify xhr response does not match expected content",
+    "open extension popup page",
+    "click on button in popup",
+    "wait for extension state change",
+    "navigate to header test url",
+    "verify page content matches header pattern",
+    "execute xhr request to proxy url",
+    "verify xhr response matches expected content"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_script",
+  "source_file": "dataset/raw/k6/script.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-01T21:06:01.280408",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "r"
+  ],
+  "goals": [
+    "Verify HTTP to HTTPS redirection status and location header",
+    "Verify API endpoint response status and Link header correctness"
+  ],
+  "activities": [
+    "Send HTTP GET request to http://${target}/",
+    "Verify response status is 301 or 308",
+    "Verify response Location header starts with https://${target}",
+    "Send HTTP GET request to https://${target}/books?page=1",
+    "Verify response status is 200",
+    "Verify response Link header matches https://${target}/docs.jsonld",
+    "Wait for 1 second"
+  ]
+}

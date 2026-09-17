@@ -1,0 +1,32 @@
+{
+  "test_case_id": "tc_ABS_test_",
+  "source_file": "dataset/raw/pytest_unit/ABS_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T13:39:19.162196",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "ABS.ABS"
+  ],
+  "goals": [
+    "Verify the ABS function correctly computes the absolute value for Scalar, Vector, and OrderedPair data types.",
+    "Verify that the ABS function's output structure correctly reflects the input, preserving the original x component and storing the absolute value in the y component."
+  ],
+  "activities": [
+    "Import the ABS module for the Scalar test.",
+    "Call the ABS function with a Scalar input of -1.0.",
+    "Verify the 'x' output of the Scalar result is -1.0.",
+    "Verify the 'y' output of the Scalar result is 1.0.",
+    "Import the ABS module for the Vector test.",
+    "Create a Vector object with values ranging from -10 to 9.",
+    "Call the ABS function with the created Vector as input.",
+    "Verify the 'x' output of the Vector result matches the input vector values.",
+    "Verify the 'y' output of the Vector result matches the absolute values of the input vector.",
+    "Import the ABS module for the OrderedPair test.",
+    "Create a NumPy array 'x' with values ranging from -10 to 9.",
+    "Create a NumPy array 'y' with values ranging from -20 to 19.",
+    "Call the ABS function with an OrderedPair input using the created 'x' and 'y' arrays.",
+    "Verify the 'x' output of the OrderedPair result matches the input 'x' array.",
+    "Verify the 'y' output of the OrderedPair result matches the absolute values of the input 'y' array."
+  ]
+}

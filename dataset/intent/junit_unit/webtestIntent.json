@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_webtest",
+  "source_file": "dataset/raw/junit_unit/webtest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T20:57:57.711345",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "HomeController",
+    "HomeService",
+    "Skill"
+  ],
+  "goals": [
+    "Verify that the skill voting endpoint correctly processes a vote request, updates the skill rating in the repository, and returns a successful HTTP status"
+  ],
+  "activities": [
+    "Initialize mocks and ObjectMapper for feature test",
+    "Create Skill object with specific attributes",
+    "Mock repository find method to return skill",
+    "Mock repository save method to increment rating",
+    "Mock repository delete method to return empty",
+    "Prepare form data with vote and skill UUID",
+    "Send POST request to /skill-vote endpoint",
+    "Verify HTTP response status is OK",
+    "Verify repository find method invocation count",
+    "Verify repository save method invocation count",
+    "Retrieve updated skill from repository",
+    "Assert skill is not null",
+    "Assert skill rating is 4",
+    "Execute repository cleanup in feature test teardown",
+    "Initialize mocks for database test",
+    "Print test start log message",
+    "Delete all data from repository in database test setup",
+    "Assert true condition in database test"
+  ]
+}

@@ -1,0 +1,10 @@
+**Test Object**
+`vgSpecEditor` directive
+
+**Test Goal**
+After compiling the directive, confirm that `vgSpecEditor` can display the expected source code content.
+
+**Test Activities**
+1. Load the module, inject vl constants, a simulated uiZeroclipDirective, and Spec services.
+2. Create a scope, compile the `<vg-spec-editor></vg-spec-editor>` element, and trigger a digest.
+3. Check that the value of `.vgspec` within the element is `{}`.

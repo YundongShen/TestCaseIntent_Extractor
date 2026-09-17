@@ -1,0 +1,16 @@
+{
+  "test_case_id": "tc_StringTest",
+  "source_file": "dataset/raw/junit_unit/StringTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T19:00:20.413544",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "StringTestHelper"
+  ],
+  "goals": [
+    "Verify that JNI methods correctly pass string parameters to StringTestHelper methods",
+    "Verify that JNI methods correctly return processed strings matching expected values"
+  ],
+  "activities": []
+}

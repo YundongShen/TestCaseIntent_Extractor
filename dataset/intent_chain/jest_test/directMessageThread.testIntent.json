@@ -1,0 +1,20 @@
+{
+  "test_case_id": "tc_directMessageThread_test",
+  "source_file": "dataset/raw/jest_test/directMessageThread.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-05-13T18:08:44.096944",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "directMessageThread",
+    "messageConnection"
+  ],
+  "goals": [
+    "Verify directMessageThread query returns correct thread data",
+    "Verify messageConnection returns messages in reverse chronological order with pagination"
+  ],
+  "activities": [
+    "string",
+    "string"
+  ]
+}

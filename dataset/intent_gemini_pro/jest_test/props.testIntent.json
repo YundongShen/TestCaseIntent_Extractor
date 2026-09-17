@@ -1,0 +1,26 @@
+{
+  "test_case_id": "tc_props_test",
+  "source_file": "dataset/raw/jest_test/props.test.jsx",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-11T07:44:07.952722",
+  "extract_mode": "independent",
+  "model": "gemini-3.1-pro-preview",
+  "objects": [
+    "NumericInput"
+  ],
+  "goals": [
+    "Verify that the NumericInput component correctly handles and applies various input properties and attributes with different input types",
+    "Verify that the NumericInput component disables inline styles on all rendered elements when the style property is set to false"
+  ],
+  "activities": [
+    "For each property configuration and mapped input value, render NumericInput with the specific property and value.",
+    "Retrieve the resulting property value from the rendered component.",
+    "Assert that the retrieved value matches the expected output.",
+    "Render NumericInput without any properties.",
+    "Assert that the default attribute state in the component's outerHTML matches expectations based on the property name.",
+    "Render NumericInput with style set to false.",
+    "Traverse the rendered component's DOM tree and assert that no element has a 'style' attribute.",
+    "Render NumericInput with style set to false and mobile prop enabled.",
+    "Traverse the rendered component's DOM tree and assert that no element has a 'style' attribute."
+  ]
+}

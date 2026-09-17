@@ -1,0 +1,46 @@
+{
+  "test_case_id": "tc_editor_test",
+  "source_file": "dataset/raw/jest_test/editor.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:56:13.815493",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "addListStyle"
+  ],
+  "goals": [
+    "Verify that the `addListStyle` function correctly applies bulleted and numbered list formatting to the input text, including sequential numbering for numbered lists, and updates the cursor position accordingly.",
+    "Verify that the `addListStyle` function does not modify the input element when no list style is provided."
+  ],
+  "activities": [
+    "Initialize an element object with value 'test' and selection at the beginning.",
+    "Call 'addListStyle' function with the element and a null list style.",
+    "Assert that the element's value remains 'test'.",
+    "Assert that the element's selectionStart remains 0.",
+    "Assert that the element's selectionEnd remains 0.",
+    "Initialize an element object with value 'test\\n' and selection at the end.",
+    "Call 'addListStyle' function with the element and 'BULLETED' list style.",
+    "Assert that the returned value is 'test\\n- '.",
+    "Assert that the returned selectionStart is at the end of the new value.",
+    "Initialize an element object with value 'test\\ntest' and selection in the middle.",
+    "Call 'addListStyle' function with the element and 'BULLETED' list style.",
+    "Assert that the returned value is 'test\\n- test'.",
+    "Assert that the returned selectionStart is correctly positioned after the bullet.",
+    "Initialize an element object with value 'test\\n' and selection at the end.",
+    "Call 'addListStyle' function with the element and 'NUMBERED' list style.",
+    "Assert that the returned value is 'test\\n1. '.",
+    "Assert that the returned selectionStart is at the end of the new value.",
+    "Initialize an element object with value 'test\\n1. \\n' and selection at the end of the second line.",
+    "Call 'addListStyle' function with the element and 'NUMBERED' list style.",
+    "Assert that the returned value is 'test\\n1. \\n2. '.",
+    "Assert that the returned selectionStart is at the end of the new value.",
+    "Initialize an element object with value 'test\\n\\ntest' and selection on the empty line.",
+    "Call 'addListStyle' function with the element and 'NUMBERED' list style.",
+    "Assert that the returned value is 'test\\n1. \\ntest'.",
+    "Assert that the returned selectionStart is correctly positioned after the number.",
+    "Initialize an element object with value 'test\\n23. \\n\\ntest' and selection on the empty line.",
+    "Call 'addListStyle' function with the element and 'NUMBERED' list style.",
+    "Assert that the returned value is 'test\\n23. \\n24. \\ntest'.",
+    "Assert that the returned selectionStart is correctly positioned after the incremented number."
+  ]
+}

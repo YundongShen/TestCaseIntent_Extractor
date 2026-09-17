@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_locustfile_7",
+  "source_file": "dataset/raw/locust/locustfile_7.py",
+  "framework": "locust",
+  "extraction_timestamp": "2026-08-10T13:34:00.106431",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "/shop",
+    "/?wc-ajax=add_to_cart",
+    "/checkout/",
+    "/?wc-ajax=checkout"
+  ],
+  "goals": [
+    "Simulate users adding products to the shopping cart.",
+    "Simulate users completing the full checkout process."
+  ],
+  "activities": [
+    "Send a GET request to the \"/shop\" page.",
+    "Define a list of product SKU options.",
+    "Generate a random quantity for the item.",
+    "Prepare data for adding an item to the cart, including a selected product SKU and quantity.",
+    "Send a POST request to add the item to the cart.",
+    "Define a list of product SKU options.",
+    "Generate a random quantity for the item.",
+    "Prepare data for adding an item to the cart, including a selected product SKU and quantity.",
+    "Send a POST request to add the item to the cart.",
+    "Send a GET request to the \"/checkout/\" page, using cookies from the previous response.",
+    "Extract the WooCommerce checkout nonce from the checkout page content.",
+    "Prepare personal, shipping, and payment details for checkout, including the extracted nonce.",
+    "Send a POST request to complete the checkout process."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_csp_spec",
+  "source_file": "dataset/raw/playwright/csp.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:35:26.350613",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "page",
+    "response",
+    "res"
+  ],
+  "goals": [
+    "Verify the server response contains strict Content Security Policy and related security headers",
+    "Verify the page loads without CSP violations and excludes insecure inline styles"
+  ],
+  "activities": [
+    "string1",
+    "string2"
+  ]
+}

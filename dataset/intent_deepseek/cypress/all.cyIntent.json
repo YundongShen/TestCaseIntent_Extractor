@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_all_cy",
+  "source_file": "dataset/raw/cypress/all.cy.js",
+  "framework": "cypress",
+  "extraction_timestamp": "2026-08-10T07:59:22.682880",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [],
+  "goals": [
+    "verifythehomepageandverifythetitle",
+    "loginauser,verifythepagecontainsthecorrectcontent,performaccesstests,performfunctionalactions"
+  ],
+  "activities": [
+    "extract_test_activities_start",
+    "before_each_test_start",
+    "visit_homepage",
+    "verify_homepage_title",
+    "login_user",
+    "perform_user_actions",
+    "extract_test_activities_end",
+    "before_each_test_start",
+    "register_user",
+    "fill_register_form",
+    "check_registration_errors",
+    "fill_register_form_again",
+    "check_registration_errors_again",
+    "extract_test_activities_end",
+    "before_each_test_start",
+    "ensure_header_elements_visible",
+    "click_sign_in_link",
+    "login_as_existing_user",
+    "perform_user_actions",
+    "search_for_product",
+    "check_search_result",
+    "extract_test_activities_end"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_US06",
+  "source_file": "dataset/raw/cucumber/US06.feature",
+  "framework": "cucumber",
+  "extraction_timestamp": "2026-08-10T07:48:05.964179",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "cultivo",
+    "enfermedadoplaga",
+    "usuario"
+  ],
+  "goals": [
+    "verifythatthesystemdetectsaunaenfermedadpotencialwhenaenfermedadoplagadescreventisestased"
+  ],
+  "activities": [
+    "Step1: Extract every action executed during the test execution from the code. Collect all candidate operations without omission.",
+    "Step2: Simplify overly detailed implementation statements into concise natural language, and arrange all extracted actions strictly in their original execution order. Write clear, readable descriptions for each activity.",
+    "Step3 (Optional): Aggregate adjacent actions of the same type or operations serving the same purpose when necessary. For this extraction, output the sequence without aggregation unless it significantly improves clarity (Be careful not to over-aggregate)."
+  ]
+}

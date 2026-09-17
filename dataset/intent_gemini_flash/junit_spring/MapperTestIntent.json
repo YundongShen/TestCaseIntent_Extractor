@@ -1,0 +1,29 @@
+{
+  "test_case_id": "tc_MapperTest",
+  "source_file": "dataset/raw/junit_spring/MapperTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T08:01:23.984345",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "TestModelMapper",
+    "TestModelService",
+    "Page"
+  ],
+  "goals": [
+    "Verify the TestModelMapper's ability to insert a TestModel object into the database.",
+    "Verify the pagination functionality of TestModelService correctly returns paged results with the expected page size and number of elements."
+  ],
+  "activities": [
+    "Create a new TestModel object.",
+    "Set the age of the TestModel to 1.",
+    "Set the creation timestamp of the TestModel to the current date.",
+    "Set the update timestamp of the TestModel to the current date.",
+    "Set the username of the TestModel to \"lalal\".",
+    "Insert the TestModel object into the database using the mapper.",
+    "Insert 100 TestModel objects into the database in a loop.",
+    "Retrieve a paginated list of TestModel objects from the service, with ID greater than 0, for page 1 with 20 items per page.",
+    "Assert that the page size of the retrieved paginated list is greater than or equal to 5.",
+    "Assert that the number of elements in the retrieved page is equal to 20."
+  ]
+}

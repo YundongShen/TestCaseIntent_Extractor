@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_DemoApplicationIntegrationTest",
+  "source_file": "dataset/raw/junit_spring/DemoApplicationIntegrationTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T08:01:06.395521",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "DemoApplication"
+  ],
+  "goals": [
+    "Verify that the Spring Boot application context loads successfully and the root endpoint returns 'Hello world'."
+  ],
+  "activities": [
+    "Send an HTTP GET request to the application's root URL.",
+    "Assert that the received response is 'Hello world'."
+  ]
+}

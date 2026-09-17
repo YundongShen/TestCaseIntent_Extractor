@@ -1,0 +1,38 @@
+{
+  "test_case_id": "tc_script",
+  "source_file": "dataset/raw/k6/script.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-08-10T07:59:55.369408",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "k6",
+    "vus",
+    "iterations",
+    "maxRedirects",
+    "scenarios",
+    "thresholds",
+    "http",
+    "get",
+    "headers",
+    "Location",
+    "status",
+    "rate",
+    "abortOnFail",
+    "p",
+    "executor",
+    "per-vu-iterations",
+    "default",
+    "units",
+    "docs.jsonld"
+  ],
+  "goals": [
+    "verify_https_redirect_status_and_redirection_location",
+    "check_books_api_link_in_response"
+  ],
+  "activities": [
+    "check_https_redirect",
+    "check_api_link_header",
+    "sleep"
+  ]
+}

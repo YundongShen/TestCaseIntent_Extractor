@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_RepositoryTest",
+  "source_file": "dataset/raw/junit_spring/RepositoryTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-01T19:02:26.258732",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Xxx",
+    "XxxRepository"
+  ],
+  "goals": [
+    "Verify XxxRepository save and find operations",
+    "Verify XxxRepository update and delete operations"
+  ],
+  "activities": [
+    "Create a new Xxx instance",
+    "Save the new Xxx instance to the repository",
+    "Retrieve the Xxx instance by UUID",
+    "Assert the retrieved instance is not null",
+    "Assert the retrieved instance equals the saved instance",
+    "Retrieve the Xxx instance by UUID",
+    "Save the retrieved Xxx instance to the repository",
+    "Retrieve the Xxx instance by UUID",
+    "Assert the retrieved instance is not null",
+    "Assert the retrieved instance equals the previously retrieved instance",
+    "Delete the Xxx instance by UUID",
+    "Retrieve the Xxx instance by UUID",
+    "Assert the retrieved instance is null"
+  ]
+}

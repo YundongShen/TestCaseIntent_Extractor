@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_ExampleJMockTest",
+  "source_file": "dataset/raw/junit_unit/ExampleJMockTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-13T15:06:12.133281",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "UserManagerImpl"
+  ],
+  "goals": [
+    "verify getUser method returns correct user object"
+  ],
+  "activities": [
+    "initialize UserManagerImpl instance with dependencies",
+    "create new User instance",
+    "configure mock expectation for dao.load method",
+    "invoke manager.getUser method with id 500",
+    "verify returned user matches emptyUser object"
+  ]
+}

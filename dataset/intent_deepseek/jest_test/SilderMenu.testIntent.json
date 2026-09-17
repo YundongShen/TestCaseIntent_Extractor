@@ -1,0 +1,27 @@
+{
+  "test_case_id": "tc_SilderMenu_test",
+  "source_file": "dataset/raw/jest_test/SilderMenu.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:51:12.917436",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "SiderMenu",
+    "getMeunMatcheys",
+    "meun"
+  ],
+  "goals": [
+    "testthecorrectmatchofparametersinthegetMeunMatcheysfunction"
+  ],
+  "activities": [
+    "import{getMeunMatcheys}from'./SiderMenu';",
+    "constmeun=['/dashboard','/userinfo','/dashboard/name','/userinfo/:id','/userinfo/:id/info'];",
+    "describe('testmeunmatch',()=>{",
+    "it('simplepath',()=>{expect(getMeunMatcheys(meun,'/dashboard')).toEqual(['/dashboard']);});",
+    "it('errorpath',()=>{expect(getMeunMatcheys(meun,'/dashboardname')).toEqual([]);});",
+    "it('Secondarypath',()=>{expect(getMeunMatcheys(meun,'/dashboard/name')).toEqual(['/dashboard/name']);});",
+    "it('Parameterpath',()=>{expect(getMeunMatcheys(meun,'/userinfo/2144')).toEqual(['/userinfo/:id']);});",
+    "it('threeparameterpath',()=>{expect(getMeunMatcheys(meun,'/userinfo/2144/info')).toEqual(['/userinfo/:id/info']);});",
+    "});"
+  ]
+}

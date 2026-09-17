@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_filterTasks_test",
+  "source_file": "dataset/raw/jest_test/filterTasks.test.js",
+  "framework": "jest_test",
+  "extraction_timestamp": "2026-08-10T07:56:24.923170",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "filterTasks"
+  ],
+  "goals": [
+    "Verify the `filterTasks` function correctly filters a list of tasks based on include/exclude criteria, and passes all tasks through when no filter is specified."
+  ],
+  "activities": [
+    "Initialize the 'tasks' array with five specific task objects.",
+    "Call the 'filterTasks' function with no filter type (false), no filter list (false), and the 'tasks' array.",
+    "Assert that the result of 'filterTasks' is strictly equal to the original 'tasks' array.",
+    "Initialize the 'tasks' array with five specific task objects.",
+    "Call the 'filterTasks' function with no filter type (false), an empty filter list ([]), and the 'tasks' array.",
+    "Assert that the result of 'filterTasks' is strictly equal to the original 'tasks' array.",
+    "Initialize the 'tasks' array with five specific task objects.",
+    "Call the 'filterTasks' function with filter type 'exclude', a filter list containing 'being', and the 'tasks' array.",
+    "Assert that the length of the result of 'filterTasks' is 4.",
+    "Initialize the 'tasks' array with five specific task objects.",
+    "Call the 'filterTasks' function with filter type 'include', a filter list containing 'tested', and the 'tasks' array.",
+    "Assert that the length of the result of 'filterTasks' is 1."
+  ]
+}

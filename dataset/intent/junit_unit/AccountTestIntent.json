@@ -1,0 +1,31 @@
+{
+  "test_case_id": "tc_AccountTest",
+  "source_file": "dataset/raw/junit_unit/AccountTest.java",
+  "framework": "junit_unit",
+  "extraction_timestamp": "2026-05-01T19:10:29.768878",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the correctness of the Account containsFriend method",
+    "Verify the consistency of friend lists and maps during friendship addition"
+  ],
+  "activities": [
+    "Initialize mock objects for Account, DataBase, List, and HashMap",
+    "Configure mock behavior for Account.containsFriend to return true",
+    "Invoke Account.containsFriend method",
+    "Assert result is true",
+    "Invoke DataBase.addFriendShip method",
+    "Retrieve friends list from friendMap",
+    "Check if friends list contains vato",
+    "Add vato to friends list",
+    "Assert friends list contains vato",
+    "Update friendMap with friends list",
+    "Assert friends list equals friendMap entry",
+    "Invoke DataBase.addFriendShip method",
+    "Retrieve friends list from friendMap",
+    "Add vato to friends list",
+    "Update friendMap with friends list",
+    "Assert friends list equals friendMap entry"
+  ]
+}

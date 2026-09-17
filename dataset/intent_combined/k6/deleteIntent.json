@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_delete",
+  "source_file": "dataset/raw/k6/delete.js",
+  "framework": "k6",
+  "extraction_timestamp": "2026-05-13T15:11:23.304333",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "Books API"
+  ],
+  "goals": [
+    "Verify book deletion returns valid HTTP status codes (200 or 404)"
+  ],
+  "activities": [
+    "Select a random book title from the titles list",
+    "Send GET request to retrieve book by title",
+    "Check if GET response status is 200",
+    "Extract ISBN from GET response body",
+    "Send DELETE request to remove book by ISBN",
+    "Verify DELETE response status is 200 or 404",
+    "Wait for 0.5 seconds"
+  ]
+}

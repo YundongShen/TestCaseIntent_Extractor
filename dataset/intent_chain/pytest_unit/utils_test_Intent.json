@@ -1,0 +1,18 @@
+{
+  "test_case_id": "tc_utils_test_",
+  "source_file": "dataset/raw/pytest_unit/utils_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:24:22.918150",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "_search_for_file_recursively"
+  ],
+  "goals": [
+    "Verify that _search_for_file_recursively correctly finds files matching the specified name in a directory tree"
+  ],
+  "activities": [
+    "Create temporary directory for testing",
+    "Remove temporary directory after testing"
+  ]
+}

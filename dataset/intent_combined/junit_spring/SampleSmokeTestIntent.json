@@ -1,0 +1,21 @@
+{
+  "test_case_id": "tc_SampleSmokeTest",
+  "source_file": "dataset/raw/junit_spring/SampleSmokeTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-05-13T15:02:04.910195",
+  "extract_mode": "combined",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "web application root endpoint"
+  ],
+  "goals": [
+    "verify application availability and welcome response"
+  ],
+  "activities": [
+    "configure request content type as JSON",
+    "execute GET request to base URI",
+    "capture HTTP response",
+    "verify status code is 200",
+    "verify response body starts with Welcome"
+  ]
+}

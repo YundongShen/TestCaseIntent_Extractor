@@ -1,0 +1,22 @@
+**Test Object**
+App Component
+
+**Test Goal**
+Confirm the component renders correctly and the page contains the guide text.
+
+**Test Activities**
+1. Render the App component.
+2. Find the text "Click on the Vite and Vue logos to learn more".
+3. Assert that the element is defined.
+
+**Test Object**
+Count Button in the App Component
+
+**Test Goal**
+Verify that the button text changes correctly after clicking the count button.
+
+**Test Activities**
+1. Render the App component.
+2. Get the first button element, assert its existence and initial innerHTML as "count is 0".
+3. Trigger the click event.
+4. Again assert that the button's innerHTML changes to "count is 1".

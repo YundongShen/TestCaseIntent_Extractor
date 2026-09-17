@@ -1,0 +1,33 @@
+{
+  "test_case_id": "tc_test__6",
+  "source_file": "dataset/raw/pytest_api/test__6.py",
+  "framework": "pytest_api",
+  "extraction_timestamp": "2026-08-10T13:39:14.524953",
+  "extract_mode": "independent",
+  "model": "gemini-2.5-flash",
+  "objects": [
+    "WorkshopTest",
+    "requests.Response",
+    "DeleteWorkshopRepBody"
+  ],
+  "goals": [
+    "Verify that the DeleteWorkshop API successfully deletes the specified workshop, returns the expected success response, and ensures no other workshops are inadvertently affected."
+  ],
+  "activities": [
+    "Clean up existing workshop data.",
+    "Create and insert the first workshop named 'qaRHR_name1'.",
+    "Create and insert the second workshop named 'qaRHR_name2'.",
+    "Obtain the ID of the first workshop for deletion.",
+    "Construct the API URL for deleting the first workshop using its ID.",
+    "Send a DELETE request to the workshop deletion API.",
+    "Parse the JSON response body from the API.",
+    "Assert that the HTTP response status code is 200.",
+    "Assert that the response Content-Type header is 'application/json'.",
+    "Assert that the 'status' field in the response body is 200.",
+    "Assert that the 'msg' field in the response body indicates successful deletion.",
+    "Assert that the 'data' field in the response body matches the expected data of the deleted workshop.",
+    "Assert that the 'detail' field is not present in the response body.",
+    "Verify that the first workshop no longer exists in the database.",
+    "Verify that the second workshop still exists in the database."
+  ]
+}

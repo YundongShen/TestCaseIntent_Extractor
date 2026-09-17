@@ -1,0 +1,35 @@
+**Test Object**
+GET /foo API
+
+**Test Goal**
+Verify that the `GET /foo` API has no historical request records on the first request, but a new call record is generated after the first request, and this record points to the correct service and path, and the response content is correct.
+
+**Test Activities**
+1. Assert that the initial length of `client.call_client.requests` is 0.
+2. Send a GET request to `/foo`.
+3. Check that the length of `client.call_client.requests` is no longer 0.
+4. Retrieve the last request record and verify that the `service` field is `"localhost:8080"`.
+5. Verify that the response body is `b"mock"`.
+
+**Test Object**
+GET /adminer/foo API
+
+**Test Goal**
+Verify that a request generates a new record with the correct path and service information.
+
+**Test Activities**
+1. Record the current length `n` of `client.call_client.requests`.
+2. Send a GET request to `/adminer/foo`.
+3. Assert that the request record length becomes `n+1`.
+4. Take the last request record and verify that `path` is `"/adminer/foo"` and `service` is `"localhost:8080"`.
+
+**Test Object**
+GET /foo` API
+
+**Test Goal**
+Verify that the custom request header is forwarded correctly and echoed in the response.
+
+**Test Activities**
+1. Send a GET request to `/foo` with the custom header `{"here": "There"}`.
+2. Take the last request record and assert that `headers` exists and `headers["here"]` has the value `"There"`.
+3. Assert that the response header also contains "here", with a value of "There".

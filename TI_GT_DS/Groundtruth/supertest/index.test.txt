@@ -1,0 +1,22 @@
+**Test Object**
+`GET /` Root Route
+
+**Test Goal**
+Verify that the root route responds correctly, returning the correct status code.
+
+**Test Activities**
+1. Send a GET request to `/`.
+2. Verify that the Content-Type is JSON.
+3. Verify that the response body is `{ name: "frodo" }`.
+4. Verify that the status code is 200.
+
+**Test Object**
+`POST /test` and `GET /test` Routes
+
+**Test Goal**
+Verify that after sending form data to `/test`, a subsequent GET request returns the previously stored array.
+
+**Test Activities**
+1. Send a POST request to `/test`, submitting `item=hey` in `form` format.
+2. Then send a GET request to `/test`.
+3. Verify that the response body is `{ array: ["hey"] }`.

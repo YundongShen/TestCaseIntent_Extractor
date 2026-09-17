@@ -1,0 +1,28 @@
+{
+  "test_case_id": "tc_put_test",
+  "source_file": "dataset/raw/supertest/put.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-05-02T02:48:21.821478",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [],
+  "goals": [
+    "Verify the update comment endpoint successfully updates comment content and returns HTTP 200 status",
+    "Verify the update comment endpoint returns HTTP 404 status when content field is missing"
+  ],
+  "activities": [
+    "Establish MongoDB connection",
+    "Insert test user data into database",
+    "Send POST request to create a comment",
+    "Extract comment ID from response",
+    "Send PUT request to update comment content",
+    "Verify response status code is 200",
+    "Verify response content type is JSON",
+    "Query database for updated comment",
+    "Verify updated comment content matches expected value",
+    "Send PUT request missing content parameter",
+    "Verify response status code is 404",
+    "Delete test data from database",
+    "Close database connections"
+  ]
+}

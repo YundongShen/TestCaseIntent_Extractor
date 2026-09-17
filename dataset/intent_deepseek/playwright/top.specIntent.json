@@ -1,0 +1,19 @@
+{
+  "test_case_id": "tc_top_spec",
+  "source_file": "dataset/raw/playwright/top.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-08-10T07:54:09.202806",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "objects": [
+    "test",
+    "page",
+    "awaitexpect",
+    "items",
+    "first",
+    "firstItemId",
+    "searchText"
+  ],
+  "goals": [],
+  "activities": []
+}

@@ -1,0 +1,11 @@
+**Test Object**
+The `getUser` method of `UserManagerImpl`
+
+**Test Goal**
+Verify that `getUser` correctly delegates to the DAO and returns the user object.
+
+**Test Activities**
+1. Initialize `UserManagerImpl`, inject mock `UserDao` and `Logger`, and prepare an empty `User` object.
+2. Set JMock expectation: when `dao.load(500)` is called once, return the empty `User`.
+3. Call `manager.getUser(500)`.
+4. Assert that the returned object is the expected one (`assertSame`).

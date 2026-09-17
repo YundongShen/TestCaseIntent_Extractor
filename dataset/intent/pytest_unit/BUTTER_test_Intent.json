@@ -1,0 +1,23 @@
+{
+  "test_case_id": "tc_BUTTER_test_",
+  "source_file": "dataset/raw/pytest_unit/BUTTER_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-02T02:02:03.335046",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "objects": [
+    "BUTTER"
+  ],
+  "goals": [
+    "Verify that the BUTTER function correctly applies a high-pass filter to remove the DC offset from the input signal"
+  ],
+  "activities": [
+    "Import the BUTTER module",
+    "Generate input array x using linear spacing",
+    "Generate input array y using sine wave calculation",
+    "Verify mean of input array y is within expected range",
+    "Create OrderedPair element with input arrays",
+    "Execute BUTTER filter function with specified parameters",
+    "Verify mean of filtered output array is close to zero"
+  ]
+}
