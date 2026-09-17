@@ -40,7 +40,7 @@ def get_device():
     import torch
     
     if torch.cuda.is_available():
-        print("🚀 [Device] Using NVIDIA CUDA (7B Model)")
+        print("[Device] Using NVIDIA CUDA (7B Model)")
         return "cuda"
     else:
         print("⚙️  [Device] Using CPU")

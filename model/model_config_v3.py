@@ -41,7 +41,7 @@ def get_device():
     import torch
     
     if torch.cuda.is_available():
-        print("🚀 [Device] Using NVIDIA CUDA (V3 Model with device_map='auto')")
+        print("[Device] Using NVIDIA CUDA (V3 Model with device_map='auto')")
         return "cuda"
     else:
         print("⚙️  [Device] Using CPU (NOT RECOMMENDED for V3)")

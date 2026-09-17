@@ -44,17 +44,17 @@ if INFERENCE_BACKEND == "api":
         "quantization": "API",
     }
     MODEL_CONFIG = EFFECTIVE_MODEL
-    print(f"✅ [Config] Using API backend: {_svc.model_name}")
+    print(f"[Config] Using API backend: {_svc.model_name}")
 else:
     if MODEL_TYPE == "qwen":
         from model.model_config_qwen import set_seed, MODEL_CONFIG
-        print(f"✅ [Config] Using Qwen-3.5-27B model configuration (27B, BF16)")
+        print(f"[Config] Using Qwen-3.5-27B model configuration (27B, BF16)")
     elif MODEL_TYPE == "v3":
         from model.model_config_v3 import set_seed, MODEL_CONFIG
-        print(f"✅ [Config] Using V3 model configuration (671B MoE, FP8)")
+        print(f"[Config] Using V3 model configuration (671B MoE, FP8)")
     else:
         from model.model_config_7b import set_seed, MODEL_CONFIG
-        print(f"✅ [Config] Using 7B model configuration (FP16)")
+        print(f"[Config] Using 7B model configuration (FP16)")
 
     # Only configure local inference service when using local backend
     from model.inference_service import set_model_config

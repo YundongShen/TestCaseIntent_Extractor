@@ -40,7 +40,7 @@ def get_device():
     import torch
     
     if torch.cuda.is_available():
-        print("🚀 [Device] Using NVIDIA CUDA (RTX 6000)")
+        print("[Device] Using NVIDIA CUDA (RTX 6000)")
         return "cuda"
     else:
         print("⚙️  [Device] Using CPU")

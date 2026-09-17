@@ -52,6 +52,11 @@ model/models/*/
 Result/
 logs/
 
+# Raw corpus + groundtruth + extraction results - published separately in
+# the Test_Intent-Groundtruth_DataSet repo, not tracked here
+dataset/
+TI_GT_DS/
+
 # Virtual environments
 gpu_env/
 gpu_env_312/
