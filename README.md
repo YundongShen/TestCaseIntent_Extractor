@@ -1,131 +1,48 @@
-# 🧪 Test Intent Extraction and Onboarding Document Generation System
+# Test Intent Extraction
 
-An intelligent system that automatically extracts intent from test cases using DeepSeek LLM and generates onboarding documents. The system adopts a **five-layer architecture** for clear data processing and separation of concerns.
+Extracts a structured Test Intent (Object, Goal, Activities) from test code
+using an LLM, and can turn a set of extracted intents into an onboarding
+document. Built around a five-layer pipeline: Input -> Extract -> Intent ->
+Business -> Output.
 
-## 📋 Overview
-
-- **Automated Intent Extraction**: Extract Activity, Goal, and Object from test code
-- **Intelligent LLM Processing**: Use COT prompting to optimize and validate extraction results
-- **Structured Document Generation**: Generate standardized onboarding documents from extracted intents
-- **Tech Stack**: Python 3.8+, PyTorch, Transformers, DeepSeek 7B
-
-## 🏗️ Project Structure
+## Layout
 
 ```
-layers/                 # Five-layer processing pipeline
-├── input/             # Layer 1: Data preprocessing
-├── extract/           # Layer 2: Extract Activity, Goal, Object
-├── intent/            # Layer 3: Validate and adjust intent
-├── business/          # Layer 4: Document template and generation
-└── output/            # Layer 5: Save final documents
+layers/
+  input/        preprocessing (trim, dedupe blank lines, strip comments)
+  extract/      object/goal/activity extraction — independent, combined, chain modes
+  extract/chain/  the chain-mode extractors (object -> goal -> activity, passing context along)
+  intent/       validates and adjusts the extracted triplet
+  business/     onboarding document templates + generator (grouping, formatting)
+  output/       writes the final document to disk
 
-model/                 # DeepSeek 7B model configuration and loading
-testcases/             # Test case input files
-onboarding_result/     # Generated onboarding documents
-main.py                # Main pipeline entry point
+model/          model configs (Qwen, DeepSeek, DeepSeek-V3) and the local/API inference services
+dataset/        raw test files used for the full extraction run, plus per-model outputs
+TI_GT_DS/       groundtruth annotations and the matching test suites, by framework
+eval/           scripts and data for scoring extraction against groundtruth
+testcases/      a handful of sample test files for quick manual runs
+
+main.py                     runs one file through all five layers
+extract_for_dataset.py      runs layers 1-2 only, for building the dataset in bulk
+correct_intent.py           LLM-assisted pass to clean up groundtruth candidates
+suites_data.py              suite/test-case definitions used by the onboarding scripts below
+extract_one_case_for_onboarding.py, assemble_5_onboarding_docs*.py
+                             per-case extraction + grouping/generation for the onboarding experiments
+md_to_docx.py               renders a generated markdown document to .docx
+*.slurm, *.sh                job scripts for running the above on a GPU cluster
 ```
 
-## 🔄 Five-Layer Architecture
-
-```
-Raw Test Code
-    ↓
-[Layer 1] INPUT: Preprocess and normalize code
-    ↓
-[Layer 2] EXTRACT: Extract activities, goals, objects
-    ↓
-[Layer 3] INTENT: Validate and optimize extraction
-    ↓
-[Layer 4] BUSINESS: Load template and generate content
-    ↓
-[Layer 5] OUTPUT: Save Markdown document
-    ↓
-Final Onboarding Document
-```
-
-| Layer | Purpose | Key Component |
-|-------|---------|----------------|
-| 1 | Normalize test code | `preprocessor.py` |
-| 2 | Extract intent elements | `*_extractor.py` |
-| 3 | Validate & optimize | `validator.py`, `adjuster.py` |
-| 4 | Business logic | `onboarding_generator.py` |
-| 5 | Generate & save | `document_writer.py` |
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8+
-- 16GB+ RAM (GPU recommended)
-- Network connection (for model download)
-
-### Setup
+## Running it
 
 ```bash
-# Create and activate virtual environment
-python3 -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# or .venv\Scripts\activate # Windows
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Download DeepSeek model
-python model/download_model.py
-```
-
----
-
-## 📝 Usage
-
-### 1. Add Test Cases
-
-Place test files in `testcases/` directory:
-```bash
-testcases/
-├── admin-index-api.test.js
-├── user-auth.test.js
-└── payment-flow.test.js
-```
-
-Supported formats: `.test.js`, `.test.ts`, or any test code
-
-### 2. Run Pipeline
-
-```bash
+export MODEL_TYPE=qwen        # or 7b, deepseek, v3
 python main.py
 ```
 
-### 3. View Results
+`MODEL_TYPE` and `EXTRACT_MODE` (independent/combined/chain) are read from
+the environment; see `MODEL_SWITCHING.md` for the full list of options.
+Local models are downloaded on first use; set `INFERENCE_BACKEND=api` plus
+the relevant key in `.env` to use the Gemini API instead.
 
-Generated documents in `onboarding_result/`:
-```
-onboarding_result/
-├── onboarding_20260326_143022.md
-├── onboarding_20260326_144534.md
-└── onboarding_20260326_145056.md
-```
-
----
-
-## 🔧 Configuration
-
-Edit `model/model_config.py` to adjust:
-- `context_length`: Model context window size
-- `device`: Use GPU/CPU for inference
-- Model path and quantization settings
-
----
-
-## 📚 Documentation
-
-- **Module Details**: See `__init__.py` files in each layer
-- **Example Test**: `testcases/admin-index-api.test.js`
-- **Model Setup**: `model/model_config.py`
-
----
-
-## 📄 License
-
-MIT License
+Generated documents land in `Result/onboarding_result/`.

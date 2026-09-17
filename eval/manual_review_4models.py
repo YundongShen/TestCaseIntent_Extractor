@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude's manual stricter re-review of the 211 test-case x 4-model alignment.
+Manual stricter re-review of the 211 test-case x 4-model alignment.
 Order per cell: [DeepSeek, Qwen, Flash, Pro]. F=Fully, P=Partially, M=Misaligned.
 
 Stricter principle vs the Gemini pre-labels: a file-level extraction that only
@@ -136,15 +136,15 @@ def main():
         print("\n*** FIX BEFORE WRITING ***"); return
 
     catmap = {m["block_id"]: (m["framework"], m["category"]) for m in mapping}
-    out = open("eval/scores/claude_review_blocks.jsonl", "w")
+    out = open("eval/scores/manual_review_4models.jsonl", "w")
     for m in mapping:
         codes = L[m["block_id"]]
         for mi, s in enumerate(MODELS):
             out.write(json.dumps({"block_id": m["block_id"], "framework": m["framework"],
                                   "category": m["category"], "set": s,
-                                  "label": FULL[codes[mi]], "reviewer": "claude"}, ensure_ascii=False) + "\n")
+                                  "label": FULL[codes[mi]]}, ensure_ascii=False) + "\n")
     out.close()
-    print("\nwrote eval/scores/claude_review_blocks.jsonl")
+    print("\nwrote eval/scores/manual_review_4models.jsonl")
 
 if __name__ == "__main__":
     main()

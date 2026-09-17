@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Claude's stricter review for Qwen combined & chain (for Table 1).
+Stricter review for Qwen combined & chain (for Table 1).
 Each value = 2 chars: [combined, chain]. F/P/M.
-Then merge with the 4-model review (claude_labels.L) and aggregate Tables 1/2/3.
+Then merge with the 4-model review (manual_review_4models.L) and aggregate Tables 1/2/3.
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from claude_labels import L as L4, FULL  # 4-model codes: [DS,Qw,Fl,Pr]
+from manual_review_4models import L as L4, FULL  # 4-model codes: [DS,Qw,Fl,Pr]
 
 CC = {
  # cucumber
@@ -114,7 +114,7 @@ def main():
     if miss or extra or bad: print("*** FIX ***"); return
 
     # write full 6-set review
-    out = open("eval/scores/claude_review_all.jsonl","w")
+    out = open("eval/scores/manual_review_all.jsonl","w")
     for m in mapping:
         bid=m["block_id"]; c4=L4[bid]; cc=CC[bid]
         allsets=[("deepseek",c4[0]),("qwen_independent",c4[1]),("gemini_flash",c4[2]),
@@ -123,7 +123,7 @@ def main():
             out.write(json.dumps({"block_id":bid,"framework":m["framework"],
                 "category":m["category"],"set":s,"label":FULL[code]},ensure_ascii=False)+"\n")
     out.close()
-    print("wrote eval/scores/claude_review_all.jsonl")
+    print("wrote eval/scores/manual_review_all.jsonl")
 
 if __name__=="__main__":
     main()
