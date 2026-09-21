@@ -43,7 +43,7 @@ def get_device():
         print("[Device] Using NVIDIA CUDA (RTX 6000)")
         return "cuda"
     else:
-        print("⚙️  [Device] Using CPU")
+        print("[Device] Using CPU")
         return "cpu"
 
 def load_deepseek_model(device=None, quantize_8bit=True):

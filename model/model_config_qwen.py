@@ -43,7 +43,7 @@ def get_device():
         print("[Device] Using NVIDIA CUDA (Qwen-27B Model)")
         return "cuda"
     else:
-        print("⚙️  [Device] Using CPU")
+        print("[Device] Using CPU")
         return "cpu"
 
 def load_qwen_model(device=None, quantize_8bit=False):

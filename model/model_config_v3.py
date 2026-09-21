@@ -44,7 +44,7 @@ def get_device():
         print("[Device] Using NVIDIA CUDA (V3 Model with device_map='auto')")
         return "cuda"
     else:
-        print("⚙️  [Device] Using CPU (NOT RECOMMENDED for V3)")
+        print("[Device] Using CPU (not recommended for V3)")
         return "cpu"
 
 def load_deepseek_model(device=None, quantize_8bit=True):

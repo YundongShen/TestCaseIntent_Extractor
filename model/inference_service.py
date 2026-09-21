@@ -119,7 +119,7 @@ class InferenceService:
         
         # All methods failed
         print(f"\n{'='*80}")
-        print("[Download] ✗ Failed - Model download unsuccessful")
+        print("[Download] Failed - model download unsuccessful")
         print(f"{'='*80}\n")
         print("SOLUTION: Please download the model manually:")
         print(f"  Command: python download_model_direct.py")

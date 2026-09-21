@@ -224,7 +224,7 @@ def correct_framework(framework: str, service) -> None:
         with open(intent_path, "w", encoding="utf-8") as f:
             json.dump(current, f, ensure_ascii=False, indent=2)
 
-        print(f"    ✓ objects={len(corrected['objects'])}  "
+        print(f"    objects={len(corrected['objects'])}  "
               f"goals={len(corrected['goals'])}  "
               f"activities={len(corrected['activities'])}")
 

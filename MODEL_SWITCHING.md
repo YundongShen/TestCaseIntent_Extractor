@@ -14,15 +14,10 @@ export MODEL_TYPE=7b && python main.py
 export MODEL_TYPE=qwen && python main.py
 ```
 
-### Use V3 model (multi-GPU)
+### Use V3 model
 ```bash
 export MODEL_TYPE=v3
-# Single GPU
 python main.py
-
-# Multi-GPU distributed
-export WORLD_SIZE=4
-torchrun --nproc_per_node 4 main.py
 ```
 
 ## Supported Models
@@ -31,7 +26,7 @@ torchrun --nproc_per_node 4 main.py
 |-------|-----------|------|-----------|--------|
 | DeepSeek-7B-Chat | `7b` | 14GB | FP16 | Ready |
 | Qwen-3.5-27B | `qwen` | 52GB | BF16 | Ready |
-| DeepSeek-V3 (MoE) | `v3` | 1.3TB | FP8 | Requires multi-GPU |
+| DeepSeek-V3 (MoE) | `v3` | 1.3TB | FP8 | Needs a large single GPU (device_map=auto) |
 
 ## File Layout
 
@@ -39,10 +34,9 @@ torchrun --nproc_per_node 4 main.py
 model/
 ├── model_config_7b.py           # 7B config
 ├── model_config_qwen.py         # Qwen config
-├── model_config_v3.py           # V3 config proxy
-├── model_config_v3_official.py  # V3 official implementation
-├── model_config_v3_mp.py        # V3 multi-GPU support
-├── inference_service.py         # Inference service (supports all models)
+├── model_config_v3.py           # V3 config
+├── inference_service.py         # local inference (all models go through _infer_local)
+├── api_inference_service.py     # Gemini API backend
 └── models/
     ├── deepseek-llm-7b-chat/
     └── models--Qwen--Qwen3.5-27B/
@@ -52,27 +46,18 @@ model/
 
 ```
 main.py
-  | (reads MODEL_TYPE env var)
+  | (reads MODEL_TYPE env var, INFERENCE_BACKEND for local vs API)
   |-> model_config_7b.py    (MODEL_TYPE=7b)
   |-> model_config_qwen.py  (MODEL_TYPE=qwen)
   |-> model_config_v3.py    (MODEL_TYPE=v3)
   |
 inference_service.py
-  | (routes to the appropriate inference method)
-  |-> _infer_7b()
-  |-> _infer_qwen()
-  |-> _infer_v3()
+  | _infer_local() loads whichever MODEL_CONFIG was set and runs it
   |
 ObjectExtractor / ActivityExtractor / GoalExtractor
 ```
 
 ## Testing Different Models
-
-### Quick Qwen test
-```bash
-sbatch test_qwen_load.slurm
-cat test_qwen_load_*.out
-```
 
 ### Full extraction comparison
 ```bash
@@ -90,39 +75,23 @@ diff Result/extract_result/*.json
 
 ### 7B model
 - **File**: `model/model_config_7b.py`
-- **Inference**: `load_deepseek_model()` → `_infer_7b()`
 - **Characteristics**: Fast, low VRAM, FP16
 - **Recommended for**: Rapid prototyping, single-GPU inference
 
 ### Qwen model
 - **File**: `model/model_config_qwen.py`
-- **Inference**: `load_qwen_model()` → `_infer_qwen()`
 - **Characteristics**: Better quality, 27B parameters, BF16, Flash Attention
 - **Recommended for**: Production-quality results
 
 ### V3 model
-- **File**: `model/model_config_v3.py` + `model_config_v3_official.py`
-- **Inference**: `load_deepseek_model()` → `_infer_v3()`
+- **File**: `model/model_config_v3.py`
 - **Characteristics**: Strongest capability, 671B MoE, FP8 quantization
-- **Recommended for**: Highest quality, requires multi-GPU cluster
+- **Recommended for**: Highest quality, needs a large-memory GPU
 
 ## Adding a New Model
 
-1. Create `model/model_config_<name>.py`:
-   ```python
-   MODEL_CONFIG = {
-       "model_id": "huggingface_model_id",
-       "local_path": Path(...),
-       "model_name": "Display Name",
-       "quantization": "FP16",
-       "parameters": "Size",
-       "context_length": 2048,
-   }
-
-   def load_<name>_model(device=None):
-       # return (model, tokenizer)
-       pass
-   ```
+1. Create `model/model_config_<name>.py` with a `MODEL_CONFIG` dict (`model_id`,
+   `local_path`, `model_name`, `quantization`, ...) and a `set_seed()`.
 
 2. Add a branch in `main.py`:
    ```python
@@ -130,14 +99,9 @@ diff Result/extract_result/*.json
        from model.model_config_<name> import set_seed, MODEL_CONFIG
    ```
 
-3. Add inference method in `inference_service.py`:
-   ```python
-   elif model_type == "<name>":
-       response = self._infer_<name>(model, tokenizer, prompt, max_tokens, device)
-
-   def _infer_<name>(self, model, tokenizer, prompt, max_tokens, device):
-       pass
-   ```
+3. `InferenceService._load_local_model()` (in `inference_service.py`) picks the
+   loader by matching `model_id` — add a branch there if the new model isn't
+   Qwen- or DeepSeek-based.
 
 ## FAQ
 
@@ -166,17 +130,13 @@ A: No. The system uses pretrained models for zero-shot extraction.
 | Variable | Values | Description |
 |----------|--------|-------------|
 | `MODEL_TYPE` | `7b`, `qwen`, `v3` | Select model |
-| `WORLD_SIZE` | integer | Number of GPUs for V3 |
+| `INFERENCE_BACKEND` | `local`, `api` | Local weights vs. Gemini API |
+| `EXTRACT_MODE` | `independent`, `combined`, `chain` | Extraction prompting mode |
 | `CUDA_VISIBLE_DEVICES` | GPU indices | Restrict visible GPUs |
 
-Examples:
+Example:
 ```bash
-# Run Qwen on GPUs 0-3
-CUDA_VISIBLE_DEVICES=0,1,2,3 MODEL_TYPE=qwen python main.py
-
-# Run V3 on 8 GPUs
-export WORLD_SIZE=8
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --nproc_per_node 8 main.py
+CUDA_VISIBLE_DEVICES=0 MODEL_TYPE=qwen python main.py
 ```
 
 ## Workflow Comparison
@@ -197,4 +157,4 @@ Slow | Very high VRAM | Best quality
 ```
 
 ---
-Updated: 2026-04-20
+Updated: 2026-09-21

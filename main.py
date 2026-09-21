@@ -80,7 +80,7 @@ def run_pipeline(raw_data):
         print("Layer 1: INPUT LAYER (Data Preprocessing)")
         print("="*80)
         data1 = InputLayer().process(raw_data)
-        print(f"✓ Input layer done: {len(data1.get('content', ''))} chars\n")
+        print(f"[OK] Input layer done: {len(data1.get('content', ''))} chars\n")
         
         # Save Preprocess result
         save_intermediate_result('preprocess', {
@@ -96,7 +96,7 @@ def run_pipeline(raw_data):
         print("Layer 2: EXTRACT LAYER (Objects/Goals/Activities)")
         print("="*80)
         data2 = ExtractLayer(extract_mode=extract_mode).process(data1)
-        print(f"✓ Extraction done: objects={len(data2.get('objects', []))} goals={len(data2.get('goals', []))} activities={len(data2.get('activities', []))}\n")
+        print(f"[OK] Extraction done: objects={len(data2.get('objects', []))} goals={len(data2.get('goals', []))} activities={len(data2.get('activities', []))}\n")
         
         # Save Extract result
         save_intermediate_result('extract', {
@@ -117,7 +117,7 @@ def run_pipeline(raw_data):
         print("Layer 3: INTENT LAYER (Validation & Adjustment)")
         print("="*80)
         data3 = IntentLayer().process(data2)
-        print(f"✓ Intent processing done\n")
+        print(f"[OK] Intent processing done\n")
         
         # Save Validate result
         save_intermediate_result('validate', {
@@ -155,7 +155,7 @@ def run_pipeline(raw_data):
         print("Layer 4: BUSINESS LAYER (Prompt Template)")
         print("="*80)
         data4 = BusinessLayer().process(data3)
-        print(f"✓ Prompt loaded: {len(data4.get('prompt', ''))} chars\n")
+        print(f"[OK] Prompt loaded: {len(data4.get('prompt', ''))} chars\n")
         
         # Layer 5: Output - Generate and save document
         print("="*80)
@@ -164,13 +164,13 @@ def run_pipeline(raw_data):
         output_result = OutputLayer().process(data4)
         
         if not output_result.get("success"):
-            print(f"✗ Document generation failed: {output_result.get('error')}\n")
+            print(f"[FAIL] Document generation failed: {output_result.get('error')}\n")
             return {
                 "success": False,
                 "error": output_result.get('error')
             }
         
-        print(f"✓ Document saved: {output_result.get('filepath')}\n")
+        print(f"[OK] Document saved: {output_result.get('filepath')}\n")
         
         # Complete
         print("="*80)
@@ -184,7 +184,7 @@ def run_pipeline(raw_data):
         }
     
     except Exception as e:
-        print(f"\n✗ Error: {e}")
+        print(f"\n[FAIL] Error: {e}")
         import traceback
         traceback.print_exc()
         return {
@@ -204,7 +204,7 @@ def create_sample_data():
     basename = os.path.splitext(os.path.basename(test_file_path))[0]
     test_case_id = "tc_" + basename.replace("-", "_").replace(".", "_")
 
-    print(f"✓ Loaded from: {test_file_path}")
+    print(f"[OK] Loaded from: {test_file_path}")
 
     return {
         "content": content,
@@ -218,7 +218,7 @@ def main():
     
     print("\n[Loading test data]")
     sample_data = create_sample_data()
-    print(f"✓ Data loaded")
+    print(f"[OK] Data loaded")
     print(f"  User ID: {sample_data['user_id']}")
     print(f"  Test ID: {sample_data['test_case_id']}")
     print(f"  Content: {len(sample_data['content'])} chars\n")
@@ -227,10 +227,10 @@ def main():
     
     if result["success"]:
         print("[Final Result]")
-        print(f"✓ Document: {result['output'].get('filepath', 'N/A')}")
+        print(f"[OK] Document: {result['output'].get('filepath', 'N/A')}")
         return 0
     else:
-        print(f"✗ Failed: {result.get('error', 'Unknown error')}")
+        print(f"[FAIL] Failed: {result.get('error', 'Unknown error')}")
         return 1
 
 
