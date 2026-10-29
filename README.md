@@ -17,7 +17,7 @@ layers/
   output/       writes the final document to disk
 
 model/          model configs (Qwen, DeepSeek, DeepSeek-V3) and the local/API inference services
-eval/           scripts and data for scoring extraction against groundtruth
+eval/           alignment labels of each extraction against groundtruth (manual_review.xlsx)
 testcases/      a handful of sample test files for quick manual runs
 scripts/        supporting one-off scripts (dataset collection, onboarding-doc assembly, md->docx, ...)
 slurm/          job scripts for running the pipeline on a GPU cluster
